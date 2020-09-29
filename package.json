@@ -1,0 +1,19 @@
+{
+  "name": "java",
+  "version": "1.0.0",
+  "description": "java学习笔记",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zsz",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.5.4"
+  },
+  "dependencies": {
+    "markdown-it-disable-url-encode": "^1.0.1"
+  }
+}

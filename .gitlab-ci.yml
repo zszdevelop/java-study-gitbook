@@ -1,0 +1,46 @@
+image: node:9.11.1
+
+# 定义 build 和 package 两个 Stages
+stages:
+  - build
+  - deploy
+
+
+# 定义 test 阶段的一个 job
+build-job:
+  stage: build
+  script:
+    - echo "项目打包 build 开始"
+    # npm install 服务器一直卡着，耗时太久。改为直接将node_modules上传
+    # -  npm install 
+    -  npm run build
+    - echo "项目打包 build 结束"
+
+
+
+
+
+# 定义 deploy 阶段的一个 job
+deploy-job:
+  stage: deploy
+  script:
+    - echo "部署服务开始"
+    - rm -rf /home/ftpuser/gitbook/java
+    - cp -r docs/.vuepress/dist /home/ftpuser/gitbook/java
+    - echo "部署完成"
+
+# image: node:9.11.1
+
+# pages:
+#  cache:
+#    paths:
+#    - node_modules/
+
+#  script:
+#  -  npm install
+#  -  npm run build
+#  artifacts:
+#    paths:
+#    - public
+#  only:
+#  - master

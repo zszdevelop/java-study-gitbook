@@ -1,0 +1,49 @@
+# Redis
+
+- [redis面试考点](./redis/interview/README.md)
+- [redis事务](./redis/interview/redis事务.md)
+- redis使用场景
+  - [Redis缓存场景](redis/scene/redis使用场景.md)
+  - hash场景
+    - [Redis修改局部信息场景，如用户信息（hash,）](redis/scene/Redis修改局部信息场景.md)
+  - list场景
+    - [Redis用作消息队列(list)](redis/scene/Redis用作消息队列.md)
+    - [Redis最新内容 （list）](redis/scene/Redis最新内容.md)
+  - set场景
+    - [共同好友列表 (set)](redis/scene/共同好友列表.md)
+  - zset场景
+    - [Redis排行榜场景（zset）](redis/scene/Redis排行榜场景.md)
+    - [Redis热门服务场景(zset)](redis/scene/Redis热门服务场景.md)
+    - [Redis在线人数场景（zset）](redis/scene/Redis在线人数场景.md)
+- redis可能出现的问题
+  - [Redis缓存雪崩](redis/question/Redis缓存雪崩.md)
+  - [Redis缓存穿透](redis/question/Redis缓存穿透.md)
+  - [如何解决 Redis 的并发竞争 Key 问题](redis/question/如何解决 Redis 的并发竞争 Key 问题.md)
+  - [Redis缓存预热](redis/question/Redis缓存预热.md)
+  - [Redis保证缓存与数据库双写时的数据一致性](redis/question/Redis保证缓存与数据库双写时的数据一致性.md)
+- [redis分布式锁](redis/lock/README.md)
+  - [一步步实现单机redis的分布式锁（setnx）](redis/lock/一步步实现单机redis的分布式锁.md)
+  - [Redlock分布式锁](redis/lock/Redlock分布式锁.md)
+- 读书笔记
+  - [Redis简介](./redis/book/README.md)
+  - [5种数据结构](./redis/5种数据结构.md)
+    - [String字符串](./redis/string/README.md)
+    - [List列表](./redis/list/README.md)
+    - [Set集合](./redis/set/README.md)
+    - [Hash散列](./redis/hash/README.md)
+    - [Zset有序集合](./redis/zset/README.md)
+  - [发布与订阅(pub/sub)](./redis/发布与订阅.md)
+  - [排序SORT](./redis/排序.md)
+  - [事务](./redis/事务.md)
+  - [键的过期时间](./redis/键的过期时间.md)
+  - [持久化](./redis/persistence/README.md)
+    - [快照(snapshotting)](./redis/persistence/快照.md)
+    - [只追加文件(append-only file,AOF)](./redis/persistence/只追加文件.md)
+- 安装
+  - [Redis安装](./redis/install/README.md)
+  - [开启远程访问](./redis/install/开启远程访问.md)
+- Redis使用
+  - [Spring Boot集成redis使用](./redis/use/SpringBoot集成redis使用.md)
+  - [redis连接客户端选择：Jedis,Redisson,Lettuce](redis/use/redis连接客户端选择.md)
+  - [JedisPool资源池优化](redis/use/JedisPool资源池优化.md)
+  - [RedisUtil工具类的使用(仅供参考)](redis/use/RedisUtil工具类的使用.md)
