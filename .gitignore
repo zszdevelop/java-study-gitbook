@@ -1,8 +1,8 @@
 .DS_Store
-# npm install 服务器一直卡着，耗时太久。改为直接将node_modules上传
+# npm install 锟斤拷锟斤拷锟斤拷一直锟斤拷锟脚ｏ拷锟斤拷时太锟矫★拷锟斤拷为直锟接斤拷node_modules锟较达拷
 # node_modules
 /dist
-/docs/.vuepress/dist
+# /docs/.vuepress/dist
 *.zip
 
 

@@ -12,7 +12,7 @@ exports.mulu = {
             children: [
                 {
                     title: 'RabbitMQ基础',   // 必要的
-                    path: 'mq/RabbitMQ/RabbitMQ基础.md'
+                    path: 'dependencies/mq/RabbitMQ/RabbitMQ基础.md'
                 },
                 {
                     title: '实战',   // 必要的
@@ -21,11 +21,11 @@ exports.mulu = {
                     children: [
                         {
                             title: 'RabbitMQ安装',   // 必要的
-                            path: 'mq/RabbitMQ/action/RabbitMQ安装.md'
+                            path: 'dependencies/mq/RabbitMQ/action/RabbitMQ安装.md'
                         },
                         {
                             title: 'SpringBoot整合RabbitMQ',   // 必要的
-                            path: 'mq/RabbitMQ/action/SpringBoot整合RabbitMQ.md'
+                            path: 'dependencies/mq/RabbitMQ/action/SpringBoot整合RabbitMQ.md'
                         }]
                 }
             ]

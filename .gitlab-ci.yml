@@ -1,9 +1,9 @@
-image: node:9.11.1
+# image: node:9.11.1
 
 # 定义 build 和 package 两个 Stages
 stages:
   - test
-  - build
+  # - build
   - deploy
 
 # 定义 test 阶段的一个 job
@@ -13,14 +13,14 @@ test-job:
     - echo "TODO test"
 
 # 定义 build 阶段的一个 job
-build-job:
-  stage: build
-  script:
-    - echo "项目打包 build 开始"
-    # npm install 服务器一直卡着，耗时太久。改为直接将node_modules上传
-    # -  npm install 
-    - npm run build
-    - echo "项目打包 build 结束"
+# build-job:
+#   stage: build
+#   script:
+#     - echo "项目打包 build 开始"
+#     # npm install 服务器一直卡着，耗时太久。改为直接将node_modules上传
+#     # -  npm install 
+#     - npm run build
+#     - echo "项目打包 build 结束"
 
 
 
