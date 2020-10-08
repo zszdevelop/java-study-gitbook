@@ -585,7 +585,6 @@
 2020/ToInt16.js	spackled linguist-generated=true
 2020/ToInt32.js	spackled linguist-generated=true
 2020/ToInt8.js	spackled linguist-generated=true
-2020/ToInteger.js	spackled linguist-generated=true
 2020/ToLength.js	spackled linguist-generated=true
 2020/ToNumber.js	spackled linguist-generated=true
 2020/ToObject.js	spackled linguist-generated=true

@@ -263,7 +263,18 @@ module.exports = function GetIntrinsic(name, allowMissing) {
 				if (!allowMissing && !(part in value)) {
 					throw new $TypeError('base intrinsic for ' + name + ' exists, but the property is not available.');
 				}
-				value = isOwn ? desc.get || desc.value : value[part];
+				// By convention, when a data property is converted to an accessor
+				// property to emulate a data property that does not suffer from
+				// the override mistake, that accessor's getter is marked with
+				// an `originalValue` property. Here, when we detect this, we
+				// uphold the illusion by pretending to see that original data
+				// property, i.e., returning the value rather than the getter
+				// itself.
+				if (isOwn && 'get' in desc && !('originalValue' in desc.get)) {
+					value = desc.get;
+				} else {
+					value = value[part];
+				}
 			} else {
 				isOwn = hasOwn(value, part);
 				value = value[part];
