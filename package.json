@@ -11,7 +11,7 @@
   "author": "zsz",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.5.4"
+    "vuepress": "^1.6.0"
   },
   "dependencies": {
     "markdown-it-disable-url-encode": "^1.0.1"
