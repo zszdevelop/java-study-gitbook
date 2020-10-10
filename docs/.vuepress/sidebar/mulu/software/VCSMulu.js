@@ -11,6 +11,10 @@ exports.mulu = {
             sidebarDepth: 1,    // 可选的, 默认值是 1
             children: [
                 {
+                    title: '删除.git中的错误提交的文件',   // 必要的
+                    path: 'tools/vcs/git/删除.git中的错误提交的文件.md'
+                },
+                {
                     title: 'gitignore文件屏蔽规则',   // 必要的
                     path: 'tools/vcs/git/gitignore文件屏蔽规则.md'
                 }, {

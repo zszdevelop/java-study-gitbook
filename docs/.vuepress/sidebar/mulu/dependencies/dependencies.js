@@ -10,6 +10,7 @@ var SwaggerMulu = require('./SwaggerMulu.js');
 var DruidMulu = require('./DruidMulu.js');
 var OfficeMulu = require('./OfficeMulu.js');
 var MQMulu = require('./MQMulu.js');
+var HibernateMulu = require('./HibernateMulu.js');
 
 exports.mulu = {
     title: '第三方依赖',   // 必要的
@@ -28,6 +29,7 @@ exports.mulu = {
         SwaggerMulu.mulu,
         DruidMulu.mulu,
         MQMulu.mulu,
-        OfficeMulu.mulu
+        OfficeMulu.mulu,
+        HibernateMulu.mulu
     ]
 }
