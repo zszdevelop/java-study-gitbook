@@ -6,7 +6,11 @@ exports.mulu = {
     children: [
         {
             title: 'Maven核心知识',   // 必要的
-            path: 'tools/maven/Maven核心知识.md'
+            path: 'dependencies/maven/Maven核心知识.md'
+        },
+        {
+            title: 'Maven依赖中的scope详解',   // 必要的
+            path: 'dependencies/maven/Maven依赖中的scope详解.md'
         }
     ]
 }

@@ -1,5 +1,6 @@
 var LayoutMulu = require('./LayoutMulu');
 var CssMulu = require('./CssMulu');
+var JsMulu = require('./JsMulu');
 var ProblemMulu = require('./ProblemMulu');
 var OptimizationMulu = require('./OptimizationMulu');
 var PluginMulu = require('./PluginMulu');
@@ -13,6 +14,7 @@ exports.mulu = {
     children: [
         LayoutMulu.mulu,
         CssMulu.mulu,
+        JsMulu.mulu,
         ProblemMulu.mulu,
         OptimizationMulu.mulu,
         PluginMulu.mulu,

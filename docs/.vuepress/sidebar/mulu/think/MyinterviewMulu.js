@@ -32,7 +32,7 @@ exports.mulu = {
                 },
                 {
                     title: 'Spring面试提问',   // 必要的
-                    path: 'spring/interview/Spring面试提问.md'
+                    path: 'dependencies/spring/interview/Spring面试提问.md'
                 },
                 {
                     title: 'MySql面试提问',   // 必要的

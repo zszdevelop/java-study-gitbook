@@ -21,6 +21,10 @@ exports.mulu = {
         {
             title: 'Hibernate的四种查询方式',   // 必要的
             path: 'dependencies/hibernate/Hibernate的四种查询方式.md'
+        },
+        {
+            title: 'Hibernate实体类创建规则',   // 必要的
+            path: 'dependencies/hibernate/Hibernate实体类创建规则.md'
         }
 
 

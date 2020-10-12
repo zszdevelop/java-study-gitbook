@@ -27,6 +27,16 @@ exports.mulu = {
                             title: 'SpringBoot整合RabbitMQ',   // 必要的
                             path: 'dependencies/mq/RabbitMQ/action/SpringBoot整合RabbitMQ.md'
                         }]
+                },
+                {
+                    title: '场景实例',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'RabbitMQ场景-商城下单，超时取消订单',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/scene/RabbitMQ场景-商城下单，超时取消订单.md'
+                        }]
                 }
             ]
         }
