@@ -19,10 +19,15 @@ exports.mulu = {
             sidebarDepth: 1,    // 可选的, 默认值是 1
             children: [
                 {
+                    title:'IDEA常用快捷键（MAC和WIN对比）',
+                    path:'software/idea/keymap/IDEA常用快捷键MAC和WIN对比.md'
+                },
+                {
                     title:'IDEA上阅读源码快捷键',
                     path:'software/idea/keymap/IDEA上阅读源码快捷键.md'
-                }]},
-                {
+                }
+            ]},
+        {
                     title:'IDEA maven下载jar包太慢',
                     path:'tools/ide/idea/IDEAmaven下载jar包太慢.md'
                 }

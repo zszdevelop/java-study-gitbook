@@ -7,10 +7,10 @@ var ZookeeperMulu = require('./ZookeeperMulu.js');
 var PushMulu = require('./PushMulu.js');
 var MavenMulu = require('./MavenMulu.js');
 var SwaggerMulu = require('./SwaggerMulu.js');
-var DruidMulu = require('./DruidMulu.js');
 var OfficeMulu = require('./OfficeMulu.js');
 var MQMulu = require('./MQMulu.js');
 var HibernateMulu = require('./HibernateMulu.js');
+var DBManagerMulu = require('./DBManagerMulu.js');
 
 exports.mulu = {
     title: '第三方依赖',   // 必要的
@@ -27,9 +27,9 @@ exports.mulu = {
         PushMulu.mulu,
         MavenMulu.mulu,
         SwaggerMulu.mulu,
-        DruidMulu.mulu,
         MQMulu.mulu,
         OfficeMulu.mulu,
-        HibernateMulu.mulu
+        HibernateMulu.mulu,
+        DBManagerMulu.mulu
     ]
 }

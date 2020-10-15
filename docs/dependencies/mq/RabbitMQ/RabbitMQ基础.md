@@ -25,8 +25,6 @@ RabbitMQ 整体上是一个生产者与消费者模型，主要负责接收、�
 
 ![image-20191106222444116](./img/image-20191106222444116.png)
 
-### 
-
 #### 2.1 Producer(生成者)和 Consumer(消费者)
 
 - **Producer(生产者)**：生产消息的一方（邮件投递者）
@@ -42,7 +40,7 @@ RabbitMQ 整体上是一个生产者与消费者模型，主要负责接收、�
 
 生产者把消息交由RabbitMQ后，RabbitMQ会**根据消息头把消息发送给感兴趣的Consumer(消费者)**。
 
-#### 2.2 Exchange(交换器)
+### 2.2 Exchange(交换器)
 
 在RabbitMQ 中，消息并不是直接被投递到 Queue（消息队列）中的，中间还需要**经过 Exchange(交换器)这一层**。Exchange(交换器)会把我们的消息分配到对应的Queue（消息队列）中
 
@@ -53,9 +51,20 @@ RabbitMQ 整体上是一个生产者与消费者模型，主要负责接收、�
 **RabbitMQ 的Exchange（交换器）有四种类型，不同的类型对应着不同的路由策略**
 
 - direct（默认的）
+
+  >*直接丟給指定的 Queue*
+
 - fanout
+
+  >*一次丟給全部負責的 Queue*
+
 - topic
+
+  >*類似 regular expression，設定 binding 規則，丟給符合的 Queue*
+
 - headers
+
+  >*透過傳送資料的 header 來特別指定所要的 Queue*
 
 不同类型的Exchange转发消息的策略有所区别。
 
@@ -64,6 +73,8 @@ RabbitMQ 整体上是一个生产者与消费者模型，主要负责接收、�
 ![image-20191106224716648](./img/image-20191106224716648.png)
 
 ### 2.3 Banding 绑定
+
+>*跟 Exchange 成對搭配，主要是告訴 Exchange 他負責哪些 Queue*
 
 生产者将消息发给交换器的时候，一般会指定一个 RoutingKey(路由键)，用来指定这个消息的路由规则，而这个RoutingKey需要与交换器类型和绑定键（Bindingkey）联合使用才能最终生效
 
@@ -77,7 +88,13 @@ RabbitMQ 中通过 Binding(绑定) 将 Exchange(交换器)与 Queue（消息队�
 
 生产者将消息发送给交换器时，需要一个RoutingKey，当BindingKey 和 RoutingKey 相匹配时，消息会被路由到对应的队列中。在绑定多个队列到同一个交换器的时候，这些绑定允许使用相同的BindKey。BindKey并不是在所有的情况下都生效，它依赖于交换器类型，比如fanout 类型的交换器就会无视，而是将消息路由到所有绑定到该交换器的队列中
 
-## 2.4 Queue（消息队列）
+### 2.4 Queue（消息队列）
+
+>负责存放所需要的资料 
+>
+>跟資料結構的 Queue 一樣，有先進先出 (FIFO) 特性
+>
+>每個 Queue 都會有他的名字當 id
 
 **Queue(消息队列)用来保存消息直到发送给消费者。他是消息的容器，也是消息的终点**。一个消息可投入一个或多个队列。消息一直在队列里面，等待消费者连接到这个队列将其取走
 
@@ -109,7 +126,7 @@ RabbitMQ常用的 Exchange Type 有 fanout、direct、topic、headers 这四种�
 
   ![image-20191106232655072](./img/image-20191106232655072.png)
 
-  以上图呀为例，如果发送消息的时候设置路由键为“wraning”，那么消息会路由到Queue1 和 Queue2 。如果在发送消息的时候，设置路由键为info或者“debug”，那么消息只会路由到Queue2.如果以其他的路由键发送消息，则消息不会路由到这两个队列中。
+  以上图为例，如果发送消息的时候设置路由键为“wraning”，那么消息会路由到Queue1 和 Queue2 。如果在发送消息的时候，设置路由键为info或者“debug”，那么消息只会路由到Queue2.如果以其他的路由键发送消息，则消息不会路由到这两个队列中。
   direct 类型常用在处理有优先级的任务，根据任务的优先级吧消息发送到对应的队列，这样可以指派更多的资源去处理高优先级的队列
 
 - topic
@@ -134,3 +151,6 @@ RabbitMQ常用的 Exchange Type 有 fanout、direct、topic、headers 这四种�
 
   headers 类型的交换器不依赖于路由键的匹配规则来路由消息，而是根据发送的消息内容中的 headers 属性进行匹配。在绑定队列和交换器时制定一组键值对，当发送消息到交换器时，RabbitMQ会获取到该消息的 headers（也是一个键值对的形式)'对比其中的键值对是否完全匹配队列和交换器绑定时指定的键值对，如果完全匹配则消息会路由到该队列，否则不会路由到该队列。headers 类型的交换器性能会很差，而且也不实用，基本上不会看到它的存在。
 
+## 参考文章
+
+[【RabbitMQ】五分鐘輕鬆了解 RabbitMQ 運作](https://medium.com/@zamhuang/rabbitmq-%E4%BA%94%E5%88%86%E9%90%98%E8%BC%95%E9%AC%86%E4%BA%86%E8%A7%A3-rabbitmq-%E9%81%8B%E4%BD%9C-fcaecbaa69d4)

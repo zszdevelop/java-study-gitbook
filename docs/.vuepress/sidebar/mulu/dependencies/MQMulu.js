@@ -15,6 +15,10 @@ exports.mulu = {
                     path: 'dependencies/mq/RabbitMQ/RabbitMQ基础.md'
                 },
                 {
+                    title: 'RabbitMQ通过TTL和死信队列实现延时队列',   // 必要的
+                    path: 'dependencies/mq/RabbitMQ/RabbitMQ通过TTL和死信队列实现延时消息.md'
+                },
+                {
                     title: '实战',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 1,    // 可选的, 默认值是 1

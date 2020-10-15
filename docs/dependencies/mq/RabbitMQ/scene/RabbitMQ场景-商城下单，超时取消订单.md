@@ -4,6 +4,10 @@
 
 >用于解决用户下单以后，订单超时如何取消订单的问题。
 
+>为什么需要使用延迟队列？适用于什么场景？  
+>
+>订单下单之后30分钟后，如果用户没有付钱，则系统自动取消订单。  这样类似的需求是我们经常会遇见的问题。最常用的方法是定期轮训数据库，设置状态。在数据量小的时候并没有什么大的问题，但是数据量一大轮训数据库的方式就会变得特别耗资源。当面对千万级、上亿级数据量时，本身写入的IO就比较高，导致长时间查询或者根本就查不出来。通过使用延迟队列来解决这种问题
+
 - 用户进行下单操作（会有锁定商品库存、使用优惠券、积分一系列的操作）；
 - 生成订单，获取订单的id；
 - 获取到设置的订单超时时间（假设设置的为60分钟不支付取消订单）；
@@ -48,19 +52,11 @@
 ```java
 package com.zszdevelop.rabbitmqdemo.enums;
 
-/**
- * @author 作者: zhangshengzhong
- * @文件名: QueueEnum
- * @版本号:1.0
- * @创建日期: 2020/10/12 14:09
- * @描述:
- */
 
 import lombok.Getter;
 
 /**
  * 消息队列枚举配置
- * Created by macro on 2018/9/14.
  */
 @Getter
 public enum QueueEnum {
@@ -194,12 +190,12 @@ public class RabbitMqConfig {
 
 ### 3.1 添加延迟消息的发送者CancelOrderSender
 
-> 用于向订单延迟消息队列（mall.order.cancel.ttl）里发送消息。
+> 用于向订单延迟消息队列（himall.order.cancel.ttl）里发送消息。
 
 ```java
-package com.macro.mall.portal.component;
+package com.zszdevelop.rabbitmqdemo.component;
 
-import com.macro.mall.portal.domain.QueueEnum;
+import com.zszdevelop.rabbitmqdemo.enums.QueueEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.AmqpException;
@@ -210,7 +206,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * 取消订单消息的生产者
+ * 取消订单消息的发出者
  */
 @Component
 public class CancelOrderSender {
@@ -228,14 +224,14 @@ public class CancelOrderSender {
                 return message;
             }
         });
-        LOGGER.info("send orderId:{}",orderId);
+        LOGGER.info("send delay message orderId:{}",orderId);
     }
 }
 ```
 
 ### 3.2 添加取消订单消息的接收者CancelOrderReceiver
 
-> 用于从取消订单的消息队列（mall.order.cancel）里接收消息。
+> 用于从取消订单的消息队列（himall.order.cancel）里接收消息。
 
 ```java
 package com.zszdevelop.rabbitmqdemo.component;
@@ -270,13 +266,6 @@ public class CancelOrderReceiver {
 ```java
 package com.zszdevelop.rabbitmqdemo.service;
 
-/**
- * @author 作者: zhangshengzhong
- * @文件名: OmsPortalOrderService
- * @版本号:1.0
- * @创建日期: 2020/10/12 14:38
- * @描述:
- */
 
 import com.zszdevelop.rabbitmqdemo.dto.CommonResult;
 import com.zszdevelop.rabbitmqdemo.dto.OrderParam;

@@ -17,6 +17,10 @@ exports.mulu = {
                 {
                     title: 'CSS属性box-sizing',   // 必要的
                     path: 'frontend/css/attribute/CSS属性box-sizing.md'
+                },
+                {
+                    title: 'css样式权重和优先级',   // 必要的
+                    path: 'frontend/css/attribute/css样式权重和优先级.md'
                 }
             ]
         }
