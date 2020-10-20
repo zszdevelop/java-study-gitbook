@@ -100,6 +100,7 @@ services:
       - /elk/elasticsearch/data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
+      - 9300:9300
   kibana:
     image: kibana:6.4.1
     container_name: kibana
@@ -147,23 +148,74 @@ docker ps -a
 
 - 如遇到状态为exit的，请查看当前内存是否足够
 
-## 4. Logstash中安装json_lines插件
+## 4.  安装插件
 
-### 4.1 进入Logstash容器
+## 4.1 Logstash中安装json_lines插件
 
-使用如下命令进入到Logstash容器中：
+1. 进入Logstash容器
 
-```
-docker exec -it logstash /bin/bash
-```
+   使用如下命令进入到Logstash容器中：
 
-### 4.2 安装步骤
+    ```
+    docker exec -it logstash /bin/bash
+    ```
 
-- 切换到/bin目录
-- 安装json_lines插件
-- 退出
+2. 安装步骤
 
-![image-20200127100248559](./img/image-20200127100248559.png)
+    - 切换到/bin目录
+    - 安装json_lines插件
+    - 退出
+
+    ![image-20200127100248559](./img/image-20200127100248559.png)
+    
+    ```bash
+    [root@iZwz97t3ru69kye3l7uj70Z DockerCompos]# docker exec -it logstash /bin/bash
+    bash-4.2$ cd /bin/
+    bash-4.2$ logstash-plugin install logstash-codec-json_lines
+    Validating logstash-codec-json_lines
+    Installing logstash-codec-json_lines
+    Installation successful
+    bash-4.2$ ^C
+    bash-4.2$ exit
+    exit
+    ```
+    
+    
+
+### 4.2 安装分词插件
+
+[分词插件](https://github.com/medcl/elasticsearch-analysis-ik)
+
+1. 进入容器
+
+  ```
+   docker exec -it elasticsearch /bin/bash
+  ```
+
+2. 安装分词器
+
+  ```bash
+ ./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.4.1/elasticsearch-analysis-ik-6.4.1.zip
+
+  ```
+
+3. 进入plugins可以看到IK分词器已经安装成功
+
+   ```
+   [root@7ee792e56428 elasticsearch]# cd plugins/
+   [root@7ee792e56428 plugins]# ls
+   analysis-ik
+   
+   ```
+
+4. 退出并重启镜像
+
+   ```
+   exit
+   docker restart elasticsearch
+   ```
+
+   
 
 ## 5. 效果
 

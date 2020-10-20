@@ -21,6 +21,12 @@ module.exports = {
   themeConfig: {
     // 导航栏图标
     logo: '/assets/img/logo.png',
+    repo: 'https://github.com/zszdevelop/java-study-gitbook',
+    repoLabel: 'Github',
+    // algolia: {
+    //   apiKey: '<API_KEY>',
+    //   indexName: '<INDEX_NAME>'
+    // },
     // 顶部导航栏
     nav: [
       {
@@ -46,7 +52,7 @@ module.exports = {
           { text: '日常思考', link: '/work/APP更新方案选择' }
         ]
       },
-      { text: 'Github', link: 'https://github.com/zszdevelop/java-study-gitbook' }
+      // { text: 'Github', link: 'https://github.com/zszdevelop/java-study-gitbook' }
     ],
     // 自动生成侧边栏  
     sidebar: sidebar.mulu
@@ -56,5 +62,7 @@ module.exports = {
       md.use(require("markdown-it-disable-url-encode"));
     }
   },
-  // plugins: [['vuepress-plugin-code-copy', true]]
+  plugins: [
+    ['@dovyp/vuepress-plugin-clipboard-copy', true]
+  ]
 }
