@@ -167,6 +167,21 @@ exports.mulu = {
         {
             title: 'Spring发展提升',   // 必要的
             path: 'dependencies/spring/development/Spring发展提升.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        }
+        },
+        {
+            title: '集成/使用问题',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 1,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '打jar包，没有主清单属性',
+                    path: 'dependencies/spring/problem/打jar包没有主清单属性.md'
+                },
+                {
+                    title: 'SpringBoot下定时任务方案',
+                    path: 'dependencies/spring/apply/scheduled/SpringBoot下定时任务方案.md'
+                }
+            ]
+        },
     ]
 }

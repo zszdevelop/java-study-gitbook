@@ -23,10 +23,10 @@ module.exports = {
     logo: '/assets/img/logo.png',
     repo: 'https://github.com/zszdevelop/java-study-gitbook',
     repoLabel: 'Github',
-    // algolia: {
-    //   apiKey: '<API_KEY>',
-    //   indexName: '<INDEX_NAME>'
-    // },
+    algolia: {
+      apiKey: 'c8e53deb617c118364166fcd7ed64423',
+      indexName: 'isture'
+    },
     // 顶部导航栏
     nav: [
       {

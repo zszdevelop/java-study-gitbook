@@ -12,8 +12,13 @@ exports.mulu = {
             children: [
                 {
                     title: 'CorsConfig',   // 必要的
-                    path: 'utils/跨域支持/CorsConfig.md',
+                    path: 'utils/java/跨域支持/CorsConfig.md',
                 }]
+        },
+        {
+            title: 'SpringContext工具类',   // 必要的
+            path: 'utils/java/SpringContext工具类.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+           
         }
     ]
 }
