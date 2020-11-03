@@ -72,13 +72,13 @@ public enum FieldType {
 
 按ctrl+F12 也可以显示所有方法
 
-![image-20201020100112292](.\img\image-20201020100112292.png)
+![image-20201020100112292](./img/image-20201020100112292.png)
 
 #### 1.2.2 衍生查询
 
 在接口中直接指定查询方法名称便可查询，无需进行实现，如商品表中有商品名称、标题和关键字，直接定义以下查询，就可以对这三个字段进行全文搜索。
 
-![image-20201020095859759](.\img\image-20201020095859759.png)
+![image-20201020095859759](./img/image-20201020095859759.png)
 
 #### 1.2.3 使用@Query注解可以用Elasticsearch的DSL语句进行查询
 
@@ -821,10 +821,10 @@ public class EsProductController {
 
 访问： http://localhost:8010/esProduct/importAll
 
-![image-20201020113456055](.\img\image-20201020113456055.png)
+![image-20201020113456055](./img/image-20201020113456055.png)
 
 ### 4.2 简单搜索
 
 访问：http://localhost:8010/esProduct/search/simple?keyword=手机
 
-![image-20201020135915200](.\img\image-20201020135915200.png)
+![image-20201020135915200](./img/image-20201020135915200.png)

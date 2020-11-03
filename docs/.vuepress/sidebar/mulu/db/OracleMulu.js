@@ -37,6 +37,33 @@ exports.mulu = {
         {
             title: '序列', 
             path:'db/Oracle/序列.md'
+        },
+        {
+            title: '存储结构', 
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 1,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '分区表',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'oracle分区表(partition)概念篇',   // 必要的
+                            sidebarDepth: 3,   
+                            path: 'db/Oracle/storage/partition/oracle分区表partition.md'
+                         },
+                         {
+                            title: 'oracle分区表-自动创建的分区',   // 必要的
+                            path: 'db/Oracle/storage/partition/oracle分区表-自动创建的分区.md'
+                         },
+                         {
+                            title: '5e数据大表-分区表查数据',   // 必要的
+                            path: 'db/Oracle/storage/partition/5e数据大表-分区表查数据.md'
+                         }
+                        ]
+                 }
+            ]
         }
     ]
 }

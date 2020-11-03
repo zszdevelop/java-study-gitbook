@@ -1,5 +1,17 @@
 # Oracle函数日期格式转换 to_date
 
+## 1. 比较日期
+
+查找出大于指定日期的数据
+
+```
+SELECT EMP_NAME, DEPT
+FROM EMPLOYEE
+WHERE TIME_CREATED >= TO_DATE('2020/11/11','yyyy/MM/dd')
+```
+
+
+
 ## 1. 字符串和时间转换
 
 ```sql

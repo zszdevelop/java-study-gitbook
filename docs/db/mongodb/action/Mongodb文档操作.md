@@ -16,7 +16,7 @@ Spring Data Mongodb是Spring提供的一种以Spring Data风格来操作数据�
 
 **继承MongoRepository接口可以获得常用的数据操作方法**
 
-![image-20201015161513489](.\img\image-20201015161513489.png)
+![image-20201015161513489](./img/image-20201015161513489.png)
 
 IDEA查看的快捷键：
 
@@ -53,7 +53,7 @@ public interface MemberReadHistoryRepository extends MongoRepository<MemberReadH
 
 > 在IDEA中直接会提示对应的字段
 
-![image-20201015162632877](.\img\image-20201015162632877.png)
+![image-20201015162632877](./img/image-20201015162632877.png)
 
 
 
@@ -304,7 +304,7 @@ public class MemberReadHistoryController {
 
 访问： http://localhost:8010/member/readHistory/create
 
-![image-20201015163918672](.\img\image-20201015163918672.png)
+![image-20201015163918672](./img/image-20201015163918672.png)
 
 
 
@@ -312,7 +312,7 @@ public class MemberReadHistoryController {
 
 http://localhost:8010/member/readHistory/list?memberId=11
 
-![image-20201015164032869](.\img\image-20201015164032869.png)
+![image-20201015164032869](./img/image-20201015164032869.png)
 
 ### 3.3 删除指定id的商品浏览记录
 
