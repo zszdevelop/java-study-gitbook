@@ -347,6 +347,20 @@ select * from all_part_tables;                   ---当前用户可访问的所�
 select * from user_part_tables;               ---当前用户的所有分区表信息
 ```
 
+### 7.4 查询所有分区
+
+```sql
+select * from all_tab_partitions;
+```
+
+### 7.5 查询某一分区上的表
+
+```sql
+select * from MyTable partition(SYS_P101);
+```
+
+
+
 ## 参考文章
 
 [对oracle分区表的理解整理](http://blog.itpub.net/31401608/viewspace-2147665/)

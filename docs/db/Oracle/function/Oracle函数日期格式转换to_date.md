@@ -46,7 +46,7 @@ TO_DATE ('2002-08-26','YYYY-mm-dd','NLS_DATE_LANGUAGE = American')
 ## 4. 两个日期间的天数
 
 ```sql
-select floor(sysdate - to_date('20020405','yyyymmdd')) from dual;
+select floor(sysdate - to_date('20200405','yyyymmdd')) from dual;
 ```
 
 

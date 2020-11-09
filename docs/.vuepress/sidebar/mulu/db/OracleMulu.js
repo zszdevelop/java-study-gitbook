@@ -39,6 +39,30 @@ exports.mulu = {
             path:'db/Oracle/序列.md'
         },
         {
+            title: 'DDL(数据库模式定义语言)', 
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 1,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '索引',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: '索引',   // 必要的
+                            sidebarDepth: 3,   
+                            path: 'db/Oracle/ddl/index/索引.md'
+                         },
+                        {
+                            title: 'oracle创建、查看索引和数据量',   // 必要的
+                            sidebarDepth: 3,   
+                            path: 'db/Oracle/ddl/index/oracle创建查看索引和数据量.md'
+                         }
+                        ]
+                 }
+            ]
+        },
+        {
             title: '存储结构', 
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 1,    // 可选的, 默认值是 1
