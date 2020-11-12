@@ -6,11 +6,11 @@ exports.mulu = {
     children: [
         {
             title: '博客框架选型',   // 必要的
-            path: 'work/博客框架选型.md'
+            path: 'think/work/博客框架选型.md'
         },
         {
             title: 'APP更新方案选择',   // 必要的
-            path: 'work/APP更新方案选择.md'
+            path: 'think/work/APP更新方案选择.md'
         }
     ]
 }

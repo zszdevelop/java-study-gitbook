@@ -6,7 +6,7 @@ exports.mulu = {
     children: [
         {
             title: '项目开发流程',   // 必要的
-            path: 'peojectManage/项目开发流程.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            path: 'think/peojectManage/项目开发流程.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           
         }
     ]
