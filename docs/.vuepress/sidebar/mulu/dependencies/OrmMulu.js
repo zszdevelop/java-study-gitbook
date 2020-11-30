@@ -43,6 +43,17 @@ exports.mulu = {
                             title: 'JPA的getOne报错',   // 必要的
                             path: 'dependencies/orm/jpa/problem/jpa的getOne报错.md'
                         }]
+                },
+                {
+                    title: '辅助功能',   // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: '根据数据库表生成实体类',   // 必要的
+                            path: 'dependencies/orm/jpa/auxiliary/根据数据库表生成实体类.md'
+                        }]
                 }
             ]
         }

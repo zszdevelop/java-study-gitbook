@@ -33,6 +33,12 @@ exports.mulu = {
                 {
                     title: 'Linux文件大小和磁盘使用情况',   // 必要的
                     path: 'linux/operation/Linux文件大小.md'
+                }, {
+                    title: 'linux查看指定程序是否运行及关闭',   // 必要的
+                    path: 'linux/operation/linux查看指定程序是否运行及关闭.md'
+                }, {
+                    title: 'linux查找文件夹具体位置',   // 必要的
+                    path: 'linux/operation/linux查找文件夹具体位置.md'
                 },
                
             ]

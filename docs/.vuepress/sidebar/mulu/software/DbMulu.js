@@ -13,6 +13,10 @@ exports.mulu = {
                 {
                     title:'PL/SQL Developer导入、导出表结构和表数据',
                     path:'software/dbsoftware/plsql/plsql导入导出表结构和表数据.md'
+                },
+                {
+                    title:'plsql导出建表语句（包括存储过程、视图）',
+                    path:'software/dbsoftware/plsql/plsql导出建表语句.md'
                 }
             ]
         }
