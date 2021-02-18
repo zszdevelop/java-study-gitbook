@@ -1,0 +1,23 @@
+# linux
+
+- [操作命令](linux/operation/README.md)
+  - [用户管理](linux/operation/用户管理.md)
+  - [查找文件](linux/operation/查找文件.md)
+  - [根据端口号/进程号查项目位置](linux/operation/根据端口号/进程号查项目位置.md)
+- [sshd](linux/sshd/README.md)
+  - [ssh一段时间就断掉](linux/sshd/ssh一段时间就断掉.md)
+- [清除挖矿程序（sysupdate, networkservice进程）](linux/error/清除挖矿程序.md)
+- 软件安装
+  - [Java安装](linux/insatll/java.md)
+  - MySQL
+    - [CentosMySQL安装](db/mysql/CentosMySQL安装.md)
+  - [nginx](linux/nginx/README.md)
+    - [安装nginx](linux/nginx/安装nginx.md)
+    - 问题集锦
+      - [nginx设置请求body大小](linux/nginx/problem/nginx设置请求body大小.md)
+      - [403 Forbidden](linux/nginx/problem/403Forbidden.md)
+      - [支持websocket](linux/nginx/problem/支持websocket.md)
+  - [FTP](linux/ftp/README.md)
+    - [安装FTP服务](linux/ftp/安装FTP服务.md)
+  - [unzip](linux/unzip/README.md)
+  - [kafka](linux/kafka/README.md)

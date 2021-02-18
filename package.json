@@ -1,0 +1,23 @@
+{
+  "name": "java",
+  "version": "1.0.0",
+  "description": "java学习笔记",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix-memory-limit": "cross-env LIMIT=2048 increase-memory-limit"
+  },
+  "author": "zsz",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.6.0",
+    "increase-memory-limit": "^1.0.7",
+    "cross-env": "^5.0.5"
+  },
+  "dependencies": {
+    "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
+    "markdown-it-disable-url-encode": "^1.0.1"
+  }
+}
