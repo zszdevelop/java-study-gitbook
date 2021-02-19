@@ -19,13 +19,17 @@ exports.mulu = {
                     path: 'dependencies/mq/RabbitMQ/RabbitMQ通过TTL和死信队列实现延时消息.md'
                 },
                 {
-                    title: '实战',   // 必要的
+                    title: '安装与实战',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 1,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'RabbitMQ安装',   // 必要的
                             path: 'dependencies/mq/RabbitMQ/action/RabbitMQ安装.md'
+                        },
+                        {
+                            title: 'RabbitMQ安装',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/install/Docker安装RabbitMQ.md'
                         },
                         {
                             title: 'SpringBoot整合RabbitMQ',   // 必要的
