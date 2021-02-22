@@ -1,69 +1,118 @@
 # nginx设置开机自启动
 
-## 1. 在/etc/init.d 下创建文件nginx
+>centos 7开机自启动有两种不同的设置方式，如果是yum直接安装的软件服务，则直接开启即可，如果是源码编译安装的，则需要在系统服务（system）创建service文件，然后才能设置。
 
-Vim 创建nginx文件
+## 1.  前言
 
-```
-vim /etc/init.d/nginx
-```
+centos 7以上是用Systemd进行系统初始化的，Systemd 是 Linux 系统中最新的初始化系统（init），它主要的设计目标是克服 sysvinit 固有的缺点，提高系统的启动速度。
 
-编辑de内容
+## 2. 安装方式为：yum直接安装Nginx服务
 
-[官网配置](https://www.nginx.com/resources/wiki/start/topics/examples/redhatnginxinit/)
+Systemd服务文件以`.service`结尾，比如现在要建立nginx为开机启动，如果用`yum install`命令安装的，yum命令会自动创建`nginx.service`文件，直接用命令:
 
-需要修改以下两处
-
-```
-nginx=”/usr/local/nginx/sbin/nginx” //修改成nginx执行程序的路径。
-
-NGINX_CONF_FILE=”/usr/local/nginx/conf/nginx.conf” //修改成nginx.conf文件的路径。
+```sh
+systemcel enable nginx.service
 ```
 
-保存后设置文件的执行权限
+## 3.安装方式为： 源码编译安装
 
-```
-chmod a+x /etc/init.d/nginx
-```
+在这里我是用源码编译安装的，所以要手动创建`nginx.service`服务文件。开机没有登陆情况下就能运行的程序，存在系统服务（system）里，即：
 
-至此就可以通过下面指令控制启动停止
-
-```
-/etc/init.d/nginx start
-/etc/init.d/nginx stop
+```sh
+/lib/systemd/system/
 ```
 
-上面的方法完成了用脚本管理nginx服务的功能，但是还是不太方便。
+### 3.1 创建nginx.service文件
 
-## 2. 将nginx服务加入chkconfig
-
-先将nginx服务加入chkconfig管理列表：
+在系统服务目录里创建nginx.service文件
 
 ```
-chkconfig --add /etc/init.d/nginx
+vim /lib/systemd/system/nginx.service
 ```
 
-加完这个之后，就可以使用service对nginx进行启动，重启等操作了。
+写入内容如下：
 
 ```
-service nginx start
-service nginx stop
-service nginx restart
+[Unit]
+Description=nginx
+After=network.target
+  
+[Service]
+Type=forking
+ExecStart=/usr/local/nginx/sbin/nginx
+ExecReload=/usr/local/nginx/sbin/nginx -s reload
+ExecStop=/usr/local/nginx/sbin/nginx -s quit
+PrivateTmp=true
+  
+[Install]
+WantedBy=multi-user.target
 ```
 
-最后设置开机自动启动
+**[Unit]:服务的说明**
+
+Description:描述服务
+After:描述服务类别
+[Service]服务运行参数的设置
+Type=forking是后台运行的形式
+ExecStart为服务的具体运行命令
+ExecReload为重启命令
+ExecStop为停止命令
+PrivateTmp=True表示给服务分配独立的临时空间
+注意：[Service]的启动、重启、停止命令全部要求使用绝对路径
+[Install]运行级别下服务安装的相关设置，可设置为多用户，即系统运行级别为3
+
+### 3.2 设置开机启动
 
 ```
- chkconfig nginx on
+systemctl enable nginx.service
 ```
 
-### 2.1 如出现“服务 nginx 不支持 chkconfig”
-
-在/etc/init.d/nginx加上
+### 3.3 查看nginx状态
 
 ```
-#!/bin/sh
-#chkconfig: 2345 80 90
-#description:auto_run
+systemctl status nginx.service
 ```
 
+### 3.4 其他命令
+
+启动nginx服务
+
+```
+systemctl start nginx.service　
+```
+
+设置开机自启动
+
+```
+systemctl enable nginx.service
+```
+
+停止开机自启动
+
+```
+systemctl disable nginx.service
+```
+
+查看服务当前状态
+
+```
+systemctl status nginx.service
+```
+
+重新启动服务
+
+```
+systemctl status nginx.service
+```
+
+查看所有已启动的服务
+
+```
+systemctl list-units --type=service
+```
+
+
+
+## 参考文章
+
+[CentOS7.5 设置 Nginx 开机自启动](https://segmentfault.com/a/1190000022665540)

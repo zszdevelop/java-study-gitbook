@@ -126,6 +126,14 @@ grep "temporary password" /var/log/mysqld.log
 
 ### 1.5 重置密码
 
+使用默认密码登录
+
+```sh
+mysql -u root -p
+```
+
+设置密码
+
 ```
 SET PASSWORD = PASSWORD('123456');
 ```
@@ -162,7 +170,7 @@ show variables like "%char%";
 修改编码,在
 
 ```
-vim /etc/my.cnf`
+vim /etc/my.cnf
 ```
 
 新增服务端默认字符集
@@ -173,7 +181,7 @@ vim /etc/my.cnf`
 character-set-server=utf8
 ```
 
-![image-20210207165359177](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210207165359177.png)
+![image-20210219161142953](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210219161142953.png)
 
 ### 参考文章
 

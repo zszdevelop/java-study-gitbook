@@ -5,6 +5,14 @@
 1. 获取镜像并运行
 
    ```
+   docker run -d -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+   ```
+
+   -d 后台运行程序
+
+   包含删除历史rabbitmq
+
+   ```
    docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
    ```
 
@@ -13,8 +21,6 @@
    ```
    docker ps
    ```
-
-   ![image-20200802235205255](/Users/zsz/Library/Application Support/typora-user-images/image-20200802235205255.png)
 
 3. 查看容器日志
 
@@ -52,12 +58,13 @@ rabbitmqctl add_user root 123456
     rabbitmqctl set_permissions -p / root ".*" ".*" ".*"
    ```
    
+
 2.4 赋予root用户administrator角色
-   
+
 ```
    root@3ae75edc48e2:/# rabbitmqctl set_user_tags root administrator
-   ```
-   
+```
+
    2.5查看所有用户,即可看到root用户已经添加成功
 
    ```
@@ -67,9 +74,9 @@ root@3ae75edc48e2:/# rabbitmqctl list_users
    guest	[administrator]
    root	[administrator]
    ```
-   
+
    执行`exit`命令，从容器内部退出即可。这时我们使用root账户登录web界面也是可以的。到此，rabbitMq的安装就结束了，接下里就实际代码开发。
-   
+
 
 
 ## 参考文章

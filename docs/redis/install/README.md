@@ -10,19 +10,13 @@ wget http://download.redis.io/releases/redis-5.0.5.tar.gz
 
 具体下载哪个版本可以在[redis官网](<http://download.redis.io/releases/>)上选择
 
-### 1.2 拷贝到/usr/local 下
-
-```
-cp redis-5.0.5.tar.gz /usr/local
-```
-
-### 1.3 解压源码
+### 1.2 解压源码
 
 ```
 tar -zxvf redis-5.0.5.tar.gz
 ```
 
-### 1.4 编译
+### 1.3 编译
 
 ```
 cd /usr/local/redis-5.0.5
@@ -31,7 +25,7 @@ make PREFIX=/usr/local/redis install
 
 编译后的redis在 `/usr/local/redis`目录下
 
-#### 1.4.1 如遇安装异常cc: command not found
+#### 1.3.1 如遇安装异常cc: command not found
 
 /bin/sh: cc: command not found
 
@@ -43,20 +37,20 @@ make PREFIX=/usr/local/redis install
 yum install gcc
 ```
 
-#### 1.4.2 make时报如下错误
+#### 1.3.2 make时报如下错误
 
 原因是jemalloc重载了Linux下的ANSI C的malloc和free函数。解决办法：make时添加参数。
 
 
 
-### 1.5 redis的配置文件
+### 1.4 redis的配置文件
 
 redis.conf是redis的配置文件，redis.conf在redis源码目录。
 拷贝配置文件到安装目录下
 进入源码目录，里面有一份配置文件 redis.conf，然后将其拷贝到安装路径下
 
 ```
-cp /usr/local/redis-5.0.5/redis.conf /usr/local/redis/bin/
+cp redis.conf /usr/local/redis/bin/
 ```
 
 ## 2. bin目录结构

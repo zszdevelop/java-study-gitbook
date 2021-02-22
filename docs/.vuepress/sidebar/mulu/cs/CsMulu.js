@@ -82,10 +82,6 @@ exports.mulu = {
                 {
                     title: '网站支持https',   // 必要的
                     path: 'problem&solve/https/网站支持https.md'
-                },
-                {
-                    title: '网站支持https',   // 必要的
-                    path: 'problem&solve/https/网站支持https.md'
                 }
             ]
         }

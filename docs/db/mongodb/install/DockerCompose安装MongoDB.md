@@ -32,7 +32,7 @@ docker-compose 使用比dockerfile 更加方便
 
    ```sh
    mkdir /home/mongodb/db
-   mkdir/home/mongodb/log
+   mkdir /home/mongodb/log
    ```
 
    > 一般我们希望对镜像中的磁盘做外部映射，这样即使容器退出了，下次启动，容器中保留的数据不会丢失。

@@ -11,6 +11,9 @@ exports.mulu = {
         {
             title: 'APP更新方案选择',   // 必要的
             path: 'think/work/APP更新方案选择.md'
+        },{
+            title: '阿里云服务器购买选择',   // 必要的
+            path: 'think/work/阿里云服务器购买选择.md'
         }
     ]
 }

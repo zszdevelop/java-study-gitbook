@@ -28,7 +28,7 @@ exports.mulu = {
                             path: 'dependencies/mq/RabbitMQ/action/RabbitMQ安装.md'
                         },
                         {
-                            title: 'RabbitMQ安装',   // 必要的
+                            title: 'Docker安装RabbitMQ',   // 必要的
                             path: 'dependencies/mq/RabbitMQ/install/Docker安装RabbitMQ.md'
                         },
                         {
