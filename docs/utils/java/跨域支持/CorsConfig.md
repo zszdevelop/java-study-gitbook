@@ -46,7 +46,7 @@ public class CorsConfig {
 
 我们也可以卸载拦截器上
 
-```
+```java
 
 public class MyInterceptor implements HandlerInterceptor {
 
@@ -71,6 +71,23 @@ public class MyInterceptor implements HandlerInterceptor {
 
     }
 }
+
+```
+
+新建WebAppConfigurer 实现WebMvcConfigurer接口
+
+```java
+@Configuration
+public class WebAppConfigurer implements WebMvcConfigurer {
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        // 可添加多个
+        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**");
+    }
+
+}
+
 
 ```
 

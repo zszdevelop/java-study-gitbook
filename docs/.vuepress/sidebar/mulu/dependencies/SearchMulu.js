@@ -20,9 +20,16 @@ exports.mulu = {
                 }
             ]
         },
-        // {
-        //     title: '全文搜索引擎 ElasticSearch 还是 Solr？',   // 必要的
-        //     path: '全文搜索引擎对比'
-        // },
+        {
+            title: 'Solr',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 1,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'Solr入门',   // 必要的
+                    path: 'dependencies/search/solr/Solr入门.md'
+                }
+            ]
+        },
     ]
 }
