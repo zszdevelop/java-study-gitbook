@@ -75,6 +75,10 @@ run方法的第4步
 >3. 构造Spring容器(ApplicationContext)，并返回
 >4. 从Spring容器中找出ApplicationRunner和CommandLineRunner接口的实现类并排序后依次执行
 
+业务提炼 精简版
+
+>springboot 通过根据配置文件自动装配所属依赖的类，再用动态代理的方式注入到Spring容器里面
+
 ## 参考文章
 
 [SpringBoot源码分析之SpringBoot的启动过程](https://fangjian0423.github.io/2017/04/30/springboot-startup-analysis/)
