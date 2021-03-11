@@ -14,6 +14,25 @@ exports.mulu = {
                     path: 'python/libs3th/BeautifulSoup/BeautifulSoup入门.md'
                 }
             ]
+        },{
+            title: 'Scrapy（爬取数据，提取结构化）',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 1,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'Scrapy入门',   // 必要的
+                    path: 'python/libs3th/Scrapy/Scrapy入门.md'
+                }, {
+                    title: 'Scrapy入门（二）-爬取豆瓣电影TOP250',   // 必要的
+                    path: 'python/libs3th/Scrapy/Scrapy入门二爬取豆瓣电影TOP250.md'
+                }, {
+                    title: 'Scrapy入门（三）-调试(Debugging)Spiders',   // 必要的
+                    path: 'python/libs3th/Scrapy/Scrapy入门三调试(Debugging)Spiders.md'
+                }, {
+                    title: 'Scrapy入门（四）-抓取AJAX异步加载网页',   // 必要的
+                    path: 'python/libs3th/Scrapy/Scrapy入门四抓取AJAX异步加载网页.md'
+                }
+            ]
         },
         {
             title: 'lxml（解析库）',   // 必要的

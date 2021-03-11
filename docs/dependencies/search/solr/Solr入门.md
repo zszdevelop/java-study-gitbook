@@ -43,6 +43,8 @@ solr start
 
 ### 4.1 建立核心（core）
 
+#### 4.1.1 方式1：命令行建core
+
 >核心：独立模式下启动的配置称为核心
 >
 >集合：在SolrCloud模式启动的配置称为集合
@@ -68,6 +70,30 @@ solr create -c jcg
 JCG核心被填充在核心选择器上。
 
 ![image-20210301160034928](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301160034928.png)
+
+#### 4.1.2 方式二：界面操作
+
+1. 在core admin上点击new core新建
+
+   ![image-20210304151629768](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304151629768.png)
+
+2. 此时会提示**'solrconfig.xml** 文件找不到
+
+   ![image-20210304151726594](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304151726594.png)
+
+3. 此时我们去安装目录下，可以看到已经新建了一个core目录。
+
+   ![image-20210304151943980](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304151943980.png)
+
+   4. 报错是因为需要的配置文件不存在，我们去拷贝过来即可。
+
+      进入F:\solr-7.7.3\server\solr\configsets\_default 目录下，把conf文件夹copy到
+
+      F:\solr-7.7.3\server\solr\new_core 目录下，然后再执行Add core。
+
+      然后等待1-2s，会进入以下界面：
+
+      ![image-20210304152230352](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304152230352.png)
 
 ### 4.2 修改Schema.xml 文件
 
@@ -121,8 +147,13 @@ java -jar post.jar -h
 java -Dtype=text/csv -Durl=http://localhost:8983/solr/jcg/update  -jar post.jar   books.csv
 ```
 
--dtype - 数据文件的类型。
--Durl - JCG核心的地址。
+- -Dtype
+
+    数据文件的类型。
+
+- -Durl 
+
+   JCG核心的地址。
 
 导航到以下网址并选择核心JCG:
 

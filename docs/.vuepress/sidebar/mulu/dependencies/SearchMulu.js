@@ -28,6 +28,14 @@ exports.mulu = {
                 {
                     title: 'Solr入门',   // 必要的
                     path: 'dependencies/search/solr/Solr入门.md'
+                },
+                {
+                    title: 'Solr查询语法与参数',   // 必要的
+                    path: 'dependencies/search/solr/Solr查询语法与参数.md'
+                },
+                {
+                    title: 'Solr配置中文分词器ik-analyzer',   // 必要的
+                    path: 'dependencies/search/solr/Solr配置中文分词器ik-analyzer.md'
                 }
             ]
         },
