@@ -235,9 +235,23 @@ Nginx 的安装分为两个步骤：
 
    前面我们说过，Storage 由很多组构成，每个组又是一个小的集群，在每一个组里边，数据会进行同步，但是如果数据还没同步，这个时候就有请求发来了，该怎么办？此时**fastdfs-nginx-module 会帮助我们直接从源 Storage 上获取文件。**
 
-## 3. Java客户端调用
+## 3. 启动fastDFS
 
-### 3.1 相关配置
+重启tracker
+
+```bash
+/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf start
+```
+
+重启storage
+
+```bash
+/usr/bin/fdfs_storaged /etc/fdfs/storage.conf start
+```
+
+## 4. Java客户端调用
+
+### 4.1 相关配置
 
 安装成功后，接下来我们就用 Java 客户端来测试一下文件上传下载。
 
@@ -270,7 +284,7 @@ Nginx 的安装分为两个步骤：
    fastdfs.tracker_servers: 这是 Tracker 的地址，根据实际情况配置即可。
 
 
-### 3.2 文件上传
+### 4.2 文件上传
 
    配置完成后，先来看文件上传，代码如下：
 
@@ -315,7 +329,7 @@ Nginx 的安装分为两个步骤：
 
       就是文件的路径，此时，在浏览器中输入http://120.79.200.xxx:8701/group1/M00/00/00/eE_Ib1_S57OAa6pQAADzHWHkPwM335.jpg 就可以看到上传的图片了。
       
-   #### 3.2.1 图片显示不出
+   #### 4.2.1 图片显示不出
 
 FastDFS 配好了，Nginx也配好了，可是网页打开图片地址就是访问不了，查看Nginx的log文件看到
 ```sh
@@ -335,7 +349,7 @@ FastDFS 配好了，Nginx也配好了，可是网页打开图片地址就是访�
 
 重启fastdfs 和 nginx
 
-### 3.3 文件下载
+### 4.3 文件下载
 
 ```java
   @Test
@@ -359,7 +373,9 @@ FastDFS 配好了，Nginx也配好了，可是网页打开图片地址就是访�
 
 直接调用 download_file1 方法获取到一个 byte 数组，然后通过 IO 流写出到本地文件即可。
 
-## 4. 安全问题
+
+
+## 5. 安全问题
 
 现在，任何人都可以访问我们服务器上传文件，这肯定是不行的，这个问题好解决，加一个上传时候的令牌即可。
 
@@ -402,9 +418,9 @@ FastDFS 配好了，Nginx也配好了，可是网页打开图片地址就是访�
 
    http://120.79.200.xxx:8701/group1/M00/00/00/eE_Ib1_S57OAa6pQAADzHWHkPwM335.jpg?token=94a8e7167e1583b0efa674d0dbf5fc63&ts=1607670503。**此时访问路径里边如果没有令牌，会访问失败。**
 
-## 5.异常处理
+## 6.异常处理
 
-### 5.1 getStoreStorage fail, errno code: 28
+### 6.1 getStoreStorage fail, errno code: 28
 
 ![image-20201211113209071](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211113209071.png)
 
@@ -431,6 +447,18 @@ reserved_storage_space = 10%
 1. 删除不用文件，最好调用DFS的删除API执行删除，因为DFS会维护一个索引文件，调用API删除时会连同索引文件都会删除。这种方式谨慎使用。
 2. 如果文件不允许删除，则需要扩展磁盘。
 3. 临时解决方案，调小该比例
+
+### 6.2 客户端连接超时
+
+connect timed out
+
+![image-20210324234312735](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210324234312735.png)
+
+我们需要确认fdfs 端口是否打开，如果是阿里云服务器，则需要配置安全组
+
+![image-20210324234130717](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210324234130717.png)
+
+端口有两个：**22122 和23000 都要开启**！！！！
 
 ## 参考文章
 
