@@ -1,6 +1,6 @@
 # js调用Android方法
 
-本文参考[博客原文](<https://www.jianshu.com/p/345f4d8a5cfa>)整理，并对他进行补充扩展，并对原文深表感谢。
+## 1. 简介
 
 对于JS调用Android代码的方法有3种：
 
@@ -8,9 +8,9 @@
 2. 通过 `WebViewClient` 的`shouldOverrideUrlLoading ()`方法回调拦截 url
 3. 通过 `WebChromeClient` 的`onJsAlert()`、`onJsConfirm()`、`onJsPrompt（）`方法回调拦截JS对话框`alert()`、`confirm()`、`prompt（）` 消息
 
-## 方法分析
+## 2. 三种方法实现
 
-### 方式1：通过 `WebView`的`addJavascriptInterface（）`进行对象映射
+### 2.1 方式1：通过 `WebView`的`addJavascriptInterface（）`进行对象映射
 
 **步骤1：定义一个与JS对象映射关系的Android类：AndroidtoJs**
 
@@ -36,7 +36,7 @@ public class AndroidtoJs extends Object {
 
 *需要加载JS代码：javascript.html*
 
-```
+```html
 <!DOCTYPE html>
 <html>
    <head>
@@ -60,7 +60,7 @@ public class AndroidtoJs extends Object {
 
 如在vue中也是一样的写法
 
-```
+```js
 methods: {
     callApp(){
         test.hello("哈哈，我是js调用的")
@@ -71,7 +71,7 @@ methods: {
 
 步骤3：在Android里通过WebView设置Android类与JS代码的映射**
 
-```
+```java
 public class MainActivity extends AppCompatActivity {
 
     WebView mWebView;
@@ -97,14 +97,14 @@ public class MainActivity extends AppCompatActivity {
         mWebView.loadUrl("file:///android_asset/javascript.html");
 ```
 
-# 特点
+#### 2.1.1 方式1 特点
 
 - 优点：使用简单
 - 缺点：存在严重的漏洞问题
 
 
 
-# 方式2：通过 `WebViewClient` 的方法`shouldOverrideUrlLoading ()`回调拦截 url
+### 2.2 方式2：通过 `WebViewClient` 的方法`shouldOverrideUrlLoading ()`回调拦截 url
 
 - 具体原理：
 
@@ -206,7 +206,7 @@ mWebView.setWebViewClient(new WebViewClient() {
         }
 ```
 
-# 特点
+#### 2.2.1 方式2 特点
 
 - 优点：不存在方式1的漏洞；
 - 缺点：JS获取Android方法的返回值复杂。
@@ -223,15 +223,11 @@ function returnResult(result){
 }
 ```
 
-# 方式3：通过 `WebChromeClient` 的`onJsAlert()`、`onJsConfirm()`、`onJsPrompt（）`方法回调拦截JS对话框`alert()`、`confirm()`、`prompt（）` 消息
+### 2.3 方式3：通过 `WebChromeClient` 的`onJsAlert()`、`onJsConfirm()`、`onJsPrompt（）`方法回调拦截JS对话框`alert()`、`confirm()`、`prompt（）` 消息
 
 在JS中，有三个常用的对话框方法：
 
-
-
-![img](./944365-1385f748618af886.png)
-
-
+![944365-1385f748618af886](https://gitee.com/zszdevelop/blogimage/raw/master/944365-1385f748618af886.png)
 
 方式3的原理：Android通过 `WebChromeClient` 的`onJsAlert()`、`onJsConfirm()`、`onJsPrompt（）`方法回调分别拦截JS对话框
  （即上述三个方法），得到他们的消息内容，然后解析即可。
@@ -358,6 +354,6 @@ public class MainActivity extends AppCompatActivity {
         }
 ```
 
-## 2.2.2 三种方式的对比 & 使用场景
+## 3. 三种方式的对比 & 使用场景
 
-![](./944365-8c91481325a5253e.png)
+![944365-8c91481325a5253e](https://gitee.com/zszdevelop/blogimage/raw/master/944365-8c91481325a5253e.png)
