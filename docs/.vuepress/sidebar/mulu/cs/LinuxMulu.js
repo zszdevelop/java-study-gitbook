@@ -46,6 +46,9 @@ exports.mulu = {
                 }, {
                     title: 'Linux文件压缩和解压',   // 必要的
                     path: 'cs/linux/operation/Linux文件压缩和解压.md'
+                }, {
+                    title: 'Centos防火墙firewalld操作',   // 必要的
+                    path: 'cs/linux/firewalld/Centos防火墙firewalld操作.md'
                 }
                
             ]

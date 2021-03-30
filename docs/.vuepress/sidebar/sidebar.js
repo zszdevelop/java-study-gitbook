@@ -5,12 +5,14 @@ var microservice = require('./mulu/microservice/microservice');
 var framework = require('./mulu/framework/framework');
 var test = require('./mulu/test/test');
 var frontend = require('./mulu/frontend/frontend');
+var android = require('./mulu/android/android');
 var cs = require('./mulu/cs/cs');
 var software = require('./mulu/software/software');
 var utils = require('./mulu/utils/utils.js');
 var principle = require('./mulu/principle/principle.js');
 var think  = require('./mulu/think/think.js');
 var python  = require('./mulu/python/python.js');
+var localization  = require('./mulu/localization/localization.js');
 
 
 exports.mulu  = [
@@ -25,11 +27,13 @@ exports.mulu  = [
         framework.mulu,
         test.mulu,
         frontend.mulu,
+        android.mulu,
         python.mulu,
         cs.mulu,
         software.mulu,
         utils.mulu,
         principle.mulu,
+        localization.mulu,
         think.mulu
       ];
 

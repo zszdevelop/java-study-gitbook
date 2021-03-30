@@ -5,6 +5,23 @@ exports.mulu = {
     sidebarDepth: 1,    // 可选的, 默认值是 1
     children: [
         {
+            title: 'MyBatis',   // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 1,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'Mybatis生成实体类',   // 必要的
+                    path: 'dependencies/orm/Mybatis/Mybatis生成实体类.md'
+                    
+                },
+                {
+                    title: 'Mybatis常见面试题',   // 必要的
+                    path: 'dependencies/orm/Mybatis/interview/Mybatis常见面试题.md'
+                }
+            ]
+        },
+        {
             title: 'JPA',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
@@ -95,6 +112,38 @@ exports.mulu = {
                         }
                     ]
                 }
+            ]
+        },
+        {
+            title: 'Hibernate',   // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 1,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '集成使用',   // 必要的
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'Maven集成Hibernate示例',   // 必要的
+                            path: 'dependencies/orm/hibernate/Maven集成Hibernate示例.md'
+                        }]
+                },
+                {
+                    title: 'Hibernate概念与原理',   // 必要的
+                    path: 'dependencies/orm/hibernate/Hibernate概念与原理.md'
+                },
+                {
+                    title: 'Hibernate的四种查询方式',   // 必要的
+                    path: 'dependencies/orm/hibernate/Hibernate的四种查询方式.md'
+                },
+                {
+                    title: 'Hibernate实体类创建规则',   // 必要的
+                    path: 'dependencies/orm/hibernate/Hibernate实体类创建规则.md'
+                }
+        
+        
             ]
         }
     ]
