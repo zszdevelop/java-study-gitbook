@@ -4,7 +4,9 @@
 
 > Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务的接口文档。
 
-文档随代码变化而变化
+ *1. 接口的文档在线自动生成。*
+
+ *2. 功能测试。*
 
 ## 2.集成
 
@@ -157,6 +159,8 @@ swagger:
   
   // 2.扫描base包形式
   .apis(RequestHandlerSelectors.basePackage("com.ylzinfo.appfactory"))
+  // 2.1 多包扫描base包形式
+  .apis(basePackage("com.example.demo.controller;com.example.demo.test"))
   
   // 3.扫描带有对应注解的方式
   // 3.1带有@Api注解
@@ -172,10 +176,12 @@ swagger:
 - path：扫描接口的路径，PathSelectors下有四种方法
 
   ```java
-  // 全部扫描
-  paths(PathSelectors.any())
+  // any() --- 匹配所有的路径
+  // ant() --- 匹配传入参数的
+  // regex() --- 通过正则表达式匹配路径
+paths(PathSelectors.any())
   ```
-
+  
   
 
 ### 2.3 打开swagger地址

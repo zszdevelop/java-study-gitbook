@@ -38,13 +38,23 @@ exports.mulu = {
             sidebarDepth: 1,    // 可选的, 默认值是 1
             children: [
                 {
-                    title: 'SpringBoot整合Spring Security',   // 必要的
-                    path: 'rbac/SpringSecurity/SpringBoot整合SpringSecurity.md'
+                    title: 'SpringSecurity入门实战(一)',   // 必要的
+                    path: 'rbac/SpringSecurity/SpringSecurity入门实战.md'
+                }, {
+                    title: 'SpringSecurity核心组件(二)',   // 必要的
+                    path: 'rbac/SpringSecurity/SpringSecurity核心组件.md'
+                }, {
+                    title: 'SpringSecurity工作原理(三)',   // 必要的
+                    path: 'rbac/SpringSecurity/SpringSecurity工作原理.md'
                 },
-                {
-                    title: 'Spring Security入门',   // 必要的
-                    path: 'rbac/SpringSecurity/SpringSecurity入门.md'
-                }
+                // {
+                //     title: 'SpringBoot整合Spring Security',   // 必要的
+                //     path: 'rbac/SpringSecurity/SpringBoot整合SpringSecurity.md'
+                // },
+                // {
+                //     title: 'Spring Security入门',   // 必要的
+                //     path: 'rbac/SpringSecurity/SpringSecurity入门.md'
+                // }
             ]
         },
         {
