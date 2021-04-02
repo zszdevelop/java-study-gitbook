@@ -2,13 +2,13 @@ exports.mulu = {
     title: 'SQL',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: 'SELECT',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'SELECT检索数据',   // 必要的
@@ -46,7 +46,7 @@ exports.mulu = {
             title: 'INSERT',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'INSERT插入数据',   // 必要的
@@ -57,7 +57,7 @@ exports.mulu = {
             title: 'UPDATE',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'UPDATE更新数据',   // 必要的
@@ -68,7 +68,7 @@ exports.mulu = {
             title: 'DELETE',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'DELETE删除数据',   // 必要的
@@ -79,7 +79,7 @@ exports.mulu = {
             title: '创建和操纵表',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'CREATE TABLE 创建表',   // 必要的

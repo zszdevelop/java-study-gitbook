@@ -2,13 +2,13 @@ exports.mulu = {
     title: 'MongoDB',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: '安装',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Docker安装MongoDB',   // 必要的
@@ -27,7 +27,7 @@ exports.mulu = {
             title: '入门',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'MongoDB入门',   // 必要的
@@ -65,7 +65,7 @@ exports.mulu = {
             title: '实战',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Mongodb文档操作',   // 必要的
@@ -81,7 +81,7 @@ exports.mulu = {
             title: '问题',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'mongodb异常关闭后，如何修复启动',   // 必要的

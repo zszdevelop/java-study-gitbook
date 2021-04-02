@@ -2,14 +2,18 @@ exports.mulu = {
     title: 'Linux',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: '操用命令',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
+                {
+                    title: 'Linux命令行学习-tldr',   // 必要的
+                    path: 'cs/linux/operation/Linux命令行学习-tldr.md'
+                },
                 {
                     title: '查看Linux版本',   // 必要的
                     path: 'cs/linux/operation/查看Linux版本.md'
@@ -57,7 +61,7 @@ exports.mulu = {
             title: 'ssh',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'ssh一段时间就断掉',   // 必要的
@@ -69,7 +73,7 @@ exports.mulu = {
             title: '挖矿',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: '清除挖矿程序（sysupdate, networkservice进程）',   // 必要的
@@ -89,7 +93,7 @@ exports.mulu = {
             title: 'Swap交换分区',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Linux Swap交换分区',   // 必要的
@@ -101,7 +105,7 @@ exports.mulu = {
             title: '软件安装',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Java安装',   // 必要的
@@ -111,7 +115,7 @@ exports.mulu = {
                     title: 'FTP',   // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: '安装FTP服务',   // 必要的
@@ -132,7 +136,7 @@ exports.mulu = {
             title: '云服务器ECS',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children:[{
                 title: '安装/重装系统',   // 必要的
                 path: 'cs/aliyun/ecs/安装系统.md', 

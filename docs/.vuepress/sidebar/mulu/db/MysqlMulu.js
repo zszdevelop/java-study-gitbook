@@ -2,7 +2,7 @@ exports.mulu = {
     title: 'MySql',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: 'CentosMySQL安装',   // 必要的
@@ -19,7 +19,7 @@ exports.mulu = {
         {
             title: '索引',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: '索引常见的数据结构',
@@ -46,7 +46,7 @@ exports.mulu = {
         {
             title: '统计',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Mysql按日、周、月进行分组统计',
@@ -57,7 +57,7 @@ exports.mulu = {
         {
             title: '锁',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: '锁',
@@ -72,7 +72,7 @@ exports.mulu = {
         {
             title: '常用操作',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: '常用操作',
@@ -91,7 +91,7 @@ exports.mulu = {
         {
             title: '性能优化',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: '大表优化',
@@ -117,7 +117,7 @@ exports.mulu = {
         {
             title: '备份',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: '热备份和冷备份概念',
@@ -128,7 +128,7 @@ exports.mulu = {
         {
             title: '问题集锦',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: '无法连接远端Mysql',

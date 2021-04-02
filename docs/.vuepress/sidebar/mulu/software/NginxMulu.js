@@ -2,7 +2,7 @@ exports.mulu = {
     title: 'nginx',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title:'安装nginx',
@@ -16,7 +16,7 @@ exports.mulu = {
             title: '问题集锦',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'nginx设置请求body大小',   // 必要的

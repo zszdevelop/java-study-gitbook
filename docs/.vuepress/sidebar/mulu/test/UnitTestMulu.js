@@ -2,7 +2,7 @@ exports.mulu = {
     title: '单元测试',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: '单元测试',   // 必要的
@@ -12,7 +12,7 @@ exports.mulu = {
             title: 'Junit',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Junit4常见注解和执行顺序',   // 必要的
@@ -28,7 +28,7 @@ exports.mulu = {
             title: 'Mock',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Mock',   // 必要的
@@ -38,7 +38,7 @@ exports.mulu = {
                     title: 'Mockito',   // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'Mockito基本功能',   // 必要的

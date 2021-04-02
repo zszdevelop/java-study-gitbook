@@ -2,19 +2,19 @@ exports.mulu = {
     title: 'office相关',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: '在线office',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'OnlyOffice',   // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'OnlyOffice功能及演示',   // 必要的
@@ -35,7 +35,7 @@ exports.mulu = {
             title: 'java导出生成word',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'java导出生成word之技术选型',   // 必要的
@@ -44,7 +44,7 @@ exports.mulu = {
                 {
                     title: 'XML方式',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'java导出生成word之XML方式',   // 必要的
@@ -56,7 +56,7 @@ exports.mulu = {
         {
             title: 'word转pdf',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'java将word转成pdf之技术选型',   // 必要的
@@ -65,7 +65,7 @@ exports.mulu = {
                 {
                     title: 'docx4j的exportpdf组件',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'java将word转成pdf之docx4j的exportpdf组件',   // 必要的

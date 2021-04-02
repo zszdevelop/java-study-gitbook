@@ -2,7 +2,7 @@ exports.mulu = {
     title: '权限管理系统',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: 'RBAC权限管理',   // 必要的
@@ -15,7 +15,7 @@ exports.mulu = {
             title: 'shiro',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'shiro基础',   // 必要的
@@ -35,7 +35,7 @@ exports.mulu = {
             title: 'Spring Security',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'SpringSecurity入门实战(一)',   // 必要的
@@ -46,6 +46,9 @@ exports.mulu = {
                 }, {
                     title: 'SpringSecurity工作原理(三)',   // 必要的
                     path: 'rbac/SpringSecurity/SpringSecurity工作原理.md'
+                }, {
+                    title: 'SpringSecurity四种权限控制方式',   // 必要的
+                    path: 'rbac/SpringSecurity/SpringSecurity四种权限控制方式.md'
                 },
                 // {
                 //     title: 'SpringBoot整合Spring Security',   // 必要的
@@ -61,7 +64,7 @@ exports.mulu = {
             title: 'OAuth2',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'OAuth2基础',   // 必要的
@@ -73,7 +76,7 @@ exports.mulu = {
             title: 'jwt',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'JWT详解',   // 必要的

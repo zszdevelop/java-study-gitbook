@@ -2,7 +2,7 @@ exports.mulu = {
     title: 'Redis',   // 必要的
     // path: '/redis/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 1,    // 可选的, 默认值是 1
+    sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
             title: 'redis面试考点',   // 必要的
@@ -15,7 +15,7 @@ exports.mulu = {
         {
             title: 'redis使用场景',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Redis缓存场景',   // 必要的
@@ -24,7 +24,7 @@ exports.mulu = {
                 {
                     title: 'hash场景',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'Redis修改局部信息场景，如用户信息（hash,）',   // 必要的
@@ -34,7 +34,7 @@ exports.mulu = {
                 }, {
                     title: 'list场景',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'Redis用作消息队列(list)',   // 必要的
@@ -48,7 +48,7 @@ exports.mulu = {
                 }, {
                     title: 'set场景',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: '共同好友列表 (set)',   // 必要的
@@ -58,7 +58,7 @@ exports.mulu = {
                 }, {
                     title: 'zset场景',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 1,    // 可选的, 默认值是 1
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
                         {
                             title: 'Redis排行榜场景（zset）',   // 必要的
@@ -83,7 +83,7 @@ exports.mulu = {
         {
             title: 'Redis可能出现的问题',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Redis缓存雪崩',   // 必要的
@@ -110,7 +110,7 @@ exports.mulu = {
         {
             title: 'redis分布式锁',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'redis分布式锁',   // 必要的
@@ -133,7 +133,7 @@ exports.mulu = {
         {
             title: 'Redis面经',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'redis面试问题',   // 必要的
@@ -148,7 +148,7 @@ exports.mulu = {
         {
             title: '安装',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Redis安装',   // 必要的
@@ -162,7 +162,7 @@ exports.mulu = {
         {
             title: 'Redis使用',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'Spring Boot集成redis使用',   // 必要的
@@ -183,7 +183,7 @@ exports.mulu = {
         {
             title: 'Redis实战',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 1,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
                     title: 'SpringBoot集成redis项目范例',   // 必要的
