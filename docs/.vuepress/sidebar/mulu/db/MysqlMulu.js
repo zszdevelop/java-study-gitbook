@@ -149,8 +149,19 @@ exports.mulu = {
                 }
             ]
         }, {
-            title: 'MySql面试提问',   // 必要的
-            path: "db/mysql/interview/MySql面试提问.md"
+            title: '面试真题',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '手写SQL面试题',   // 必要的
+                    path: "db/mysql/interview/手写SQL面试题.md"
+                },
+                {
+                    title: 'MySql面试提问',   // 必要的
+                    path: "db/mysql/interview/MySql面试提问.md"
+                }
+            ]
         }
     ]
 }
