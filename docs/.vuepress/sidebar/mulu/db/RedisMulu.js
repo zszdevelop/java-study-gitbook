@@ -10,8 +10,8 @@ exports.mulu = {
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
-                    title: 'Redis为什么redis能这么快？',   // 必要的
-                    path: 'redis/interview/Redis为什么redis能这么快.md'
+                    title: '为什么redis能这么快？',   // 必要的
+                    path: 'redis/interview/为什么redis能这么快.md'
                 },{
                     title: 'Redis从海量数据里查询某一固定前缀的key',   // 必要的
                     path: 'redis/interview/Redis从海量数据里查询某一固定前缀的key.md'
@@ -21,6 +21,15 @@ exports.mulu = {
                 },{
                     title: 'Redis如何实现异步队列?',   // 必要的
                     path: 'redis/interview/Redis如何实现异步队列.md'
+                },{
+                    title: 'Redis如何做持久化',   // 必要的
+                    path: 'redis/interview/Redis如何做持久化.md'
+                },{
+                    title: 'Redis主从同步',   // 必要的
+                    path: 'redis/interview/Redis主从同步.md'
+                },{
+                    title: 'Redis集群',   // 必要的
+                    path: 'redis/interview/Redis集群.md'
                 },
                 {
                     title: 'redis面试考点',   // 必要的
