@@ -5,9 +5,42 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
-            title: 'redis面试考点',   // 必要的
-            path: 'redis/interview/'
-        },
+            title: 'Redis面经',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '为什么redis能这么快？',   // 必要的
+                    path: 'redis/interview/为什么redis能这么快.md'
+                },{
+                    title: 'Redis从海量数据里查询某一固定前缀的key',   // 必要的
+                    path: 'redis/interview/Redis从海量数据里查询某一固定前缀的key.md'
+                },{
+                    title: 'Redis如何实现分布式锁?',   // 必要的
+                    path: 'redis/interview/Redis如何实现分布式锁.md'
+                },{
+                    title: 'Redis如何实现异步队列?',   // 必要的
+                    path: 'redis/interview/Redis如何实现异步队列.md'
+                },{
+                    title: 'Redis如何做持久化',   // 必要的
+                    path: 'redis/interview/Redis如何做持久化.md'
+                },{
+                    title: 'Redis主从同步',   // 必要的
+                    path: 'redis/interview/Redis主从同步.md'
+                },{
+                    title: 'Redis集群',   // 必要的
+                    path: 'redis/interview/Redis集群.md'
+                },
+                {
+                    title: 'redis面试考点',   // 必要的
+                    path: 'redis/interview/'
+                },
+                {
+                    title: 'redis面试问题',   // 必要的
+                    path: 'redis/interview/redis面试问题.md'
+                }
+            ]
+        } ,
         {
             title: 'redis事务',   // 必要的
             path: 'redis/interview/redis事务.md'
@@ -107,40 +140,30 @@ exports.mulu = {
                 },
             ]
         },
-        {
-            title: 'redis分布式锁',   // 必要的
-            collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
-                    title: 'redis分布式锁',   // 必要的
-                    path: 'redis/lock/'
-                },
-                {
-                    title: '一步步实现单机redis的分布式锁（setnx）',   // 必要的
-                    path: 'redis/lock/一步步实现单机redis的分布式锁.md'
-                },
-                {
-                    title: 'Redlock分布式锁',   // 必要的
-                    path: 'redis/lock/Redlock分布式锁.md'
-                },
-                {
-                    title: 'Redis的操作为什么是原子性的?',   // 必要的
-                    path: 'redis/lock/Redis的操作为什么是原子性的.md'
-                }
-            ]
-        },
-        {
-            title: 'Redis面经',   // 必要的
-            collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
-                    title: 'redis面试问题',   // 必要的
-                    path: 'redis/interview/redis面试问题.md'
-                }
-            ]
-        } ,
+        // {
+        //     title: 'redis分布式锁',   // 必要的
+        //     collapsable: true, // 可选的, 默认值是 true,
+        //     sidebarDepth: 2,    // 可选的, 默认值是 1
+        //     children: [
+        //         {
+        //             title: 'redis分布式锁',   // 必要的
+        //             path: 'redis/lock/'
+        //         },
+        //         {
+        //             title: '一步步实现单机redis的分布式锁（setnx）',   // 必要的
+        //             path: 'redis/lock/一步步实现单机redis的分布式锁.md'
+        //         },
+        //         {
+        //             title: 'Redlock分布式锁',   // 必要的
+        //             path: 'redis/lock/Redlock分布式锁.md'
+        //         },
+        //         {
+        //             title: 'Redis的操作为什么是原子性的?',   // 必要的
+        //             path: 'redis/lock/Redis的操作为什么是原子性的.md'
+        //         }
+        //     ]
+        // },
+       
         {
             title: 'Redist禁用危险命令',   // 必要的
             path: 'redis/interview/Redist禁用危险命令.md'
@@ -185,6 +208,11 @@ exports.mulu = {
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
+                
+                {
+                    title: '批量生成redis测试数据方法',   // 必要的
+                    path: 'redis/action/批量生成redis测试数据方法.md'
+                },
                 {
                     title: 'SpringBoot集成redis项目范例',   // 必要的
                     path: 'redis/action/SpringBoot集成redis项目范例.md'

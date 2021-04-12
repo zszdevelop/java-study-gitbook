@@ -11,6 +11,10 @@ exports.mulu = {
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
+                    title: 'linux安装mongoDB',   // 必要的
+                    path: 'db/mongodb/install/linux安装mongoDB.md'
+                },
+                {
                     title: 'Docker安装MongoDB',   // 必要的
                     path: 'db/mongodb/install/Docker安装MongoDB.md'
                 },

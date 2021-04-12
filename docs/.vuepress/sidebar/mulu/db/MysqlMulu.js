@@ -22,6 +22,10 @@ exports.mulu = {
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
+                    title: '索引',
+                    path: "db/mysql/index/索引.md"
+                },
+                {
                     title: '索引常见的数据结构',
                     path: "db/mysql/index/索引常见的数据结构.md"
                 },
@@ -36,6 +40,10 @@ exports.mulu = {
                 {
                     title: '联合索引',
                     path: "db/mysql/index/联合索引.md"
+                },
+                {
+                    title: '联合索引-最左匹配原则成因',
+                    path: "db/mysql/index/联合索引-最左匹配原则成因.md"
                 },
             ]
         },
@@ -106,9 +114,14 @@ exports.mulu = {
                     path: "db/mysql/optimize/like模糊查询优化.md"
                 },
                 {
+                    title: '如何调优慢查询SQL',
+                    path: "db/mysql/optimize/如何调优慢查询SQL.md"
+                }, 
+                {
                     title: 'Explain使用分析',
                     path: "db/mysql/optimize/Explain使用分析.md"
-                }, {
+                }, 
+                {
                     title: '一条SQL语句在MySQL中如何执行的',
                     path: "db/mysql/optimize/一条SQL语句在MySQL中如何执行的.md"
                 },
@@ -136,8 +149,19 @@ exports.mulu = {
                 }
             ]
         }, {
-            title: 'MySql面试提问',   // 必要的
-            path: "db/mysql/interview/MySql面试提问.md"
+            title: '面试真题',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '手写SQL面试题',   // 必要的
+                    path: "db/mysql/interview/手写SQL面试题.md"
+                },
+                {
+                    title: 'MySql面试提问',   // 必要的
+                    path: "db/mysql/interview/MySql面试提问.md"
+                }
+            ]
         }
     ]
 }
