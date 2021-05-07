@@ -23,7 +23,11 @@ exports.mulu = {
                 {
                     title: 'Oracle预定义函数',   // 必要的
                     path: 'db/Oracle/study/Oracle预定义函数.md'
-                 }
+                 },
+                 {
+                    title: '序列', 
+                    path:'db/Oracle/序列.md'
+                },
             ]
         },
         {
@@ -50,9 +54,14 @@ exports.mulu = {
             ]
         },
         {
-            title: '序列', 
-            path:'db/Oracle/序列.md'
-        },
+            title: '常用操作',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'Oracle导入导出dmp文件',   // 必要的
+                    path: 'db/Oracle/operation/Oracle导入导出dmp文件.md'
+                 }]},
         {
             title: 'DDL(数据库模式定义语言)', 
             collapsable: true, // 可选的, 默认值是 true,

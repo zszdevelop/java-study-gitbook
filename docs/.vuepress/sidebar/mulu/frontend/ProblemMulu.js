@@ -15,6 +15,10 @@ exports.mulu = {
         {
             title: 'Vue打包指定不压缩-排查线上问题',   // 必要的
             path: 'frontend/problem/Vue打包指定不压缩-排查线上问题.md'
+        },
+        {
+            title: 'npm install时遇到的问题 npm ERR! code ERESOLVE',   // 必要的
+            path: 'frontend/problem/npminstall时遇到的问题npmERRcodeERESOLVE.md'
         }
     ]
 }
