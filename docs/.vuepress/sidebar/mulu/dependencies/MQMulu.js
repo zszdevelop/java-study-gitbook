@@ -68,7 +68,7 @@ exports.mulu = {
                         }]
                 },
                 {
-                    title: '相关问题（面试）',   // 必要的
+                    title: '小技巧',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
