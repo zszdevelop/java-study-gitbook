@@ -74,7 +74,7 @@ exports.mulu = {
                     children: [
                         {
                             title: 'RabbitMQ消息如何保障100%投递成功?',   // 必要的
-                            path: 'dependencies/mq/RabbitMQ/interview/RabbitMQ消息如何保障100%投递成功.md'
+                            path: 'dependencies/mq/RabbitMQ/interview/RabbitMQ消息如何保障100投递成功.md'
                         }]
                 }
             ]
