@@ -132,7 +132,6 @@ export default {
     },
 
     onPlay(index) {
-      debugger;
       this.showVideo(true);
       let item = this.chunkList[index];
       this.video.src = item.stream;
