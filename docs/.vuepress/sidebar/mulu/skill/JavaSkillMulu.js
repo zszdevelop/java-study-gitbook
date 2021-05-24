@@ -7,6 +7,12 @@ exports.mulu = {
         {
             title: 'Java项目启动时执行指定方法的几种方式',   // 必要的
             path: 'skill/java/Java项目启动时执行指定方法的几种方式.md'
+        },{
+            title: 'RESTfulApi项目命名规范',   // 必要的
+            path: 'skill/java/RestfulApi项目命名规范.md'
+        },{
+            title: '数据库字典表设计与前端Element-select配合使用',   // 必要的
+            path: 'skill/java/数据库字典表设计与前端Element-select配合使用.md'
         }
     ]
 }

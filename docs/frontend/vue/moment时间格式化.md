@@ -60,6 +60,8 @@
 
 ## 3. 使用
 
+### 3.1 基础使用
+
 1. moment()
 
    要获取当前的日期和时间， 只需调用不带参数的`moment()` 即可。
@@ -93,9 +95,58 @@
    moment("12-25-1995", ["MM-DD-YYYY", "YYYY-MM-DD"]);
    ```
 
-   
 
+### 3.2 日期操作
 
+moment.js 使用流式接口，操作如
+
+```
+moment().add(7, 'days').subtract(1, 'months').year(2009).hours(0).minutes(0).seconds(0);
+```
+
+1. add()
+
+   为现有的 moment 增加时间
+
+   ```
+   moment().add(Number, String);
+   moment().add(Duration);
+   moment().add(Object);
+   ```
+
+   如：
+
+   ```javascript
+   moment().add(7, 'days');
+   ```
+
+   如果对希望简短，也有一些快捷的键。
+
+   ```javascript
+   moment().add(7, 'd');
+   ```
+
+   | 键           | 快捷键 |
+   | :----------- | :----- |
+   | years        | y      |
+   | quarters     | Q      |
+   | months       | M      |
+   | weeks        | w      |
+   | days         | d      |
+   | hours        | h      |
+   | minutes      | m      |
+   | seconds      | s      |
+   | milliseconds | ms     |
+
+2. ### subtract()
+
+   ```js
+   moment().subtract(Number, String);
+   moment().subtract(Duration);
+   moment().subtract(Object);
+   ```
+
+   通过减去时间来改变原始的 moment。
 
 ​	[更多使用参考官方文档](http://momentjs.cn/docs/)
 

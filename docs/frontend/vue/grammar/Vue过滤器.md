@@ -80,7 +80,22 @@ new Vue({
 
 这里，`filterA` 被定义为接收三个参数的过滤器函数。其中 `message` 的值作为第一个参数，普通字符串 `'arg1'` 作为第二个参数，表达式 `arg2` 的值作为第三个参数。
 
+## 4. 补充
 
+- 如果在element 的table 中，需要格式化数据也可以使用:formatter 达到文本格式化效果
+
+  ```vue
+   <el-table-column label="状态" align="center" prop="status" :formatter="statusFormat" />
+  ```
+
+  ```js
+    // 岗位状态字典翻译
+      statusFormat(row, column) {
+        return this.selectDictLabel(this.statusOptions, row.status);
+      },
+  ```
+
+  
 
 ## 参考文章
 

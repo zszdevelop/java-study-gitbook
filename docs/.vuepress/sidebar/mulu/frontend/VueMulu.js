@@ -14,6 +14,11 @@ exports.mulu = {
                     title: 'Vue过滤器',   // 必要的
                     path: 'frontend/vue/grammar/Vue过滤器.md'
                     
+                },
+                {
+                    title: 'Vue插件',   // 必要的
+                    path: 'frontend/vue/grammar/Vue插件.md'
+                    
                 }
             ]
         },

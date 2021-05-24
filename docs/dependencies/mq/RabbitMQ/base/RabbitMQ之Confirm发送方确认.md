@@ -189,4 +189,5 @@ for (int i = 0; i < 10; i++) {
 
 ## 参考文章
 
-https://zq99299.github.io/mq-tutorial/rabbitmq-ac/04/08.html#%E4%BA%8B%E7%89%A9%E6%9C%BA%E5%88%B6
+[生产者确认](https://zq99299.github.io/mq-tutorial/rabbitmq-ac/04/08.html#%E4%BA%8B%E7%89%A9%E6%9C%BA%E5%88%B6)
+

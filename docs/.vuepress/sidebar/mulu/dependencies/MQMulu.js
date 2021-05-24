@@ -20,17 +20,33 @@ exports.mulu = {
                             path: 'dependencies/mq/RabbitMQ/base/RabbitMQ基础.md'
                         },
                         {
-                            title: 'RabbitMQ通过TTL和死信队列实现延时队列',   // 必要的
-                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ通过TTL和死信队列实现延时消息.md'
-                        },
-                        {
                             title: 'RabbitMQ概念补充',   // 必要的
                             path: 'dependencies/mq/RabbitMQ/base/RabbitMQ概念补充.md'
                         },
                         {
                             title: 'RabbitMQ之生产者确认（事务与Confirm发送方确认）',   // 必要的
                             path: 'dependencies/mq/RabbitMQ/base/RabbitMQ之Confirm发送方确认.md'
+                        },{
+                            title: 'RabbitMQ的Return消息机制',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ的Return消息机制.md'
+                        },{
+                            title: 'RabbitMQ的消费端自定义监听',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ的消费端自定义监听.md'
+                        },{
+                            title: 'RabbitMQ消费端限流',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ消费端限流.md'
+                        },{
+                            title: 'RabbitMQ消费端的ack和重回队列',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ消费端的ack和重回队列.md'
                         },
+                       {
+                            title: 'RabbitMQ通过TTL队列/消息',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQTTL队列与消息.md'
+                        },
+                        {
+                             title: 'RabbitMQ死信队列',   // 必要的
+                             path: 'dependencies/mq/RabbitMQ/base/RabbitMQ死信队列.md'
+                         },
                     ]},
                 
                 
@@ -55,7 +71,12 @@ exports.mulu = {
                         {
                             title: 'SpringBoot整合RabbitMQ',   // 必要的
                             path: 'dependencies/mq/RabbitMQ/action/SpringBoot整合RabbitMQ.md'
-                        }]
+                        },
+                        {
+                            title: 'RabbitMQ通过TTL和死信队列实现延时队列',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ通过TTL和死信队列实现延时消息.md'
+                        },
+                    ]
                 },
                 {
                     title: '场景实例',   // 必要的

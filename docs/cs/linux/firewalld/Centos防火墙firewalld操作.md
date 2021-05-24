@@ -57,6 +57,16 @@ systemctl是CentOS7的服务管理工具中主要的工具，它融合之前serv
 
    firewall-cmd --zone= public --remove-port=80/tcp --permanent
 
+## 5. Centos6.X 防火墙操作
+
+- 开启命令：service iptables start
+
+- 关闭命令：service iptables stop
+
+- 永久关闭防火墙：chkconfig iptables off
+
+- 查看防火墙状态：service iptables status
+
 ## 参考文章
 
 [CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)
