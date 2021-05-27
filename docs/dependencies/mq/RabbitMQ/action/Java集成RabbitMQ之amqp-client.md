@@ -1,4 +1,4 @@
-# RabbitMQ入门实战
+# Java集成RabbitMQ(amqp-client)
 
 ## 1. 基础使用
 

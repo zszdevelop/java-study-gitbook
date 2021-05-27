@@ -1,4 +1,4 @@
-# SpringBoot整合RabbitMQ
+# SpringBoot集成RabbitMQ（spring-boot-starter-amqp）
 
 ## 1. 简介
 

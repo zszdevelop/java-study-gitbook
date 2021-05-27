@@ -11,7 +11,7 @@ exports.mulu = {
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
-                    title: '安装与实战',   // 必要的
+                    title: '基础',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
@@ -49,32 +49,39 @@ exports.mulu = {
                          },
                     ]},
                 
-                
+                    {
+                        title: '安装',   // 必要的
+                        collapsable: true, // 可选的, 默认值是 true,
+                        sidebarDepth: 2,    // 可选的, 默认值是 1
+                        children: [
+                            {
+                                title: 'RabbitMQ安装',   // 必要的
+                                path: 'dependencies/mq/RabbitMQ/install/RabbitMQ安装.md'
+                            },
+                            {
+                                title: 'Docker安装RabbitMQ',   // 必要的
+                                path: 'dependencies/mq/RabbitMQ/install/Docker安装RabbitMQ.md'
+                            }
+                        ]
+                    },
                 {
-                    title: '安装与实战',   // 必要的
+                    title: '实战',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2,    // 可选的, 默认值是 1
                     children: [
+
                         {
-                            title: 'RabbitMQ安装',   // 必要的
-                            path: 'dependencies/mq/RabbitMQ/install/RabbitMQ安装.md'
+                            title: 'Java集成RabbitMQ(amqp-client)',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/action/Java集成RabbitMQ之amqp-client.md'
                         },
                         {
-                            title: 'Docker安装RabbitMQ',   // 必要的
-                            path: 'dependencies/mq/RabbitMQ/install/Docker安装RabbitMQ.md'
-                        },
-                        {
-                            title: 'RabbitMQ入门实战',   // 必要的
-                            path: 'dependencies/mq/RabbitMQ/action/RabbitMQ入门实战.md'
+                            title: 'Spring集成RabbitMQ(spring-rabbit)',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/action/Spring集成RabbitMQ之spring-rabbit.md'
                         },
                         
                         {
-                            title: 'SpringBoot整合RabbitMQ',   // 必要的
-                            path: 'dependencies/mq/RabbitMQ/action/SpringBoot整合RabbitMQ.md'
-                        },
-                        {
-                            title: 'RabbitMQ通过TTL和死信队列实现延时队列',   // 必要的
-                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ通过TTL和死信队列实现延时消息.md'
+                            title: 'SpringBoot集成RabbitMQ（spring-boot-starter-amqp）',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/action/SpringBoot集成RabbitMQ.md'
                         },
                     ]
                 },
@@ -86,7 +93,11 @@ exports.mulu = {
                         {
                             title: 'RabbitMQ场景-商城下单，超时取消订单',   // 必要的
                             path: 'dependencies/mq/RabbitMQ/scene/RabbitMQ场景-商城下单，超时取消订单.md'
-                        }]
+                        },
+                        {
+                            title: 'RabbitMQ通过TTL和死信队列实现延时队列',   // 必要的
+                            path: 'dependencies/mq/RabbitMQ/base/RabbitMQ通过TTL和死信队列实现延时消息.md'
+                        },]
                 },
                 {
                     title: '小技巧',   // 必要的
