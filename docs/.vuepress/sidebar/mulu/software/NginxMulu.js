@@ -5,9 +5,18 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
-            title:'安装nginx',
-            path:'software/nginx/安装nginx.md'
-        },
+            title: '问题集锦',   // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [{
+                title:'Linux安装nginx',
+                path:'software/nginx/install/Linux安装nginx.md'
+            },{
+                title:'Mac安装nginx',
+                path:'software/nginx/install/Mac安装nginx.md'
+            } 
+        ]},
         {
             title:'nginx设置开机自启动',
             path:'software/nginx/nginx设置开机自启动.md'

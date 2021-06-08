@@ -1,4 +1,4 @@
-# 安装nginx
+# Linux安装nginx
 
 ## 1. 安装步骤
 

@@ -78,6 +78,46 @@ exports.mulu = {
                     path: 'frontend/vue/Vue指令v-for之遍历输出JavaScript数组json对象的几种方式.md'
                 }
             ]
+        },
+        {
+            title: 'UI框架', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'Element', // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [{
+                            title: 'Element文件上传Upload', // 必要的
+                            path: 'frontend/vue/ui/Element/Element文件上传Upload.md'
+        
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            title: '后台框架', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'vue-element-admin', // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [{
+                            title: 'vue-element-admin入门使用', // 必要的
+                            path: 'frontend/vue/admin/vue-element-admin/vue-element-admin入门使用.md'
+        
+                        }
+                    ]
+                },
+            ]
         }
     ]
 }

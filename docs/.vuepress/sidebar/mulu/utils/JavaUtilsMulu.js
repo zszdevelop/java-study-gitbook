@@ -16,6 +16,11 @@ exports.mulu = {
                 }]
         },
         {
+            title: 'SpringBoot文件上传',   // 必要的
+            path: 'utils/java/SpringBoot文件上传.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+           
+        },
+        {
             title: '全局异常处理',   // 必要的
             path: 'utils/java/全局异常处理.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
            

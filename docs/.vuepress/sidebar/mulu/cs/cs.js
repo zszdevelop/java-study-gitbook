@@ -11,5 +11,5 @@ exports.mulu = {
         LinuxMulu.mulu,
         CsMulu.mulu,
         WinMulu.mulu,
-        // MacMulu.mulu
+        MacMulu.mulu
     ]}

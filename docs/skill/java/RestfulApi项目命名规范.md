@@ -64,60 +64,49 @@ Controller 层
 
 ```java
 
-/**
- * 公告 信息操作处理
- * 
- */
+
 @RestController
+@Api(tags = {"公告 信息操作处理"})
 @RequestMapping("/system/notice")
 public class SysNoticeController extends BaseController
 {
     @Autowired
     private ISysNoticeService noticeService;
 
-    /**
-     * 获取通知公告列表
-     */
+  	@GetMapping("/list")
+  	@ApiOperation(value = "获取通知公告列表")
     public TableDataInfo list(SysNotice notice)
     {
         startPage();
         List<SysNotice> list = noticeService.selectNoticeList(notice);
         return getDataTable(list);
     }
-
-    /**
-     * 根据通知公告编号获取详细信息
-     */
+  
     @GetMapping(value = "/{noticeId}")
+  	@ApiOperation(value = "根据通知公告编号获取详细信息")
     public AjaxResult getInfo(@PathVariable Long noticeId)
     {
         return AjaxResult.success(noticeService.selectNoticeById(noticeId));
     }
 
-    /**
-     * 新增通知公告
-     */
     @PostMapping
+  	@ApiOperation(value = "新增通知公告")
     public AjaxResult add(@Validated @RequestBody SysNotice notice)
     {
         notice.setCreateBy(SecurityUtils.getUsername());
         return toAjax(noticeService.insertNotice(notice));
     }
 
-    /**
-     * 修改通知公告
-     */
     @PutMapping
+  	@ApiOperation(value = "修改通知公告")
     public AjaxResult edit(@Validated @RequestBody SysNotice notice)
     {
         notice.setUpdateBy(SecurityUtils.getUsername());
         return toAjax(noticeService.updateNotice(notice));
     }
 
-    /**
-     * 删除通知公告
-     */
     @DeleteMapping("/{noticeIds}")
+  	@ApiOperation(value = "删除通知公告")
     public AjaxResult remove(@PathVariable Long[] noticeIds)
     {
         return toAjax(noticeService.deleteNoticeByIds(noticeIds));
