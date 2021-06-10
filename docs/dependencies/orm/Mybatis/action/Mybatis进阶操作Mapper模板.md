@@ -53,3 +53,17 @@ mybatis的模板
    SELECT 1 FROM DUAL
 </insert>
 ```
+
+## 2. 批量删除
+
+Mysql和Oracle版本一致
+
+```xml
+<delete id="deleteBatch" parameterType="List">
+DELETE FROM STUDENT WHERE id IN
+<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+#{item}
+</foreach>
+</delete>
+```
+

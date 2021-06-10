@@ -26,7 +26,7 @@
 
    查看容器日志 使用`docker logs -f 容器ID`命令可以查看容器日志，我们执行`docker logs -f 3ae`命令查看rabbitMq在启动过程中日志，3ae是容器ID的简写——容器ID太长，使用时其写前几位即可
 
-   ![image-20200802235358837](/Users/zsz/Library/Application Support/typora-user-images/image-20200802235358837.png)
+   ![image-20200802235358837](https://gitee.com/zszdevelop/blogimage/raw/master/image-20200802235358837.png)
 
    从日志可以看出，rabbitMq默认创建了guest用户，并且赋予administrator角色权限，同时服务监听5672端口TCP连接和15672端口的HTTP连接，至此说明安装成功。
 
@@ -43,13 +43,13 @@
    2.1 进入到rabbitMq容器内部
 
    ```sh
-docker exec -i -t 3a8161fea5d8 bin/bash
+   docker exec -i -t 3a8161fea5d8 bin/bash
    ```
 
    2.2  添加用户，用户名为root,密码为123456
 
    ```
-rabbitmqctl add_user root 123456
+   rabbitmqctl add_user root 123456
    ```
 
    2.3 赋予root用户所有权限
@@ -57,7 +57,6 @@ rabbitmqctl add_user root 123456
    ```sh
     rabbitmqctl set_permissions -p / root ".*" ".*" ".*"
    ```
-   
 
 2.4 赋予root用户administrator角色
 

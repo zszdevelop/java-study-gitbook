@@ -17,6 +17,10 @@ exports.mulu = {
                     title: 'Vue插件', // 必要的
                     path: 'frontend/vue/grammar/Vue插件.md'
 
+                },
+                {
+                    title: 'Vue中8种组件通信方式', // 必要的
+                    path: 'frontend/vue/grammar/Vue中8种组件通信方式.md'
                 }
             ]
         },

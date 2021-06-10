@@ -24,6 +24,9 @@ exports.mulu = {
                     },{
                         title: 'Mybatis进阶操作Mapper模板（二）', // 必要的
                         path: 'dependencies/orm/Mybatis/action/Mybatis进阶操作Mapper模板.md'
+                    },{
+                        title: 'Mybatis一对多Mapper模板（三）', // 必要的
+                        path: 'dependencies/orm/Mybatis/action/Mybatis一对多Mapper模板.md'
                     }
                 ]
                 },
