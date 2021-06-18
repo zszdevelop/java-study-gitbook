@@ -34,6 +34,10 @@ REST（REpresentational State Transfer） 直译就是：抽象状态转移。
     - Controller层 url 地址：/{xxxId}
     - Controller 层方法名为：getInfo(@PathVariable Long xxxId)
     - Service层方法名为：selectXxxById(Long xxxId)
+  - 统计
+    - Controller层 url 地址：/count
+    - Controller 层方法名为：count(XXX xxx)
+    - Service层方法名为：countXxx(XXX xxx)
 - post
   - 新增
     - Controller层 url 地址：缺省
@@ -86,7 +90,7 @@ public class SysNoticeController extends BaseController
   	@ApiOperation(value = "根据通知公告编号获取详细信息")
     public AjaxResult getInfo(@PathVariable Long noticeId)
     {
-      	SysNotice item = noticeService.selectNoticeById(noticeId)
+      	SysNotice item = noticeService.selectNoticeById(noticeId);
         return AjaxResult.success(item);
     }
 
@@ -108,11 +112,11 @@ public class SysNoticeController extends BaseController
       	return AjaxResult.dbRows(i);
     }
 
-    @DeleteMapping("/{noticeIds}")
+    @DeleteMapping("/{noticeId}")
   	@ApiOperation(value = "删除通知公告")
-    public AjaxResult remove(@PathVariable Long[] noticeIds)
+    public AjaxResult remove(@PathVariable Long noticeId)
     {
-       int i= noticeService.deleteNoticeByIds(noticeIds);
+       int i= noticeService.deleteNoticeById(noticeId);
        return AjaxResult.dbRows(i);
     }
 }

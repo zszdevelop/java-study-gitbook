@@ -26,6 +26,16 @@
     </select>
 ```
 
+如果需要查询in
+
+```xml
+<if test="cllxList != null">
+            <foreach collection="cllxList" index="index" item="item" separator="," open="AND CLLX IN (" close=")">
+                #{item}
+            </foreach>
+        </if>
+```
+
 
 
 ### 1.2 根据id查详情
@@ -109,7 +119,17 @@
     </delete>
 ```
 
-## 5. 完整代码
+## 5. 统计
+
+```sql
+	<select id="countNoticeByType" resultType="Integer">
+	    select count(1) from sys_notice where type=#{type}  
+	</select>
+```
+
+
+
+## 6. 完整代码
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
