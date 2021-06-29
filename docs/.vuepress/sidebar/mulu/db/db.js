@@ -3,6 +3,8 @@ var OracleMulu = require('./OracleMulu');
 var RedisMulu = require('./RedisMulu');
 var MongoDBMulu = require('./MongoDBMulu');
 var SqlMulu = require('./SqlMulu');
+var DamengMulu = require('./DamengMulu');
+
 exports.mulu = {
     title: '数据库',   // 必要的
     // path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
@@ -13,6 +15,7 @@ exports.mulu = {
         OracleMulu.mulu,
         RedisMulu.mulu,
         MongoDBMulu.mulu,
-        SqlMulu.mulu
+        SqlMulu.mulu,
+        DamengMulu.mulu
     ]
 }

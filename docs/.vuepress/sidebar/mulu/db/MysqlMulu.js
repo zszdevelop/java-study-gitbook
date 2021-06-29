@@ -61,6 +61,16 @@ exports.mulu = {
                     path: "db/mysql/statistics/Mysql按日周月进行分组统计.md"
                 },
             ]
+        },{
+            title: '小技巧',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'GROUP BY分组取字段最大值',
+                    path: "db/mysql/skill/GROUPBY分组取字段最大值.md"
+                },
+            ]
         },
         {
             title: '锁',   // 必要的

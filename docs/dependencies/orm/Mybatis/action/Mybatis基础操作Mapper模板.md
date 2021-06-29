@@ -52,6 +52,16 @@
     </select>
 ```
 
+### 1.3 查询总数
+
+```xml
+    <select id="countUserRoleByRoleId" resultType="Integer">
+        select count(1) from sys_user_role where role_id=#{roleId}
+    </select>
+```
+
+
+
 ## 2. 新增
 
 ```xml

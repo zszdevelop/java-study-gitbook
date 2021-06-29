@@ -54,7 +54,27 @@ mybatis的模板
 </insert>
 ```
 
-## 2. 批量删除
+## 2. 批量更新
+
+```xml
+ <update id="updateBatchUserByIds">
+        <foreach collection="list" item="item" index="index" separator=";" open="begin" close=";end;">
+            UPDATE t_user
+            <set>
+                <if test="name != null">
+                    name = #{item.name,jdbcType=VARCHAR},
+                </if>
+                <if test="sex != null">
+                    sex = #{item.sex,jdbcType=VARCHAR},
+                </if>
+              
+            </set>
+            where ID = #{item.id,jdbcType=VARCHAR}
+        </foreach>
+    </update>
+```
+
+## 3. 批量删除
 
 Mysql和Oracle版本一致
 
