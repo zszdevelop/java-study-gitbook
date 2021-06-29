@@ -17,7 +17,7 @@ SpringBoot 的自动配置非常强大，我们经常使用的`@Enable*`注解�
 
 ### 2.1 方式一：直接导入配置类（@Configuration 类）
 
-```
+```java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Import(SchedulingConfiguration.class)

@@ -4,7 +4,7 @@
 
 RabbitMQ 是采用Erlang 语言实现 AMQP(Advanced Message Queuing Protocol，高级消息队列协议) 的消息中间件，最初起源于金融系统，用于在分布式系统中存储转发消息。
 
-**具有如下特点**
+### 1.1 特点
 
 - **可靠性**：RabbitMQ 使用一些机制来保证消息的可靠性，如持久化、传输确认及发布确认等
 - **灵活的路由**：在消息进入队列之前，通过交换器来路由消息。对于典型的路由功能，RabbitMQ 已经提供了一些内置的交换器来实现。针对更复杂的路由功能，可以将多个交换器绑定在一起，也可以通过插件机制来实现自己的交换器。
@@ -15,11 +15,31 @@ RabbitMQ 是采用Erlang 语言实现 AMQP(Advanced Message Queuing Protocol，�
 - **易用的管理界面**：RabbitMQ提供了一个易用的用户界面，使得用户可以监控和管理消息、集群中的节点等。
 - **插件机制**：RabbitMQ 提供了许多插件，以实现从多个方面进行扩展，当然也可以编写自己的插件
 
+### 1.2 使用场景
+
+在我们秒杀抢购商品的时候，系统会提醒我们稍等排队中，而不是像几年前一样页面卡死或报错给用户。
+
+像这种排队结算就用到了消息队列机制，放入通道里面一个一个结算处理，而不是某个时间断突然涌入大批量的查询新增把数据库给搞宕机，所以RabbitMQ本质上起到的作用就是**削峰填谷**，为业务保驾护航。
+
 ## 2. 核心概念
 
 RabbitMQ 整体上是一个生产者与消费者模型，主要负责接收、存储和转发消息。
 
 > 可以把消息传递的过程想象成：当你将一个包裹送到邮局，邮局会暂存并最终将邮件通过邮递员送到收件人的手上，RabbitMQ 就好比邮局、邮箱和邮递员组成的一个系统（从计算机术语层面来说，RabbitMQ 模型更像是一种交换机模型）
+
+Rabbit名词：ConnectionFactory（连接管理器）、Channel（信道）、Exchange（交换器）、Queue（队列）、RoutingKey（路由键）、BindingKey（绑定键）。
+
+- **ConnectionFactory（连接管理器）：**应用程序与Rabbit之间建立连接的管理器，程序代码中使用；
+
+- **Channel（信道）：**消息推送使用的通道；
+
+- **Exchange（交换器）：**用于接受、分配消息；
+
+- **Queue（队列）**：用于存储生产者的消息；
+
+- **RoutingKey（路由键）**：用于把生成者的数据分配到交换器上；
+
+- **BindingKey（绑定键）**：用于把交换器的消息绑定到队列上；
 
 ### 2.1 整体架构
 
@@ -133,18 +153,25 @@ RabbitMQ常用的 Exchange Type 有 fanout、direct、topic、headers 这四种�
 
   前面讲到direct类型的交换器路由规则是完全匹配 BindingKey 和 RoutingKey ，但是这种严格的匹配方式在很多情况下不能满足实际业务的需求。topic类型的交换器在匹配规则上进行了扩展，它与 direct 类型的交换器相似，也是将消息路由到 BindingKey 和 RoutingKey 相匹配的队列中，但这里的匹配规则有些不同，它约定：
 
-  - RoutingKey 为一个点号“．”分隔的字符串（被点号“．”分隔开的每一段独立的字符串称为一个单词），如 “com.rabbitmq.client”、“java.util.concurrent”、“com.hidden.client”;
-  - BindingKey 和 RoutingKey 一样也是点号“．”分隔的字符串；
-  - BindingKey 中可以存在两种特殊字符串“*”和“#”，用于做模糊匹配，其中“*”用于匹配一个单词，“#”用于匹配多个单词(可以是零个)。
+  
+
+  消费消息的时候routingKey可以使用下面字符匹配消息：
+
+  - "*"匹配一个分段(用“.”分割)的内容；
+  - "#"匹配0和多个字符；
 
 ![image-20191106233048403](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191106233048403.png)
 
-​	以上图为例：
+以上图为例：
 
 - 路由键为 “com.rabbitmq.client” 的消息会同时路由到 Queuel 和 Queue2;
+
 - 路由键为 “com.hidden.client” 的消息只会路由到 Queue2 中；
+
 - 路由键为 “com.hidden.demo” 的消息只会路由到 Queue2 中；
+
 - 路由键为 “java.rabbitmq.demo” 的消息只会路由到Queuel中；
+
 - 路由键为 “java.util.concurrent” 的消息将会被丢弃或者返回给生产者（需要设置 mandatory 参数），因为它没有匹配任何路由键。
 
 - headers（不推荐）
@@ -154,3 +181,5 @@ RabbitMQ常用的 Exchange Type 有 fanout、direct、topic、headers 这四种�
 ## 参考文章
 
 [【RabbitMQ】五分鐘輕鬆了解 RabbitMQ 運作](https://medium.com/@zamhuang/rabbitmq-%E4%BA%94%E5%88%86%E9%90%98%E8%BC%95%E9%AC%86%E4%BA%86%E8%A7%A3-rabbitmq-%E9%81%8B%E4%BD%9C-fcaecbaa69d4)
+
+[RabbitMQ系列（二）深入了解RabbitMQ工作原理及简单使用](https://www.cnblogs.com/vipstone/p/9275256.html)

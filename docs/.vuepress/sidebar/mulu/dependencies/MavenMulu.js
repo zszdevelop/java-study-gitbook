@@ -11,6 +11,10 @@ exports.mulu = {
         {
             title: 'Maven依赖中的scope详解',   // 必要的
             path: 'dependencies/maven/Maven依赖中的scope详解.md'
+        },
+        {
+            title: 'Maven的中心资源库中没有ojdbc驱动包',   // 必要的
+            path: 'dependencies/maven/Maven的中心资源库中没有ojdbc驱动包.md'
         }
     ]
 }
