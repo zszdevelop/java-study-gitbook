@@ -53,6 +53,9 @@ exports.mulu = {
                 }, {
                     title: 'Centos防火墙firewalld操作',   // 必要的
                     path: 'cs/linux/firewalld/Centos防火墙firewalld操作.md'
+                }, {
+                    title: 'Linux查看命令的所在路径-which',   // 必要的
+                    path: 'cs/linux/operation/Linux查看命令的所在路径which.md'
                 }
                
             ]

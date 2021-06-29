@@ -129,6 +129,28 @@ mkdir logs
 ./nginx -s reload 重启
 ```
 
+## 4. 附录
+
+### 4.1 rpm 版本 Nginx 部署
+
+1. 上传nginx对应版本的rpm
+
+2. 安装rpm
+
+   rpm -ivh nginx-1.16.1-1.el6.ngx.x86_64.rpm
+
+3. 启动nginx
+
+   service nginx start
+
+4. 创建前端存放文件夹
+
+   mkdir /usr/share/nginx/html/frontend
+
+5. 替换配置文件
+
+   替换覆盖nginx.conf 到/etc/nginx/目录下
+
 ## 参考文章
 
 [nginx重启后，反向代理失败之问题排查记录](https://www.debugger.wiki/article/html/1575597633434520)

@@ -2,17 +2,17 @@
 
 ## 1. Axure 和 激活码生成器下载
 
-Axure 和 激活码生成器下载 百度网盘地址：
+- Axure 和 激活码生成器下载 百度网盘地址：
 
->链接：https://pan.baidu.com/s/1OBwkxQsLj55B89o8M0JLPA 
->提取码：rlvi 
->复制这段内容后打开百度网盘手机App，操作更方便哦
+  链接：https://pan.baidu.com/s/1OBwkxQsLj55B89o8M0JLPA 
+  提取码：rlvi 
+  复制这段内容后打开百度网盘手机App，操作更方便哦
 
-只包含激活码生成器百度网盘地址：
+- 只包含激活码生成器百度网盘地址：
 
-> 链接：https://pan.baidu.com/s/13ZcmNh3UTQdCE-LiB0xEPg 
-> 提取码：uc86 
-> 复制这段内容后打开百度网盘手机App，操作更方便哦
+  链接：https://pan.baidu.com/s/13ZcmNh3UTQdCE-LiB0xEPg 
+  提取码：uc86 
+  复制这段内容后打开百度网盘手机App，操作更方便哦
 
 ## 2. 激活码使用
 
