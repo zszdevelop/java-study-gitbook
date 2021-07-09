@@ -7,6 +7,10 @@ exports.mulu = {
         {
             title: 'Python优势',   // 必要的
             path: 'python/base/Python优势.md'
-        }
+        },
+        {
+            title: 'Python之OS模块(文件和目录操作)',   // 必要的
+            path: 'python/base/Python优势.md'
+        },
     ]
 }

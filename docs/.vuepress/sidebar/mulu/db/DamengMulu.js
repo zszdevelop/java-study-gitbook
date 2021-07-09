@@ -4,6 +4,16 @@ exports.mulu = {
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
+        {
+            title: '达梦特殊SQL',   // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '达梦数据库管理常用 SQL 命令',   // 必要的
+                    path: 'db/dameng/sql/达梦数据库管理常用SQL命令.md'
+                }]},
        {
             title: '常用操作',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
@@ -12,7 +22,7 @@ exports.mulu = {
             children: [
                 {
                     title: '达梦数据库-数据库配置助手（初始化，删除数据库）',   // 必要的
-                    path: 'db/dameng/operation/达梦数据库初始化数据库.md'
+                    path: 'db/dameng/operation/达梦数据库数据库配置助手.md'
                 },
                 {
                     title: '达梦数据库-迁移工具DTS',   // 必要的
@@ -21,6 +31,10 @@ exports.mulu = {
                 {
                     title: '达梦数据库-控制台工具（备份，恢复）',   // 必要的
                     path: 'db/dameng/operation/达梦数据库-控制台工具.md'
+                },
+                {
+                    title: '达梦数据库-DMRMAN（备份，恢复）',   // 必要的
+                    path: 'db/dameng/operation/达梦数据库-DMRMAN.md'
                 }
             ]
         },

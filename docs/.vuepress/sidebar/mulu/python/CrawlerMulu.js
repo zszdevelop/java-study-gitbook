@@ -14,6 +14,10 @@ exports.mulu = {
                     path: 'python/crawler/action/python爬取12306城市编码转换.md'
                 },
                 {
+                    title: 'python爬取脉脉',   // 必要的
+                    path: 'python/crawler/action/python爬取脉脉.md'
+                },
+                {
                     title: 'ECommerceCrawlers项目',   // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2,    // 可选的, 默认值是 1

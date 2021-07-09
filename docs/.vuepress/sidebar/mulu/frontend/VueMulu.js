@@ -35,23 +35,23 @@ exports.mulu = {
                 collapsable: true, // 可选的, 默认值是 true,
                 sidebarDepth: 2, // 可选的, 默认值是 1
                 children: [{
-                    title: 'Vue Router概念', // 必要的
-                    path: 'frontend/vue/three/router/VueRouter概念.md'
-                },
-                {
-                    title: 'Vue Router动态路由匹配', // 必要的
-                    path: 'frontend/vue/three/router/VueRouter动态路由匹配.md'
-                },
-                {
-                    title: 'Vue Router路由跳转', // 必要的
-                    path: 'frontend/vue/three/router/VueRouter路由跳转.md'
-                },
-                {
-                    title: 'Vue Router History模式', // 必要的
-                    path: 'frontend/vue/three/router/VueRouterHistory模式.md'
-                }
+                        title: 'Vue Router概念', // 必要的
+                        path: 'frontend/vue/three/router/VueRouter概念.md'
+                    },
+                    {
+                        title: 'Vue Router动态路由匹配', // 必要的
+                        path: 'frontend/vue/three/router/VueRouter动态路由匹配.md'
+                    },
+                    {
+                        title: 'Vue Router路由跳转', // 必要的
+                        path: 'frontend/vue/three/router/VueRouter路由跳转.md'
+                    },
+                    {
+                        title: 'Vue Router History模式', // 必要的
+                        path: 'frontend/vue/three/router/VueRouterHistory模式.md'
+                    }
                 ]
-            },{
+            }, {
                 title: 'vuex', // 必要的
                 //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 collapsable: true, // 可选的, 默认值是 true,
@@ -88,40 +88,44 @@ exports.mulu = {
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [
-                {
-                    title: 'Element', // 必要的
-                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
-                            title: 'Element文件上传Upload', // 必要的
-                            path: 'frontend/vue/ui/Element/Element文件上传Upload.md'
-        
-                        }
-                    ]
-                },
-            ]
+            children: [{
+                title: 'Element', // 必要的
+                //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                collapsable: true, // 可选的, 默认值是 true,
+                sidebarDepth: 2, // 可选的, 默认值是 1
+                children: [{
+                    title: 'Element文件上传Upload', // 必要的
+                    path: 'frontend/vue/ui/Element/Element文件上传Upload.md'
+
+                }]
+            }, ]
         },
         {
             title: '后台框架', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [
-                {
-                    title: 'vue-element-admin', // 必要的
-                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
-                            title: 'vue-element-admin入门使用', // 必要的
-                            path: 'frontend/vue/admin/vue-element-admin/vue-element-admin入门使用.md'
-        
-                        }
-                    ]
-                },
-            ]
+            children: [{
+                title: 'vue-element-admin', // 必要的
+                //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                collapsable: true, // 可选的, 默认值是 true,
+                sidebarDepth: 2, // 可选的, 默认值是 1
+                children: [{
+                    title: 'vue-element-admin入门使用', // 必要的
+                    path: 'frontend/vue/admin/vue-element-admin/vue-element-admin入门使用.md'
+
+                }]
+            }, ]
+        },
+        {
+            title: '小技巧', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
+                title: 'vue实现回到顶部的问题', // 必要的
+                path: 'frontend/vue/skill/vue实现回到顶部的问题.md'
+            }, ]
         }
     ]
 }

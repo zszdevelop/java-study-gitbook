@@ -6,6 +6,8 @@ var ProblemMulu = require('./ProblemMulu');
 var OptimizationMulu = require('./OptimizationMulu');
 var PluginMulu = require('./PluginMulu');
 var UtilsMulu = require('./UtilsMulu');
+var SkillMulu = require('./SkillMulu');
+
 
 exports.mulu = {
     title: '前端',   // 必要的
@@ -20,5 +22,6 @@ exports.mulu = {
         ProblemMulu.mulu,
         OptimizationMulu.mulu,
         PluginMulu.mulu,
-        UtilsMulu.mulu
+        UtilsMulu.mulu,
+        SkillMulu.mulu
     ]}
