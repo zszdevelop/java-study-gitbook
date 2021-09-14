@@ -21,6 +21,14 @@ exports.mulu = {
                 {
                     title: 'Vue中8种组件通信方式', // 必要的
                     path: 'frontend/vue/grammar/Vue中8种组件通信方式.md'
+                },
+                {
+                    title: 'Vue数据更新了但页面没有更新的7种情况', // 必要的
+                    path: 'frontend/vue/grammar/Vue数据更新了但页面没有更新的7种情况.md'
+                },
+                {
+                    title: 'Vue中watch对象内属性的方法', // 必要的
+                    path: 'frontend/vue/grammar/Vue中watch对象内属性的方法.md'
                 }
             ]
         },

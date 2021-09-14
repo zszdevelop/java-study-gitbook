@@ -5,9 +5,20 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
-            title: 'CentosMySQL安装',   // 必要的
-            path: 'db/mysql/CentosMySQL安装.md'
+            title: 'MySQL安装',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'CentosMySQL安装',   // 必要的
+                    path: 'db/mysql/install/CentosMySQL安装.md'
+                },  {
+                    title: 'Mysql安装后登录异常tmysqlsock',   // 必要的
+                    path: 'db/mysql/install/Mysql安装后登录异常tmysqlsock.md'
+                }
+            ]
         },
+      
         {
             title: '存储引擎',   // 必要的
             path: 'db/mysql/存储引擎.md'

@@ -8,6 +8,12 @@ exports.mulu = {
             title: 'Java项目启动时执行指定方法的几种方式',   // 必要的
             path: 'skill/java/Java项目启动时执行指定方法的几种方式.md'
         },{
+            title: 'Springboot项目指定打包名',   // 必要的
+            path: 'skill/java/Springboot项目指定打包名.md'
+        },{
+            title: '工具类静态方法调用@Autowired注入的service类问题',   // 必要的
+            path: 'skill/java/工具类静态方法调用@Autowired注入的service类问题.md'
+        },{
             title: 'RESTfulApi项目命名规范',   // 必要的
             path: 'skill/java/RestfulApi项目命名规范.md'
         },{

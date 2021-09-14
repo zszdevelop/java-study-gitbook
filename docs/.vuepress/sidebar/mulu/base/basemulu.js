@@ -134,6 +134,10 @@ exports.mulu =   {
                                 {
                                     title: '在接口中使用线程池，处理数据', 
                                     path: 'base/concurrent/threadpool/在接口中使用线程池，处理数据.md'
+                                },
+                                {
+                                    title: '线程池执行完所有任务后再执行主线程方案', 
+                                    path: 'base/concurrent/threadpool/线程池执行完所有任务后再执行主线程.md'
                                 }
                             ]
                         },

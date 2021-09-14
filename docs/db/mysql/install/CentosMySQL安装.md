@@ -26,6 +26,10 @@ yum install mysql
 yum remove mysql
 ```
 
+如需彻底删除，参考
+
+[Centos7 完全卸载mysql](https://www.jianshu.com/p/ef58fb333cd6)
+
 ### 1.2.2 下载mysql的repo 源（MySQL 5.7）
 
 ```
@@ -76,36 +80,7 @@ mysql -u root
 
 ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
 
-执行如下命令
-
-```
-sudo chown -R openscanner:openscanner /var/lib/mysql
-```
-
-如果报
-
-chown: invalid user: ‘openscanner:openscanner’
-
-更换命令 chown root /var/lib/mysql/， 并用 ll 查看目录权限列表
-
-```
-chown root /var/lib/mysql/
-ll
-```
-
-重启服务
-
-```
-service mysqld restart
-```
-
-若还异常
-
-```
- chmod 777 /var/lib/mysql
-```
-
-
+[参考文章](./Mysql安装后登录异常tmysqlsock.md)
 
 #### 1.4.2 登录异常2(默认密码)
 

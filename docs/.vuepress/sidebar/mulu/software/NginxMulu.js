@@ -5,7 +5,7 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
-            title: '问题集锦',   // 必要的
+            title: '安装',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1
@@ -32,7 +32,7 @@ exports.mulu = {
                     path: 'software/nginx/problem/nginx设置请求body大小.md'
                 },
                 {
-                    title: '403 Forbidden',   // 必要的
+                    title: '四种解决Nginx出现403 forbidden 报错的方法',   // 必要的
                     path: 'software/nginx/problem/403Forbidden.md'
                 },
                 {

@@ -19,6 +19,10 @@ exports.mulu = {
         {
             title: 'npm install时遇到的问题 npm ERR! code ERESOLVE',   // 必要的
             path: 'frontend/problem/npminstall时遇到的问题npmERRcodeERESOLVE.md'
+        },
+        {
+            title: 'npm 运行项目时 Error: PostCSS received undefined instead of CSS string',   // 必要的
+            path: 'frontend/problem/npmrun时PostCSS.md'
         }
     ]
 }

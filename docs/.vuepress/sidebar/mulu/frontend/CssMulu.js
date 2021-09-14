@@ -21,6 +21,10 @@ exports.mulu = {
                 {
                     title: 'css样式权重和优先级',   // 必要的
                     path: 'frontend/css/attribute/css样式权重和优先级.md'
+                },
+                {
+                    title: 'calc()函数',   // 必要的
+                    path: 'frontend/css/attribute/calc函数.md'
                 }
             ]
         }

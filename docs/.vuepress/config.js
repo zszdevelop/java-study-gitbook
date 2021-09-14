@@ -66,6 +66,8 @@ module.exports = {
     }
   },
   plugins: [
-    ['@dovyp/vuepress-plugin-clipboard-copy', true]
+    ['@dovyp/vuepress-plugin-clipboard-copy', true],
+    ['@vuepress/medium-zoom'],
+    ['@vuepress/last-updated']
   ]
 }

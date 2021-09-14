@@ -16,6 +16,14 @@ exports.mulu = {
         {
             title: 'List的contains导致cpu100%',   // 必要的
             path: 'think/deepImpression/List的contains导致cpu100.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        },
+        {
+            title: '业务流程流转状态过多设计思路',   // 必要的
+            path: 'think/deepImpression/业务流程流转状态过多设计思路.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        },
+        {
+            title: 'Vue组件抽离分分合合的思考',   // 必要的
+            path: 'think/deepImpression/Vue组件抽离分分合合的思考.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         }
     ]
 }

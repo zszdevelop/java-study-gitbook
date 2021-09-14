@@ -5,10 +5,24 @@
 1. 导出语句
 
    ```tex
-   exp myuser/mypassword@192.168.0.1:1521/orcl file=D:\mydb.dmp log=D:\export.log full=y
+   exp myuser/mypassword@192.168.0.1:1521/orcl file=D:\mydb.dmp log=D:\export.log full=y  as sysdba
    ```
 
    导出的用户名密码，最好用dba权限的
+
+   导出命令中加入如下参数 ，可分别实现不同的功能：
+
+   > - full=y
+   >
+   >   全库导出
+   >
+   > - owner=（user1，user2）
+   >
+   >   导出指定的用户，如user1、user2
+   >
+   > - compress=y
+   >
+   >   设置待导出的表占用空间为实际尺寸（即除去高端水印）
 
 2. 导入语句
 
@@ -16,6 +30,16 @@
    Imp myuser/mypassword@192.168.0.1/orcl file=D:\mydb.dmp  full=y  ignore=y
    ```
 
+   导入还可以指定用户
+
+   - fromuser就是把当前的dmp文件中的某一个用户下的数据取出。
+   - touser就是把现在dmp文件中的数据导入到目标库的指定user下。
+
+   ```
+   Imp myuser/mypassword@192.168.0.1/orcl file=D:\mydb.dmp    fromuser=BJ_RV touser=BJ_TEST   ignore=y
+   ```
+
+   
 
 ## 2. 可能遇到的问题
 
