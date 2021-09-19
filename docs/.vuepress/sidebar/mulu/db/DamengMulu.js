@@ -51,6 +51,10 @@ exports.mulu = {
                 {
                     title: '达梦数据库-关键字（domain等）导致的异常',   // 必要的
                     path: 'db/dameng/problem/达梦数据库-关键字导致的异常.md'
+                },
+                {
+                    title: 'mac下使用datagrip连接达梦数据库',   // 必要的
+                    path: 'db/dameng/problem/mac下使用datagrip连接达梦数据库.md'
                 }
             ]
         }

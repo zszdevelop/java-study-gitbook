@@ -1,6 +1,7 @@
 var BigSiteMulu = require('./BigSiteMulu');
 var RbacMulu = require('./RbacMulu');
 var FileMulu = require('./FileMulu');
+var MessageMulu = require('./MessageMulu');
 var ManagementSystemMulu = require('./ManagementSystemMulu');
 exports.mulu = {
     title: '系统架构',   // 必要的
@@ -11,5 +12,6 @@ exports.mulu = {
         BigSiteMulu.mulu,
         RbacMulu.mulu,
         FileMulu.mulu,
-        ManagementSystemMulu.mulu
+        ManagementSystemMulu.mulu,
+        MessageMulu.mulu
     ]}

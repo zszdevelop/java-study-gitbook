@@ -7,7 +7,7 @@ var ZookeeperMulu = require('./ZookeeperMulu.js');
 var PushMulu = require('./PushMulu.js');
 var MavenMulu = require('./MavenMulu.js');
 var SwaggerMulu = require('./SwaggerMulu.js');
-var OfficeMulu = require('./OfficeMulu.js');
+// var OfficeMulu = require('./OfficeMulu.js');
 var MQMulu = require('./MQMulu.js');
 var DBManagerMulu = require('./DBManagerMulu.js');
 var SearchMulu = require('./SearchMulu.js');
@@ -27,7 +27,6 @@ exports.mulu = {
         MavenMulu.mulu,
         SwaggerMulu.mulu,
         MQMulu.mulu,
-        OfficeMulu.mulu,
         DBManagerMulu.mulu,
         SearchMulu.mulu
     ]

@@ -133,6 +133,9 @@ exports.mulu = {
             children: [{
                 title: 'vue实现回到顶部的问题', // 必要的
                 path: 'frontend/vue/skill/vue实现回到顶部的问题.md'
+            }, {
+                title: 'Vue自定义防抖指令', // 必要的
+                path: 'frontend/vue/skill/Vue自定义防抖指令.md'
             }, ]
         }
     ]
