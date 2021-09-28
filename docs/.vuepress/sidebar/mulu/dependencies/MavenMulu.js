@@ -9,6 +9,10 @@ exports.mulu = {
             path: 'dependencies/maven/Maven核心知识.md'
         },
         {
+            title: 'Maven全局配置settings',   // 必要的
+            path: 'dependencies/maven/Maven全局配置settings.md'
+        },
+        {
             title: 'Maven依赖中的scope详解',   // 必要的
             path: 'dependencies/maven/Maven依赖中的scope详解.md'
         },

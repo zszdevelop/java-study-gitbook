@@ -5,6 +5,9 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
+            title: '统一代码风格工具editorConfig',   // 必要的
+            path: 'frontend/problem/统一代码风格工具editorConfig.md'
+        },{
             title: 'Vue.js中引入图片路径的几种方式',   // 必要的
             path: 'frontend/problem/Vuejs中引入图片路径的几种方式.md'
         },

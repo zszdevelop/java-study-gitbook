@@ -11,6 +11,7 @@ var SwaggerMulu = require('./SwaggerMulu.js');
 var MQMulu = require('./MQMulu.js');
 var DBManagerMulu = require('./DBManagerMulu.js');
 var SearchMulu = require('./SearchMulu.js');
+var RequestHttpMulu = require('./RequestHttpMulu.js');
 
 exports.mulu = {
     title: '第三方依赖',   // 必要的
@@ -28,6 +29,7 @@ exports.mulu = {
         SwaggerMulu.mulu,
         MQMulu.mulu,
         DBManagerMulu.mulu,
-        SearchMulu.mulu
+        SearchMulu.mulu,
+        RequestHttpMulu.mulu
     ]
 }

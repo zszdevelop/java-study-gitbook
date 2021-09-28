@@ -17,6 +17,10 @@ exports.mulu = {
                         {
                             title: 'Flyway数据库版本管理',   // 必要的
                             path: 'dependencies/dbmanager/version/flyway/Flyway数据库版本管理'
+                        },
+                        {
+                            title: 'Flyway兼容达梦数据库',   // 必要的
+                            path: 'dependencies/dbmanager/version/flyway/Flyway兼容达梦数据库'
                         }
                     ]
                 }
