@@ -5,6 +5,10 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
+            title: '前后端分离项目跨域解决',   // 必要的
+            path: 'frontend/skill/前后端分离项目跨域解决.md'
+        },
+        {
             title: '常用资源网站',   // 必要的
             path: 'frontend/skill/常用资源网站.md'
         },

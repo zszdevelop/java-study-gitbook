@@ -302,6 +302,10 @@ exports.mulu = {
                     {
                         title: 'Docker启动',   // 必要的
                         path: 'microservice/deploy/docker/Docker启动.md',
+                    },
+                    {
+                        title: 'docker中宿主机与容器（container）互相拷贝传递文件的方法',   // 必要的
+                        path: 'microservice/deploy/docker/docker中宿主机与容器互相拷贝传递文件的方法.md',
                     }, {
                         title: 'Dockerfile 指令',   // 必要的
                         collapsable: true, // 可选的, 默认值是 true,
@@ -311,7 +315,9 @@ exports.mulu = {
                                 title: 'Dockerfile之COPY复制文件',   // 必要的
                                 path: 'microservice/deploy/docker/Instruction/Dockerfile之COPY复制文件.md',
                             }]
-                    }, {
+                    },
+                    
+                    {
                         title: 'Docker参考文章',   // 必要的
                         path: 'https://yeasy.gitbooks.io/docker_practice/',
                     }, {
@@ -345,10 +351,12 @@ exports.mulu = {
                     }, {
                         title: 'Kubernetes架构',   // 必要的
                         path: 'microservice/deploy/Kubernetes/Kubernetes架构.md',
-                    }, {
-                        title: 'Kubeadm安装Kubernetes',   // 必要的
-                        path: 'microservice/deploy/Kubernetes/Kubeadm安装Kubernetes.md',
-                    }
+                    },
+                    
+                    // {
+                    //     title: 'Kubeadm安装Kubernetes',   // 必要的
+                    //     path: 'microservice/deploy/Kubernetes/Kubeadm安装Kubernetes.md',
+                    // }
                 ]
             },
             {

@@ -95,7 +95,14 @@ new Vue({
       },
   ```
 
-  
+
+## 5. 使用全局的过滤器
+
+```
+let dateStr = this.$options.filters["dateFormat"](new Date(), "YYYYMMDDHHmmss");
+```
+
+
 
 ## 参考文章
 

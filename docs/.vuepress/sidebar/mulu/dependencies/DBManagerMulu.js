@@ -19,8 +19,16 @@ exports.mulu = {
                             path: 'dependencies/dbmanager/version/flyway/Flyway数据库版本管理'
                         },
                         {
+                            title: 'Flyway-commandline使用',   // 必要的
+                            path: 'dependencies/dbmanager/version/flyway/Flyway-commandline使用'
+                        },
+                        {
                             title: 'Flyway兼容达梦数据库',   // 必要的
                             path: 'dependencies/dbmanager/version/flyway/Flyway兼容达梦数据库'
+                        },
+                        {
+                            title: 'Flyway常见问题',   // 必要的
+                            path: 'dependencies/dbmanager/version/flyway/Flyway常见问题'
                         }
                     ]
                 }

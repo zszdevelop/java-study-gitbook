@@ -1,4 +1,7 @@
 var MiddlewareMulu = require('./MiddlewareMulu');
+var ProblemMulu = require('./ProblemMulu');
+
+
 
 exports.mulu = {
     title: '项目国产化',   // 必要的
@@ -6,5 +9,6 @@ exports.mulu = {
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
-        MiddlewareMulu.mulu
+        MiddlewareMulu.mulu,
+        ProblemMulu.mulu
     ]}

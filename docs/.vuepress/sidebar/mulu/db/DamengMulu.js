@@ -35,6 +35,10 @@ exports.mulu = {
                 {
                     title: '达梦数据库-DMRMAN（备份，恢复）',   // 必要的
                     path: 'db/dameng/operation/达梦数据库-DMRMAN.md'
+                },
+                {
+                    title: '达梦数据库-SQL创建用户与授权',   // 必要的
+                    path: 'db/dameng/operation/达梦数据库-SQL创建用户与授权.md'
                 }
             ]
         },

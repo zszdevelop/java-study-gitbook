@@ -16,11 +16,17 @@ docker pull jenkins/jenkins:lts
 
 - 在Docker容器中运行Jenkins：
 
-```
+```dockerfile
 docker run -p 18080:8080 -p 50000:5000 --name jenkins \
 -u root \
 -v /mydata/jenkins_home:/var/jenkins_home \
 -d jenkins/jenkins:lts
+```
+
+注：可在上面语句后添加编码。如果不设置编码的话，会出现乱码问题（博主没设置出现了问题）
+
+```
+-e JAVA_OPTS=-Dfile.encoding=UTF-8 
 ```
 
 ## 3. Jenkins的配置

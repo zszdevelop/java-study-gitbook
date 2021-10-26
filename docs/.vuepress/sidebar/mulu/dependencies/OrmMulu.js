@@ -19,16 +19,24 @@ exports.mulu = {
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2, // 可选的, 默认值是 1
                     children: [{
-                        title: 'Mybatis基础操作Mapper模板（一）', // 必要的
-                        path: 'dependencies/orm/Mybatis/action/Mybatis基础操作Mapper模板.md'
-                    },{
-                        title: 'Mybatis进阶操作Mapper模板（二）', // 必要的
-                        path: 'dependencies/orm/Mybatis/action/Mybatis进阶操作Mapper模板.md'
-                    },{
-                        title: 'Mybatis一对多Mapper模板（三）', // 必要的
-                        path: 'dependencies/orm/Mybatis/action/Mybatis一对多Mapper模板.md'
-                    }
-                ]
+                        title: '模板', // 必要的
+                        //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                        collapsable: true, // 可选的, 默认值是 true,
+                        sidebarDepth: 2, // 可选的, 默认值是 1
+                        children: [{
+                            title: 'Mybatis基础操作Mapper模板（一）', // 必要的
+                            path: 'dependencies/orm/Mybatis/action/Mybatis基础操作Mapper模板.md'
+                        }, {
+                            title: 'Mybatis进阶操作Mapper模板（二）', // 必要的
+                            path: 'dependencies/orm/Mybatis/action/Mybatis进阶操作Mapper模板.md'
+                        }, {
+                            title: 'Mybatis一对多Mapper模板（三）', // 必要的
+                            path: 'dependencies/orm/Mybatis/action/Mybatis一对多Mapper模板.md'
+                        }]
+                    }, {
+                        title: 'Mybatis使用collection解决一对多关联查询', // 必要的
+                        path: 'dependencies/orm/Mybatis/action/Mybatis使用collection解决一对多关联查询.md'
+                    }]
                 },
                 {
                     title: 'Mybatis常见面试题', // 必要的
@@ -152,6 +160,17 @@ exports.mulu = {
                 }
 
 
+            ]
+        },
+        {
+            title: 'Mybatis-PageHelper', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
+                title: 'Mybatis-PageHelper源码分析', // 必要的
+                path: 'dependencies/orm/Mybatis-PageHelper/Mybatis-PageHelper源码分析.md'
+            }
             ]
         }
     ]

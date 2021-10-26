@@ -1,5 +1,5 @@
 exports.mulu = {
-    title: '印象深刻bug',   // 必要的
+    title: '印象深刻问题',   // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2,    // 可选的, 默认值是 1
@@ -24,6 +24,10 @@ exports.mulu = {
         {
             title: 'Vue组件抽离分分合合的思考',   // 必要的
             path: 'think/deepImpression/Vue组件抽离分分合合的思考.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        },
+        {
+            title: 'SQL多字段聚合统计的思考',   // 必要的
+            path: 'think/deepImpression/SQL多字段聚合统计的思考.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         }
     ]
 }

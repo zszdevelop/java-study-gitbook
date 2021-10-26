@@ -10,6 +10,7 @@ module.exports = {
   title: 'Java学习笔记',
   description: 'Java小白的成长史',
   head: [
+    ['link', { rel: 'icon', href: '/assets/img/logo.png' }],
     ['script', {}, `
           var _hmt = _hmt || [];
           (function() {

@@ -184,6 +184,51 @@ public class MainTest {
         </dependency>
 ```
 
+## 7. 在flyway-commandline使用
+
+我们使用方式可以是在项目中使用，还可以使用flyway-commandline 的方式。此方式更加方便
+
+### 7.1 下载对应版本的flyway-commandline
+
+我们改的源码是6.3.3 的，所以我们下载6.3.3 的flyway-commandline
+
+[flywaydb下载](https://repo1.maven.org/maven2/org/flywaydb/)
+
+### 7.2 添加达梦驱动
+
+将达梦驱动放到 flyway-6.3.3->drivers->DmJdbcDriver18.jar
+
+![image-20211011222426034](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211011222426034.png)
+
+### 7.3  更改配置
+
+修改flyway-6.3.3-》conf->flyway.conf
+
+```bash
+# 达梦数据库url
+flyway.url=jdbc:dm://192.168.0.1:5236
+# 数据库驱动
+flyway.driver=dm.jdbc.driver.DmDriver
+# 数据库用户名
+flyway.user=youuser
+# 数据库密码
+flyway.password=youpassword
+```
+
+#### 7.4 替换flyway-core包
+
+修改flyway-6.3.3-》lib->community->flyway-core-6.3.3.jar
+
+![image-20211011222641335](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211011222641335.png)
+
+### 7.5 命令行运行
+
+```
+./flyway migrate -baselineOnMigrate=true
+```
+
+
+
 ## 参考文章
 
 [flyway 源码解析](https://blog.csdn.net/qq_32811865/article/details/105594256)

@@ -29,10 +29,10 @@ exports.mulu = {
                     title: 'Cookie',
                     path: 'J2EE/会话/Cookie.md',
                 },
-                {
-                    title: 'Session',
-                    path: 'J2EE/会话/Session.md',
-                },
+                // {
+                //     title: 'Session',
+                //     path: 'J2EE/会话/Session.md',
+                // },
                 {
                     title: 'Cookie和Session总结',
                     path: 'J2EE/会话/Cookie和Session总结.md',

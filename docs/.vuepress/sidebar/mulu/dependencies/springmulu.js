@@ -63,6 +63,9 @@ exports.mulu = {
                         }, {
                             title: 'AOP实现Limit限流',
                             path: 'dependencies/spring/aop/Limit限流.md',
+                        }, {
+                            title: 'AOP实现防重复提交',
+                            path: 'dependencies/spring/aop/AOP实现防重复提交.md',
                         }
                     ]
                 }

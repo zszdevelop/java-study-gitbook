@@ -11,7 +11,10 @@ exports.mulu = {
         {
             title: 'Swagger实体类注释自动生成-Mybatis生成实体类',   // 必要的
             path: 'dependencies/orm/Mybatis/Mybatis生成实体类.md'
-            
+        },
+        {
+            title: 'Swagger分模块',   // 必要的
+            path: 'tools/swagger/Swagger分模块.md'
         },
     ]
 }

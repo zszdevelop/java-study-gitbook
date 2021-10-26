@@ -29,7 +29,7 @@ exports.mulu = {
             ]
         }
         , {
-            title: 'pdf预览',   // 必要的
+            title: 'pdf预览打印',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1
@@ -37,6 +37,9 @@ exports.mulu = {
                 {
                     title: 'vue项目预览pdf',   // 必要的
                     path: 'frontend/plugin/pdf/vue项目预览pdf.md'
+                },{
+                    title: 'Vue使用print-js实现打印功能',   // 必要的
+                    path: 'frontend/plugin/pdf/Vue使用print-js实现打印功能.md'
                 }
             ]
         }

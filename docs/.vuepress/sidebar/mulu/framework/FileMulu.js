@@ -14,6 +14,12 @@ exports.mulu = {
                     title: 'Minio安装',   // 必要的
                     path: 'framework/filesystem/minio/Minio安装.md'
                 },{
+                    title: 'Minio客户端mc使用',   // 必要的
+                    path: 'framework/filesystem/minio/Minio客户端mc使用.md'
+                },{
+                    title: 'Minio临时访问权限',   // 必要的
+                    path: 'framework/filesystem/minio/Minio临时访问权限.md'
+                },{
                     title: 'SpringBoot整合minio',   // 必要的
                     path: 'framework/filesystem/minio/SpringBoot整合minio.md'
                 },
