@@ -79,6 +79,7 @@ public class SwaggerConfig
 }
 ```
 
+- @Bean("system") : 实例化多个`docket`
 - groupName:  指定该模块名称
 - paths：指定该模块要扫码的路径
 

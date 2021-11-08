@@ -37,7 +37,16 @@ exports.mulu = {
                         title: 'Mybatis使用collection解决一对多关联查询', // 必要的
                         path: 'dependencies/orm/Mybatis/action/Mybatis使用collection解决一对多关联查询.md'
                     }]
-                },
+                },{
+                    title: '常见问题', // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [{
+                            title: 'mybatis中if关于数字的判断', // 必要的
+                            path: 'dependencies/orm/Mybatis/problem/mybatis中if关于数字的判断.md'
+        
+                        }]},
                 {
                     title: 'Mybatis常见面试题', // 必要的
                     path: 'dependencies/orm/Mybatis/interview/Mybatis常见面试题.md'

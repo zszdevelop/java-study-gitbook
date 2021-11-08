@@ -59,9 +59,14 @@ exports.mulu = {
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
+                    title: 'ORACLE如果表不存在，则创建该表',   // 必要的
+                    path: 'db/Oracle/operation/ORACLE如果表不存在，则创建该表.md'
+                 },
+                 {
                     title: 'Oracle备份-导入导出dmp文件',   // 必要的
                     path: 'db/Oracle/operation/Oracle备份导入导出dmp文件.md'
-                 }]},
+                 }
+                ]},
         {
             title: 'DDL(数据库模式定义语言)', 
             collapsable: true, // 可选的, 默认值是 true,

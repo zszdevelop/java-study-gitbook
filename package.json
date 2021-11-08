@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
-    "markdown-it-disable-url-encode": "^1.0.1"
+    "markdown-it-disable-url-encode": "^1.0.1",
+    "vuepress-plugin-comment": "^0.7.3"
   }
 }

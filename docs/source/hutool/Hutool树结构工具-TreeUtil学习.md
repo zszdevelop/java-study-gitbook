@@ -67,7 +67,7 @@ nodeList.add(new TreeNode<>("221", "2", "商品管理2", 2));Copy to clipboardEr
 
 ```java
 // 0表示最顶层的id是0
-List<Tree<String>> treeList = TreeUtil.build(nodeList, "0");Copy to clipboardErrorCopied
+List<Tree<String>> treeList = TreeUtil.build(nodeList, "0");
 ```
 
 因为两个Tree是平级的，再没有上层节点，因此为List。

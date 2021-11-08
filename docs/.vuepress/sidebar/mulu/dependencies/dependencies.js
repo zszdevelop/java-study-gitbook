@@ -7,11 +7,13 @@ var ZookeeperMulu = require('./ZookeeperMulu.js');
 var PushMulu = require('./PushMulu.js');
 var MavenMulu = require('./MavenMulu.js');
 var SwaggerMulu = require('./SwaggerMulu.js');
-// var OfficeMulu = require('./OfficeMulu.js');
+var OfficeMulu = require('./OfficeMulu.js');
 var MQMulu = require('./MQMulu.js');
 var DBManagerMulu = require('./DBManagerMulu.js');
 var SearchMulu = require('./SearchMulu.js');
 var RequestHttpMulu = require('./RequestHttpMulu.js');
+var TimerMulu = require('./TimerMulu.js');
+var LogMulu = require('./LogMulu.js');
 
 exports.mulu = {
     title: '第三方依赖',   // 必要的
@@ -30,6 +32,9 @@ exports.mulu = {
         MQMulu.mulu,
         DBManagerMulu.mulu,
         SearchMulu.mulu,
-        RequestHttpMulu.mulu
+        RequestHttpMulu.mulu,
+        TimerMulu.mulu,
+        LogMulu.mulu,
+        OfficeMulu.mulu
     ]
 }

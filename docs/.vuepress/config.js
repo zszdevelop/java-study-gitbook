@@ -69,6 +69,18 @@ module.exports = {
   plugins: [
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
     ['@vuepress/medium-zoom'],
-    ['@vuepress/last-updated']
+    ['@vuepress/last-updated'],
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'valine', 
+        // options选项中的所有参数，会传给Valine的配置
+        options: {
+          el: '#valine-vuepress-comment',
+          appId: 'usBOX32tn9CVy8CqBSvgknux-gzGzoHsz',
+          appKey: 'Q5hdu2onySGhpKXFnh1l9n6U'
+        }
+      }
+    ]
   ]
 }

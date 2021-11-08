@@ -7,6 +7,10 @@ exports.mulu = {
         {
             title: 'Mac软件包管理工具Homebrew',   // 必要的
             path: 'cs/mac/Mac软件包管理工具Homebrew.md'
+        },
+        {
+            title: 'Mac之Alfred使用',   // 必要的
+            path: 'cs/mac/Mac之Alfred使用.md'
         }
     ]
 }

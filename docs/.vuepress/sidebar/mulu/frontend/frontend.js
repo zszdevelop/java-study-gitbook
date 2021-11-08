@@ -7,6 +7,7 @@ var OptimizationMulu = require('./OptimizationMulu');
 var PluginMulu = require('./PluginMulu');
 var UtilsMulu = require('./UtilsMulu');
 var SkillMulu = require('./SkillMulu');
+var EnvironmentMulu  = require('./EnvironmentMulu');
 
 
 exports.mulu = {
@@ -23,5 +24,6 @@ exports.mulu = {
         OptimizationMulu.mulu,
         PluginMulu.mulu,
         UtilsMulu.mulu,
-        SkillMulu.mulu
+        SkillMulu.mulu,
+        EnvironmentMulu.mulu
     ]}

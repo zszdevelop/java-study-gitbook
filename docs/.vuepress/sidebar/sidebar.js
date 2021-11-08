@@ -14,6 +14,7 @@ var think  = require('./mulu/think/think.js');
 var python  = require('./mulu/python/python.js');
 var localization  = require('./mulu/localization/localization.js');
 var skill  = require('./mulu/skill/skill.js');
+var source  = require('./mulu/source/source.js');
 var openplatform  = require('./mulu/openplatform/openplatform.js');
 
 
@@ -37,6 +38,7 @@ exports.mulu  = [
         utils.mulu,
         principle.mulu,
         skill.mulu,
+        source.mulu,
         localization.mulu,
         think.mulu
       ];

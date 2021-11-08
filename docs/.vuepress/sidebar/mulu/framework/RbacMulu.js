@@ -63,6 +63,16 @@ exports.mulu = {
                         path: 'rbac/SpringSecurity/skill/SpringSecurity支持多种登录方式.md'
                     }]
                 },
+                // {
+                //     title: '源码分析', // 必要的
+                //     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                //     collapsable: true, // 可选的, 默认值是 true,
+                //     sidebarDepth: 2, // 可选的, 默认值是 1
+                //     children: [{
+                //         title: 'SpringSecurity源码分析（一）', // 必要的
+                //         path: 'rbac/SpringSecurity/source/SpringSecurity源码分析1.md'
+                //     }]
+                // },
                 {
                     title: 'OAuth2', // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在

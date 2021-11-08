@@ -2,7 +2,7 @@
 
 ## 1. 官网地址
 
-[printjs.crabbly.com/](https://link.juejin.cn/?target=https%3A%2F%2Fprintjs.crabbly.com%2F)
+[https://printjs.crabbly.com/](https://printjs.crabbly.com/)
 
 ## 2. 下载
 
