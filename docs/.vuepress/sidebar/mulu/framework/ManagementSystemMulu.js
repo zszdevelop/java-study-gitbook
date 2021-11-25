@@ -50,6 +50,10 @@ exports.mulu = {
                     path: 'framework/ManagementSystem/function/系统参数配置功能.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 },
                 {
+                    title: '多数据源的支持', // 必要的
+                    path: 'framework/ManagementSystem/function/多数据源的支持.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                },
+                {
                     title: '系统日志功能', // 必要的
                     path: 'framework/ManagementSystem/function/系统日志功能.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 },

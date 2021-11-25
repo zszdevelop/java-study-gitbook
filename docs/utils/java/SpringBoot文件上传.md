@@ -72,7 +72,7 @@ public class UploadController {
 }
 ```
 
-#### 1.3.2 方式二：HttpServletRequest
+#### 1.3.2 方式二：单文件MultipartFile，多文件HttpServletRequest
 
 ```java
 

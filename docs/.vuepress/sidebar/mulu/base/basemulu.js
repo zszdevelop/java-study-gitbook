@@ -155,6 +155,10 @@ exports.mulu =   {
                         {
                             title: 'ThreadLocal使用不当导致内存泄漏', 
                             path: 'base/concurrent/ThreadLocal/ThreadLocal使用不当导致内存泄漏.md'
+                        },
+                        {
+                            title: 'ThreadLocal使用场景', 
+                            path: 'base/concurrent/ThreadLocal/ThreadLocal使用场景.md'
                         }
                     ]
                 },

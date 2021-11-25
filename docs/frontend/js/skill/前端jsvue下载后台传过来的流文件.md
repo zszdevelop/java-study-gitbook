@@ -103,6 +103,67 @@ download 属性设置文件名时，可以直接设置扩展名。如果没有�
   })
   ```
 
+## 4. 可能遇到的问题
+
+### 4.1 axios获取不到文件名
+
+1. 需要在服务端加上此请求头
+
+   ```java
+   //响应时在响应头里添加 Access-Control-Expose-Headers 
+    response.setHeader("Access-Control-Expose-Headers", "Content-Disposition");
+   ```
+
+2. 前端还是用原生的axios post 方法吧
+
+   ```
+   download(url, params, filename) {
+           // NProgress.start()
+           return axios.post(url, params, {
+               timeout: 300000,
+               baseURL: baseUrl,
+               transformRequest: [(params) => {
+                   return tansParams(params);
+               }],
+               headers: {
+                   "Content-Type": "application/x-www-form-urlencoded",
+                   "Authorization": "Bearer " + getToken()
+               },
+               responseType: "blob"
+           }).then((response) => {
+               if (filename == null||filename== undefined||filename==''){
+                   // 前提是服务端要在header设置Access-Control-Expose-Headers: Content-Disposition
+                   // 前端才能正常获取到Content-Disposition内容
+                   const disposition = response.headers["content-disposition"];
+                   let filename = disposition.substring(disposition.indexOf("filename=") + 9, disposition.length);
+                   // iso8859-1的字符转换成中文
+                   filename = decodeURI(escape(filename));
+                   // 去掉双引号
+                   filename = filename.replace(/\"/g, "");
+               }
+               
+               const content = response.data;
+               const blob = new Blob([content]);
+               if ("download" in document.createElement("a")) {
+                   const elink = document.createElement("a");
+                   elink.download = filename;
+                   elink.style.display = "none";
+                   elink.href = URL.createObjectURL(blob);
+                   document.body.appendChild(elink);
+                   elink.click();
+                   URL.revokeObjectURL(elink.href);
+                   document.body.removeChild(elink);
+               } else {
+                   navigator.msSaveBlob(blob, filename);
+               }
+               // NProgress.done()
+           }).catch((r) => {
+           });
+       },
+   ```
+
+   
+
 ## 参考文章
 
 [前端js/vue下载后台传过来的流文件（如excel）并设置下载文件名](https://segmentfault.com/a/1190000020540788)

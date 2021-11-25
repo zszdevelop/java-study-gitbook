@@ -97,7 +97,7 @@ public class SysUser extends BaseEntity {
 ```
 
 - 添加 `@Transient` 注解的字段，非存储字段。后续的实体，补充重复赘述。
-- 每个字段比较简单，胖友自己根据注释理解下即可。
+- 每个字段比较简单，根据注释理解下即可。
 
 对应表的创建 SQL 如下：
 
@@ -219,7 +219,7 @@ public class SysUserRole {
 }
 ```
 
-- 每个字段比较简单，胖友自己根据注释理解下即可。
+- 每个字段比较简单，根据注释理解下即可。
 - `roleKey` 属性，对应的角色**标识**字符串，可以对应多个角色**标识**，使用逗号分隔。例如说：`"admin,normal"` 。
 
 对应表的创建 SQL 如下：
@@ -355,7 +355,7 @@ public class SysRoleMenu {
 }
 ```
 
-- 每个字段比较简单，胖友自己根据注释理解下即可。
+- 每个字段比较简单，友自己根据注释理解下即可。
 
 对应表的创建 SQL 如下：
 
@@ -372,7 +372,11 @@ create table sys_role_menu (
 在SecurityConfig 配置类，继承 WebSecurityConfigurerAdapter 抽象类，实现 Spring Security 在 Web 场景下的自定义配置。代码如下：
 
 ```java
-// SecurityConfig.java@Configurationpublic class SecurityConfig extends WebSecurityConfigurerAdapter {    // ...}
+// SecurityConfig.java
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+  // ...
+}
 ```
 
 涉及到的配置方法较多，我们逐个来看看。
@@ -471,9 +475,9 @@ protected void configure(HttpSecurity httpSecurity) throws Exception {
 }
 ```
 
-- `<X>` 处，设置认证失败时的处理器为 `unauthorizedHandler` 。详细解析，见7.6.1 AuthenticationEntryPointImpl。
-- `<Y>` 处，设置用于登录的 `/login` 接口，允许匿名访问。这样，后续我们就可以使用自定义的登录接口。详细解析，见7.3 登录 API 接口
-- `<Z>` 处，设置登出成功的处理器为 `logoutSuccessHandler` 。详细解析，见7.6.3 LogoutSuccessHandlerImpl
+- `<X>` 处，设置认证失败时的处理器为 `unauthorizedHandler` 。详细解析，见 AuthenticationEntryPointImpl。
+- `<Y>` 处，设置用于登录的 `/login` 接口，允许匿名访问。这样，后续我们就可以使用自定义的登录接口。详细解析，见登录 API 接口
+- `<Z>` 处，设置登出成功的处理器为 `logoutSuccessHandler` 。详细解析，见LogoutSuccessHandlerImpl
 - `<P>` 处，添加 JWT 认证过滤器 `authenticationTokenFilter` ，用于用户使用用户名与密码登录完成后，后续请求基于 JWT 来认证。 详细解析，见 JwtAuthenticationTokenFilter。
 
 ### 3.3 重写 `#authenticationManagerBean` 方法
@@ -600,11 +604,11 @@ public String login(String username, String password, String code, String uuid) 
 }
 ```
 
-- `<1>` 处，验证图片验证码的正确性。该验证码会存储在 Redis 缓存中，通过 `uuid` 作为对应的标识。生成的逻辑，胖友自己看 CaptchaController 提供的 `/captchaImage` 接口。
+- `<1>` 处，验证图片验证码的正确性。该验证码会存储在 Redis 缓存中，通过 `uuid` 作为对应的标识。生成的逻辑，看 CaptchaController 提供的 `/captchaImage` 接口。
 - <2>处，调用 Spring Security 的AuthenticationManager#authenticate(UsernamePasswordAuthenticationToken authentication)方法，基于用户名与密码的登录认证。在其内部，会调用我们定义的 UserDetailsServiceImpl #loadUserByUsername(String username)方法，获得指定用户名对应的用户信息。
   - `<2.1>` 处，发生异常，说明认证**不**通过，记录相应的登录失败日志。
   - `<2.2>` 处，**未**发生异常，说明认证通过，记录相应的登录成功日志。
-  - 关于上述日志，我们在[「7.7 登录日志」](https://www.iocoder.cn/Spring-Boot/Spring-Security/?vip=#)来讲。
+  - 关于上述日志，我们在 登录日志 来讲。
 - `<3>` 处，调用 TokenService 的 `#createToken(LoginUser loginUser)` 方法，给认证通过的用户，生成其对应的认证 TOKEN 。这样，该用户的后续请求，就使用该 TOKEN 作为身份标识进行认证。
 
 ### 4.3 加载用户信息
@@ -732,7 +736,7 @@ public SysUser selectUserByUserName(String userName) {
   - 首先，如果 SysUser 是超级管理员，则其权限标识集合就是 `*:*:*` ，标识可以所有模块的所有操作。
   - 然后，查询 `sys_menu` 表，同时连接 `sys_role_menu`、`sys_user_role` 表，将 SysUser 拥有的 SysMenu 的权限标识数组，然后使用 `","` 分隔每个 SysMenu 对应的权限标识。
 
-这里，我们看到最终返回的是 [LoginUser](https://github.com/YunaiV/RuoYi-Vue/blob/master/ruoyi/src/main/java/com/ruoyi/framework/security/LoginUser.java) ，实现 Spring Security [UserDetails](https://github.com/spring-projects/spring-security/blob/master/core/src/main/java/org/springframework/security/core/userdetails/UserDetails.java) 接口，自定义的用户明细。代码如下：
+这里，我们看到最终返回的是 LoginUser ，实现 Spring Security UserDetails  接口，自定义的用户明细。代码如下：
 
 
 

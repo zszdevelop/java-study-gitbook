@@ -5,6 +5,26 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
+            title: '常用函数库',   // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'lodash',   // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'lodash使用与常用函数',   // 必要的
+                            path: 'frontend/plugin/funclib/lodash/lodash使用与常用函数.md'
+                        }
+                    ]
+                },
+            ]
+        },
+        {
             title: 'eslint',   // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
@@ -40,6 +60,25 @@ exports.mulu = {
                 },{
                     title: 'Vue使用print-js实现打印功能',   // 必要的
                     path: 'frontend/plugin/pdf/Vue使用print-js实现打印功能.md'
+                }
+            ]
+        }, {
+            title: '表单生成器',   // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'form-generator',   // 必要的
+                        //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                        collapsable: true, // 可选的, 默认值是 true,
+                        sidebarDepth: 2,    // 可选的, 默认值是 1
+                        children: [
+                            {
+                                title: 'form-generator初尝试',   // 必要的
+                                path: 'frontend/plugin/formgenerator/form-generator/form-generator初尝试.md'
+                            }
+                        ]
                 }
             ]
         }
