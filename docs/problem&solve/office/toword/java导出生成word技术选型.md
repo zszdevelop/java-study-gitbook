@@ -10,6 +10,9 @@
 - itext
 - JSP输出样式
 - 使用xml
+- aspose.words java
+  - 公司.net团队使用的技术，也有java版本。收费
+
 
 ## 2. 技术选型
 

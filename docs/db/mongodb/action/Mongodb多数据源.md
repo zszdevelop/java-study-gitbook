@@ -61,8 +61,8 @@
    
        @Bean
        @Primary
-       public MongoDbFactory primaryFactory(MongoProperties mongoProperties) throws Exception {
-           return new SimpleMongoDbFactory(new MongoClientURI(primaryMongoProperties().getUri()));
+    		public MongoDatabaseFactory primaryFactory(MongoProperties mongoProperties)  {
+           return new SimpleMongoClientDatabaseFactory(primaryMongoProperties().getUri());
        }
    }
    
@@ -70,7 +70,7 @@
 
 4. 副数据库配置文件PrimaryMongoConfig
 
-   ```
+   ```java
    package com.zszdevelop.mongomultidemo.config;
    
    import com.mongodb.MongoClientURI;
@@ -101,24 +101,22 @@
        }
    
        @Bean
-       public MongoDbFactory secondaryFactory(MongoProperties mongoProperties) throws Exception {
-           return new SimpleMongoDbFactory(new MongoClientURI(secondaryMongoProperties().getUri()));
+        @Bean
+       public MongoDatabaseFactory secondaryFactory(MongoProperties mongoProperties) throws Exception {
+           SimpleMongoClientDatabaseFactory simpleMongoClientDbFactory = new SimpleMongoClientDatabaseFactory(secondaryMongoProperties().getUri());
+           return  simpleMongoClientDbFactory;
        }
    }
    
    ```
+
+   
 
 5. 用户实体类（存储在副数据库）
 
    ```java
    package com.zszdevelop.mongomultidemo.domain.secondary;
    
-   /**
-    * @author: zsz
-    * @create: 2021-02-03 10:36
-    * @描述:
-    **/
-   // User.java
    
    import lombok.Data;
    import lombok.experimental.Accessors;
@@ -128,11 +126,6 @@
    import java.io.Serializable;
    import java.time.Instant;
    
-   /**
-    * 用户
-    * @author Erwin Feng
-    * @since 2019-07-01 17:15
-    */
    @Data
    @Accessors(chain = true)
    @Document(collection = "t_user")
@@ -155,7 +148,7 @@
    }
    
    ```
-
+   
 6. 用户查询仓库（副数据库）
 
    ```java
@@ -236,12 +229,7 @@
    ```java
    package com.zszdevelop.mongomultidemo.controller;
    
-   /**
-    * @author: zsz
-    * @create: 2021-02-03 10:41
-    * @描述:
-    **/
-   // InitController.java
+   
    
    import com.zszdevelop.mongomultidemo.domain.secondary.User;
    import com.zszdevelop.mongomultidemo.repository.secondary.UserRepository;
@@ -279,7 +267,7 @@
    }
    
    ```
-
+   
 2. 测试代码
 
    ```java
@@ -423,3 +411,5 @@
 ## 参考文章
 
 [SpringBoot整合MongoDB多数据源](https://juejin.cn/post/6844903878312329224)
+
+[Spring Data MongoDB多数据源实现](https://blog.csdn.net/xl_1803/article/details/118462077)

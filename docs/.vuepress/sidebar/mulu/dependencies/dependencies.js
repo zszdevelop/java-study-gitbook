@@ -14,6 +14,8 @@ var SearchMulu = require('./SearchMulu.js');
 var RequestHttpMulu = require('./RequestHttpMulu.js');
 var TimerMulu = require('./TimerMulu.js');
 var LogMulu = require('./LogMulu.js');
+var Monitor = require('./Monitor.js');
+
 
 exports.mulu = {
     title: '第三方依赖',   // 必要的
@@ -35,6 +37,7 @@ exports.mulu = {
         RequestHttpMulu.mulu,
         TimerMulu.mulu,
         LogMulu.mulu,
-        OfficeMulu.mulu
+        OfficeMulu.mulu,
+        Monitor.mulu
     ]
 }

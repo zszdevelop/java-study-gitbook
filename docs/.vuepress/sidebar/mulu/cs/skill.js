@@ -15,6 +15,11 @@ exports.mulu = {
                     path: 'cs/skill/内网穿透/内网穿透之natapp使用.md'
                 }
             ]
+        },
+        {
+            title: '如何高效地使用搜索引擎？',   // 必要的
+            path: 'cs/skill/search/如何高效地使用搜索引擎.md'
         }
+        
     ]
 }

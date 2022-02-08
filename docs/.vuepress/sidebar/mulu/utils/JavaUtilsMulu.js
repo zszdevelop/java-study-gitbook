@@ -37,6 +37,14 @@ exports.mulu = {
             title: 'Java根据ParentId生成tree',   // 必要的
             path: 'utils/java/Java根据ParentId生成tree.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
            
+        }, {
+            title: 'Zxing生成和识别二维码',   // 必要的
+            path: 'utils/java/Zxing生成和识别二维码.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+           
+        }, {
+            title: 'Java精确的浮点数运算工具类',   // 必要的
+            path: 'utils/java/Java精确的浮点数运算工具类.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+           
         }
     ]
 }

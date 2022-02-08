@@ -1,4 +1,4 @@
-# Mongodb文档操作
+# spring-data-mongodb文档基础操作
 
 ## 1. Spring Data Mongodb 
 
@@ -86,7 +86,7 @@ spring:
     mongodb:
       host: 127.0.0.1 # mongodb的连接地址
       port: 27017 # mongodb的连接端口号
-      database: mall-port # mongodb的连接的数据库
+      database: mytest # mongodb的连接的数据库
 ```
 
 ### 2.3 添加会员浏览记录文档对象MemberReadHistory

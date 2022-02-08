@@ -12,6 +12,10 @@ exports.mulu = {
             title:'jrebel热加载',
             path:'tools/Jrebel/'
         },
+        // {
+        //     title:'idea热部署',
+        //     path:'software/idea/idea热部署.md'
+        // },
         {
             title:'p3c插件检测代码规范',
             path:'tools/p3c/'

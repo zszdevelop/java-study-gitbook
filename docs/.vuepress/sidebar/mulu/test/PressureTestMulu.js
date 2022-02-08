@@ -35,6 +35,16 @@ exports.mulu = {
                     title: 'JMeter的基本使用',   // 必要的
                     path: 'test/PressureTest/JMeter/JMeter的基本使用.md'
                 }, {
+                    title: '插件',   // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'JMeter插件使用',   // 必要的
+                            path: 'test/PressureTest/JMeter/plugins/JMeter插件使用.md'
+                        }]
+                }, {
                     title: '遇到的问题',   // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,

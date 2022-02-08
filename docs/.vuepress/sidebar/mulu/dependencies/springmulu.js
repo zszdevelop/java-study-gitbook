@@ -1,11 +1,10 @@
 exports.mulu = {
-    title: 'Spring',   // 必要的
+    title: 'Spring', // 必要的
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
-    sidebarDepth: 2,    // 可选的, 默认值是 1
-    children: [
-        {
-            title: 'Spring常见知识点',   // 必要的
+    sidebarDepth: 2, // 可选的, 默认值是 1
+    children: [{
+            title: 'Spring常见知识点', // 必要的
             path: 'dependencies/spring/interview/Spring常见知识点.md'
         },
         {
@@ -13,20 +12,18 @@ exports.mulu = {
             path: 'dependencies/spring/Framework/Spring整体架构.md',
         },
         {
-            title: 'Spring IoC',   // 必要的
+            title: 'Spring IoC', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
                     title: 'Spring IoC常见问题',
                     path: 'dependencies/spring/ioc/SpringIoC常见问题.md',
                 },
                 {
                     title: 'Spring Bean常见问题',
                     path: 'dependencies/spring/ioc/SpringBean常见问题.md',
-                }
-                ,
+                },
                 {
                     title: 'Spring 装配Bean的3种方式',
                     path: 'dependencies/spring/ioc/Spring 装配Bean的3种方式.md',
@@ -38,12 +35,11 @@ exports.mulu = {
             ]
         },
         {
-            title: 'SpringAOP',   // 必要的
+            title: 'SpringAOP', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
                     title: 'SpringAOP概述',
                     path: 'dependencies/spring/aop/SpringAOP概述.md',
                 },
@@ -52,42 +48,40 @@ exports.mulu = {
                     path: 'dependencies/spring/aop/SpringAOP实现原理.md',
                 },
                 {
-                    title: 'AOP实战',   // 必要的
+                    title: 'AOP实战', // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2,    // 可选的, 默认值是 1
-                    children: [
-                        {
-                            title: 'AOP实现打印日志',
-                            path: 'dependencies/spring/aop/AOP打印日志.md',
-                        }, {
-                            title: 'AOP实现Limit限流',
-                            path: 'dependencies/spring/aop/Limit限流.md',
-                        }, {
-                            title: 'AOP实现防重复提交',
-                            path: 'dependencies/spring/aop/AOP实现防重复提交.md',
-                        }
-                    ]
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [{
+                        title: 'AOP实现打印日志',
+                        path: 'dependencies/spring/aop/AOP打印日志.md',
+                    }, {
+                        title: 'AOP实现Limit限流',
+                        path: 'dependencies/spring/aop/Limit限流.md',
+                    }, {
+                        title: 'AOP实现防重复提交',
+                        path: 'dependencies/spring/aop/AOP实现防重复提交.md',
+                    }]
                 }
             ]
         }, {
-            title: 'Spring事务',   // 必要的
+            title: 'Spring事务', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
-                    title: 'Spring事务',
-                    path: 'dependencies/spring/transaction/Spring事务.md'
-                }
-            ]
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
+                title: 'Spring事务',
+                path: 'dependencies/spring/transaction/Spring事务.md'
+            }, {
+                title: '@Transactional注解的失效场景',
+                path: 'dependencies/spring/transaction/Transactional注解的失效场景.md'
+            }]
         }, {
-            title: 'Spring MVC',   // 必要的
+            title: 'Spring MVC', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
                     title: 'SpringMVC常见知识点',
                     path: 'dependencies/spring/springmvc/SpringMVC常见知识点.md'
                 },
@@ -101,12 +95,11 @@ exports.mulu = {
                 }
             ]
         }, {
-            title: 'Spring Boot',   // 必要的
+            title: 'Spring Boot', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
                     title: 'Spring Boot常见知识点',
                     path: 'dependencies/spring/SpringBoot/'
                 },
@@ -121,9 +114,8 @@ exports.mulu = {
                 {
                     title: 'SpringBoot-Starter',
                     collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2,    // 可选的, 默认值是 1
-                    children: [
-                        {
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [{
                             title: '自定义SpringBoot Starter实现自动化配置',
                             path: 'dependencies/spring/SpringBoot/自定义SpringBootStarter实现自动化配置.md'
                         },
@@ -135,12 +127,11 @@ exports.mulu = {
                 },
             ]
         }, {
-            title: 'Spring相关应用',   // 必要的
+            title: 'Spring相关应用', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
                     title: '拦截器和过滤器',
                     path: 'dependencies/spring/filter/拦截器和过滤器.md'
                 },
@@ -151,15 +142,14 @@ exports.mulu = {
             ]
         },
         {
-            title: 'Spring发展提升',   // 必要的
-            path: 'dependencies/spring/development/Spring发展提升.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            title: 'Spring发展提升', // 必要的
+            path: 'dependencies/spring/development/Spring发展提升.md', // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         },
         {
-            title: '集成/使用问题',   // 必要的
+            title: '集成/使用问题', // 必要的
             collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
                     title: '打jar包，没有主清单属性',
                     path: 'dependencies/spring/problem/打jar包没有主清单属性.md'
                 },

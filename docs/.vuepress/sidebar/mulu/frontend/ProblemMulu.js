@@ -26,6 +26,10 @@ exports.mulu = {
         {
             title: 'npm 运行项目时 Error: PostCSS received undefined instead of CSS string',   // 必要的
             path: 'frontend/problem/npmrun时PostCSS.md'
+        },
+        {
+            title: '线上element的字体图标乱码',   // 必要的
+            path: 'frontend/problem/线上element的字体图标乱码.md'
         }
     ]
 }

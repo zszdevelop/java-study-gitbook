@@ -9,6 +9,13 @@ exports.mulu = {
             title: 'GooglePlay的App离线下载',
             path: 'software/site/GooglePlay的App离线下载.md'
         },
-
+        {
+            title: 'Chrome插件离线下载',
+            path: 'software/site/Chrome插件离线下载.md'
+        },
+        {
+            title: '百度网盘搜索资源',
+            path: 'software/site/百度网盘搜索资源.md'
+        },
     ]
 }

@@ -9,6 +9,7 @@ var AxureMulu = require('./AxureMulu');
 var TomcatMulu = require('./TomcatMulu');
 var JenkinsMulu = require('./JenkinsMulu');
 var NexusMulu = require('./NexusMulu');
+var SiteMulu = require('./SiteMulu');
 
 
 exports.mulu = {
@@ -27,5 +28,6 @@ exports.mulu = {
         BlogMulu.mulu,
         TomcatMulu.mulu,
         JenkinsMulu.mulu,
-        NexusMulu.mulu
+        NexusMulu.mulu,
+        SiteMulu.mulu
     ]}

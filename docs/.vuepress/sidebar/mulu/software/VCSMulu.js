@@ -17,9 +17,13 @@ exports.mulu = {
                 {
                     title: 'gitignore文件屏蔽规则',   // 必要的
                     path: 'tools/vcs/git/gitignore文件屏蔽规则.md'
+                },  {
+                    title: 'git工作流',   // 必要的
+                    path: 'tools/vcs/git/git工作流.md'
+
                 }, {
-                    title: 'android gitignore 模板',   // 必要的
-                    path: 'tools/vcs/git/androidGitignore模板.md'
+                    title: 'git merge的三种操作',   // 必要的
+                    path: 'tools/vcs/git/gitmerge的三种操作.md'
 
                 }
             ]

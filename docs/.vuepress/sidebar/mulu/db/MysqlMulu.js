@@ -230,6 +230,9 @@ exports.mulu = {
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 {
+                    title: 'MySQL性能优化思路',
+                    path: "db/mysql/optimize/MySQL性能优化思路.md"
+                }, {
                     title: 'MySQL 高性能优化规范建议',
                     path: "db/mysql/optimize/MySQL高性能优化规范建议.md"
                 },

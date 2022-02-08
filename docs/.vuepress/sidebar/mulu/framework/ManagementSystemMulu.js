@@ -60,6 +60,22 @@ exports.mulu = {
                 {
                     title: '分页插件的二次封装', // 必要的
                     path: 'framework/ManagementSystem/function/分页插件的二次封装.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                },
+                {
+                    title: '进程优雅退出功能&实现思路', // 必要的
+                    path: 'framework/ManagementSystem/function/进程优雅退出功能&实现思路.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                }
+            ]
+        },
+        {
+            title: '问题记录', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '若依优化与问题记录', // 必要的
+                    path: 'framework/ManagementSystem/problem/若依优化与问题记录.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 }
             ]
         },

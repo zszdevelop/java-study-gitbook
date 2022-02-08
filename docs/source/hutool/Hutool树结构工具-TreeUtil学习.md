@@ -60,7 +60,7 @@ nodeList.add(new TreeNode<>("11", "1", "用户管理", 222222));
 nodeList.add(new TreeNode<>("111", "11", "用户添加", 0));
 nodeList.add(new TreeNode<>("2", "0", "店铺管理", 1));
 nodeList.add(new TreeNode<>("21", "2", "商品管理", 44));
-nodeList.add(new TreeNode<>("221", "2", "商品管理2", 2));Copy to clipboardErrorCopied
+nodeList.add(new TreeNode<>("221", "2", "商品管理2", 2));
 ```
 
 > TreeNode表示一个抽象的节点，也表示数据库中一行数据。 如果有其它数据，可以调用`setExtra`添加扩展字段。
@@ -93,7 +93,7 @@ List<Tree<String>> treeNodes = TreeUtil.build(nodeList, "0", treeNodeConfig,
             // 扩展属性 ...
             tree.putExtra("extraField", 666);
             tree.putExtra("other", new Object());
-        });Copy to clipboardErrorCopied
+        });
 ```
 
 通过TreeNodeConfig我们可以自定义节点的名称、关系节点id名称，这样就可以和不同的数据库做对应。
