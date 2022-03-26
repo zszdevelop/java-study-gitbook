@@ -6,7 +6,7 @@
 1. 项目并没有引用到log4g-core
 2. 也没有打印会引起该漏洞的关键字或规则
 
-![image-20211222121156841](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211222121156841.png)
+![image-20211222121156841](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211222121156841.png)
 
 ### 1.1 针对漏洞的自定义规则
 
@@ -100,7 +100,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer
 
 #### 4.2.3 运行poc.java，即可访问恶意类并执行写在其中的"calc"命令
 
-![image-20211222124406317](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211222124406317.png)
+![image-20211222124406317](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211222124406317.png)
 
 ### 4.3 验证测试
 
@@ -108,21 +108,21 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer
 
 打印的日志会调用jndi
 
-![image-20211222124709509](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211222124709509.png)
+![image-20211222124709509](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211222124709509.png)
 
-![image-20211222124917358](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211222124917358.png)
+![image-20211222124917358](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211222124917358.png)
 
 #### 4.3.2 已修复版本log4j-core-2.17.0
 
 已修复版本就变成单纯的打印日志了
 
-![image-20211222124814229](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211222124814229.png)
+![image-20211222124814229](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211222124814229.png)
 
 ## 5. 项目验证
 
 项目在log 中的jdni，并不会执行远程调用
 
-![image-20211222125006483](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211222125006483.png)
+![image-20211222125006483](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211222125006483.png)
 
 ## 参考文章
 

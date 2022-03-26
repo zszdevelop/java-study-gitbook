@@ -6,27 +6,27 @@
 
 导入文件之后，显示OverView界面
 
-![image-20190930142515380](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930142515380.png)
+![image-20190930142515380](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930142515380.png)
 
 如果选择了第一个，则会生成一个报告
 
 ## 1.2 OverView 界面
 
-![image-20190930142814638](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930142814638.png)
+![image-20190930142814638](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930142814638.png)
 
 需要关注的是下面的Actions区域
 
 - Histogram: 列出内存中的对象，对象的个人以及大小
 
-  ![image-20190930143023139](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930143023139.png)
+  ![image-20190930143023139](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930143023139.png)
 
 - Dominator Tree: 列出最大的对象以及其依赖存活的Object（大小以Retained Heap为标准的排序）
 
-  ![image-20190930143324484](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930143324484.png)
+  ![image-20190930143324484](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930143324484.png)
 
 - Top Consumers: 通过图形列出最大的Object
 
-  ![image-20190930143408220](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930143408220.png)
+  ![image-20190930143408220](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930143408220.png)
 
   一般Histogram和 Dominator Tree是最常用的。
 
@@ -60,7 +60,7 @@ Retained Heap的概念，它表示如果一个对象被释放掉，那会因为�
 
 把内存中的对象看成下图中的节点，并且对象和对象之间互相引用。这里有一个特殊的节点GC Roots，这就是reference chain(引用链)的起点:
 
-![image-20190930144701785](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930144701785.png)
+![image-20190930144701785](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930144701785.png)
 
 ### 2.3 GC Root
 
@@ -72,19 +72,19 @@ GC发现通过任何reference chain(引用链)无法访问某个对象的时候�
 
 Thread OvewView可以查看这个应用的Thread信息：
 
-![image-20190930145046069](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930145046069.png)
+![image-20190930145046069](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930145046069.png)
 
 ### 3.2 Group
 
 在Histogram和Domiantor Tree界面，可以选择将结果用另一种Group的方式显示（默认是Group by Object），切换到Group by package，可以更好地查看具体是哪个包里的类占用内存大，也很容易定位到自己的应用程序。
 
-![image-20190930145128425](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930145128425.png)
+![image-20190930145128425](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930145128425.png)
 
 ### 3.3 Path to GC Root
 
 在Histogram或者Domiantor Tree的某一个条目上，右键可以查看其GC Root Path：
 
-![image-20190930145214577](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930145214577.png)
+![image-20190930145214577](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930145214577.png)
 
 这里也要说明一下Java的引用规则：
 从最强到最弱，不同的引用（可到达性）级别反映了对象的生命周期。
@@ -96,7 +96,7 @@ Thread OvewView可以查看这个应用的Thread信息：
 
 点击Path To GC Roots –> with all references
 
-![image-20190930145257990](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190930145257990.png)
+![image-20190930145257990](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190930145257990.png)
 
 ### 参考文章
 

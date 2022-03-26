@@ -49,7 +49,7 @@ systemctl start docker
 
 查看是否安装成功：
 
-![image-20200126212039986](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200126212039986.png)
+![image-20200126212039986](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200126212039986.png)
 
 ## 2 安装Docker Compose
 
@@ -73,5 +73,5 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 ### 2.4 查看是否安装成功：
 
-![image-20200126212141426](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200126212141426.png)
+![image-20200126212141426](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200126212141426.png)
 

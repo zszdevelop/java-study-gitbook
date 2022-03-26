@@ -6,7 +6,7 @@
  find / -name redis
 ```
 
-![image-20201123160112607](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201123160112607.png)
+![image-20201123160112607](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201123160112607.png)
 
 ## 2. locate 
 

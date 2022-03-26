@@ -22,7 +22,7 @@
 
 消息落库的流程图
 
-![image-20210514102652979](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210514102652979.png)
+![image-20210514102652979](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210514102652979.png)
 
 以我们用户下单成功为例：
 
@@ -55,7 +55,7 @@
 
 这时候需要我们的第二种方案了，流程图如下。
 
-![image-20210514092618725](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210514092618725.png)
+![image-20210514092618725](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210514092618725.png)
 
 1. Step1 & Step2: 
 

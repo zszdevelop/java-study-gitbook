@@ -59,4 +59,4 @@ ln -s /usr/local/java/jdk1.8.0_221/bin/java /usr/bin/java
 java -version
 ```
 
-![image-20190909212359280](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190909212359280.png)
+![image-20190909212359280](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190909212359280.png)

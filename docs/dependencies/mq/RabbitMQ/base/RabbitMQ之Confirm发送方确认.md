@@ -32,7 +32,7 @@ channel.txCommit();
 
 AMQP 协议流转过程如下图所示
 
-![image-20210514144523551](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210514144523551.png)
+![image-20210514144523551](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210514144523551.png)
 
 1. 客户端发送 Tx.Select 开启事物
 2. Broker 回复 Tx.Select-Ok，确认事物开启
@@ -59,7 +59,7 @@ try {
 
 交互流程如下
 
-![image-20210514144758771](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210514144758771.png)
+![image-20210514144758771](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210514144758771.png)
 
 如果要发送多条消息，则如下做
 
@@ -88,7 +88,7 @@ for (int i = 0; i < 10; i++) {
 
 RabbitMQ 回传给生产者的确认消息中的 deliveryTag 包含了确认消息的序号，此外还可以设置 `channel.basicAck 方法中的 multple 参数`，表示在这个序号之前的所有消息都已经得到了处理。
 
-![image-20210514145114090](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210514145114090.png)
+![image-20210514145114090](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210514145114090.png)
 
 如上图所示：生产者发送了 3 条消息，开启了 mutilple，那么 RabbitMQ 回调确认时，deliveryTag = 3，表示前面的 2 条消息，包含自己都已经正确到达 RabbitMQ 了。
 
@@ -183,7 +183,7 @@ for (int i = 0; i < 10; i++) {
 
 在性能方面，QPS 对比如下
 
-![image-20210514145538216](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210514145538216.png)
+![image-20210514145538216](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210514145538216.png)
 
 普通 confirm 就是发送一条就 waitForConfirms 一次。可见异步方式效率是最高的
 

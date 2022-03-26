@@ -75,7 +75,7 @@ mc rm minio-server/test/dog.png
 mc cp /Users/zsz/Desktop/temp/dog.png  minio-server/test/
 ```
 
-![image-20210930140312806](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210930140312806.png)
+![image-20210930140312806](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210930140312806.png)
 
 ### 4.2 Bucket管理
 
@@ -89,14 +89,14 @@ mc rb --force minio-server/bucket01
 
 ```
 
-![image-20210930143222201](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210930143222201.png)
+![image-20210930143222201](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210930143222201.png)
 
 ```sh
 #查询bucket03磁盘使用情况
 mc du minio-server/bucket03
 ```
 
-![image-20210930145523482](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210930145523482.png)
+![image-20210930145523482](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210930145523482.png)
 
 ## 5 mc admin使用
 
@@ -144,7 +144,7 @@ mc admin user info minio-server fox
 mc admin user remove minio-server fox02
 ```
 
-![image-20210930145919383](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210930145919383.png)
+![image-20210930145919383](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210930145919383.png)
 
 ### 5.2 策略管理
 
@@ -160,7 +160,7 @@ mc admin policy list minio-server
 mc admin policy info minio-server readwrite
 ```
 
-![image-20210930150314231](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210930150314231.png)
+![image-20210930150314231](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210930150314231.png)
 
 #### 5.2.1 添加新的策略
 
@@ -213,7 +213,7 @@ mc admin policy add minio-server mall /Users/zsz/Desktop/miniotest/mall.json
 mc admin policy list minio-server
 ```
 
-![image-20210930151708195](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210930151708195.png)
+![image-20210930151708195](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210930151708195.png)
 
 #### 5.2.2 设置用户访问策略
 
@@ -223,7 +223,7 @@ mc admin user add minio-server fox03 12345678
 mc admin policy set minio-server mall user=fox03
 ```
 
-![image-20210930152101436](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210930152101436.png)
+![image-20210930152101436](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210930152101436.png)
 
 测试：fox03/12345678 登录minio控制台http://192.168.3.14:50000/，只能操作tulingmall的bucket
 

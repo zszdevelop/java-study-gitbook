@@ -21,7 +21,7 @@
 
 描述方式：用三角形箭头加实线表示，箭头指向父类
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/uml01.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/uml01.jpg)
 
 ### 2.2 实现
 
@@ -29,7 +29,7 @@
 
 描述方式：用三角形箭头加虚线表示，箭头指向实现的接口
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/uml02.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/uml02.jpg)
 
 ###2.3.关联
 
@@ -37,7 +37,7 @@
 
 　 **【代码体现】：成员变量**
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/uml03.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/uml03.jpg)
 
 ### 2.4 共享聚合
 
@@ -47,7 +47,7 @@
 
 ​         **【代码体现】：成员变量**
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/uml04.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/uml04.jpg)
 
 ###2.5.组合集合
 
@@ -59,7 +59,7 @@
 
 　　**【箭头及指向】：带实心菱形的实线，菱形指向整体**
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/uml05.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/uml05.jpg)
 
 ###2.6.依赖　　
 
@@ -69,8 +69,8 @@
 
 **【箭头及指向】：带箭头的虚线，指向被使用者**
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/uml07.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/uml07.jpg)
 
 ###2.7 各种类图关系
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/uml08.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/uml08.jpg)

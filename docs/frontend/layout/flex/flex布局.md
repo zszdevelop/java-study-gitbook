@@ -31,7 +31,7 @@ flex 的使用方法很简单，只需要将其 `display` 属性设置为 `flex`
 在使用 flex 的子元素中，占据的主轴空间叫做 `main size`，占据的交叉轴空间叫做 `cross size`。
 
 
-![基本概念](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200827151116128.png)
+![基本概念](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200827151116128.png)
 
 ## 3. 父容器属性
 
@@ -59,7 +59,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 
 
 
-![flex-direction 属性](https://gitee.com/zszdevelop/blogimage/raw/master/img/01.png)
+![flex-direction 属性](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/01.png)
 
 ### 3.2 flex-wrap 属性
 
@@ -72,7 +72,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
  flex-wrap: wrap-reverse     // 换行，第一行在下方
 ```
 
-![flex-wrap 属性](https://gitee.com/zszdevelop/blogimage/raw/master/img/02.png)
+![flex-wrap 属性](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/02.png)
 
 ### 3.3 justify-content 属性
 
@@ -91,7 +91,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 
 
 
-![justify-content 属性](https://gitee.com/zszdevelop/blogimage/raw/master/img/03.png)
+![justify-content 属性](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/03.png)
 
 ### 3.4 flex-flow 属性
 
@@ -118,7 +118,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 }
 ```
 
-![align-items 属性](https://gitee.com/zszdevelop/blogimage/raw/master/img/04.png)
+![align-items 属性](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/04.png)
 
 ### 3.6 align-content 属性
 
@@ -135,7 +135,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 }
 ```
 
-![align-content ](https://gitee.com/zszdevelop/blogimage/raw/master/img/05.png)
+![align-content ](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/05.png)
 
 ## 4. 子容器属性
 
@@ -158,7 +158,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 }
 ```
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/41.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/41.png)
 
 ### 4.2 flex-grow 属性
 
@@ -172,7 +172,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 }
 ```
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/42.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/42.png)
 
 ### 4.3 flex-shrink 属性
 
@@ -186,7 +186,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 }
 ```
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/43.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/43.png)
 
 ### 4.4 flex-basis 属性
 
@@ -200,7 +200,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 }
 ```
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/44.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/44.png)
 
 ### 4.5 flex 属性
 
@@ -233,7 +233,7 @@ flex-direction 属性决定主轴的方向（**主轴的方向不一定是水平
 }
 ```
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/46.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/46.png)
 
 ## 参考文章
 

@@ -24,7 +24,7 @@ Spring Cloud Gateway 作为Spring Cloud 生态系统中的网关，**目标是�
 
 ## 4. 工作流程
 
-![image-20200118122919783](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200118122919783.png)
+![image-20200118122919783](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200118122919783.png)
 
 1. 客户端向 Spring Cloud Gateway 发出请求。
 2. 如果Gateway handler Mapping 中找到与请求相匹配的路由，

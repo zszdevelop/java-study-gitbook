@@ -96,7 +96,7 @@ curl -sSL https://zipkin.io/quickstart.sh | bash -s
 
 [官方数据库表地址](https://github.com/openzipkin/zipkin/blob/master/zipkin-storage/mysql-v1/src/main/resources/mysql.sql)
 
-![image-20191203222325915](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191203222325915.png)
+![image-20191203222325915](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191203222325915.png)
 
 ### 3.4 启动zipkin.jar
 
@@ -144,16 +144,16 @@ spring:
 
 http://localhost:8402/zipkin/链接
 
-![image-20191203223120174](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191203223120174.png)
+![image-20191203223120174](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191203223120174.png)
 
-![image-20191203223135119](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191203223135119.png)
+![image-20191203223135119](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191203223135119.png)
 
-![image-20191203223152330](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191203223152330.png)
+![image-20191203223152330](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191203223152330.png)
 
 查看依赖关系
 
-![image-20210218094014985](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210218094014985.png)
+![image-20210218094014985](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210218094014985.png)
 
 ### 3.8 查看数据表，看是否存储了信息：
 
-![image-20191203223244996](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191203223244996.png)
+![image-20191203223244996](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191203223244996.png)

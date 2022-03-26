@@ -331,7 +331,7 @@ select * from user_tab_partitions where table_name='TEST';
 // select * from dba_tab_partitions where table_name='TEST';
 ```
 
-![image-20201103231714916](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201103231714916.png)
+![image-20201103231714916](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201103231714916.png)
 
 ### 7.2 查询索引信息
 

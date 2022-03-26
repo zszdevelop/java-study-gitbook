@@ -4,7 +4,7 @@
 
 最简单的网格布局，就是平均分布。在容器里面平均分配空间，跟上面的骰子布局很像，但是需要设置项目的自动缩放。
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071321.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071321.png)
 
 HTML代码如下。
 
@@ -32,7 +32,7 @@ CSS代码如下。
 
 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071322.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071322.png)
 
 HTML代码如下。
 

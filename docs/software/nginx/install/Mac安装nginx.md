@@ -20,7 +20,7 @@ brew update
 brew search nginx
 ```
 
-![image-20210607150955882](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210607150955882.png)
+![image-20210607150955882](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210607150955882.png)
 
 ### 2.3 **安装nginx**
 
@@ -61,7 +61,7 @@ nginx -s reload
 
 成功看到欢迎页面～！（对应的html是/usr/local/var/www/index.html）
 
-![image-20210607151153045](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210607151153045.png)
+![image-20210607151153045](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210607151153045.png)
 
 ## 参考文章
 

@@ -43,7 +43,7 @@ CSS
 
 效果：
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/1460000021249926.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/1460000021249926.png)
 
 ### 1.2 方式二：`margin: 0 aoto`实现
 
@@ -75,7 +75,7 @@ CSS
 
 效果：
 
-![image-20210709201555384](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210709201555384.png)
+![image-20210709201555384](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210709201555384.png)
 
 ### 1.3 方式三：table+margin实现
 
@@ -106,7 +106,7 @@ CSS
 
 效果：
 
-![image-20210709201645304](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210709201645304.png)
+![image-20210709201645304](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210709201645304.png)
 
 ### 1.4 方式四：absolute+transform实现
 
@@ -145,7 +145,7 @@ CSS
 
 效果：
 
-![image-20210709201723869](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210709201723869.png)
+![image-20210709201723869](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210709201723869.png)
 
 ### 1.5 方式五：absolute+margin实现
 
@@ -181,7 +181,7 @@ CSS
 
 效果：
 
-![image-20210709201823067](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210709201823067.png)
+![image-20210709201823067](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210709201823067.png)
 
 ### 1.6 方式六：flexbox实现
 
@@ -214,7 +214,7 @@ CSS
 
 效果：
 
-![image-20210709201903304](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210709201903304.png)
+![image-20210709201903304](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210709201903304.png)
 
 ### 1.7 方式七：flex+margin实现
 
@@ -245,7 +245,7 @@ CSS
 }
 ```
 
-![image-20210709201948982](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210709201948982.png)
+![image-20210709201948982](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210709201948982.png)
 
 ## 参考文章
 

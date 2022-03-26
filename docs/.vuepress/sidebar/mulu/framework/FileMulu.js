@@ -23,7 +23,10 @@ exports.mulu = {
                     title: 'SpringBoot整合minio',   // 必要的
                     path: 'framework/filesystem/minio/SpringBoot整合minio.md'
                 },
-               
+                {
+                    title: '如何自定义MinIO桶的权限',   // 必要的
+                    path: 'framework/filesystem/minio/如何自定义MinIO桶的权限.md'
+                },
             ]
         },
         {

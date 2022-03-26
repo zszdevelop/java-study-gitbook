@@ -25,7 +25,7 @@
 - 优化器：按照MySQL 认为最优的方案去执行
 - 执行器：执行语句，然后从存储引擎返回数据
 
-![image-20190913212622310](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190913212622310.png)
+![image-20190913212622310](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190913212622310.png)
 
 简单来说Mysql 主要分为Server层和存储引擎层
 

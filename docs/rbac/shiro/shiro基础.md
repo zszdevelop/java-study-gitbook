@@ -2,7 +2,7 @@
 
 ## 1. 架构
 
-![image-20191017171103266](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191017171103266.png)
+![image-20191017171103266](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191017171103266.png)
 
 黄色部分为shiro 内部
 

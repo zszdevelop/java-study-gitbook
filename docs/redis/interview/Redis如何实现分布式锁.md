@@ -38,7 +38,7 @@ SETNX key value
 
 ### 3.2 示例
 
-![image-20210410211900583](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410211900583.png)
+![image-20210410211900583](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410211900583.png)
 
 如果该locknx 的key没有被设置过，就能获取到对应的锁，否则获取不到锁。我们用完锁就释放掉。但是如果我们进程挂了，无法正常释放锁，那么key 锁就会长期存在。如何解决这个问题
 

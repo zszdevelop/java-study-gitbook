@@ -454,7 +454,7 @@ Promise.resolve()
 
 可参考下图
 
-![image-20210617194234349](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210617194234349.png)
+![image-20210617194234349](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210617194234349.png)
 
 promise的缺点之一就是无法让promise中断，利用这个特性可以让Promise中断执行，也算一种办法吧
 

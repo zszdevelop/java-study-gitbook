@@ -8,7 +8,7 @@ IDEA 新建项目会默认使用系统本地的maven设置，避免每一次都�
 
 ## 2. idea 中查找maven 默认配置路径
 
-![image-20210925131352631](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210925131352631.png)
+![image-20210925131352631](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210925131352631.png)
 
 ## 3.设置settings.xml
 

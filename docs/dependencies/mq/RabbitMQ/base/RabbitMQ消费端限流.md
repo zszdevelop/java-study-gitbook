@@ -153,23 +153,23 @@ public class Consumer {
 
 1. 第一次我们注释掉 手动 ack给RabbitMQ应答
 
-   ![image-20210519164040329](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210519164040329.png)
+   ![image-20210519164040329](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210519164040329.png)
 
    运行结果：
 
    > 发现一直卡在第一条消息，因为未给RabbitMQ手动应答，所以RabbitMQ认为消费端还未消费完，不推送新的消息
 
-   ![image-20210519164133230](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210519164133230.png)
+   ![image-20210519164133230](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210519164133230.png)
 
 2. 第二次开启手动应答
 
-   ![image-20210519164152556](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210519164152556.png)
+   ![image-20210519164152556](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210519164152556.png)
 
    运行结果：
 
    > 所有消息依次消费
 
-   ![image-20210519164211391](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210519164211391.png)
+   ![image-20210519164211391](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210519164211391.png)
 
 ## 参考文章
 

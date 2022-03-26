@@ -124,6 +124,16 @@ exports.mulu = {
                             path: 'dependencies/spring/SpringBoot/SpringBoot-Starter-权限白名单自动化配置.md'
                         }
                     ]
+                },{
+                    title: 'SpringBoot源码学习',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: '导入SpringBoot源码',
+                            path: 'dependencies/spring/SpringBoot/source/导入SpringBoot源码.md'
+                        }
+                    ]
                 },
             ]
         }, {

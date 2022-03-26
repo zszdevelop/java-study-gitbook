@@ -4,7 +4,7 @@
 
 索引一般以文件形式存储在磁盘上，索引检索需要磁盘I/O 操作，与主存不同，磁盘I/O**存在机械运动耗费**。因此磁盘I/O的时间消耗时巨大的
 
-![image-20190905233758433](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190905233758433.png)
+![image-20190905233758433](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190905233758433.png)
 
 #### 1.1 磁盘的组成
 
@@ -22,7 +22,7 @@
 
 #### 1.2 磁盘组成和工作原理
 
-![image-20190905235059595](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190905235059595.png) 
+![image-20190905235059595](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190905235059595.png) 
 
 - 磁道
 

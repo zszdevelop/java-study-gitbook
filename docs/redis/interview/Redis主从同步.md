@@ -4,7 +4,7 @@
 
 和MySQL主从复制的原因一样，Redis虽然读取写入的速度都特别快，但是也会产生读压力特别大的情况。为了分担读压力，Redis支持主从复制，Redis的主从结构可以采用一主多从或者级联结构，下图为级联结构。
 
-![image-20210411205126388](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411205126388.png)
+![image-20210411205126388](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411205126388.png)
 
 
 

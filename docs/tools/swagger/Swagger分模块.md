@@ -6,7 +6,7 @@
 
 ### 1.1 初始情况
 
-![image-20211026093522355](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026093522355.png)
+![image-20211026093522355](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026093522355.png)
 
 默认情况模块只有一个default
 
@@ -83,5 +83,5 @@ public class SwaggerConfig
 - groupName:  指定该模块名称
 - paths：指定该模块要扫码的路径
 
-![image-20211026094024020](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026094024020.png)
+![image-20211026094024020](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026094024020.png)
 

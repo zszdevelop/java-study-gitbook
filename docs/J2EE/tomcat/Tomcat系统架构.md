@@ -14,7 +14,7 @@
 
 Tomcat 顶层架构图，如下
 
-![image-20190827230726717](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190827230726717.png)
+![image-20190827230726717](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190827230726717.png)
 
 - Service
 
@@ -47,7 +47,7 @@ Tomcat 顶层架构图，如下
 
   如同时提供Http和Https链接，也可以提供向相同协议不同端口的连接，示意图如下：
 
-  ![image-20190827231956772](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190827231956772.png)
+  ![image-20190827231956772](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190827231956772.png)
 
   多个Connector 和一个Container 就形成一个Service，有了Service就可以对外提供服务了，但是还要一个生存环境，必须要有人能够给他生命，掌握其生死大权，那就非Server莫属了！所以整个Tomcat有Server控制
 
@@ -57,11 +57,11 @@ Tomcat 顶层架构图，如下
 
 上述关系都可以从server.xml看出
 
-![image-20190827232500799](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190827232500799.png)
+![image-20190827232500799](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190827232500799.png)
 
 配置文件对应的结构图
 
-![image-20190827232605700](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190827232605700.png)
+![image-20190827232605700](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190827232605700.png)
 
 结构图解析
 
@@ -110,7 +110,7 @@ Connector 最底层使用的事Socket来进行封装的，Request和Response 是
 
 Container 用于封装和管理Servlet，以及具体处理Request请求，在Connector内部包含了4个自容器
 
-![image-20190827234440202](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190827234440202.png)
+![image-20190827234440202](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190827234440202.png)
 
 #### 5.3.1  4个子容器的作用
 
@@ -121,7 +121,7 @@ Container 用于封装和管理Servlet，以及具体处理Request请求，在Co
 
 tomcat的文件目录对照，如下图
 
-![image-20190827234845236](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190827234845236.png)
+![image-20190827234845236](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190827234845236.png)
 
 Context和Host的区别是Context表示一个应用，我们的tomcat中默认的配置下webapps下的每一个文件夹目录是一个Context，其中ROOT目录存放着主应用，其他目录存放着子应用，而珍格格webapps就是一个Host站点
 

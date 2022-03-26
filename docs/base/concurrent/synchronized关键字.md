@@ -99,7 +99,7 @@ public class SynchronizedDemo2 {
 }
 ```
 
-![image-20190915222505021](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190915222505021.png)
+![image-20190915222505021](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190915222505021.png)
 
 synchronized 修饰的方法并没有 monitorenter 指令和 monitorexit 指令，取得代之的确实是 ACC_SYNCHRONIZED 标识，该标识指明了该方法是一个同步方法，**JVM 通过该 ACC_SYNCHRONIZED 访问标志来辨别一个方法是否声明为同步方法**，从而执行相应的同步调用。
 

@@ -23,11 +23,11 @@ Java虚拟机在执行 java 程序的过程中会把它管理的内存划分成�
 
 JDK 1.8 之前
 
-![image-20190923234434594](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190923234434594.png)
+![image-20190923234434594](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190923234434594.png)
 
 在JDK 1.8 
 
-![image-20190923235103550](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190923235103550.png)
+![image-20190923235103550](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190923235103550.png)
 
 **线程私有的：**
 
@@ -99,7 +99,7 @@ Java 虚拟机中所管理的内存中最大的一块，java 堆是所有线程�
 
 java堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（Garbage Collected Heap）**.从垃圾回收的角度，由于现在收集器基本都采用分代垃圾收集算法，所以 Java 堆还可以细分为：新生代和老年代：再细致一点有：Eden 空间、From Survivor、To Survivor 空间等。**进一步划分的目的是更好的回收内存，更快的分配内存**
 
-![image-20190924001743226](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190924001743226.png)
+![image-20190924001743226](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190924001743226.png)
 
 上图所示的eden 区，s0 区，s1区都是属于新生代，tentired区属于老年代，大部分情况
 
@@ -167,7 +167,7 @@ JDK 1.8 的时候，方法区（HotSpot 的永久代）被彻底移除了（JDK1
 
 **JDK1.7 及之后版本的 JVM 已经将运行时常量池从方法区中移了出来，在 Java 堆（Heap）中开辟了一块区域存放运行时常量池。**
 
-![image-20190924003048984](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190924003048984.png)
+![image-20190924003048984](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190924003048984.png)
 
 ### 3.7 直接内存
 

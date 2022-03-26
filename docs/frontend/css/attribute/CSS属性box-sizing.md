@@ -10,7 +10,7 @@ CSS的盒子模型(box model)，它控制着页面各元素的宽与高，盒子
 
 这看起来并不是那么直观，那么我们看一个图：
 
-![image-20200828153545384](https://gitee.com/zszdevelop/blogimage/raw/master/img/img01.png)
+![image-20200828153545384](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/img01.png)
 
 我们要设置这样一个宽200px的盒子的时候，还需要去计算border和padding 实现太麻烦了，如何解决呢？我们可以设置box-sizing 的属性值为**border-box**
 

@@ -4,7 +4,7 @@
 
 ### 1.1 OAuth 基本流程
 
-![image-20200124153249544](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200124153249544.png)
+![image-20200124153249544](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200124153249544.png)
 
 基本组件
 
@@ -184,7 +184,7 @@ JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
  jwtAccessTokenConverter.setSigningKey("CatalpaFlat")
 ```
 
-![image-20200124221739806](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200124221739806.png)
+![image-20200124221739806](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200124221739806.png)
 
 #### 2.1.3 端点接入-endpoints
 

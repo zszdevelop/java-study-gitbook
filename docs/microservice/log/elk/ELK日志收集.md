@@ -142,7 +142,7 @@ docker-compose up -d
 docker ps -a
 ```
 
-![image-20200127095851591](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127095851591.png)
+![image-20200127095851591](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127095851591.png)
 
 三个状态都为up就证明启动成功了
 
@@ -166,7 +166,7 @@ docker ps -a
     - 安装json_lines插件
     - 退出
 
-    ![image-20200127100248559](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127100248559.png)
+    ![image-20200127100248559](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127100248559.png)
     
     ```bash
     [root@iZwz97t3ru69kye3l7uj70Z DockerCompos]# docker exec -it logstash /bin/bash
@@ -221,4 +221,4 @@ docker ps -a
 
 使用浏览器访问 http://120.79.200.111:5601/ 可以看到Kibana管理界面：
 
-![image-20200127100502389](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127100502389.png)
+![image-20200127100502389](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127100502389.png)

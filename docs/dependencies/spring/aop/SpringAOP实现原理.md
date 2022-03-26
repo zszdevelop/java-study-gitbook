@@ -4,7 +4,7 @@
 
 代理模式UML 类图如下
 
-![image-20191011005747639](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191011005747639.png)
+![image-20191011005747639](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191011005747639.png)
 
 >类图中虚线箭头表示接口实现
 >
@@ -78,7 +78,7 @@ public class StaticProxy {
 
 结果：
 
-![image-20191011010421666](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191011010421666.png)
+![image-20191011010421666](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191011010421666.png)
 
 ## 3.动态代理
 
@@ -188,7 +188,7 @@ public class ReflectTest {
 
 结果：
 
-![image-20191011011313856](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191011011313856.png)
+![image-20191011011313856](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191011011313856.png)
 
 可以看到对于不同的实现类来说，可以用同一个动态代理类来进行代理，实现了“一次编写到处代理”的效果。但是这种方法有个缺点，就是被代理的类一定要是实现了某个接口的，这很大程度限制了本方法的使用场景。下面还有另外一个使用了CGlib增强库的方法。
 
@@ -239,7 +239,7 @@ public class CGlibAgent implements MethodInterceptor {
 }
 ```
 
-![image-20191011011509222](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191011011509222.png)
+![image-20191011011509222](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191011011509222.png)
 
 可以看到结果和JDK动态代理是一样的，但是可以直接对实现类进行操作而非接口，这样会有很大的便利。
 

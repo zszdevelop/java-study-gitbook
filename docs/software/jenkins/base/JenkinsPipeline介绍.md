@@ -404,7 +404,7 @@ pipeline {
 
 ### 4.1 新建 选择pipeline 填写Job 的名字
 
-![image-20210918223955810](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210918223955810.png)
+![image-20210918223955810](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210918223955810.png)
 
 ### 4.2 填写相应的pipeline script
 
@@ -431,15 +431,15 @@ pipeline{
 }
 ```
 
-![image-20210918224136661](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210918224136661.png)
+![image-20210918224136661](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210918224136661.png)
 
 注意这：如果使用SCM 就会从代码中获取
 
-![image-20210918224201903](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210918224201903.png)
+![image-20210918224201903](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210918224201903.png)
 
 ### 4.3 保存之后，立即构建
 
-![image-20210918224255875](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210918224255875.png)
+![image-20210918224255875](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210918224255875.png)
 
 ## 5. 变量的传递
 

@@ -4,7 +4,7 @@
 
 1. 在原有项目下新建的module
 
-   ![image-20210330153327890](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210330153327890.png)
+   ![image-20210330153327890](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210330153327890.png)
 
 2. pom文件添加依赖
 
@@ -272,7 +272,7 @@
 
    1. 在原有项目下新建的module
 
-      ![image-20210330153327890](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210330153327890.png)
+      ![image-20210330153327890](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210330153327890.png)
 
    2. pom文件添加依赖
 
@@ -570,4 +570,4 @@
 
 点击Generator 边上的绿色箭头运行，会自动生成红色框里的内容
 
-![image-20210330162338158](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210330162338158.png)
+![image-20210330162338158](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210330162338158.png)

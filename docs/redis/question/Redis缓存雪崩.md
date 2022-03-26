@@ -10,4 +10,4 @@
 - 事中：本地chcache缓存 + hystrix限流&降级，避免Mysql崩掉
 - 事后：利用 redis 持久化机制保存的数据尽快恢复缓存
 
-![image-20191008225446152](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191008225446152.png)
+![image-20191008225446152](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191008225446152.png)

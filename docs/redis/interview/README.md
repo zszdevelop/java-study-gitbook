@@ -20,12 +20,12 @@
 
   假如用户第一次访问数据库中的某些数据。这个过程会比较慢，因为是从硬盘上读取的。将该用户访问的数据存在缓存中，这样下一次再访问这些数据的时候就可以直接从缓存中获取了。操作缓存就是直接操作内存，所以速度相当快。如果数据库中的对应数据改变的之后，同步改变缓存中相应的数据即可！
 
-  ![image-20191001003544350](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191001003544350.png)
+  ![image-20191001003544350](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191001003544350.png)
 - **高并发**
 
 直接操作缓存能够承受的请求是远远大于直接访问数据库的，所以我们可以考虑把数据库中的部分数据转移到缓存中去，这样用户的一部分请求会直接到缓存这里而不用经过数据库。
 
-![image-20191001003719543](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191001003719543.png)
+![image-20191001003719543](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191001003719543.png)
 
 ## 3. 为什么要用redis 而不用 map/guava 做缓存
 
@@ -58,7 +58,7 @@
 
 3. 事件分派器每次从队列中取出一个事件，把该事件交给对应的**事件处理器**进行处理。
 
-![image-20191024173340752](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191024173340752.png)
+![image-20191024173340752](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191024173340752.png)
 
 ## 5. redis 单线程为什么效率也这么高
 
@@ -79,7 +79,7 @@
 3. **集群模式**：memcached没有原生的集群模式，需要依靠客户端来实现往集群中分片写入数据；但是 redis 目前是原生支持 cluster 模式的.
 4. **Memcached是多线程，非阻塞IO复用的网络模型；Redis使用单线程的多路 IO 复用模型。**
 
-![image-20191003175856781](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191003175856781.png)
+![image-20191003175856781](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191003175856781.png)
 
 ## 8. redis常见数据结构及使用场景分析
 

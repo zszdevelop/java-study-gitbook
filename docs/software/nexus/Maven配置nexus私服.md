@@ -6,7 +6,7 @@
 
 maven 默认的settings.xml地址。可以通过idea查看
 
-![image-20211004220055672](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004220055672.png)
+![image-20211004220055672](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004220055672.png)
 
 ## 2. 修改maven的settings.xml
 
@@ -69,7 +69,7 @@ maven 默认的settings.xml地址。可以通过idea查看
 
    构建项目，可以看到在构建的过程中使用的是nexus私服地址。
 
-   ![image-20211004221548862](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004221548862.png)
+   ![image-20211004221548862](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004221548862.png)
 
 2. 查看项目
 
@@ -83,13 +83,13 @@ maven 默认的settings.xml地址。可以通过idea查看
 
 3. **查看nexus中缓存的文件**
 
-   ![image-20211004221850526](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004221850526.png)
+   ![image-20211004221850526](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004221850526.png)
 
    **若没有缓存文件，下面有解决办法**
 
    **如果在以上页面中，并没有看到缓存的文件，是因为当前没有写入nexus的权限，可以进行以下操作：**
 
-   ![image-20211004222018328](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004222018328.png)
+   ![image-20211004222018328](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004222018328.png)
 
    进行以上设置后，再次删除本地宿主目录下的缓存文件，重新构建项目并打包，即可看到nexus上的缓存文件了。
 
@@ -134,11 +134,11 @@ mvn deploy
 
 ### 4.4 **在web界面确认上传成功：**
 
-![image-20211004224041615](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004224041615.png)
+![image-20211004224041615](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004224041615.png)
 
 将所有的内容展开，即可看到以下内容：
 
-![image-20211004223948837](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004223948837.png)
+![image-20211004223948837](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004223948837.png)
 
 如果在部署过程中，出现了错误，首先先检查一下配置文件setting.xml的账号密码有没有与nexus创建的用户密码相同，其次再检查setting.xml里的id标签和pom.xml文件中的id标签是否相同，不同会报401（没有权限）的错误。
 
@@ -160,11 +160,11 @@ mvn deploy
 
 ### 5.3 在web界面中查看，如下：
 
-![image-20211004224615718](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004224615718.png)
+![image-20211004224615718](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004224615718.png)
 
 **展开所有节点，即可看到以下内容：**
 
-![image-20211004224646522](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004224646522.png)
+![image-20211004224646522](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004224646522.png)
 
 ## 参考文章
 

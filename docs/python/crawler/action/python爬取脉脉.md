@@ -8,7 +8,7 @@
 
 >这是一个基于python3而写的爬虫，爬取的网站的脉脉网(https://maimai.cn/)，在搜索框中搜索“CHO”，并切换到“人脉”选项卡，点击姓名，进入详情页，爬取其详细信息
 
-![image-20210701215737588](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210701215737588.png)
+![image-20210701215737588](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210701215737588.png)
 
 ### 1.2 爬取的接口分析
 
@@ -41,7 +41,7 @@ https://maimai.cn/search/contacts?count=20&page=0&query=Cho&dist=0&searchTokens=
 
 该接口的返回结果为
 
-![image-20210701221518719](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210701221518719.png)
+![image-20210701221518719](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210701221518719.png)
 
 ```
 {

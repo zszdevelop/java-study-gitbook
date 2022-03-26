@@ -8,7 +8,7 @@
 Caused by: java.lang.OutOfMemoryError: PermGen space
 ```
 
-![image-20201215152554194](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201215152554194.png)
+![image-20201215152554194](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201215152554194.png)
 
 ## 2. 错误原因
 
@@ -32,7 +32,7 @@ Caused by: java.lang.OutOfMemoryError: PermGen space
 
 具体如何配置，如下图所示：
 
-![image-20201215153207907](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201215153207907.png)
+![image-20201215153207907](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201215153207907.png)
 
 其中，各个参数的含义为：
 

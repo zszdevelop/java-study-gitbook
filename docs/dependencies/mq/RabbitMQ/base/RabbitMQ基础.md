@@ -43,7 +43,7 @@ Rabbit名词：ConnectionFactory（连接管理器）、Channel（信道）、Ex
 
 ### 2.1 整体架构
 
-![image-20191106222444116](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191106222444116.png)
+![image-20191106222444116](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191106222444116.png)
 
 #### 2.1 Producer(生成者)和 Consumer(消费者)
 
@@ -90,7 +90,7 @@ Rabbit名词：ConnectionFactory（连接管理器）、Channel（信道）、Ex
 
 ##### 2.2.2 Exchange(交换器)示意图
 
-![image-20191106224716648](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191106224716648.png)
+![image-20191106224716648](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191106224716648.png)
 
 ### 2.3 Banding 绑定
 
@@ -104,7 +104,7 @@ RabbitMQ 中通过 Binding(绑定) 将 Exchange(交换器)与 Queue（消息队�
 
 ##### 2.3.1 Binding（绑定）示意图
 
-![image-20191106225342981](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191106225342981.png)
+![image-20191106225342981](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191106225342981.png)
 
 生产者将消息发送给交换器时，需要一个RoutingKey，当BindingKey 和 RoutingKey 相匹配时，消息会被路由到对应的队列中。在绑定多个队列到同一个交换器的时候，这些绑定允许使用相同的BindKey。BindKey并不是在所有的情况下都生效，它依赖于交换器类型，比如fanout 类型的交换器就会无视，而是将消息路由到所有绑定到该交换器的队列中
 
@@ -130,7 +130,7 @@ RabbitMQ 不支持队列层面的广播消费，如果有广播消费的需求�
 
 下图展示了生成者将消息存入 RabbitMQ Broker,以及消费者从Broker 中消费数据的整个流程
 
-![image-20191106232115321](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191106232115321.png)
+![image-20191106232115321](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191106232115321.png)
 
 ## 3. Exchange Types(交换器类型)
 
@@ -144,7 +144,7 @@ RabbitMQ常用的 Exchange Type 有 fanout、direct、topic、headers 这四种�
 
   direct类型的Exchange 路由规则也很简单，他会把消息路由到那些Bindingkey 与 RoutingKey 完全匹配的 Queue中。
 
-  ![image-20191106232655072](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191106232655072.png)
+  ![image-20191106232655072](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191106232655072.png)
 
   以上图为例，如果发送消息的时候设置路由键为“wraning”，那么消息会路由到Queue1 和 Queue2 。如果在发送消息的时候，设置路由键为info或者“debug”，那么消息只会路由到Queue2.如果以其他的路由键发送消息，则消息不会路由到这两个队列中。
   direct 类型常用在处理有优先级的任务，根据任务的优先级吧消息发送到对应的队列，这样可以指派更多的资源去处理高优先级的队列
@@ -160,7 +160,7 @@ RabbitMQ常用的 Exchange Type 有 fanout、direct、topic、headers 这四种�
   - "*"匹配一个分段(用“.”分割)的内容；
   - "#"匹配0和多个字符；
 
-![image-20191106233048403](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191106233048403.png)
+![image-20191106233048403](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191106233048403.png)
 
 以上图为例：
 

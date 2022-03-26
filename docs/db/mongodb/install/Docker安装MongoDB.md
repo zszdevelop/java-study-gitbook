@@ -8,7 +8,7 @@
 
 可以通过 Sort by 查看其他版本的 MongoDB，默认是最新版本 **mongo:latest**。
 
-![image-20200802220904622](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200802220904622.png)
+![image-20200802220904622](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200802220904622.png)
 
 ## 1.2 下载mongoDB
 
@@ -16,13 +16,13 @@
 docker pull mongo
 ```
 
-![image-20200802221102680](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200802221102680.png)
+![image-20200802221102680](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200802221102680.png)
 
 ### 1.3 查看本地镜像
 
 使用以下命令来查看是否已经安装mongo
 
-![image-20200802221215062](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200802221215062.png)
+![image-20200802221215062](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200802221215062.png)
 
 在上图中可以看到我们已经安装了最新版本（latest）的 mongo 镜像。
 
@@ -37,7 +37,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 
 
 
-![image-20200802221327304](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200802221327304.png)
+![image-20200802221327304](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200802221327304.png)
 
 参数说明
 
@@ -48,7 +48,7 @@ docker run -itd --name mongo -p 27017:27017 mongo --auth
 
 最后我们可以通过 **docker ps** 命令查看容器的运行信息：
 
-![image-20200802221448015](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200802221448015.png)
+![image-20200802221448015](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200802221448015.png)
 
 ## 2. 相关设置
 
@@ -62,4 +62,4 @@ $ docker exec -it mongo mongo admin
 > db.auth('admin', '123456')
 ```
 
-![image-20200802221707076](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200802221707076.png)
+![image-20200802221707076](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200802221707076.png)

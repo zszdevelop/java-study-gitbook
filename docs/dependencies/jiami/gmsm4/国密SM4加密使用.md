@@ -10,7 +10,7 @@
 
 - 前后端的参数要严格保持统一
 
-  ![image-20210928152557678](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210928152557678.png)
+  ![image-20210928152557678](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210928152557678.png)
 
 ## 2. java后端集成
 
@@ -121,7 +121,7 @@ export default {
 
 [在线测试网站](https://the-x.cn/cryptography/Sm4.aspx)
 
-![image-20210928152433988](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210928152433988.png)
+![image-20210928152433988](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210928152433988.png)
 
 ## 参考文章
 

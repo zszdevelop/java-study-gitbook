@@ -14,7 +14,7 @@
 
 2. 目录结构
 
-   ![image-20210301153307778](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301153307778.png)
+   ![image-20210301153307778](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301153307778.png)
 
    - bin： 启动和停止服务器的脚本
    - example：示例
@@ -31,13 +31,13 @@ solr 内置 `Jetty`服务器 ，可以直接启动
 solr start
 ```
 
-![image-20210301153900527](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301153900527.png)
+![image-20210301153900527](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301153900527.png)
 
 默认端口为8983
 
 [http://localhost:8983/solr/](http://localhost:8983/solr/)
 
-![image-20210301154015030](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301154015030.png)
+![image-20210301154015030](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301154015030.png)
 
 ## 4. 配置Solr
 
@@ -65,25 +65,25 @@ solr start
 solr create -c jcg
 ```
 
-![image-20210301155837877](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301155837877.png)
+![image-20210301155837877](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301155837877.png)
 
 JCG核心被填充在核心选择器上。
 
-![image-20210301160034928](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301160034928.png)
+![image-20210301160034928](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301160034928.png)
 
 #### 4.1.2 方式二：界面操作
 
 1. 在core admin上点击new core新建
 
-   ![image-20210304151629768](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304151629768.png)
+   ![image-20210304151629768](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210304151629768.png)
 
 2. 此时会提示**'solrconfig.xml** 文件找不到
 
-   ![image-20210304151726594](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304151726594.png)
+   ![image-20210304151726594](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210304151726594.png)
 
 3. 此时我们去安装目录下，可以看到已经新建了一个core目录。
 
-   ![image-20210304151943980](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304151943980.png)
+   ![image-20210304151943980](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210304151943980.png)
 
    4. 报错是因为需要的配置文件不存在，我们去拷贝过来即可。
 
@@ -93,11 +93,11 @@ JCG核心被填充在核心选择器上。
 
       然后等待1-2s，会进入以下界面：
 
-      ![image-20210304152230352](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304152230352.png)
+      ![image-20210304152230352](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210304152230352.png)
 
 ### 4.2 修改Schema.xml 文件
 
-![image-20210301160308308](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301160308308.png)
+![image-20210301160308308](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301160308308.png)
 
 - conf ： 保存核心配置
 - data： 索引数据
@@ -133,13 +133,13 @@ solr start
 
 Apache Solr自带SimplePostTool的程序。
 
-![image-20210301163115327](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301163115327.png)
+![image-20210301163115327](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301163115327.png)
 
 ```java
 java -jar post.jar -h
 ```
 
-![image-20210301163318496](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301163318496.png)
+![image-20210301163318496](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301163318496.png)
 
  索引数据：
 
@@ -157,7 +157,7 @@ java -Dtype=text/csv -Durl=http://localhost:8983/solr/jcg/update  -jar post.jar 
 
 导航到以下网址并选择核心JCG:
 
-![image-20210301163549574](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301163549574.png)
+![image-20210301163549574](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301163549574.png)
 
 ## 5. 搜索
 
@@ -167,19 +167,19 @@ java -Dtype=text/csv -Durl=http://localhost:8983/solr/jcg/update  -jar post.jar 
 
 
 
-![image-20210301163908343](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301163908343.png)
+![image-20210301163908343](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301163908343.png)
 
 ### 5.2 首字母搜索
 
 [http://localhost:8983/solr/jcg/select?q=name](https://link.jianshu.com/?t=http://localhost:8983/solr/jcg/select?q=name):"A"
 
-![image-20210301164023760](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301164023760.png)
+![image-20210301164023760](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301164023760.png)
 
 ### 5.3 使用通配符
 
 [http://localhost:8983/solr/jcg/select?q=name](https://link.jianshu.com/?t=http://localhost:8983/solr/jcg/select?q=name):"*of"
 
-![image-20210301164102113](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301164102113.png)
+![image-20210301164102113](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301164102113.png)
 
 ### 5.4 使用条件
 
@@ -187,11 +187,11 @@ java -Dtype=text/csv -Durl=http://localhost:8983/solr/jcg/update  -jar post.jar 
 
 http://localhost:8983/solr/jcg/select?q=*&fq=price:[0 TO 6]
 
-![image-20210301164140115](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301164140115.png)
+![image-20210301164140115](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301164140115.png)
 
 ## 6. Solr 页面进行查询
 
-![image-20210301164448216](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210301164448216.png)
+![image-20210301164448216](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210301164448216.png)
 
 ## 参考文章
 

@@ -267,7 +267,7 @@ public T get() {
 
 我们来看一下ThreadLocal的对象关系引用图：
 
-![image-20190917002342817](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190917002342817.png)
+![image-20190917002342817](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190917002342817.png)
 
 ThreadLocal内存泄漏的根源是：**由于ThreadLocalMap的生命周期跟Thread一样长，如果没有手动删除对应key就会导致内存泄漏，而不是因为弱引用**。
 

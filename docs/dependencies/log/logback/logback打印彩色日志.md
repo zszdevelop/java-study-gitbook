@@ -8,7 +8,7 @@ logback 默认的日志在控制台都是白白的一片，并不好看出日志
 
 [官方日志彩色](http://logback.qos.ch/manual/layouts.html#coloring)
 
-![image-20211103091624483](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211103091624483.png)
+![image-20211103091624483](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211103091624483.png)
 
 ## 2. 核心代码
 
@@ -130,4 +130,4 @@ appender > encoder > pattern 是格式化日志输出，这里也是可以自己
 
 ## 4. 测试
 
-![image-20211103085857718](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211103085857718.png)
+![image-20211103085857718](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211103085857718.png)

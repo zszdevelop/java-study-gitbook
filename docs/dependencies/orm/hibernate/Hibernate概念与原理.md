@@ -33,9 +33,9 @@
 
 #### 3.1 运行过程图
 
-![image-20201010142111373](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201010142111373.png)
+![image-20201010142111373](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201010142111373.png)
 
-![image-20201010142134280](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201010142134280.png)
+![image-20201010142134280](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201010142134280.png)
 
 ## 4. hibernate工作原理总结
 

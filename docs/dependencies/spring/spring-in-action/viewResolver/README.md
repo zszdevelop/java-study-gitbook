@@ -43,4 +43,4 @@ View 接口的任务就是接受模型以及Servlet的request 和response对象�
 
 ###Spring 自带的13个视图解析器
 
-![image-20190801234854268](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190801234854268.png)
+![image-20190801234854268](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190801234854268.png)

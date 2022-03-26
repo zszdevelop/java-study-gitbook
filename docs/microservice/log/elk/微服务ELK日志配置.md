@@ -34,18 +34,18 @@ Kibana UI地址  [http://120.79.200.111:5601/](http://120.79.200.111:5601/)
 
 依次启动chinahrss-gateway、chinahrss-auth、chinahrss-server-system和chinahrss-server-test模块，然后回到Kibana管理界面创建Kinaba Index Patterns：
 
-![image-20200127102659301](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127102659301.png)
+![image-20200127102659301](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127102659301.png)
 
 在Index pattern里输入我们在logstash配置文件`logstash-elk.conf`里`output.index`指定的值`chinahrss-logstash-*`：
 
-![image-20200127111650262](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127111650262.png)
+![image-20200127111650262](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127111650262.png)
 
 点击Next Step，在下拉框里选择`@timestamp`：
 
-![image-20200127110601012](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127110601012.png)
+![image-20200127110601012](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127110601012.png)
 
 最后点击Create Index Pattern按钮完成创建。
 
 ### 在Kibana里搜索日志：
 
-![image-20200127111818230](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127111818230.png)
+![image-20200127111818230](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127111818230.png)

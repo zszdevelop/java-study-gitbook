@@ -10,9 +10,9 @@ Tomcat服务器在JavaEE项目中使用率非常高，所以在生产环境对To
 
 如果不配置tomcat用户，那么查看tomcat状态时，将会出现403错误
 
-![image-20210728220240999](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728220240999.png)
+![image-20210728220240999](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728220240999.png)
 
-![image-20210728220259132](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728220259132.png)
+![image-20210728220259132](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728220259132.png)
 
 如果需要登录系统，必须配置tomcat用户，在安装完Tomcat后，进行如下操作
 
@@ -42,11 +42,11 @@ Tomcat服务器在JavaEE项目中使用率非常高，所以在生产环境对To
 
 再次点击的时候，就需要输入账户密码了：tomcat/tomcat
 
-![image-20210728220849612](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728220849612.png)
+![image-20210728220849612](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728220849612.png)
 
 登录之后可以看到服务器状态等信息，主要包括服务器信息，JVM，ajp和http信息
 
-![image-20210728220924142](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728220924142.png)
+![image-20210728220924142](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728220924142.png)
 
 ## 3. 优化1：AJP连接
 
@@ -54,13 +54,13 @@ Tomcat服务器在JavaEE项目中使用率非常高，所以在生产环境对To
 
 在服务状态页面中可以看到，默认状态下会启用AJP服务，并且占用8009端口。
 
-![image-20210728221223607](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728221223607.png)
+![image-20210728221223607](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728221223607.png)
 
 ### 3.1 什么是AJP
 
 AJP（Apache JServer Protocol）
 AJPv13协议是面向包的。WEB服务器和Servlet容器通过TCP连接来交互；为了节省SOCKET创建的昂贵代价，WEB服务器会尝试维护一个永久TCP连接到servlet容器，并且在多个请求和响应周期过程会重用连接。
-![image-20210728221317207](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728221317207.png)
+![image-20210728221317207](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728221317207.png)
 
 我们一般是使用Nginx+Tomcat的架构，所以用不着AJP协议，把AJP连接器禁用。
 
@@ -73,7 +73,7 @@ AJPv13协议是面向包的。WEB服务器和Servlet容器通过TCP连接来交�
 
 重启tomcat，查看效果。可以看到AJP服务已经不存在了。
 
-![image-20210728221415136](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728221415136.png)
+![image-20210728221415136](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728221415136.png)
 
 ## 4. 优化2：执行器（线程池）
 
@@ -102,7 +102,7 @@ maxQueueSize，最大的等待队列数，超过则拒绝请求
 
 保存退出，重启tomcat，查看效果。
 
-![image-20210728222804439](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728222804439.png)
+![image-20210728222804439](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728222804439.png)
 
 在页面中显示最大线程数为-1，这个是正常的，仅仅是显示的问题，实际使用的是指定的值。如果配置了一个Executor，则该属性的任何值将被正确记录，但是它将被显示为-1
 
@@ -145,7 +145,7 @@ tomcat的运行模式有3种：
                redirectPort="8443" />
 ```
 
-![image-20210728223416722](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728223416722.png)
+![image-20210728223416722](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728223416722.png)
 
 可以看到已经设置为nio2了。
 

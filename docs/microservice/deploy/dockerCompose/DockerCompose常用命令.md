@@ -16,7 +16,7 @@ docker-compose up -d
    docker-compose ps
    ```
 
-   ![image-20200630204740960](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200630204740960.png)
+   ![image-20200630204740960](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200630204740960.png)
 
 3. 查看compose日志
 
@@ -32,7 +32,7 @@ docker-compose up -d
 
    看到服务的状态为Exit退出状态
 
-   ![image-20200630210704130](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200630210704130.png)
+   ![image-20200630210704130](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200630210704130.png)
 
 5. 重启compose服务
 
@@ -52,4 +52,4 @@ docker-compose up -d
    docker-compose rm
    ```
 
-   ![image-20200630210930094](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200630210930094.png)
+   ![image-20200630210930094](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200630210930094.png)

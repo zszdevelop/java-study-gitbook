@@ -4,7 +4,7 @@
 
 在达梦数据库中，SQL 查询时，需要加上模式名（数据库名）才能访问
 
-![image-20210629143738277](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210629143738277.png)
+![image-20210629143738277](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210629143738277.png)
 
 ### 2. 问题原因
 
@@ -47,7 +47,7 @@ GRANT RESOURCE TO TESTDB1;
 GRANT RESOURCE TO TESTDB2;
 ```
 
-![image-20210629145138099](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210629145138099.png)
+![image-20210629145138099](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210629145138099.png)
 
 ### 3.3 步骤3：迁移工具迁移的时候用TESTDB1用户来迁移
 
@@ -57,4 +57,4 @@ GRANT RESOURCE TO TESTDB2;
 
 访问TESTDB1用户（模式）下的表，就使用TESTDB1用户登录来访问，就不需要加模式名TESTDB1
 
-![image-20210629145353834](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210629145353834.png)
+![image-20210629145353834](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210629145353834.png)

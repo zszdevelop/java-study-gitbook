@@ -10,7 +10,7 @@ Linux内核为了提高读写效率与速度，会将文件在内存中进行缓
 
 查看Swap分区的大小以及使用情况，一般使用free命令。当前我们并没设置swap分区
 
-![image-20200206122221579](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200206122221579.png)
+![image-20200206122221579](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200206122221579.png)
 
 我们可以使用swapon命令查看当前swap相关信息：例如swap空间是swap partition，Swap size，使用情况等详细信息
 
@@ -18,7 +18,7 @@ Linux内核为了提高读写效率与速度，会将文件在内存中进行缓
 swapon -s
 ```
 
-![image-20200206130028437](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200206130028437.png)
+![image-20200206130028437](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200206130028437.png)
 
 ## 3. 创建swap区分
 
@@ -38,7 +38,7 @@ count代表的是大小，我这里是2G。
  sudo mkswap swapfile
 ```
 
-![image-20200206124047741](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200206124047741.png)
+![image-20200206124047741](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200206124047741.png)
 
 ### 3.3 激活swap文件
 
@@ -68,7 +68,7 @@ vim /etc/fstab
 
 ### 3.5 查看使用成功
 
-![image-20200206125218923](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200206125218923.png)
+![image-20200206125218923](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200206125218923.png)
 
 ## 4. swappiness属性
 

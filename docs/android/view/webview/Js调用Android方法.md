@@ -227,7 +227,7 @@ function returnResult(result){
 
 在JS中，有三个常用的对话框方法：
 
-![944365-1385f748618af886](https://gitee.com/zszdevelop/blogimage/raw/master/944365-1385f748618af886.png)
+![944365-1385f748618af886](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/944365-1385f748618af886.png)
 
 方式3的原理：Android通过 `WebChromeClient` 的`onJsAlert()`、`onJsConfirm()`、`onJsPrompt（）`方法回调分别拦截JS对话框
  （即上述三个方法），得到他们的消息内容，然后解析即可。
@@ -356,4 +356,4 @@ public class MainActivity extends AppCompatActivity {
 
 ## 3. 三种方式的对比 & 使用场景
 
-![944365-8c91481325a5253e](https://gitee.com/zszdevelop/blogimage/raw/master/944365-8c91481325a5253e.png)
+![944365-8c91481325a5253e](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/944365-8c91481325a5253e.png)

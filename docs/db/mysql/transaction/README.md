@@ -16,7 +16,7 @@
 
 ## 2. 事务的四大特性（ACID）
 
-![image-20190911000830006](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190911000830006.png)
+![image-20190911000830006](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190911000830006.png)
 
 1. **原子性（Atomicity）**:
 

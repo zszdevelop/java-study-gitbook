@@ -18,7 +18,7 @@
 
    结果如下
 
-   ![image-20210405231229429](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405231229429.png)
+   ![image-20210405231229429](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405231229429.png)
 
 - Long_query_time: 默认是10s就算是慢日志了
 - Show_query_log: 慢日志的开启状态
@@ -32,7 +32,7 @@
 
    结果如下
 
-   ![image-20210405231632132](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405231632132.png)
+   ![image-20210405231632132](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405231632132.png)
 
 3. 慢日志打开
 
@@ -47,9 +47,9 @@
 
    结果如下
 
-   ![image-20210405231723049](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405231723049.png)
+   ![image-20210405231723049](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405231723049.png)
 
-   ![image-20210405231849634](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405231849634.png)
+   ![image-20210405231849634](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405231849634.png)
 
 
 
@@ -73,7 +73,7 @@
 
    show VARIABLES like '%query%'
 
-   ![image-20210405233551896](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405233551896.png)
+   ![image-20210405233551896](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405233551896.png)
 
 6. 查看慢日志
 
@@ -81,30 +81,30 @@
     vim /var/lib/mysql/iZwz914d1peizv4h7laju4Z-slow.log
    ```
 
-   ![image-20210405234141934](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405234141934.png)
+   ![image-20210405234141934](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405234141934.png)
 
 ## 3. 使用explain等工具分析sql
 
 1.  在查询语句前面加上explain
 
-   ![image-20210405234252604](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405234252604.png)
+   ![image-20210405234252604](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405234252604.png)
 
    其中两个字段非常重要
 
    - type：
 
-     ![image-20210405234357173](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405234357173.png)
+     ![image-20210405234357173](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405234357173.png)
 
    - extra：
 
-     ![image-20210405234420498](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405234420498.png)
+     ![image-20210405234420498](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405234420498.png)
 
 ## 4. 修改sql或者尽量让sql走索引
 
 ### 4.1 方案一：查询其他有索引的字段
 
-![image-20210405234611399](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405234611399.png)
+![image-20210405234611399](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405234611399.png)
 
 ### 4.2 方案二：添加索引
 
-![image-20210405234645956](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210405234645956.png)
+![image-20210405234645956](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210405234645956.png)

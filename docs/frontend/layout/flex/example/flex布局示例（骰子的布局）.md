@@ -4,7 +4,7 @@
 
 骰子的一面，最多可以放置9个点。
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071328.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071328.png)
 
 下面，就来看看Flex如何实现，从1个点到9个点的布局
 
@@ -24,7 +24,7 @@
 
 首先，只有左上角1个点的情况。Flex布局默认就是首行左对齐，所以一行代码就够了。
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071301.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071301.png)
 
 > ```css
 > .box {
@@ -34,7 +34,7 @@
 
 设置项目的对齐方式，就能实现居中对齐和右对齐。
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071302.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071302.png)
 
 > ```css
 > .box {
@@ -43,7 +43,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071303.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071303.png)
 
 > ```css
 > .box {
@@ -54,7 +54,7 @@
 
 设置交叉轴对齐方式，可以垂直移动主轴。
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071304.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071304.png)
 
 > ```css
 > .box {
@@ -63,7 +63,7 @@
 > }
 > ```
 
-![bg2015071305](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071305.png)
+![bg2015071305](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071305.png)
 
 > ```css
 > .box {
@@ -73,7 +73,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071306.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071306.png)
 
 > ```css
 > .box {
@@ -83,7 +83,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071307.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071307.png)
 
 > ```css
 > .box {
@@ -95,7 +95,7 @@
 
 ##  双项目
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071308.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071308.png)
 
 > ```css
 > .box {
@@ -104,7 +104,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071309.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071309.png)
 
 > ```css
 > .box {
@@ -114,7 +114,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071310.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071310.png)
 
 > ```css
 > .box {
@@ -125,7 +125,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071311.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071311.png)
 
 > ```css
 > .box {
@@ -136,7 +136,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071312.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071312.png)
 
 > ```css
 > .box {
@@ -148,7 +148,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071313.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071313.png)
 
 > ```css
 > .box {
@@ -163,7 +163,7 @@
 
 ##  三项目
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071314.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071314.png)
 
 > ```css
 > .box {
@@ -181,7 +181,7 @@
 
 ##  四项目
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071315.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071315.png)
 
 > ```css
 > .box {
@@ -192,7 +192,7 @@
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071316.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071316.png)
 
 HTML代码如下。
 
@@ -227,7 +227,7 @@ CSS代码如下。
 
 ## 六项目
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071317.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071317.png)
 
 > ```css
 > .box {
@@ -237,7 +237,7 @@ CSS代码如下。
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071318.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071318.png)
 
 > ```css
 > .box {
@@ -248,7 +248,7 @@ CSS代码如下。
 > }
 > ```
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071319.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071319.png)
 
 HTML代码如下。
 
@@ -293,7 +293,7 @@ CSS代码如下。
 
 ##  九项目
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071320.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071320.png)
 
  ```css
  .box {

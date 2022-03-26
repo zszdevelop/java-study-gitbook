@@ -6,7 +6,7 @@
 free -h
 ```
 
-![image-20200206143108070](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200206143108070.png)
+![image-20200206143108070](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200206143108070.png)
 
 ## 2. 开始清理
 
@@ -14,7 +14,7 @@ free -h
 echo 1 > /proc/sys/vm/drop_caches
 ```
 
-![image-20200206143213546](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200206143213546.png)
+![image-20200206143213546](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200206143213546.png)
 
 再次查看就已经清除成功了
 

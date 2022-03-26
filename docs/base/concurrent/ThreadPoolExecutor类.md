@@ -6,7 +6,7 @@ java.uitl.concurrent.ThreadPoolExecutor类是线程池中最核心的一个类�
 
 在ThreadPoolExecutor类中提供了四个构造方法：
 
-![image-20190916211541288](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190916211541288.png)
+![image-20190916211541288](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190916211541288.png)
 
 ```java
 public class ThreadPoolExecutor extends AbstractExecutorService {
@@ -207,7 +207,7 @@ public interface Executor {
 
 到这里，大家应该明白了ThreadPoolExecutor、AbstractExecutorService、ExecutorService和Executor几个之间的关系了。
 
-![image-20190916220156104](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190916220156104.png)
+![image-20190916220156104](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190916220156104.png)
 
 Executor是一个顶层接口，在它里面只声明了一个方法execute(Runnable)，返回值为void，参数为Runnable类型，从字面意思可以理解，就是用来执行传进去的任务的；
 

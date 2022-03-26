@@ -11,17 +11,17 @@ Skywalking 主要包含
 
 - Docker 镜像等
 
-![image-20211127220454981](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127220454981.png)
+![image-20211127220454981](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127220454981.png)
 
 ### 1.1 下载Apm
 
 Apm有好几个版本的存储引擎，我们使用默认的就可以了
 
-![image-20211127220854387](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127220854387.png)
+![image-20211127220854387](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127220854387.png)
 
 ### 1.2 下载Agent代理
 
-![image-20211127220958409](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127220958409.png)
+![image-20211127220958409](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127220958409.png)
 
 ## 2. 确认端口
 
@@ -49,7 +49,7 @@ netstat -ano|findstr 8080
 
 下载解压后界面如下：
 
-![image-20211127222204919](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127222204919.png)
+![image-20211127222204919](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127222204919.png)
 
 ### 3.1 启动
 
@@ -60,7 +60,7 @@ cd apache-skywalking-apm-bin/bin
 sh startup.sh
 ```
 
-![image-20211127221921163](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127221921163.png)
+![image-20211127221921163](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127221921163.png)
 
 #### 3.1.2 Windows
 
@@ -75,11 +75,11 @@ startup.bat
 
 访问 [http://localhost:8080](http://localhost:8080) ，即可看到类似如下的界面
 
-![image-20211127222015183](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127222015183.png)
+![image-20211127222015183](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127222015183.png)
 
 ### 3.3 停止
 
-![image-20211127221803108](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127221803108.png)
+![image-20211127221803108](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127221803108.png)
 
 ## 4. Agent代理
 
@@ -87,7 +87,7 @@ startup.bat
 
 下载解压后界面如下：
 
-![image-20211127222457230](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127222457230.png)
+![image-20211127222457230](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127222457230.png)
 
 ### 4.1 核心目录
 
@@ -111,7 +111,7 @@ startup.bat
 -javaagent:/Users/zsz/Project/software/skywalking/skywalking-agent/skywalking-agent.jar
 ```
 
-![image-20211127223142443](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127223142443.png)
+![image-20211127223142443](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127223142443.png)
 
 #### 4.3.2  `java -jar` 启动的应用
 
@@ -144,19 +144,19 @@ set "CATALINA_OPTS=-javaagent:/opt/agent/skywalking-agent.jar"
 
 ### 5.1 首页
 
-![image-20211127223940093](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127223940093.png)
+![image-20211127223940093](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127223940093.png)
 
 ### 5.2 网络拓扑
 
 可以分析请求的网络去向。例如下图，表示请求首先打到了ygn这个微服务，然后又请求了`localhost:3306` 这个MySQL数据库。
 
-![image-20211127223953352](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127223953352.png)
+![image-20211127223953352](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127223953352.png)
 
 ### 5.3 追踪
 
 这个导航栏是我们定位问题时最常用的，可以搜索查询的具体细节。定位性能瓶颈出在了哪个阶段。
 
-![image-20211127224158117](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127224158117.png)
+![image-20211127224158117](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127224158117.png)
 
 #### 5.4 告警：
 
@@ -164,7 +164,7 @@ set "CATALINA_OPTS=-javaagent:/opt/agent/skywalking-agent.jar"
 
 暂未添加的情况
 
-![image-20211127224230064](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211127224230064.png)
+![image-20211127224230064](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211127224230064.png)
 
 ## 参考文章
 

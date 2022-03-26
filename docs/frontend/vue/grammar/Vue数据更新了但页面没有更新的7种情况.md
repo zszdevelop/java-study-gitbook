@@ -221,7 +221,7 @@ this.message.text = '我更新啦！'
 
 > 模板中每个指令/数据绑定都有一个对应的 **watcher** 对象，在计算过程中它把属性记录为依赖。之后当依赖的 setter 被调用时，会触发 watcher 重新计算 ，也就会导致它的关联指令更新 DOM。
 
-![image-20210804215220396](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210804215220396.png)
+![image-20210804215220396](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210804215220396.png)
 
 具体流程如下所示：
 

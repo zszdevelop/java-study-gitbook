@@ -8,7 +8,7 @@ github: https://github.com/amueller/word_cloud
 
 效果如下：
 
-![image-20210204151203285](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210204151203285.png)
+![image-20210204151203285](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210204151203285.png)
 
 ## 2. 集成使用
 

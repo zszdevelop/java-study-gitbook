@@ -37,7 +37,7 @@ public class AppController {
 
 再次访问`/hello`，我们可以得到一个页面，如下：
 
-![image-20210401150919739](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210401150919739.png)
+![image-20210401150919739](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210401150919739.png)
 
 说明spring security 已经起作用了，我们需要登陆才能访问。我们可以查看下这个页面的源代码，是这样：
 
@@ -192,7 +192,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 There was an unexpected error (type=Forbidden, status=403).
 ```
 
-![image-20210401152411860](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210401152411860.png)
+![image-20210401152411860](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210401152411860.png)
 
 我们把浏览器中的uri修改成：`/product/info`，结果访问成功。可以看到`some product info`。说明 spring这个USER角色只能访问 product/** ,这个结果与我们预期一致。
 

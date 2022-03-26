@@ -4,7 +4,7 @@
 
 https://repo1.maven.org/maven2/org/flywaydb/
 
-![image-20211011213319190](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211011213319190.png)
+![image-20211011213319190](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211011213319190.png)
 
 - conf ：存放flyway.conf配置文件，通过jdbc方式配置数据库连接
 - drivers：存放数据库jdbc驱动
@@ -40,7 +40,7 @@ create table PERSON (
 ./flyway migrate -baselineOnMigrate=true
 ```
 
-![image-20211011214740961](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211011214740961.png)
+![image-20211011214740961](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211011214740961.png)
 
 ## 5. Flyway 常用命令
 
@@ -48,7 +48,7 @@ create table PERSON (
 
 执行sql文件夹中未执行的sql，将sql版本更到最新。如果Flyway不存在，它将自动创建架构历史记录表。
 
-![image-20211026152909198](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026152909198.png)
+![image-20211026152909198](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026152909198.png)
 
 #### 5.1.1 使用
 
@@ -56,16 +56,16 @@ create table PERSON (
 flyway  migrate
 ```
 
-![image-20211026154955580](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026154955580.png)
+![image-20211026154955580](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026154955580.png)
 
-![image-20211026154919444](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026154919444.png)
+![image-20211026154919444](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026154919444.png)
 
 ### 5.2 clean 命令
 
 删除已配置模式中的所有对象（表，视图，过程，触发器等）。
 架构将按照`schemas`属性指定的顺序进行清理。
 
-![image-20211026153049436](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026153049436.png)
+![image-20211026153049436](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026153049436.png)
 
 #### 5.2.1 使用
 
@@ -73,17 +73,17 @@ flyway  migrate
 flyway  clean
 ```
 
-![image-20211026155035705](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026155035705.png)
+![image-20211026155035705](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026155035705.png)
 
 表已经被清空了
 
-![image-20211026155129127](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026155129127.png)
+![image-20211026155129127](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026155129127.png)
 
 ### 5.3 info命令
 
 打印有关所有迁移的详细信息和状态信息。
 
-![image-20211026153221574](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026153221574.png)
+![image-20211026153221574](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026153221574.png)
 
 #### 5.3.1 使用
 
@@ -91,14 +91,14 @@ flyway  clean
 flyway  info
 ```
 
-![image-20211026155748244](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026155748244.png)
+![image-20211026155748244](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026155748244.png)
 
 相比数据库这张表
 
 - 数据列会更少一些。比如执行者、执行时间
 - 但是这里会出现待执行的
 
-![image-20211026155329057](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026155329057.png)
+![image-20211026155329057](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026155329057.png)
 
 ### 5.4 validate 命令
 
@@ -110,7 +110,7 @@ flyway  info
 - 已应用不再在本地解析的版本
 - 已解决尚未应用的版本
 
-![image-20211026153524052](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026153524052.png)
+![image-20211026153524052](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026153524052.png)
 
 #### 5.4.1 使用
 
@@ -118,19 +118,19 @@ flyway  info
 flyway  validate
 ```
 
-![image-20211026160024340](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026160024340.png)
+![image-20211026160024340](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026160024340.png)
 
 原有的脚本如果变化了，用这个就可以校验是哪个脚本
 
 改回原来的就没有问题了
 
-![image-20211026160110913](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026160110913.png)
+![image-20211026160110913](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026160110913.png)
 
 ### 5.5 baseline 命令
 
 为现有数据库提供基准，不包括直到包括的所有迁移`baselineVersion`。
 
-![image-20211026153926959](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026153926959.png)
+![image-20211026153926959](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026153926959.png)
 
 #### 5.5.1 使用
 
@@ -138,7 +138,7 @@ flyway  validate
 flyway  baseline
 ```
 
-![image-20211026160250111](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026160250111.png)
+![image-20211026160250111](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026160250111.png)
 
 如果数据库中有数据会报错，需要clean清空数据后，在执行
 
@@ -150,7 +150,7 @@ flyway  baseline
   （仍然必须手动清理留下的用户对象）
 - 将可用迁移的校验和，描述和类型与可用迁移重新对齐
 
-![image-20211026154058239](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026154058239.png)
+![image-20211026154058239](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026154058239.png)
 
 #### 5.6.1 使用
 
@@ -158,7 +158,7 @@ flyway  baseline
 flyway repair
 ```
 
-![image-20211026160918822](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211026160918822.png)
+![image-20211026160918822](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026160918822.png)
 
 对有报错的语句执行后会回滚。
 

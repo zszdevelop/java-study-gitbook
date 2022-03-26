@@ -38,7 +38,7 @@ bin/zkCli.sh
 
 
 
-![image-20200610230057765](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200610230057765.png)
+![image-20200610230057765](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200610230057765.png)
 
-![image-20200610230234605](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200610230234605.png)
+![image-20200610230234605](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200610230234605.png)
 

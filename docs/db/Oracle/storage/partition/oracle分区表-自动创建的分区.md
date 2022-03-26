@@ -30,7 +30,7 @@ PARTITION BY RANGE (c3)
 select table_name,partition_name from user_tab_partitions where table_name='INTERVALPART';
 ```
 
-![image-20201103234450655](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201103234450655.png)
+![image-20201103234450655](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201103234450655.png)
 
 ### 1.3  插入测试数据：
 
@@ -59,7 +59,7 @@ commit;
   select to_char(add_months(trunc(sysdate),1),'yyyymm') from dual;
   ```
 
-  ![image-20201103234904783](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201103234904783.png)
+  ![image-20201103234904783](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201103234904783.png)
 
 ### 1.4 观察自动创建的分区：
 
@@ -67,7 +67,7 @@ commit;
 select table_name,partition_name from user_tab_partitions where table_name='INTERVALPART';
  ```
 
-![image-20201103235039044](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201103235039044.png)
+![image-20201103235039044](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201103235039044.png)
 
 ### 1.5 查看分区内容：
 
@@ -77,7 +77,7 @@ select table_name,partition_name from user_tab_partitions where table_name='INTE
   select * from INTERVALPART;
   ```
   
-  ![image-20201103235352870](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201103235352870.png)
+  ![image-20201103235352870](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201103235352870.png)
 
 - 查询指定分区
 
@@ -87,7 +87,7 @@ select table_name,partition_name from user_tab_partitions where table_name='INTE
 
   
 
-  ![image-20201103235835676](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201103235835676.png)
+  ![image-20201103235835676](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201103235835676.png)
 
 ## 2. 创建一个以天为间隔的分区表：
 
@@ -112,7 +112,7 @@ partition by range (dt)
 select table_name,partition_name from user_tab_partitions where table_name='DAVE';
 ```
 
-![image-20201104000207367](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201104000207367.png)
+![image-20201104000207367](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201104000207367.png)
 
 ### 2.3 插入测试数据
 
@@ -132,7 +132,7 @@ end;
  select table_name,partition_name from user_tab_partitions where table_name='DAVE';
 ```
 
-![image-20201104000413036](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201104000413036.png)
+![image-20201104000413036](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201104000413036.png)
 
 ### 2.5 查看分区内容：
 
@@ -144,7 +144,7 @@ end;
 
   
 
-  ![image-20201104000802542](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201104000802542.png)
+  ![image-20201104000802542](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201104000802542.png)
 
 - 查看指定分区
 
@@ -154,7 +154,7 @@ end;
 
   
 
-  ![image-20201104000653069](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201104000653069.png)
+  ![image-20201104000653069](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201104000653069.png)
 
 ## 参考文章
 

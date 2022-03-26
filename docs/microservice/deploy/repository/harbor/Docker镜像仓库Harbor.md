@@ -30,7 +30,7 @@ vim /software/harbor/harbor.yml
 
 将hostname修改为宿主机IP和端口
 
-![image-20200130122153935](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130122153935.png)
+![image-20200130122153935](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130122153935.png)
 
 - 端口8601
 - ip：120.79.200.111
@@ -48,7 +48,7 @@ ERROR: for redis  Cannot create container for service redis: Conflict. The conta
 ERROR: Encountered errors while bringing up the project.
 ```
 
-![image-20200130125541152](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130125541152.png)
+![image-20200130125541152](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130125541152.png)
 
 这里提示容器名冲突
 
@@ -68,7 +68,7 @@ ERROR: Encountered errors while bringing up the project.
 
 ### 3.5 安装成功的提示信息
 
-![image-20200130125731811](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130125731811.png)
+![image-20200130125731811](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130125731811.png)
 
 ### 3.6 浏览器访问查看
 
@@ -78,13 +78,13 @@ http://120.79.200.111:8601/
 
 http://harbor.isture.com
 
-![image-20200130125852979](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130125852979.png)
+![image-20200130125852979](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130125852979.png)
 
 默认的用户名：admin 	密码：Harbor12345
 
 登录后
 
-![image-20200130125932143](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130125932143.png)
+![image-20200130125932143](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130125932143.png)
 
 
 
@@ -92,19 +92,19 @@ http://harbor.isture.com
 
 ### 4.1 在管理界面新增一个用户
 
-![image-20200130130435317](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130130435317.png)
+![image-20200130130435317](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130130435317.png)
 
 密码需要大小写混用Zs16
 
 ### 4.2 新增项目
 
-![image-20200130130604948](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130130604948.png)
+![image-20200130130604948](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130130604948.png)
 
 ### 4.3 在该项目下添加用户
 
-![image-20200130130818089](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130130818089.png)
+![image-20200130130818089](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130130818089.png)
 
-![image-20200130130843225](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130130843225.png)
+![image-20200130130843225](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130130843225.png)
 
 ## 5. 服务器上登录harbor
 
@@ -120,7 +120,7 @@ vi /etc/docker/daemon.json
 "insecure-registries": ["harbor.isture.com"]
 ```
 
-![image-20200130132917685](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130132917685.png)
+![image-20200130132917685](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130132917685.png)
 
 ### 5.2 重启docker
 
@@ -144,7 +144,7 @@ docker login harbor.isture.com
 
 
 
-![image-20200130133118860](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130133118860.png)
+![image-20200130133118860](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130133118860.png)
 
 ## 6. 测试镜像推拉
 
@@ -186,7 +186,7 @@ vi /lib/systemd/system/docker.service
 
 修改的地方如下图所示
 
-![image-20200130142726317](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130142726317.png)
+![image-20200130142726317](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130142726317.png)
 
 ### 7.2 重启Docker服务
 
@@ -213,7 +213,7 @@ curl 120.79.200.111:2375/info
 
 点击IDEA -> File -> Settings… -> Build,Execution,Deployment -> Docker：
 
-![image-20200130143518901](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130143518901.png)
+![image-20200130143518901](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130143518901.png)
 
 填写远程Docker地址，如果显示Connection successful说明连接远程Docker服务成功。
 
@@ -221,19 +221,19 @@ curl 120.79.200.111:2375/info
 
 准备好后，点击IDEA -> Run -> Edit Configrations…，添加Docker配置：
 
-![image-20200130143930528](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130143930528.png)
+![image-20200130143930528](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130143930528.png)
 
 选择Dockerfile文件地址，并且添加镜像标签为 harbor.isture.com/chinahrss/chinahrss-auth:latest ，然后保存即可：
 
-![image-20200130144035302](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130144035302.png)
+![image-20200130144035302](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130144035302.png)
 
 ### 8.3 点击构建
 
-![image-20200130144129091](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130144129091.png)
+![image-20200130144129091](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130144129091.png)
 
 在Services->Master Docker Service->Images上，我们可以看到远程仓库上已经部署好了
 
-![image-20200130144730417](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130144730417.png)
+![image-20200130144730417](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130144730417.png)
 
 我们可以到远程服务器上核心一下：
 
@@ -241,7 +241,7 @@ curl 120.79.200.111:2375/info
 docker images | grep chinahrss
 ```
 
-![image-20200130145053528](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130145053528.png)
+![image-20200130145053528](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130145053528.png)
 
 这证明我们通过远程Docker服务构建镜像是OK的。
 

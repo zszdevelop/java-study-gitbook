@@ -128,7 +128,7 @@ public class Consumer {
 
 最后3条消息，发`nack`给`Broker`，并不断重回队列尾端，broker再将其推给消费端，一直循环消费失败
 
-![image-20210519170938194](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210519170938194.png)
+![image-20210519170938194](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210519170938194.png)
 
 ## 参考文章
 

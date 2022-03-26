@@ -4,7 +4,7 @@
 
 提示：Host 'xxx.xxx.x.xx' is not allowed to connect to this MySQL server
 
-![image-20190913211110163](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190913211110163.png)
+![image-20190913211110163](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190913211110163.png)
 
 2. 问题原因
 
@@ -18,7 +18,7 @@ select Host,User from mysql.user;
 
 结果如下
 
-![image-20190909214141218](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190909214141218.png)
+![image-20190909214141218](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190909214141218.png)
 
 ## 3. 解决方案
 

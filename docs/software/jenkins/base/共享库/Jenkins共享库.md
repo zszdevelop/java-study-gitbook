@@ -107,7 +107,7 @@ https://gitee.com/zszdevelop/pipeline-library-demo
 
 共享库创建完成后，我们需要让 Jenkins 知道这个共享库，我们可以从 Jenkins 的 Web 页面进行添加。在 Jenkins 首页 -> 系统管理 -> 系统配置，在 `Global Pipeline Libraries` 区域配置共享库：
 
-![image-20211001182353785](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001182353785.png)
+![image-20211001182353785](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001182353785.png)
 
 
 
@@ -127,7 +127,7 @@ stage('Demo') {
 }
 ```
 
-![image-20211001182543979](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001182543979.png)
+![image-20211001182543979](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001182543979.png)
 
 需要注意的是 `@Library('pipeline-library-demo')_` 最后有一个下划线 `_`，这个下划线并不是写错了，如果 `@Libray` 后面紧接的一行不是 `import` 语句的话，就需要这个下划线，我们这里后面就是一条 `import` 语句，所以这里可以省略这个下划线。
 
@@ -135,7 +135,7 @@ stage('Demo') {
 
 配置完成后，构建这个 Pipeline，正常就可以看到如下所示的构建结果
 
-![image-20211001182654054](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001182654054.png)
+![image-20211001182654054](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001182654054.png)
 
 ## 5. 参考文章
 

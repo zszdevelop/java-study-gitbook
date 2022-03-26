@@ -16,7 +16,7 @@
 
 **IO流的用来处理设备之间数据传输的**，传输电的叫电流，传输水的叫水流，传输数据的就叫数据流
 
-![image-20190724224037201](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190724224037201.png)
+![image-20190724224037201](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190724224037201.png)
 
 ## 流的分类
 

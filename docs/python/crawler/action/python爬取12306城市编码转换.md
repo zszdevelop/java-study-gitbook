@@ -6,11 +6,11 @@
 
 我们在信息查询->正晚点->可以看到station_name.js返回了城市编码信息
 
-![image-20210202094628947](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210202094628947.png)
+![image-20210202094628947](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210202094628947.png)
 
 **请求地址**：https://kyfw.12306.cn/otn/resources/js/framework/station_name.js
 
-![image-20210202095058660](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210202095058660.png)
+![image-20210202095058660](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210202095058660.png)
 
 ## 2. 爬虫
 

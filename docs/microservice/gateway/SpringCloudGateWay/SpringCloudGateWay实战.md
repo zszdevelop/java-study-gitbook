@@ -42,7 +42,7 @@ spring:
 
 上面这段配置的意思是，配置了一个id为 neo_route 的路由规则，当访问地址 `http://localhost:8080/spring-cloud`时会自动转发到地址：`http://www.ityouknow.com/spring-cloud`。配置完成启动项目即可在浏览器访问进行测试，当我们访问地址`http://localhost:8080/spring-cloud` 时会展示页面展示如下
 
-![image-20200118135522145](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200118135522145.png)
+![image-20200118135522145](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200118135522145.png)
 
 证明页面转发成功。
 

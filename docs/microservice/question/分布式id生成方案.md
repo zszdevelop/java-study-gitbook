@@ -19,7 +19,7 @@ ID是数据的唯一标识
 
 ## 2. 常用分布式ID方案
 
-![image-20200213214844715](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200213214844715.png)
+![image-20200213214844715](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200213214844715.png)
 
 ## 3. 雪花算法-snowflake
 
@@ -29,7 +29,7 @@ ID是数据的唯一标识
 
 **分布式ID固定是一个long型的数字，一个long型占8个字节，也就是占用64bit，原始snowflake算法对于bit分配如下图**
 
-![image-20200213220443866](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200213220443866.png)
+![image-20200213220443866](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200213220443866.png)
 
 - **第一个bit位是标识部分**，在java中由于long的最高位是符号位，正数是0，负数是1，一般生成的ID为正数，所以固定为0。
 - **时间戳部分占41bit**，这个是毫秒级的时间，一般实现上不会存储当前的时间戳，而是时间戳的差值（当前时间-固定的开始时间），这样可以使产生的ID从更小值开始；41位的时间戳可以使用69年，(1L << 41) / (1000L * 60 * 60 * 24 * 365) = 69年

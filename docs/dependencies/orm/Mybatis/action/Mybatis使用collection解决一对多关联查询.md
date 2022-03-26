@@ -42,7 +42,7 @@
  <==      Total: 10
 ```
 
-![image-20211005154305109](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211005154305109.png)
+![image-20211005154305109](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211005154305109.png)
 
 #### 2.1.2 优缺点
 
@@ -94,7 +94,7 @@ SysUserDao
 
 #### 2.2.1 查询的sql日志
 
-![image-20211005154247410](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211005154247410.png)
+![image-20211005154247410](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211005154247410.png)
 
 #### 2.2.2 优缺点
 

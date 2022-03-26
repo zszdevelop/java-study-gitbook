@@ -101,4 +101,4 @@
 
 ## 4. 结果
 
-![image-20210118172945823](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210118172945823.png)
+![image-20210118172945823](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210118172945823.png)

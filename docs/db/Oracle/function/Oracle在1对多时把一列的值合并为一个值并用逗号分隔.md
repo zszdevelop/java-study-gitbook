@@ -4,7 +4,7 @@ Oracle把一列的值合并为一个值，并用逗号分隔。
 
 实例中将把部门表（DEPT表）与员工表（EMP表）关联，查询每个部门下的所有员工姓名，员工姓名之间以逗号分隔（如图一）。
 
-![image-20201221152131891](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201221152131891.png)
+![image-20201221152131891](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201221152131891.png)
 
 ## 1. WMSYS.WM_CONCAT(列名)函数
 

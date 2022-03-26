@@ -62,10 +62,10 @@ ClassPathResource resource = new ClassPathResource("test.properties");
 
 ### 3.1 源码
 
-![image-20211016215313217](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016215313217.png)
+![image-20211016215313217](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016215313217.png)
 
-![image-20211016215259180](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016215259180.png)
+![image-20211016215259180](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016215259180.png)
 
 根据给定资源初始化url
 
-![image-20211016215338466](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016215338466.png)
+![image-20211016215338466](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016215338466.png)

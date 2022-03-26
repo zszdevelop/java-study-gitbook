@@ -12,7 +12,7 @@ git merge的三种操作merge, squash merge, 和rebase merge
 
 如下图所示：
 
-![image-20211210215256075](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211210215256075.png)
+![image-20211210215256075](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211210215256075.png)
 
 现在我们完成了dev分支的开发测试工作，需要把dev分支合并回master分支。
 
@@ -27,7 +27,7 @@ git checkout master
 git merge dev
 ```
 
-![image-20211210215426765](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211210215426765.png)
+![image-20211210215426765](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211210215426765.png)
 
 **此时还会生产一个merge commit (D4')**，这个merge commit不包含任何代码改动，而包含在dev分支上的几个commit列表(D1, D2和D3)。查看git的提交历史(git log)可以看到所有的这些提交历史记录。
 
@@ -40,7 +40,7 @@ git merge dev
  git merge --squash dev
 ```
 
-![image-20211210215937039](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211210215937039.png)
+![image-20211210215937039](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211210215937039.png)
 
 在这个例子中，我们把D1，D2和D3的改动合并成了一个D。
 
@@ -78,13 +78,13 @@ pick <D3> Message for commit #3
 
 rebase之后的状态变为：
 
-![image-20211210220238914](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211210220238914.png)
+![image-20211210220238914](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211210220238914.png)
 
 D1'是D1和D2的合并。
 
 第二步：再执行merge操作，把dev分支合并到master分支：
 
-![image-20211210220256208](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211210220256208.png)
+![image-20211210220256208](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211210220256208.png)
 
 
 

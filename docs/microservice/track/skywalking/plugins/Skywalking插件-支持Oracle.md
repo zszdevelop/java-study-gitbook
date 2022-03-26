@@ -12,16 +12,16 @@
 
 [下载地址](https://github.com/SkyAPM/java-plugin-extensions/releases)
 
-![image-20211128200249253](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211128200249253.png)
+![image-20211128200249253](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211128200249253.png)
 
 ### 2.2 移动插件
 
 将`apm-oracle-10.x-plugin-2.1.0.jar` 移动到 `skywalking-agent/plugins`
 
-![image-20211128200535071](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211128200535071.png)
+![image-20211128200535071](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211128200535071.png)
 
 ### 2.3 测试
 
 可以看到就能正常显示oracle的sql了
 
-![image-20211128201608003](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211128201608003.png)
+![image-20211128201608003](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211128201608003.png)

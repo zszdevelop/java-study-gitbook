@@ -8,7 +8,7 @@
 
 - 将github 上的内容放在gitee码云上，速度是快了好多，但是竟然不支持自定义域名了！！！只有企业版支持。
 
-![image-20211001220335021](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001220335021.png)
+![image-20211001220335021](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001220335021.png)
 
 我们用站长工具测试
 
@@ -26,23 +26,23 @@
 
 2. 添加站点，把对应的域名填写进去
 
-   ![image-20211001221040546](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001221040546.png)
+   ![image-20211001221040546](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001221040546.png)
 
 3. 选择免费的版本就可以了
 
-   ![image-20211001221140025](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001221140025.png)
+   ![image-20211001221140025](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001221140025.png)
 
 4. 提交之后会自动扫描域名对应的解析记录：
 
-![image-20211001221304689](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001221304689.png)
+![image-20211001221304689](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001221304689.png)
 
 5. 通过域名的运营商修改对应的 NS 记录，这里每个运营商的修改方式都不一样，我这里是用的阿里云的：
 
-   ![image-20211001222009805](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001222009805.png)
+   ![image-20211001222009805](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001222009805.png)
 
-   ![image-20211001222114836](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001222114836.png)
+   ![image-20211001222114836](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001222114836.png)
 
-   ![image-20211001222042251](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001222042251.png)
+   ![image-20211001222042251](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001222042251.png)
 
 6. 验证
 
@@ -59,15 +59,15 @@
 
 7. 然后清除下浏览器 DNS 缓存，chrome 浏览器输入`chrome://net-internals/#dns`进入清除页：
 
-   ![image-20211001222337283](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001222337283.png)
+   ![image-20211001222337283](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001222337283.png)
 
 8. 再次访问`https://java.isture.com/`，F12 打开网络面板可以看到已经用上了 CDN 了：
 
-   ![image-20211001222513243](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001222513243.png)
+   ![image-20211001222513243](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001222513243.png)
 
 ## 3. 结果对比
 
-![image-20211001222756708](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001222756708.png)
+![image-20211001222756708](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001222756708.png)
 
 
 

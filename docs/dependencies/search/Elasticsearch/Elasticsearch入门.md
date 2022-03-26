@@ -36,7 +36,7 @@ curl -X GET 'http://localhost:9200/_cat/indices?v'
 
 
 
-![image-20201019140504439](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201019140504439.png)
+![image-20201019140504439](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201019140504439.png)
 
 ### 3.3 Document
 

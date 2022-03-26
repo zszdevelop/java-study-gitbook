@@ -22,7 +22,7 @@
 
 如下图
 
-![image-20190913195804469](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190913195804469.png)
+![image-20190913195804469](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190913195804469.png)
 
 ### 3.1 垂直拆分的优缺点
 
@@ -43,7 +43,7 @@
 
 > 举个例子，我们可以将用户信息表拆分成多个用户信息表，这样可以避免单一表数据量过大对性能造成的影响
 
-![image-20190913202054918](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190913202054918.png)
+![image-20190913202054918](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190913202054918.png)
 
 水平拆分可以**支持非常大的数据量**
 
@@ -72,4 +72,3 @@
   - 360的Atlas
   - 网易的DDB
 
-  

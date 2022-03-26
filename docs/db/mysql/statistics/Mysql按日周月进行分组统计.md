@@ -55,7 +55,7 @@ select DATE_FORMAT(start_time,'**%Y%m**') months,count(product_no) count from te
 
 >需求注：按照时间段来查询显示该时间段内每一天的数据量，如果某一天没有数据，显示数据量为0.
 
-![image-20210126170727871](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210126170727871.png)
+![image-20210126170727871](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210126170727871.png)
 
 ## 3. 优化方案
 
@@ -83,7 +83,7 @@ union all select 1) as tmp,
 
 结果如下
 
-![image-20210126171101910](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210126171101910.png)
+![image-20210126171101910](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210126171101910.png)
 
 ### 3.2 关联查询显示
 

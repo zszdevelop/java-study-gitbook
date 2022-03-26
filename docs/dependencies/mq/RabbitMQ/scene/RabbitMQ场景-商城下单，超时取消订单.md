@@ -177,9 +177,9 @@ public class RabbitMqConfig {
 
 ### 2.5 在RabbitMQ管理页面可以看到以下交换机和队列
 
-![image-20201012165633067](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201012165633067.png)
+![image-20201012165633067](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201012165633067.png)
 
-![image-20201012165651267](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201012165651267.png)
+![image-20201012165651267](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201012165651267.png)
 
 #### 交换机及队列说明
 
@@ -368,8 +368,8 @@ public class OmsPortalOrderController {
 
 2. 可以看到控制台
 
-   ![image-20201012170924827](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201012170924827.png)
+   ![image-20201012170924827](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201012170924827.png)
 
 3. 当执行到对应延迟的时间后收到消息
 
-   ![image-20201012171004900](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201012171004900.png)
+   ![image-20201012171004900](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201012171004900.png)

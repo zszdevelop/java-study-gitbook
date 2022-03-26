@@ -20,7 +20,12 @@ exports.mulu = {
                     }, {
                         title: 'Hutool的IO包之资源ResourceUtil源码阅读',
                         path: 'base/io/lib/hutool/Hutool的IO包之资源ResourceUtil源码阅读.md'
-                    }]
+                    },
+                    {
+                        title: 'Hutool树结构工具-TreeUtil学习',   // 必要的
+                        path: 'source/hutool/Hutool树结构工具-TreeUtil学习.md'
+                    }
+                ]
                 },
                 {
                     title: 'ApacheCommons-IO',

@@ -12,7 +12,7 @@ Let's Encrypt 能够免费签名一个证书，所以假如要求不高，可以
 
 [官网地址https://certbot.eff.org/](https://certbot.eff.org/)
 
-![image-20210220092815155](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210220092815155.png)
+![image-20210220092815155](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210220092815155.png)
 
 ### 2.2 安装snapd
 
@@ -54,13 +54,13 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 certbot certonly --webroot -w /usr/local/nginx/html -d www.isture.com -m 312905679@qq.com --agree-tos
 ```
 
-![image-20210220115219947](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210220115219947.png)
+![image-20210220115219947](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210220115219947.png)
 
 ### 2.2 证书保存位置
 
 /etc/letsencrypt/live/
 
-![image-20210220115330635](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210220115330635.png)
+![image-20210220115330635](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210220115330635.png)
 
 ### 2.3 证书有效期
 
@@ -68,7 +68,7 @@ certbot certonly --webroot -w /usr/local/nginx/html -d www.isture.com -m 3129056
 openssl x509 -noout -dates -in /etc/letsencrypt/live/www.isture.com/cert.pem
 ```
 
-![image-20210220115440070](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210220115440070.png)
+![image-20210220115440070](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210220115440070.png)
 
 ## 3. 更新证书
 
@@ -82,6 +82,9 @@ certbot renew --dry-run
  
 //如果不需要返回的信息，可以用静默方式
 certbot renew --quiet
+
+// 更新指定域名证书
+ certbot certonly -d www.isture.com
 ```
 
 ### 3.2 定时更新
@@ -104,7 +107,7 @@ crontab -e
    crontab -l
    ```
 
-   ![image-20210220115814879](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210220115814879.png)
+   ![image-20210220115814879](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210220115814879.png)
 
 
 
@@ -112,7 +115,7 @@ crontab -e
 certbot certonly --email 312905679@qq.com -d test.isture.com 
 ```
 
-![image-20201110230101897](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201110230101897.png)
+![image-20201110230101897](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201110230101897.png)
 
 
 
@@ -152,7 +155,7 @@ Input the webroot for test.isture.com: (Enter 'c' to cancel): /home/test-portal
 certbot certificates
 ```
 
-![image-20201110225053075](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201110225053075.png)
+![image-20201110225053075](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201110225053075.png)
 
 以上可以看出此https 证书已经过期了
 
@@ -178,7 +181,7 @@ ping 不通该域名，可能是域名解析没有配置
 
 ### 4.2 最近授权太多次
 
-![image-20201110233310535](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201110233310535.png)
+![image-20201110233310535](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201110233310535.png)
 
 ## 参考文章
 

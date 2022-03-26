@@ -31,7 +31,7 @@
 
 3. 输出结果
 
-   ![image-20201210162547578](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201210162547578.png)
+   ![image-20201210162547578](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201210162547578.png)
 
 ## 2. v-for对 JSON 数组 几种输出方式
 
@@ -47,7 +47,7 @@ html 代码
 
 输出结果：
 
-![image-20201210164049745](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201210164049745.png)
+![image-20201210164049745](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201210164049745.png)
 
 ### 2.2 输出value值且输出对应的索引值
 
@@ -62,7 +62,7 @@ html代码：
 
 输出结果：
 
-![image-20201210164215652](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201210164215652.png)
+![image-20201210164215652](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201210164215652.png)
 
 ## 3. v-for对json格式的几种输出方式
 
@@ -78,7 +78,7 @@ html代码
 
 输出结果：
 
-![image-20201210164447098](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201210164447098.png)
+![image-20201210164447098](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201210164447098.png)
 
 ### 3.2 输出value值和key值
 
@@ -92,7 +92,7 @@ html 代码
 
 输出结果：
 
-![image-20201210164606587](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201210164606587.png)
+![image-20201210164606587](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201210164606587.png)
 
 ## 3.输出value值，key值和索引值index
 
@@ -106,7 +106,7 @@ html代码：
 
 输出结果：
 
-![image-20201210164817986](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201210164817986.png)
+![image-20201210164817986](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201210164817986.png)
 
 ## 4. 总结
 

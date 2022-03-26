@@ -102,7 +102,7 @@ List<Tree<String>> treeNodes = TreeUtil.build(nodeList, "0", treeNodeConfig,
 
 ### 3.1 Tree源码
 
-![image-20211022200317096](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022200317096.png)
+![image-20211022200317096](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022200317096.png)
 
 - Tree 它继承自 LinkedHashMap<String, Object>
 
@@ -138,38 +138,38 @@ List<Tree<String>> treeNodes = TreeUtil.build(nodeList, "0", treeNodeConfig,
 
 - 对于Tree 节点的插入都是调用map的。但是具体的key名，需要从treeNodeConfig中获取
 
-  ![image-20211022201140972](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022201140972.png)
+  ![image-20211022201140972](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022201140972.png)
 
 ### 3.2 Node接口
 
-![image-20211022201335122](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022201335122.png)
+![image-20211022201335122](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022201335122.png)
 
 - 定义了构成树的必要节点
 - 其中默认实现了 compareTo 排序
 
-![image-20211022201447544](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022201447544.png)
+![image-20211022201447544](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022201447544.png)
 
 ### 3.3 TreeUtil 工具类
 
-![image-20211022202111338](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022202111338.png)
+![image-20211022202111338](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022202111338.png)
 
 TreeUtil 主要是各种构造器的入口
 
-![image-20211022202615115](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022202615115.png)
+![image-20211022202615115](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022202615115.png)
 
 ### 3.4 TreeBuilder 构造器
 
-![image-20211022202248598](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022202248598.png)
+![image-20211022202248598](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022202248598.png)
 
 treeBuilder 才是真正实现树结构的实现
 
-![image-20211022202400647](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022202400647.png)
+![image-20211022202400647](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022202400647.png)
 
 #### 3.4.1 添加节点列表
 
 将我们的列表添加到 LinkedHashMap中。以id为key。以节点为值
 
-![image-20211022202741529](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022202741529.png)
+![image-20211022202741529](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022202741529.png)
 
 #### 3.4.2 节点解析器
 
@@ -181,23 +181,23 @@ nodeParser.parse(t, node);
 
 他是扩展节点属性的关键因素
 
-![image-20211022203210810](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022203210810.png)
+![image-20211022203210810](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022203210810.png)
 
 默认节点解析器，就做简单的转换
 
-![image-20211022203240188](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022203240188.png)
+![image-20211022203240188](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022203240188.png)
 
 #### 3.4.3 append 到全局map
 
 最后的append 就是将tree 添加到全局的treemap中
 
-![image-20211022205137274](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022205137274.png)
+![image-20211022205137274](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022205137274.png)
 
-![image-20211022203324209](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022203324209.png)
+![image-20211022203324209](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022203324209.png)
 
 #### 3.4.4 开始构建代码
 
-![image-20211022202445998](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211022202445998.png)
+![image-20211022202445998](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211022202445998.png)
 
 1. 先对所有节点进行排序
 2. 如果是根节点就塞进根节点列表

@@ -281,7 +281,7 @@
    
    ```
 
-   ![image-20201207161731505](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201207161731505.png)
+   ![image-20201207161731505](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201207161731505.png)
 
 至此就已经配置完毕了
 
@@ -415,5 +415,5 @@
    }
    ```
 
-   ![image-20201207162216525](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201207162216525.png)
+   ![image-20201207162216525](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201207162216525.png)
 

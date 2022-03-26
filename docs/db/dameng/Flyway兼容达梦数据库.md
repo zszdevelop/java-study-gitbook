@@ -6,7 +6,7 @@
 
 ### 2.1 将pom文件，移到根目录
 
-![image-20210921202513182](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921202513182.png)
+![image-20210921202513182](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921202513182.png)
 
 1. 将META-INF文件夹下的pom文件移到根目录
 2. 并更新
@@ -16,36 +16,36 @@
 1. 新建src/main/java 文件夹
 2. 新建src/main/resources 文件夹
 
-![image-20210921202029009](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921202029009.png)
+![image-20210921202029009](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921202029009.png)
 
 ### 2.2 将org包下的源码移入java目录下
 
-![image-20210921202229371](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921202229371.png)
+![image-20210921202229371](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921202229371.png)
 
 ## 1. 解压出来的内容
 
-![image-20210921161054646](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921161054646.png)
+![image-20210921161054646](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921161054646.png)
 
 新建src 和 resource 文件夹，将org 文件夹移动到src文件夹中
 
-![image-20210921161200504](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921161200504.png)
+![image-20210921161200504](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921161200504.png)
 
 将META-INF文件夹下的pom文件，移到根目录
 
-![image-20210921161521951](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921161521951.png)
+![image-20210921161521951](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921161521951.png)
 
 在modules 中将src 设置成sources ，将resource 设置成resources
 
 - 方式一：
 
-![image-20210921161705098](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921161705098.png)
+![image-20210921161705098](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921161705098.png)
 
 - 方式二：
-- ![image-20210921165133285](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921165133285.png)
+- ![image-20210921165133285](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921165133285.png)
 
 全局搜索 databaseProductName.startsWith("Oracle")
 
-![image-20210921162215933](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921162215933.png)
+![image-20210921162215933](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921162215933.png)
 
 增加||databaseProductName.startsWith("DM")
 
@@ -87,11 +87,11 @@ public class MainTest {
 
 ### 3.3 数据库新增表 flyway_schema_history
 
-![image-20210921165644716](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921165644716.png)
+![image-20210921165644716](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921165644716.png)
 
 表内容如下
 
-![image-20210921165652823](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921165652823.png)
+![image-20210921165652823](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921165652823.png)
 
 ## 4. 达梦集成测试
 
@@ -163,7 +163,7 @@ Exception in thread "main" org.flywaydb.core.internal.exception.FlywayDbUpgradeR
 
 ```
 
-![image-20210921173026851](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921173026851.png)
+![image-20210921173026851](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921173026851.png)
 
 因为我们达梦直接使用oracle 的语法，但是版本还是达梦的。所以我们直接注释掉。有两处
 
@@ -202,6 +202,6 @@ Exception in thread "main" org.flywaydb.core.internal.exception.FlywayDbUpgradeR
 
 ### 4.5 再次运行时，就能正常运行了
 
-![image-20210921173515577](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921173515577.png)
+![image-20210921173515577](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921173515577.png)
 
 也正常生成 `flyway_schema_history`

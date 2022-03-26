@@ -10,15 +10,15 @@ windows下可以使用达梦提供的工具,mac下使用datagrip连接达梦数�
 
 2. 点击加号
 
-   ![image-20210915140348269](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915140348269.png)
+   ![image-20210915140348269](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915140348269.png)
 
 3. 导入驱动包
 
-   ![image-20210915140420817](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915140420817.png)
+   ![image-20210915140420817](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915140420817.png)
 
 4. 配置
 
-   ![image-20211112094915173](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211112094915173.png)
+   ![image-20211112094915173](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211112094915173.png)
 
 ## 参考文章
 

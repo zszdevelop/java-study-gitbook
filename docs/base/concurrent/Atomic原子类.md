@@ -8,7 +8,7 @@ Atomic 翻译成中文的意思，在化学上，我们知道原子是构成一�
 
 并发包 `java.util.concurrent` 的原子类都存放在`java.util.concurrent.atomic`下,如下图所示。
 
-![image-20190917225827634](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190917225827634.png)
+![image-20190917225827634](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190917225827634.png)
 
 ## 2. JUC包中的4类原子类
 

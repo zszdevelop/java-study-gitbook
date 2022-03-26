@@ -4,27 +4,27 @@
 
 ### 1.1 创建repositories
 
-![image-20211004225113417](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004225113417.png)
+![image-20211004225113417](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004225113417.png)
 
-![image-20211004225141529](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004225141529.png)
+![image-20211004225141529](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004225141529.png)
 
 ### 1.2 配置repositories
 
 配置如下（定义名称并激活），然后自行拖到页面的最下方，点击添加即可
 
-![image-20211004225316142](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004225316142.png)
+![image-20211004225316142](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004225316142.png)
 
 ### 1.3 maven-public配置3rd
 
-![image-20211004225459127](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004225459127.png)
+![image-20211004225459127](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004225459127.png)
 
-![image-20211004225514115](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004225514115.png)
+![image-20211004225514115](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004225514115.png)
 
 ### 1.4 Maven添加第三方仓库地址（全局配置）
 
-![image-20211004225624932](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004225624932.png)
+![image-20211004225624932](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004225624932.png)
 
-![image-20211004225652991](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004225652991.png)
+![image-20211004225652991](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004225652991.png)
 
 ### 1.5 配置settings.xml
 
@@ -66,9 +66,9 @@ mvn deploy:deploy-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.
 
 ### 1.7 **查看本地上传的jar包：**
 
-![image-20211004230728014](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004230728014.png)
+![image-20211004230728014](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004230728014.png)
 
-![image-20211004230745224](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004230745224.png)
+![image-20211004230745224](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004230745224.png)
 
 ## 参考文章
 

@@ -2,7 +2,7 @@
 
 ## 1. Java 异常类层次结构图
 
-![image-20191020003914919](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191020003914919.png)
+![image-20191020003914919](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191020003914919.png)
 
 在Java中，所有的异常都有一个共同的祖先java.lang包中的**Throwable类**。Throwable: 有两个重要的子类：**Exception（异常）**和 **Error（错误）**，二者都是Java异常处理的重要子类，各自都包含了大量子类
 

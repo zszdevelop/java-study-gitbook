@@ -180,7 +180,7 @@ sudo gitlab-ctl status
 
   默认账户是root，密码在此页面设置
 
-![image-20190907201354004](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190907201354004.png)
+![image-20190907201354004](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190907201354004.png)
 
 ## 3. 常用的几个Gitlab命令
 

@@ -1,6 +1,6 @@
 # Gitlab-Runner实践
 
-![image-20191220114358441](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191220114358441.png)
+![image-20191220114358441](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191220114358441.png)
 
 根据gitlab-runner 的介绍，我们可以看到
 

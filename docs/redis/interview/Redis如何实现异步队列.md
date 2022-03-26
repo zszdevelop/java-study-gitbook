@@ -8,7 +8,7 @@
 
 ### 1.1 操作实例
 
-![image-20210410232817945](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410232817945.png)
+![image-20210410232817945](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410232817945.png)
 
 缺点：没有等待队列里有值就直接消费
 
@@ -32,7 +32,7 @@
 - 发送者(pub) 发送消息，订阅者（sub）接收消息
 - 订阅者可以订阅任何数量的频道
 
-![image-20210410233222497](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410233222497.png)
+![image-20210410233222497](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410233222497.png)
 
 ### 4.1 面临问题：
 

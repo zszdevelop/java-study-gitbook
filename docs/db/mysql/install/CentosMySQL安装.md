@@ -44,7 +44,7 @@ sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm
 
 安装这个包后，在/etc/yum.repos.d/下 会获得两个mysql 的yum repo源
 
-![image-20190908212717751](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190908212717751.png)
+![image-20190908212717751](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190908212717751.png)
 
 ### 1.3 安装MySQL
 
@@ -64,7 +64,7 @@ sudo yum install mysql-server
 
 看到如下返回，证明安装成功了
 
-![image-20190908214919885](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190908214919885.png)
+![image-20190908214919885](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190908214919885.png)
 
 ### 1.4 登录
 
@@ -140,7 +140,7 @@ ERROR 1819 (HY000): Your password does not satisfy the current policy requiremen
 show variables like "%char%";
 ```
 
-![image-20190908222908251](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190908222908251.png)
+![image-20190908222908251](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190908222908251.png)
 
 修改编码,在
 
@@ -156,7 +156,7 @@ vim /etc/my.cnf
 character-set-server=utf8
 ```
 
-![image-20210219161142953](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210219161142953.png)
+![image-20210219161142953](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210219161142953.png)
 
 ### 参考文章
 

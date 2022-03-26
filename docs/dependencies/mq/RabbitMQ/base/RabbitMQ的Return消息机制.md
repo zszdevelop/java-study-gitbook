@@ -6,7 +6,7 @@
 - 我们的消息生产者，通过指定一个Exchange 和Routingkey，把消息送达到某一个队列中去， 然后我们的消费者监听队列，进行消费处理操作！
 - 但是在某些情况下，如果我们在发送消息的时候，当前的exchange不存在或者指定的路由key路由不到，这个时候如果我们需要监听这种不可达的消息，就要使用`Return Listener`
 
-![image-20210518193741448](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210518193741448.png)
+![image-20210518193741448](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210518193741448.png)
 
 ## 2. Return机制实现
 

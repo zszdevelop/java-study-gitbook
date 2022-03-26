@@ -29,7 +29,7 @@ make PREFIX=/usr/local/redis install
 
 /bin/sh: cc: command not found
 
-![image-20191203115107725](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191203115107725.png)
+![image-20191203115107725](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191203115107725.png)
 
 **解决方案：**安装gcc命令
 
@@ -63,7 +63,7 @@ cd /usr/local/redis/bin
 
 目录结构
 
-![image-20190909112349183](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190909112349183.png)
+![image-20190909112349183](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190909112349183.png)
 
 - redis-benchmark: redis 性能检测工具
 - redis-check-aof： AOF文件修复工具
@@ -87,7 +87,7 @@ cd /usr/local/redis/bin
 
 如图
 
-![image-20190909112943727](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190909112943727.png)
+![image-20190909112943727](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190909112943727.png)
 
 ### 3.2 后端模式启动
 
@@ -97,7 +97,7 @@ cd /usr/local/redis/bin
 vim /usr/local/redis/bin/redis.conf
 ```
 
-![image-20190909113153794](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190909113153794.png)
+![image-20190909113153794](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190909113153794.png)
 
 执行如下命令
 
@@ -109,7 +109,7 @@ vim /usr/local/redis/bin/redis.conf
 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
 ```
 
-![image-20190909114017734](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190909114017734.png)
+![image-20190909114017734](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190909114017734.png)
 
 ## 4. 连接redis
 

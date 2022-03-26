@@ -22,7 +22,7 @@
 
 1. 看下redis.config 默认配置文件，找到SECURITY 区域，如以下所示：
 
-![image-20200310214536838](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200310214536838.png)
+![image-20200310214536838](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200310214536838.png)
 
 看说明，添加rename-command 配置即可达到安全目的
 

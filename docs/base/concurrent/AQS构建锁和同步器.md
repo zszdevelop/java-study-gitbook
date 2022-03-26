@@ -4,7 +4,7 @@
 
 AQS的全称为（AbstractQueuedSynchronizer），这个类在java.util.concurrent.locks包下面。
 
-![image-20190917232909916](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190917232909916.png)
+![image-20190917232909916](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190917232909916.png)
 
 AQS是一个**用来构建锁和同步器的框架**，使用AQS能简单且高效得构造出应用广泛的大量同步器，比如我们提到了ReentrantLock，Semaphore，其他的诸如ReentrantReadWriteLock，SynchronousQueue，FutureTask等等皆是基于AQS的。当然，我们自己也能利用AQS非常轻松容易地构造出符合我们自己需求的同步器。
 
@@ -21,7 +21,7 @@ AQS 核心思想是
 
 看个AQS(AbstractQueuedSynchronizer)原理图：
 
-![image-20190917234315783](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190917234315783.png)
+![image-20190917234315783](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190917234315783.png)
 
 AQS使用一个int成员变量来表示同步状态，通过内置的FIFO队列来完成资源线程的排队工作，AQS使用CAS对该同步状态进行原子操作实现对其值的修改。
 

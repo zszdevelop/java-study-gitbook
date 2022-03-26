@@ -17,7 +17,7 @@ Skywalking 能监听大部分场景了，如各服务请求时间，数据库日
 
 在实现拦截器之前我们需要了解分布式追踪系统中的一些关键数据结构。 
 
-![image-20211203215729077](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211203215729077.png)
+![image-20211203215729077](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211203215729077.png)
 
 ### 2.1 跨度（Span） 
 
@@ -366,7 +366,7 @@ mvn clean package
 
 将jar包 apm-hutool-plugin-1.0-SNAPSHOT.jar 放入skywalking-agent/plugins 目录下
 
-![image-20211202230640506](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211202230640506.png)
+![image-20211202230640506](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211202230640506.png)
 
 ### 4.3 测试接口
 
@@ -388,7 +388,7 @@ mvn clean package
 
 请求结果后可以看到多了一行filecopy
 
-![image-20211202230759483](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211202230759483.png)
+![image-20211202230759483](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211202230759483.png)
 
 
 

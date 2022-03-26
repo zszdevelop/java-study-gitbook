@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-![效果如图所示](https://gitee.com/zszdevelop/blogimage/raw/master/944365-826d0aa065f70cb1.png)
+![效果如图所示](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/944365-826d0aa065f70cb1.png)
 
 **特别注意：JS代码调用一定要在 onPageFinished（） 回调之后才能调用，否则不会调用。**
 
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## 方法对比
 
-![方法对比](https://gitee.com/zszdevelop/blogimage/raw/master/944365-30f095d4c9e638fd.png)
+![方法对比](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/944365-30f095d4c9e638fd.png)
 
 ## 使用建议
 

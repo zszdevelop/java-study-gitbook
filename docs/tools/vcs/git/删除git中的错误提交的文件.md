@@ -14,7 +14,7 @@ Git 操作时，经常“不小心”上传一些不必要的（大）文件，�
 
 
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201010094508032.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201010094508032.png)
 
 
 
@@ -48,7 +48,7 @@ Git 操作时，经常“不小心”上传一些不必要的（大）文件，�
 
 
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201010093714396.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201010093714396.png)
 
 ## 参考文章
 

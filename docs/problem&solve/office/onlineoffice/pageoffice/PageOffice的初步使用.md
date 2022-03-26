@@ -2,7 +2,7 @@
 
 
 
-![image-20200417215206890](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200417215206890.png)
+![image-20200417215206890](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200417215206890.png)
 
 pageoffice 需要安装插件
 

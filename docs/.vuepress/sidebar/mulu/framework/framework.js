@@ -1,6 +1,7 @@
 var BigSiteMulu = require('./BigSiteMulu');
 var RbacMulu = require('./RbacMulu');
 var FileMulu = require('./FileMulu');
+var MallMulu = require('./MallMulu');
 var MessageMulu = require('./MessageMulu');
 var ManagementSystemMulu = require('./ManagementSystemMulu');
 exports.mulu = {
@@ -12,6 +13,7 @@ exports.mulu = {
         BigSiteMulu.mulu,
         RbacMulu.mulu,
         FileMulu.mulu,
+        MallMulu.mulu,
         ManagementSystemMulu.mulu,
         MessageMulu.mulu
     ]}

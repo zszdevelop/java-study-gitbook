@@ -82,7 +82,7 @@ touch /chinahrss/redis/conf/redis.conf
 
 准备完毕后，将目录切换到/chinahrss/third-part，然后运行`docker-compose up -d`启动：
 
-![image-20200129210656858](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129210656858.png)
+![image-20200129210656858](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129210656858.png)
 
 ### 2.6 连接测试
 
@@ -90,43 +90,43 @@ touch /chinahrss/redis/conf/redis.conf
 
 使用Navicat连接MySQL
 
-![image-20200129212504561](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129212504561.png)
+![image-20200129212504561](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129212504561.png)
 
 连接成功
 
-![image-20200129212520066](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129212520066.png)
+![image-20200129212520066](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129212520066.png)
 
 创建数据库
 
-![image-20200129212808981](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129212808981.png)
+![image-20200129212808981](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129212808981.png)
 
 最后导入chinahrss_cloud_base SQL和zipkin相关SQL，导入后库表如下所示：
 
-![image-20200129212958440](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129212958440.png)
+![image-20200129212958440](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129212958440.png)
 
 ### 2.6.2 连接Redis
 
 使用Redis Desktop Manager看看能否成功连接Redis：
 
-![image-20200129213232963](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129213232963.png)
+![image-20200129213232963](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129213232963.png)
 
 ### 2.6.3 连接RabbitMQ测试
 
 浏览器访问 http://120.79.200.111:15673/
 
-![image-20200129213558080](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129213558080.png)
+![image-20200129213558080](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129213558080.png)
 
 默认用户名和密码都为guest。在Admin标签页里新建一个用户，用户名为chinahrss，密码为123456，角色为管理员：
 
-![image-20200129213748137](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129213748137.png)
+![image-20200129213748137](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129213748137.png)
 
 然后对chinahrss用户授权，点击chinahrss用户：
 
-![image-20200129213840855](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129213840855.png)
+![image-20200129213840855](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129213840855.png)
 
 点击Set Permission按钮：
 
-![image-20200129213921866](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129213921866.png)
+![image-20200129213921866](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129213921866.png)
 
 至此第三方服务都准备完毕，接下来开始部署我们自己的微服务。
 
@@ -186,7 +186,7 @@ docker-compose up -d
 
 http://120.79.200.111:8001/nacos/
 
-![image-20200130115355107](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200130115355107.png)
+![image-20200130115355107](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200130115355107.png)
 
 
 

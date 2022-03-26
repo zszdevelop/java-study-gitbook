@@ -8,7 +8,7 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 **堆空间的基本结构：**
 
-![image-20190924234527212](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190924234527212.png)
+![image-20190924234527212](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190924234527212.png)
 
 上图所示的 eden区，s0("From") 区、s1("To") 区都属于新生代，tentired 区属于老年代。大部分情况，
 
@@ -24,7 +24,7 @@ Java 堆是垃圾收集器管理的主要区域，因此也被称作**GC 堆（G
 
 - Minor GC会一直重复这样的过程，直到“To”区被填满，"To"区被填满之后，会将所有对象移动到年老代中。
 
-![image-20190924235155859](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190924235155859.png)
+![image-20190924235155859](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190924235155859.png)
 
 ### 1.1 对象优先在eden 区分配
 
@@ -52,11 +52,11 @@ public class GCTest {
 
 添加的参数：`-XX:+PrintGCDetails`
 
-![image-20190924235926247](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190924235926247.png)
+![image-20190924235926247](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190924235926247.png)
 
 运行结果（JDK 1.8）
 
-![image-20190925000240877](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190925000240877.png)
+![image-20190925000240877](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190925000240877.png)
 
 从上图我们可以看出 eden 区内存几乎已经被分配完全（即使程序什么也不做，新生代也会使用 2000 多 k 内存）。假如我们再为 allocation2 分配内存会出现什么情况呢？
 
@@ -64,7 +64,7 @@ public class GCTest {
 allocation2 = new byte[900*1024];
 ```
 
-![image-20190925000448570](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190925000448570.png)
+![image-20190925000448570](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190925000448570.png)
 
 **简单解释一下为什么会出现这种情况：** 因为给 allocation2 分配内存的时候 eden 区内存几乎已经被分配完了，我们刚刚讲了当 Eden 区没有足够空间进行分配时，虚拟机将发起一次 Minor GC.GC 期间虚拟机又发现 allocation1 无法存入 Survivor 空间，所以只好通过 **分配担保机制** 把新生代的对象提前转移到老年代中去，老年代上的空间足够存放 allocation1，所以不会出现 Full GC。执行 Minor GC 后，后面分配的对象如果能够存在 eden 区的话，还是会在 eden 区分配内存。可以执行如下代码验证：
 

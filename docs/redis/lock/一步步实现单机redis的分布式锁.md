@@ -153,7 +153,7 @@ SET lockKey value NX
 
   假设有两个客户端A和B，A获取到分布式的锁。A执行了一会，突然A所在的服务器断电了（或者其他什么的），也就是客户端A挂了。这时出现一个问题，这个锁一直存在，且不会被释放，其他客户端永远获取不到锁。如下示意图
 
-![image-20191009222135428](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191009222135428.png)
+![image-20191009222135428](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191009222135428.png)
 
 可以通过设置过期时间来解决这个问题
 
@@ -194,7 +194,7 @@ SET lockKey value NX EX 30
 
 示意图如下
 
-![image-20191009223132174](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191009223132174.png)
+![image-20191009223132174](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191009223132174.png)
 
 这时会有两个问题
 
@@ -418,4 +418,4 @@ public class LockCase5Test {
 
 ### 7.1 测试结果
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/1653b1ac51325e07.gif)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/1653b1ac51325e07.gif)

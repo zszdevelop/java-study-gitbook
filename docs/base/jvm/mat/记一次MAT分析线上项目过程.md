@@ -24,11 +24,11 @@ Heap dump file created
 
 这是最简单有效的方式，我们根据报告的提示来进行分析
 
-![image-20200107232248818](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107232248818.png)
+![image-20200107232248818](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107232248818.png)
 
 我们点开报告得到
 
-![image-20200107232335036](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107232335036.png)
+![image-20200107232335036](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107232335036.png)
 
 我们根据报告得知，有个对象已经占用了44.4 MB的内存，他来源于**ConcurrentHashMap$Node[]**
 
@@ -36,7 +36,7 @@ Heap dump file created
 
 通过查看**Histogram**，列出内存中的对象情况（个数，大小）
 
-![image-20200107233119349](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107233119349.png)
+![image-20200107233119349](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107233119349.png)
 
 - **Class Name** ： 类名称，java类名
 - **Objects **： 类的对象的数量，这个对象被创建了多少个
@@ -48,21 +48,21 @@ Heap dump file created
 
 这儿借助工具提供的regex正则搜索一下我们自己的类，排序后看看哪些相对是占用比较大的。
 
-![image-20200107233400178](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107233400178.png)
+![image-20200107233400178](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107233400178.png)
 
 我们可以看出内存泄漏是有EsscWebSocket开始的
 
 ### 3.3 查看Dominator Tree
 
-![image-20200107233826983](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107233826983.png)
+![image-20200107233826983](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107233826983.png)
 
 ### 3.4 Top consumers
 
-![image-20200107233905138](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107233905138.png)
+![image-20200107233905138](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107233905138.png)
 
 **这张图展示的是占用内存比较多的****对象的分布，下面是具体的一些类和占用。**
 
-![image-20200107234011953](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107234011953.png)
+![image-20200107234011953](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107234011953.png)
 
 ## 参考文章
 

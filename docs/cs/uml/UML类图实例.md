@@ -1,3 +1,3 @@
 # UML类图实例
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/img01.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/img01.jpg)

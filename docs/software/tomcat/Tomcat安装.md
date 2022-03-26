@@ -15,13 +15,13 @@ Tomcat主要有三个安装版本
 - Windows.zip：Windows压缩包，免安装，解压即用，同时注意根据自己电脑是64位系统还是32位系统下载对应的压缩包
 - Windows Service Installer：Windows安装包，32位和64位版本的Windows系统都适用
 
-![image-20210728212527098](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728212527098.png)
+![image-20210728212527098](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728212527098.png)
 
 ## 3.安装Tomcat
 
 1. 将下载好的`apache-tomcat-8.5.47.tar.gz`放到指定目录，我这里放到`/usr/local/tomcat`，如下图所示
 
-   ![image-20210728212849291](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728212849291.png)
+   ![image-20210728212849291](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728212849291.png)
 
 2. 进入`/usr/local/tomcat`目录，解压Tomcat压缩包
 
@@ -63,7 +63,7 @@ Tomcat主要有三个安装版本
 
    **注意：开放8080端口或者关闭防火墙**
 
-   ![image-20210728214559556](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210728214559556.png)
+   ![image-20210728214559556](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210728214559556.png)
 
 **附加：开放8080端口或者关闭防火墙，如果是阿里云只能在阿里云控制台配置开放端口**
 

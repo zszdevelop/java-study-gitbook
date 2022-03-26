@@ -49,7 +49,7 @@
 
    
 
-![image-20200418161503116](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200418161503116.png)
+![image-20200418161503116](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200418161503116.png)
 
 
 
@@ -59,7 +59,7 @@
  bash opensource-install.sh -md www.isture.com
 ```
 
-![image-20200419011731460](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200419011731460.png)
+![image-20200419011731460](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200419011731460.png)
 
 
 
@@ -105,7 +105,7 @@ sudo docker run --net onlyoffice -i -t -d --restart=always --name onlyoffice-com
 
 
 
-![image-20200419161357616](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200419161357616.png)
+![image-20200419161357616](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200419161357616.png)
 
 ## 参考文章
 

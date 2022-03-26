@@ -8,7 +8,7 @@ App升级是项目必不可少的环节。在项目初期公司将升级文件�
 
 >带宽是单位时间内某一点到另一点的“最高数据率”，带宽属于共享资源，例如我们app下载，随着同时下载的人数增加，带宽会被瓜分
 
-![image-20191227201242056](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191227201242056.png)
+![image-20191227201242056](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191227201242056.png)
 
 所以我们考虑使用云来解决
 
@@ -26,7 +26,7 @@ App升级是项目必不可少的环节。在项目初期公司将升级文件�
 
   以下为阿里云存储的 `1TB`**一个月的 下行流量价格505**
 
-![2941577448356_.pic_hd](https://gitee.com/zszdevelop/blogimage/raw/master/img/2941577448356_.pic_hd.jpg)
+![2941577448356_.pic_hd](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/2941577448356_.pic_hd.jpg)
 
 ### 2.2 CDN
 
@@ -38,7 +38,7 @@ App升级是项目必不可少的环节。在项目初期公司将升级文件�
 
   以下为阿里CDN的 `1TB`**一个月的CDN加速包,价格162**。与云存储的下行流量价格差了3倍
 
-![771577431970_.pic_hd](https://gitee.com/zszdevelop/blogimage/raw/master/img/771577431970_.pic_hd.jpg)
+![771577431970_.pic_hd](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/771577431970_.pic_hd.jpg)
 
 ### 2.3 选择
 
@@ -53,7 +53,7 @@ App升级是项目必不可少的环节。在项目初期公司将升级文件�
 
 ### 3.2 配置要加速的CDN域名
 
-![image-20191228221208058](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191228221208058.png)
+![image-20191228221208058](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191228221208058.png)
 
 - 我选择ip解析的比较多。直接映射到你对应的服务器，交由nginx 解析成对应的服务中
 
@@ -63,11 +63,11 @@ App升级是项目必不可少的环节。在项目初期公司将升级文件�
 
 我们点开详情可以看到cname的配置，将陪cname的值配置到域名解析中
 
-![image-20191227205527503](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191227205527503.png)
+![image-20191227205527503](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191227205527503.png)
 
 配置域名解析
 
-![image-20210207164541145](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210207164541145.png)
+![image-20210207164541145](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210207164541145.png)
 
 
 
@@ -99,11 +99,11 @@ CDN配置之后大概几分钟就能生效
 
 - 我们可以使用host 命令来查看是否使用到了CDN
 
-![image-20191227210711647](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191227210711647.png)
+![image-20191227210711647](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191227210711647.png)
 
 - 使用dig命令来查看是否使用到了CDN
 
-![image-20191227210828792](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191227210828792.png)
+![image-20191227210828792](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191227210828792.png)
 
 ### 实际下载速度
 

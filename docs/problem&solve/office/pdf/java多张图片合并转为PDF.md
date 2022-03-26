@@ -108,7 +108,7 @@ public class Image2PdfUtil {
 
 原文章代码
 
-![image-20211028143725795](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211028143725795.png)
+![image-20211028143725795](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211028143725795.png)
 
 ### 3.1 pdf并不是A4大小而是实际图片大小
 

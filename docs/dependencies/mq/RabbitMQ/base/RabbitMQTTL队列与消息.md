@@ -101,7 +101,7 @@ public class Producer {
 
 ## 3. 实现效果
 
-![16e93a814f8c1962](https://gitee.com/zszdevelop/blogimage/raw/master/16e93a814f8c1962.gif)
+![16e93a814f8c1962](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/16e93a814f8c1962.gif)
 
 ## 参考文章
 

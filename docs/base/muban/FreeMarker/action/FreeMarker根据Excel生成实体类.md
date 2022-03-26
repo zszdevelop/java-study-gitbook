@@ -4,7 +4,7 @@
 
 如下图，有这样一张表格。需要将表格转为java实体类。如果字段少复制过来没有什么问题。但是如果表格字段很多那么一个个复制就很累了（我现实业务有100多个字段）。随着业务的扩展，可能还需要对实体类字段加上一些特殊的注解。如数据库注解@Column(name = "ID") ，导入导出excel 用的@ExcelField(value = "ID")，数据库大小写和下划线（_）还要转化为驼峰 。种种因素手动复制实现工作量实在太大了
 
-![image-20201208140412994](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201208140412994.png)
+![image-20201208140412994](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201208140412994.png)
 
  
 
@@ -461,5 +461,5 @@
    
    7. 测试生成实体类
    
-      ![image-20201208143620089](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201208143620089.png)
+      ![image-20201208143620089](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201208143620089.png)
 

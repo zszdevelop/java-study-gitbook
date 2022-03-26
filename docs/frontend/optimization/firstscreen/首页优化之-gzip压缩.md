@@ -60,8 +60,8 @@ module.exports = {
 
 - 使用前876KB
 
-  ![image-20200326183747822](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200326183747822.png)
+  ![image-20200326183747822](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200326183747822.png)
 
 - 使用后311KB
 
-  ![image-20200326183657671](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200326183657671.png)
+  ![image-20200326183657671](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200326183657671.png)

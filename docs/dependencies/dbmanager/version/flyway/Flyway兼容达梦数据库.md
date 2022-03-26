@@ -12,7 +12,7 @@
 
 因公司项目之前是用6.3.3 版本，现在版本已经变化挺大了，所以还是使用tag 为6.3.3 的
 
-![image-20210925101634465](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210925101634465.png)
+![image-20210925101634465](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210925101634465.png)
 
 ## 2.2 flyway 打包测试
 
@@ -22,13 +22,13 @@
 Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project flyway-core: Fatal error compiling
 ```
 
-![image-20210925102032444](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210925102032444.png)
+![image-20210925102032444](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210925102032444.png)
 
 网上的解释是，版本不一致，但按照他们的方法一个个设置，怎么都没用。
 
 后面怀疑是idea 的问题，用mvn clean package 打包做测试
 
-![image-20210925102307886](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210925102307886.png)
+![image-20210925102307886](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210925102307886.png)
 
 结果发现mvn 的提示清晰多了 
 
@@ -44,7 +44,7 @@ Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:comp
 
 - pom.xml 注释掉 `<release>8</release>`
 
-  ![image-20210925102554160](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210925102554160.png)
+  ![image-20210925102554160](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210925102554160.png)
 
 这样打包就可以正常使用了
 
@@ -89,7 +89,7 @@ Exception in thread "main" org.flywaydb.core.internal.exception.FlywayDbUpgradeR
 
 ```
 
-![image-20210921173026851](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921173026851.png)
+![image-20210921173026851](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921173026851.png)
 
 因为我们达梦直接使用oracle 的语法，但是版本还是达梦的。所以我们直接注释掉。有两处
 
@@ -157,7 +157,7 @@ public class MainTest {
 
 ### 5.3 运行测试
 
-![image-20210921173515577](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210921173515577.png)
+![image-20210921173515577](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210921173515577.png)
 
 也正常生成 `flyway_schema_history`
 
@@ -169,7 +169,7 @@ public class MainTest {
 
 ### 6.2  将文件放入lib中
 
-![image-20210925103927972](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210925103927972.png)
+![image-20210925103927972](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210925103927972.png)
 
 ### 6.2  pom依赖
 
@@ -198,7 +198,7 @@ public class MainTest {
 
 将达梦驱动放到 flyway-6.3.3->drivers->DmJdbcDriver18.jar
 
-![image-20211011222426034](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211011222426034.png)
+![image-20211011222426034](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211011222426034.png)
 
 ### 7.3  更改配置
 
@@ -219,7 +219,7 @@ flyway.password=youpassword
 
 修改flyway-6.3.3-》lib->community->flyway-core-6.3.3.jar
 
-![image-20211011222641335](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211011222641335.png)
+![image-20211011222641335](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211011222641335.png)
 
 ### 7.5 命令行运行
 

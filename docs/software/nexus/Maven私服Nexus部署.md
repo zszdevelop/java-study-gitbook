@@ -4,7 +4,7 @@
 
 私服是指私有服务器，是架设在局域网的一种特殊的远程仓库，目的是代理远程仓库及部署第三方构建。有了私服之后，当 Maven 需要下载构件时，直接请求私服，私服上存在则下载到本地仓库；否则，私服请求外部的远程仓库，将构件下载到私服，再提供给本地仓库下载
 
-![image-20211004204944689](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004204944689.png)
+![image-20211004204944689](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004204944689.png)
 
 ## 2. 安装步骤
 
@@ -42,7 +42,7 @@
 
    启动nexus后，即可访问服务器IP+8081端口：
 
-   ![image-20211004211202373](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004211202373.png)
+   ![image-20211004211202373](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004211202373.png)
 
 ## 3. 登录并修改密码
 
@@ -50,7 +50,7 @@
 
    根据下述提示的路径，查看密码：
 
-   ![image-20211004211352564](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004211352564.png)
+   ![image-20211004211352564](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004211352564.png)
 
    ```
    cat /usr/local/nexus/sonatype-work/nexus3/admin.password 
@@ -61,33 +61,33 @@
 
 3. 登录后,修改密码
 
-   ![image-20211004211715907](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004211715907.png)
+   ![image-20211004211715907](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004211715907.png)
 
-   ![image-20211004211756213](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004211756213.png)
+   ![image-20211004211756213](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004211756213.png)
 
-   ![image-20211004211840651](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004211840651.png)
+   ![image-20211004211840651](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004211840651.png)
 
-   ![image-20211004211852121](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004211852121.png)
+   ![image-20211004211852121](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004211852121.png)
 
 ## 4. **创建角色**
 
-![image-20211004212042299](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004212042299.png)
+![image-20211004212042299](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004212042299.png)
 
-![image-20211004212207094](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004212207094.png)
+![image-20211004212207094](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004212207094.png)
 
 **点击创建：**
 
-![image-20211004212246300](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004212246300.png)
+![image-20211004212246300](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004212246300.png)
 
 ## 5. **创建用户**
 
-![image-20211004212426719](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004212426719.png)
+![image-20211004212426719](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004212426719.png)
 
-![image-20211004212558422](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004212558422.png)
+![image-20211004212558422](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004212558422.png)
 
 ## 6. **查看默认仓库类型**
 
-![image-20211004212722827](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004212722827.png)
+![image-20211004212722827](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004212722827.png)
 
 - group（仓库组类型）：又叫组仓库，用于方便开发人员，自己设定的仓库
 - hosted（宿主类型）：内部项目的发布仓库（内部开发人员发布上去存放的仓库）
@@ -106,35 +106,35 @@
 
 开发中需要重复发版，则需要开启release类型仓库的对应权限设置allow redeploy。如下:
 
-![image-20211004213118075](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213118075.png)
+![image-20211004213118075](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213118075.png)
 
-![image-20211004213230425](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213230425.png)
+![image-20211004213230425](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213230425.png)
 
 ## 8. **设置代理仓库（阿里云maven仓库）**
 
-![image-20211004213337597](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213337597.png)
+![image-20211004213337597](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213337597.png)
 
-![image-20211004213415866](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213415866.png)
+![image-20211004213415866](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213415866.png)
 
 阿里云仓库的URL：https://maven.aliyun.com/nexus/content/groups/public/
 
-![image-20211004213621568](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213621568.png)
+![image-20211004213621568](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213621568.png)
 
 填写上述两个内容后，点击页面下边的create repository 创建完成之后可以看到新增加了阿里云库。
 
-![image-20211004213707656](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213707656.png)
+![image-20211004213707656](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213707656.png)
 
 将添加的阿里云Proxy加入默认group中：
 
-![image-20211004213813431](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213813431.png)
+![image-20211004213813431](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213813431.png)
 
 将阿里云移动到第一个
 
-![image-20211004213918176](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004213918176.png)
+![image-20211004213918176](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004213918176.png)
 
 保存后，再次刷新页面，即可看到当前的Nexus地址：
 
-![image-20211004214034153](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211004214034153.png)
+![image-20211004214034153](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211004214034153.png)
 
 ### 8.1 关于上述配置的常见使用场景介绍如下：
 

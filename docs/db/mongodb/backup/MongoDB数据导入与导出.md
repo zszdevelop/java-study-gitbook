@@ -37,7 +37,7 @@ MongoDB官方提供了两套数据导入导出工具，一般来说，
 D:\tool\mongodb-server\bin\mongoexport.exe --collection myCollection --db myDB -o D:\data\myCollection.json
 ```
 
-![image-20210104144117228](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210104144117228.png)
+![image-20210104144117228](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210104144117228.png)
 
 ## 3. mongoimport（导入）
 
@@ -63,7 +63,7 @@ D:\tool\mongodb-server\bin\mongoexport.exe --collection myCollection --db myDB -
 mongoimport --drop -d mytest -c user --file F:\bk\user.json
 ```
 
-![image-20210104144243185](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210104144243185.png)
+![image-20210104144243185](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210104144243185.png)
 
 ## 参考文章
 

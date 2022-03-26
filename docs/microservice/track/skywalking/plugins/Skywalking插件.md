@@ -8,7 +8,7 @@ Java Agent是插件化、可插拔的。Skywalking的插件分为三种：
 - 内置插件：在agent的 `plugins` 目录下
 - 可选插件：在agent的 `optional-plugins` 目录下
 
-<img src="https://gitee.com/zszdevelop/blogimage/raw/master/image-20211128180952720.png" alt="image-20211128180952720" style="zoom:67%;" />
+<img src="https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211128180952720.png" alt="image-20211128180952720" style="zoom:67%;" />
 
 **Java Agent只会启用 `plugins` 目录下的所有插件，`bootstrap-plugins` 目录以及 `optional-plugins` 目录下的插件不会启用**。Java Agent只会启用 `plugins` 目录下的所有插件，`bootstrap-plugins` 目录以及 `optional-plugins` 目录下的插件不会启用
 

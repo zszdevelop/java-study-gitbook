@@ -8,7 +8,7 @@ jenkinsfile的文件通用性更强，可以方便的复制到各个项目
 
 创建的时候选择：流水线
 
-![image-20210919194741168](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210919194741168.png)
+![image-20210919194741168](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210919194741168.png)
 
 ## 3. 部署文件jenkinsfile代码
 

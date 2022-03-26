@@ -6,7 +6,7 @@ skywalking 主要包括了分布式追踪、性能指标分析、应用和服务
 
 ## 2. 架构
 
-![image-20200129144042400](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129144042400.png)
+![image-20200129144042400](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129144042400.png)
 
 从上图可以看出skywalking主要分为四个模块：agent、collector、webapp-ui和storage。
 
@@ -268,6 +268,6 @@ telemetry:
 
 访问Skywalking的UI界面：http://120.79.200.111:8090/
 
-![image-20200129174550557](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129174550557.png)
+![image-20200129174550557](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129174550557.png)
 
 因为还没有整合agent所以现在还没有数据，界面是空的。

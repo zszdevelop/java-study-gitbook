@@ -4,7 +4,7 @@
 
 - 在读取缓存方面的方案流程图
 
-![image-20191008234809789](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191008234809789.png)
+![image-20191008234809789](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191008234809789.png)
 
 - 更新缓存方面
 
@@ -112,7 +112,7 @@ ok，如果发生上述情况，确实是会发生脏数据。
 **方案一**：
 如下图所示
 
-![image-20191008235658639](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191008235658639.png)
+![image-20191008235658639](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191008235658639.png)
 
 流程如下所示
 （1）更新数据库数据；
@@ -123,7 +123,7 @@ ok，如果发生上述情况，确实是会发生脏数据。
 然而，该方案有一个缺点，对业务线代码造成大量的侵入。于是有了方案二，在方案二中，启动一个订阅程序去订阅数据库的binlog，获得需要操作的数据。在应用程序中，另起一段程序，获得这个订阅程序传来的信息，进行删除缓存操作。
 **方案二**：
 
-![image-20191008235715281](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191008235715281.png)
+![image-20191008235715281](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191008235715281.png)
 
 流程如下图所示：
 （1）更新数据库数据

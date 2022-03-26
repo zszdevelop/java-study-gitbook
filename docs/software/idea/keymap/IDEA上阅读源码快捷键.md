@@ -8,7 +8,7 @@ option + command + left(方向键中的左箭头)
 
 control + option + h  (需要把光标定位到某个方法上)
 
-![image-20210218095008270](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210218095008270.png)
+![image-20210218095008270](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210218095008270.png)
 
 3.查看某个接口的所有实现类或子类 快捷键
 
@@ -32,7 +32,7 @@ ctrl + h
 
 8.显示包里类的层次结构
 
-![image-20210218095018694](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210218095018694.png)
+![image-20210218095018694](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210218095018694.png)
 
 
 
@@ -40,6 +40,6 @@ ctrl + h
 
 把光标定位在需要分析的类上,右键->Diagrams-->Show Diagram(或Show Diagram Popup)
 
-![image-20210218095029794](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210218095029794.png)
+![image-20210218095029794](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210218095029794.png)
 
-![image-20210218095039418](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210218095039418.png)
+![image-20210218095039418](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210218095039418.png)

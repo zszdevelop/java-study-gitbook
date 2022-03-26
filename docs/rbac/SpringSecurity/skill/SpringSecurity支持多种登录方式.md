@@ -198,7 +198,7 @@ void configure(AuthenticationManagerBuilder auth) 方法上新增认证方式
 
 ### 3.3 登录测试
 
-![image-20210916160725393](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210916160725393.png)
+![image-20210916160725393](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210916160725393.png)
 
 ## 参考文章
 

@@ -6,7 +6,7 @@
 
 ### 操作流程
 
-![image-20190725232432252](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190725232432252.png)
+![image-20190725232432252](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190725232432252.png)
 
 ### 复制文件实例
 

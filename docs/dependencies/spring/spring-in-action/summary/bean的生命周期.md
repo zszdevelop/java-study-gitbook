@@ -6,7 +6,7 @@
 
 ##2.Spring容器中，bean的生命周期
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/2641563892389_.pic.jpg)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/2641563892389_.pic.jpg)
 
 1. Spring对bean 进行实例化
 2. Spring将值和bean的引用注入到bean对应的属性中

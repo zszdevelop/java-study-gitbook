@@ -2,7 +2,7 @@
 
 ## 1. 运行原理
 
-![image-20200205235252447](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200205235252447.png)
+![image-20200205235252447](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200205235252447.png)
 
 Kubernetes 是一套分布式系统，由多个节点组成，**节点分为两类：一类是属于管理平面的主节点/控制节点（Master Node）；一类是属于运行平面的工作节点（Worker Node）**
 
@@ -33,4 +33,4 @@ Etcd既作为数据后端，又作为消息中间件
 - Kubelet 是工作节点执行操作的agent，负责具体的容器生命周期管理，根据从数据库中获取的信息来管理容器，并上报pod运行状态等
 - Kube-proxy 是一个简单的网络访问代理，同时也是一个 Load Balancer。它负责将访问到某个服务的请求具体分配给工作节点上的Pod（同一类标签）
 
-![image-20200206000707335](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200206000707335.png)
+![image-20200206000707335](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200206000707335.png)

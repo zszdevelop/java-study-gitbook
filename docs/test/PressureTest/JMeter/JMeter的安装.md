@@ -31,14 +31,14 @@ brew install jmeter
 
 点击bin下的
 
-![image-20200102104226244](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102104226244.png)
+![image-20200102104226244](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102104226244.png)
 
 可以看到启动后的页面为：
 
-![image-20200102104300100](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102104300100.png)
+![image-20200102104300100](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102104300100.png)
 
 ### 3.1 直接启动
 
 直接在终端（任意目录）输入`jmeter`，即可启动JMeter。
 
-![image-20200102181112165](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102181112165.png)
+![image-20200102181112165](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102181112165.png)

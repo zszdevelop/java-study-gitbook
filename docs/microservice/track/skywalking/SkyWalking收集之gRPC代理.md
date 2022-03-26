@@ -41,7 +41,7 @@
 
 ### 2.2.2 购买tcp隧道
 
-![image-20200204210513387](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200204210513387.png)
+![image-20200204210513387](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200204210513387.png)
 
 ### 2.2.3 启动natapp
 
@@ -49,7 +49,7 @@
 ./natapp -authtoken=1027bdec1c8d8709
 ```
 
-![image-20200204210720400](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200204210720400.png)
+![image-20200204210720400](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200204210720400.png)
 
 上面启动是前台启动，关闭页面就停止了。所以需要使用后台启动
 
@@ -59,7 +59,7 @@
 nohup ./natapp -authtoken=d0ae75441459014e -log=stdout -loglevel=ERROR &
 ```
 
-![image-20200205131045127](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200205131045127.png)
+![image-20200205131045127](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200205131045127.png)
 
 查看是否启动
 
@@ -67,7 +67,7 @@ nohup ./natapp -authtoken=d0ae75441459014e -log=stdout -loglevel=ERROR &
 ps -ef|grep natapp
 ```
 
-![image-20200205132814470](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200205132814470.png)
+![image-20200205132814470](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200205132814470.png)
 
 ### 2.2.4 backend_service 地址更改
 
@@ -77,7 +77,7 @@ ps -ef|grep natapp
 
 
 
-![image-20200204213810001](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200204213810001.png)
+![image-20200204213810001](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200204213810001.png)
 
 ## 参考文章
 

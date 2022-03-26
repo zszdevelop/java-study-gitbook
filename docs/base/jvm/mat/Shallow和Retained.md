@@ -23,7 +23,7 @@ Retained Size= **当前对象大小+当前对象可直接或间接引用到的�
 
 
 
-![image-20200107223438176](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107223438176.png)
+![image-20200107223438176](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107223438176.png)
 
 上图中，GC Roots直接引用了A和B 两个对象
 
@@ -35,7 +35,7 @@ Retained Size= **当前对象大小+当前对象可直接或间接引用到的�
 
 ### 如果GC Roots不引用D对象？
 
-![image-20200107223805147](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200107223805147.png)
+![image-20200107223805147](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200107223805147.png)
 
 此时，B对象的Retained Size=B对象的Shallow Size + C对象的Shallow Size + D对象的Shallow Size
 

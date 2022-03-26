@@ -4,7 +4,7 @@
 
 Commons IO是针对开发IO流功能的工具类库。common-io 的架构如下
 
-![image-20211016134906213](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016134906213.png)
+![image-20211016134906213](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016134906213.png)
 
 
 

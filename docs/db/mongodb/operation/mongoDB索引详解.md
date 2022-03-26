@@ -38,7 +38,7 @@ db.packages.createIndex({ appId: 1, version: 1 },{unique:true, background: true}
 
 看例子来理解复合索引是最直接的方式：
 
-![image-20211220202249659](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211220202249659.png)
+![image-20211220202249659](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211220202249659.png)
 
 图中模拟了简单的航班信息表的数据。
 
@@ -50,11 +50,11 @@ db.packages.createIndex({ appId: 1, version: 1 },{unique:true, background: true}
 
 如果这时我给航班添加一条索引**db.flights.createIndex({** **flight: 1** **},{background: true})，那么索引会类似于下图一样，将数据按照索引规则进行排序，此时就只需要扫描4条**CA12345航班的数据，然后再在内存中进行排序。如果数据量大了以后，在内存中进行排序的代价是非常大的。
 
-![image-20211220202329079](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211220202329079.png)
+![image-20211220202329079](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211220202329079.png)
 
 所以我们可以建立**复合索引 db.flights.createIndex({ flight: 1, price: 1 },{background: true})**
 
-![image-20211220202348127](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211220202348127.png)
+![image-20211220202348127](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211220202348127.png)
 
 让数据按照索引先将所有数据以航班号有序排列，再在航班号相同的数据集中按价格升序排列，这样在进行查询的时候，就可以准确的使用索引扫描4条数据，并且他们本身就是有序的，无需再进行额外的排序工作。以上实现了通过复合索引，让查询变得最优，这就是复合索引的作用。
 

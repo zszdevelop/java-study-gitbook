@@ -20,7 +20,7 @@
 
 jedis是直接连接redis server,如果在多线程环境下是**非线程安全**的，这个时候只有**使用连接池，为每个jedis实例增加物理连接 ；**
 
-![image-20191005112810662](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191005112810662.png)
+![image-20191005112810662](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191005112810662.png)
 
 lettuce的连接是基于Netty的，连接实例（StatefulRedisConnection）可以在多个线程间并发访问，StatefulRedisConnection是线程安全的，所以一个连接实例可以满足多线程环境下的并发访问，当然这也是可伸缩的设计，一个连接实例不够的情况也可以按需增加连接实例。
 

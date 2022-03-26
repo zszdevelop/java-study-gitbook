@@ -16,6 +16,6 @@ ls
 
 可以看到id_rsa为SSH private key，id_rsa.pub为SSH public key。
 
-![image-20211010225929464](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211010225929464.png)
+![image-20211010225929464](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211010225929464.png)
 
 ### 2.3 复制public key到目标服务器

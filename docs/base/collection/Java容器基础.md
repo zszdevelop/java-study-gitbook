@@ -41,7 +41,7 @@ RandomAccess接口中什么都没有定义，只是一个标识，标识实现�
 
 **双向链表**：包含两个指针，一个prev指向前一个节点，一个next指向后一个节点
 
-![image-20191018213436185](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191018213436185.png)
+![image-20191018213436185](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191018213436185.png)
 
 **双向循环链表**：最后一个节点的next指向head，而head 的prev指向最后一个节点，构成一个环
 
@@ -187,7 +187,7 @@ JDK1.8 之前 HashMap 底层是 **数组和链表** 结合在一起使用也就�
 
 所谓”拉链法“就是：将链表和数组相结合。也就是说创建一个链表数组，数组中每一格就是一个链表。若遇到hash冲突，则将冲突的值加到链表中即可
 
-![image-20191019131639758](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191019131639758.png)
+![image-20191019131639758](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191019131639758.png)
 
 #### JDK1.8 之后
 
@@ -245,17 +245,17 @@ ConcurrentHashMap 和 Hashtable 的区别主要体现在实现线程安全的方
 
 - HashTable，这个table 就一把锁
 
-  ![image-20191019160546686](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191019160546686.png)
+  ![image-20191019160546686](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191019160546686.png)
 
 - **ConcurrentHashMap**
 
   - 在JDK1.7 的ConcurrentHashMap
 
-    ![image-20191019160642850](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191019160642850.png)
+    ![image-20191019160642850](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191019160642850.png)
 
   - 在JDK1.8 的ConcurrentHashMap
 
-    ![image-20191019160657822](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191019160657822.png)
+    ![image-20191019160657822](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191019160657822.png)
 
 ## 13. ConcurrentHashMap 线程安全的具体实现方式/ 底层具体实现
 

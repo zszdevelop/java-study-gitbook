@@ -31,7 +31,7 @@ Spring官网列出的Spring的6个特性
 
 下图对应的是Spring4.X 版本，目前最新的5.X版本中Web模块的Portlet组件已经被废弃掉，同时增加了用于异步响应式处理的WebFlux 组件
 
-![image-20191013003011843](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013003011843.png)
+![image-20191013003011843](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013003011843.png)
 
 - **Spring Core**: 基础，可以说 Spring 其他所有的功能都需要依赖于该类库，主要提供Ioc 依赖注入功能
 - **Spring Aspects**: 该模块为与AspectJ 的集成提供支持
@@ -48,13 +48,13 @@ Spring官网列出的Spring的6个特性
 
 单独使用@Controller 不加@ResponseBody 的话一般使用在要返回一个视图的情况，这种情况属于比较传统的Spring MVC 的应用，对应于前后端不分离的情况
 
-![image-20191013004444758](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013004444758.png)
+![image-20191013004444758](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013004444758.png)
 
 ### 3.2 @RestController 返回JSON 或XML 形式数据
 
 @RestController 只返回对象，对象数据直接以 JSON 或 XML 形式写入HTTP 响应（Response）中，这种情况属于RESTful Web服务，这也是目前开发所接触的最常用的情况（前后端分离）
 
-![image-20191013004711881](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013004711881.png)
+![image-20191013004711881](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013004711881.png)
 
 ### 3.3 @Controller+@Responsebody 返回Json或xml形式数据
 
@@ -62,7 +62,7 @@ Spring官网列出的Spring的6个特性
 
 > `@ResponseBody` 注解的作用是将 `Controller` 的方法返回的对象通过适当的转换器转换为指定的格式之后，写入到HTTP 响应(Response)对象的 body 中，通常用来返回 JSON 或者 XML 数据，返回 JSON 数据的情况比较多。
 
-![image-20191013005025077](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013005025077.png)
+![image-20191013005025077](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013005025077.png)
 
 ## 4. Spring IOC 
 
@@ -76,7 +76,7 @@ Ioc（Inverse of Control:控制反转）是一种**设计思想**，就是**将�
 
 ### 4.2 Spring IoC的初始化过程
 
-![image-20191013010713700](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013010713700.png)
+![image-20191013010713700](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013010713700.png)
 
 ### 4.3 IoC容器有几种类型
 
@@ -97,7 +97,7 @@ AOP(Aspect-Oriented Programming: 面向切面编程)：**能够分离系统的�
 
 Spring AOP 就是基于动态代理的，如果要代理的对象，实现了某个接口，那么Spring AOP 会使用 **JDK Proxy**, 去创建代理对象，而对于没有实现接口的对象，就无法使用 JDK Proxy 去进行代理了，**这时候 Spring AOP 会使用 Cglib 生成一个被代理对象的子类来作为代理**
 
-![image-20191013104519598](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013104519598.png)
+![image-20191013104519598](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013104519598.png)
 
 > 当然你也可以使用AspectJ ，Spring AOP 已经集成了AspectJ,AspectJ 应该算的上是 Java 生态系统中最完整的 AOP 框架了。
 
@@ -212,11 +212,11 @@ public OneService getService(status) {
 
 图示
 
-![image-20191013131941959](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013131941959.png)
+![image-20191013131941959](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013131941959.png)
 
 对应的中文版
 
-![image-20191013131954423](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013131954423.png)
+![image-20191013131954423](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013131954423.png)
 
 ## 7. Spring MVC
 
@@ -234,11 +234,11 @@ Spring MVC 下我们一般把后端项目分为
 
 **Spring MVC的简单原理**
 
-![image-20191013133159540](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013133159540.png)
+![image-20191013133159540](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013133159540.png)
 
 ### 7.2 SpringMVC 工作原理了解吗
 
-![image-20191013133421181](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191013133421181.png)
+![image-20191013133421181](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191013133421181.png)
 
 Spring MVC 的入口函数也就是前端控制器 `DispatcherServlet` 的作用是接收请求，响应结果。
 

@@ -19,7 +19,7 @@
 
   hash 实际是内部存储的value为一个 HashMap,并提供直接存取这个Map成员的接口
 
-  ![image-20191010222139044](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191010222139044.png)
+  ![image-20191010222139044](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191010222139044.png)
 
   也就是说，key 任然是用户id，vulue 是一个map，这个map 的key 是成员的属性名，value是属性值。这样对数据的修改和存取都可以直接通过其内部map 的key。(Redis里称内部Map的key为field), 也就是通过 key(用户ID) + field(属性标签) 就可以操作对应属性数据了，既不需要重复存储数据，也不会带来序列化和并发修改控制的问题。
 

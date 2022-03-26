@@ -6,4 +6,4 @@
 cat etcredhat-release
 ```
 
-![image-20210118153314098](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210118153314098.png)
+![image-20210118153314098](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210118153314098.png)

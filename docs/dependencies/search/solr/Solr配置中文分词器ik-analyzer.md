@@ -51,7 +51,7 @@
 
    选择core-> Analysis  -> 选择分词器 text_ik 输入 "黑夜给了我黑色的眼睛"->点击"Analyse Values"按钮
 
-   ![image-20210304172543651](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304172543651.png)
+   ![image-20210304172543651](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210304172543651.png)
 
 ## 3. ik分词器配置
 
@@ -68,3 +68,9 @@
 2. `dynamicdic.txt` 为动态词典
 
    在此文件配置的词语不需重启服务即可加载进内存中。 以`#`开头的词语视为注释，将不会加载到内存中。
+
+## 4. 遇到的问题
+
+### 4.1 ik搜索不要加*
+
+如果手动设置加 * 内容 *，那么星号里面的内容将不会被分词

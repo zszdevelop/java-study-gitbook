@@ -2,7 +2,7 @@
 
 ## 1. Solr 查询界面
 
-![image-20210304140431497](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210304140431497.png)
+![image-20210304140431497](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210304140431497.png)
 
 ## 2. 基本查询
 

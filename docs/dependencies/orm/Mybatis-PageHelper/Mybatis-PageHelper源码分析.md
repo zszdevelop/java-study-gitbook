@@ -12,7 +12,7 @@
 
 Mybatis 提供了拦截器接口`Interceptor(org.apache.ibatis.plugin.Interceptor)`, 我们仅需要在实现类中对拦截对象和方法进行处理即可
 
-![image-20211023103716074](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023103716074.png)
+![image-20211023103716074](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023103716074.png)
 
 #### 2.1.1 Object intercept(Invocation invocation)
 
@@ -85,7 +85,7 @@ public class ZszInterceptor implements Interceptor {
 
  `@Intercepts`  注解中的属性是一个 `@Signature`签名数组，可以在同一个拦截器中同时拦截不同的接口和方法
 
-![image-20211023111853954](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023111853954.png)
+![image-20211023111853954](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023111853954.png)
 
  `@Signature`  注解包含以下三个属性
 
@@ -100,7 +100,7 @@ public class ZszInterceptor implements Interceptor {
 
   例如Executor 中能选query，update等
 
-  ![image-20211023112540386](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023112540386.png)
+  ![image-20211023112540386](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023112540386.png)
 
 - args：设置拦截方法的参数类型数组，通过方法名和参数类型可以确定唯一一个方法
 
@@ -110,11 +110,11 @@ public class ZszInterceptor implements Interceptor {
 
 这样我们就能拦截到sql 查询语句
 
-![image-20211023164728249](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023164728249.png)
+![image-20211023164728249](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023164728249.png)
 
 ### 3.2 获取拦截参数
 
-![image-20211023164930142](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023164930142.png)
+![image-20211023164930142](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023164930142.png)
 
 ### 3.3 分页判断
 
@@ -123,35 +123,35 @@ public class ZszInterceptor implements Interceptor {
    1. 查询总数
 3. 分页查询
 
-![image-20211023165357858](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023165357858.png)
+![image-20211023165357858](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023165357858.png)
 
 ### 3.4 计算总数
 
-![image-20211023165640099](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023165640099.png)
+![image-20211023165640099](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023165640099.png)
 
 计算总数实现
 
-![image-20211023165903830](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023165903830.png)
+![image-20211023165903830](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023165903830.png)
 
 获取方言count sql
 
 此时还贴心的去除了order by
 
-![image-20211023170153258](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023170153258.png)
+![image-20211023170153258](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023170153258.png)
 
 获取普通的Count-sql
 
-![image-20211023170559536](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023170559536.png)
+![image-20211023170559536](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023170559536.png)
 
 ### 3.5 分页查询
 
-![image-20211023170703110](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023170703110.png)
+![image-20211023170703110](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023170703110.png)
 
 - boundSql 包含了执行的sql 和对应的参数
 
 调用方言获取分页 sql
 
-![image-20211023171056962](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023171056962.png)
+![image-20211023171056962](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023171056962.png)
 
 1. `String sql = boundSql.getSql()` 方言sql
 2. 其中`Page page = this.getLocalPage();` 就是获得分页的参数
@@ -159,23 +159,23 @@ public class ZszInterceptor implements Interceptor {
 
 获取分页的 getPageSql
 
-![image-20211023171543077](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023171543077.png)
+![image-20211023171543077](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023171543077.png)
 
 转换为分页语句
 
-![image-20211023171621305](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023171621305.png)
+![image-20211023171621305](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023171621305.png)
 
-![image-20211023171656921](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023171656921.png)
+![image-20211023171656921](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023171656921.png)
 
 ### 3.6 添加order by 语句
 
 在做分页查询的时候校验了是否需要order by 语句
 
-![image-20211023171330695](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023171330695.png)
+![image-20211023171330695](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023171330695.png)
 
 添加order 语句
 
-![image-20211023171410950](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023171410950.png)
+![image-20211023171410950](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023171410950.png)
 
 ## 4. Dialect 方言接口
 
@@ -183,18 +183,18 @@ Dialect 方言 包含了数据库支持的类型
 
 我们可以看到几个关键节点上都调用了Dialect
 
-![image-20211023173219075](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023173219075.png)
+![image-20211023173219075](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023173219075.png)
 
 ### 4.1 dialect 接口
 
-![image-20211023173328549](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023173328549.png)
+![image-20211023173328549](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023173328549.png)
 
 ### 4.2 dialect 实例
 
 #### 4.2.1 oracle 版本
 
-![image-20211023173426394](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023173426394.png)
+![image-20211023173426394](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023173426394.png)
 
 #### 4.2.2 mysql版本
 
-![image-20211023173527432](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211023173527432.png)
+![image-20211023173527432](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211023173527432.png)

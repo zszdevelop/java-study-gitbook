@@ -35,7 +35,7 @@
 
 如果要注册Specific Runner，你需要到项目的设置的Runner页面里面去找注册token。如下图所示：
 
-![image-20200109135721629](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200109135721629.png)
+![image-20200109135721629](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200109135721629.png)
 
 #### 1.2.3 注册runner
 
@@ -49,7 +49,7 @@ gitlab-ci-multi-runner register
 
 
 
-![image-20200109140942669](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200109140942669.png)
+![image-20200109140942669](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200109140942669.png)
 
 依据提示输入
 
@@ -71,7 +71,7 @@ gitlab-ci-multi-runner register
 
 注册完成之后，GitLab-CI就会多出一条Runner记录，如下图所示：
 
-![image-20200109141223152](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200109141223152.png)
+![image-20200109141223152](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200109141223152.png)
 
 ### 1.3 让注册好的Runner运行起来
 

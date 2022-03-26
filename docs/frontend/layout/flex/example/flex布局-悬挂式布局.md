@@ -2,7 +2,7 @@
 
 有时，主栏的左侧或右侧，需要添加一个图片栏。
 
-![img](https://gitee.com/zszdevelop/blogimage/raw/master/img/bg2015071325.png)
+![img](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/bg2015071325.png)
 
 HTML代码如下。
 

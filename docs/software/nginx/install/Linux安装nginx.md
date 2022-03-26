@@ -75,7 +75,7 @@ ps -ef | grep nginx
 
 ### 1.6 浏览器打开
 
-![image-20190907221848439](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190907221848439.png)
+![image-20190907221848439](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190907221848439.png)
 
 ## 2. 启动可能遇到的问题
 
@@ -109,7 +109,7 @@ mkdir logs
 
 ### 2.3 启动无反应，error.log 疯狂打印 worker process 22327 exited on signal
 
-![image-20210115112252704](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210115112252704.png)
+![image-20210115112252704](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210115112252704.png)
 
 因为nginx对fastdfs进行了代理,我们启动fdfs 即可恢复
 

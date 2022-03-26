@@ -12,7 +12,7 @@ FreeMarker是一款用java语言编写的模版引擎，主要应用场景，**�
 
 ### 1.2 工作原理
 
-![image-20201208110123472](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201208110123472.png)
+![image-20201208110123472](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201208110123472.png)
 
 ## 2. 集成使用
 
@@ -128,7 +128,7 @@ FreeMarker是一款用java语言编写的模版引擎，主要应用场景，**�
 
 5. 运行完毕可以看到生成了一个新类 AutoCodeDemo.java 。
 
-   ![image-20201208112441266](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201208112441266.png)
+   ![image-20201208112441266](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201208112441266.png)
 
    运行程序后刷新项目，会发现多了一个AutoCodeDemo.java类。不仅仅是java类，xml也是可以。笔者就是通过FreeMarker做了一个简易的工具类，公司的一个标准管理页面及其增删改查等功能，以及相关的配置文件（十三个文件），一个回车就全部自动生成。
 

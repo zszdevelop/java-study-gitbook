@@ -16,7 +16,7 @@
 
 1. 表关系
 
-![image-20210406211823871](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210406211823871.png)
+![image-20210406211823871](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210406211823871.png)
 
 2. 学生表 student
 
@@ -102,7 +102,7 @@
    GROUP BY student_id
    ```
 
-   ![image-20210406215817378](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210406215817378.png)
+   ![image-20210406215817378](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210406215817378.png)
 
 2. 查询所有同学的学号，姓名，选课数，总成绩
 
@@ -116,7 +116,7 @@
    GROUP BY s.student_id
    ```
 
-   ![image-20210406220759681](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210406220759681.png)
+   ![image-20210406220759681](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210406220759681.png)
 
 ## 4. HAVING 练习
 
@@ -133,4 +133,4 @@
    SELECT COUNT(*) FROM course)
    ```
 
-   ![image-20210406221302898](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210406221302898.png)
+   ![image-20210406221302898](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210406221302898.png)

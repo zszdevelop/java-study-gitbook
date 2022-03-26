@@ -6,13 +6,13 @@
 
 **在 Test Plan 上點右鍵， Add → Threads (Users) → Thread Group**
 
-![image-20200102135005094](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135005094.png)
+![image-20200102135005094](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135005094.png)
 
 ### 1.2 步骤2
 
 设定有10个使用者来存取（测试）我们的服务
 
-![image-20200102135129772](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135129772.png)
+![image-20200102135129772](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135129772.png)
 
 *Ramp-Up Period (in seconds)* 指得是「在幾秒內達到所設定的使用者人數」，可以讓受測服務一開始不會接受到太過巨量的 Requests
 
@@ -22,11 +22,11 @@
 
 在 *Thread Group* 上點右鍵， *Add → Logic Controller → Loop Controller*
 
-![image-20200102135505057](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135505057.png)
+![image-20200102135505057](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135505057.png)
 
 設定 Loop count (迴圈/重複執行次數)為 100 次
 
-![image-20200102135539224](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135539224.png)
+![image-20200102135539224](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135539224.png)
 
 設定完 *Thread Group* 和 *Loop Count* 後，也就等於控制了對受測服務所發出的 request 數量，這邊作個簡單的計數的話就是：
 
@@ -40,39 +40,39 @@
 
 建立一個 *HTTP Request*。在 *Loop Controller* 上點右鍵， *Add → Sampler → HTTP Request*
 
-![image-20200102135714099](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135714099.png)
+![image-20200102135714099](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135714099.png)
 
 输入要测试的内容
 
-![image-20200102135823044](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135823044.png)
+![image-20200102135823044](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135823044.png)
 
 如果有需要添加请求header
 
-![image-20200102135918040](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135918040.png)
+![image-20200102135918040](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135918040.png)
 
 例如这里添加到content-type 为json
 
-![image-20200102135949198](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102135949198.png)
+![image-20200102135949198](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135949198.png)
 
 ### 1.5 建立测量图报表
 
 我們一樣在 *Loop Controller* 上點右鍵， *Add → Listener → Graph Results* 加入圖形化的測量結果：
 
-![image-20200102140708331](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102140708331.png)
+![image-20200102140708331](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102140708331.png)
 
 图标结果之后的展示页面
 
-![image-20200102140755976](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102140755976.png)
+![image-20200102140755976](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102140755976.png)
 
 ## 1.6 **View Results Tree**
 
 *Loop Controller* 上點右鍵， *Add → Listener → View Results Tree* 加入 *View Results Tree* 來記錄每一筆 Request 的結果
 
-![image-20200102140846532](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102140846532.png)
+![image-20200102140846532](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102140846532.png)
 
 View Results Tree 裡可以看到實際傳回的 request 和 response data.
 
-![image-20200102141123652](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102141123652.png)![image-20200102141029818](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102141029818.png)
+![image-20200102141123652](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102141123652.png)![image-20200102141029818](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102141029818.png)
 
 ### 1.7 看结果集概述
 
@@ -80,7 +80,7 @@ View Results Tree 裡可以看到實際傳回的 request 和 response data.
 
 概览图
 
-![image-20200102141152379](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200102141152379.png)
+![image-20200102141152379](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102141152379.png)
 
 ## 参考文章
 

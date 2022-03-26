@@ -30,4 +30,4 @@ cat /tmp/redisTest.txt | /usr/local/redis/bin/redis-cli -h localhost -p 6379  --
 
 大概需要花10分钟左右
 
-![image-20210410103828296](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410103828296.png)
+![image-20210410103828296](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410103828296.png)

@@ -4,7 +4,7 @@
 
 访问mongoDB官网，选择对应版本[mongodb官网](https://www.mongodb.com/try/download/community)
 
-![image-20210406231806650](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210406231806650.png)
+![image-20210406231806650](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210406231806650.png)
 
 选择对应的版本
 
@@ -99,7 +99,7 @@
    ./mongo
    ```
 
-   ![image-20210406233633436](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210406233633436.png)
+   ![image-20210406233633436](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210406233633436.png)
 
 ## 5. 配置账户，授权登录
 

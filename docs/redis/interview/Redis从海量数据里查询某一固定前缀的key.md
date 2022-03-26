@@ -30,7 +30,7 @@ keys pattern：查找所有符合给定模式pattern
    dbsize
    ```
 
-   ![image-20210410112532695](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410112532695.png)
+   ![image-20210410112532695](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410112532695.png)
 
 2. 匹配测试
 
@@ -38,7 +38,7 @@ keys pattern：查找所有符合给定模式pattern
     keys k1*
    ```
 
-   ![image-20210410112503140](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410112503140.png)
+   ![image-20210410112503140](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410112503140.png)
    
    我们可以看到需要花费85才查询完
 
@@ -61,13 +61,13 @@ scan cursor [match pattern] [COUNT count]
 
 我们使用scan查询
 
-![image-20210410112658763](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410112658763.png)
+![image-20210410112658763](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410112658763.png)
 
 我们返回的第一个是游标，第二个是结果。结果并不一定满足count
 
 我们通过游标继续查找
 
-![image-20210410112902489](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410112902489.png)
+![image-20210410112902489](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410112902489.png)
 
 #### 3.2.4 tips
 
@@ -77,7 +77,7 @@ scan cursor [match pattern] [COUNT count]
 
 #### 3.2.5 rmd客户端也使用scan
 
-![image-20210410104006086](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210410104006086.png)
+![image-20210410104006086](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210410104006086.png)
 
 ## 4. 总结
 

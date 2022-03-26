@@ -24,7 +24,7 @@
 
 ## 结论
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/944365-613b57c93dff2eb8.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/944365-613b57c93dff2eb8.png)
 
 本文参考[博客原文](<https://www.jianshu.com/p/345f4d8a5cfa>)整理，并对他进行补充扩展，并对原文深表感谢。
 

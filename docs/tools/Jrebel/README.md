@@ -2,7 +2,7 @@
 
 ## 激活
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/20180718095815803.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/20180718095815803.png)
 
 激活地址
 
@@ -13,4 +13,4 @@ https://jrebel.qekang.com/bb25c9bf-7695-48d6-b1a0-baf893ca7631
 
 ## Jrebel离线模式
 
-![image-20190819142226526](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190819142226526.png)
+![image-20190819142226526](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190819142226526.png)

@@ -236,9 +236,9 @@
 
 RabbitMQ的管理后台中看到一共有四个队列，除默认的Exchange外还有声明的两个Exchange。
 
-![image-20210521222525261](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210521222525261.png)
+![image-20210521222525261](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210521222525261.png)
 
-![image-20210521222542576](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210521222542576.png)
+![image-20210521222542576](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210521222542576.png)
 
 访问一下url，来测试一下：
 

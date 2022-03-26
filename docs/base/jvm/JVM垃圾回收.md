@@ -14,7 +14,7 @@
 
 ## 2. 导火索
 
-![image-20190924233828114](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190924233828114.png)
+![image-20190924233828114](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190924233828114.png)
 
 当需要排查各种内存溢出问题、当垃圾收集成为系统达到更高并发的瓶颈时，我们就需要对这些“自动化”的技术实施必要的监控和调节。
 

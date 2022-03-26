@@ -150,9 +150,9 @@ vue的单页面应用是基于路由和组件的，路由用于**设定访问路
 
 6. 当我们在右侧直接输入/home路径访问时，由于没有登录，直接跳转到了登录页面
 
-   ![image-20210527191603740](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210527191603740.png)
+   ![image-20210527191603740](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210527191603740.png)
 
 7. 当输入用户名、密码登录后，则跳转到了首页
 
-   ![image-20210527191625999](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210527191625999.png)
+   ![image-20210527191625999](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210527191625999.png)
 

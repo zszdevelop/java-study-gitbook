@@ -162,7 +162,7 @@ trim_trailing_whitespace = false
 
 ### 6.1 VSCode中安装EditorConfig
 
-![image-20210924210740884](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210924210740884.png)
+![image-20210924210740884](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210924210740884.png)
 
 EditorConfig扩展的作用是读取第一步创建的editorconfig文件中定义的规则，并覆盖user/workspace settings中的对应配置（从这我们也可以看出vscode本身其实是并不直接支持editorconfig的）
 
@@ -181,11 +181,11 @@ editorconfig依赖包(npm install -g editorconfig | npm install -D editorconfig)
 
 操作步骤：webstorm里找到配置，按照以下图示导出.editorconfig，.editorconfig文件会出现在项目的根目录里：
 
-![image-20210924210543587](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210924210543587.png)
+![image-20210924210543587](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210924210543587.png)
 
 
 
-![image-20210924210707992](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210924210707992.png)
+![image-20210924210707992](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210924210707992.png)
 
 ## 参考文章
 

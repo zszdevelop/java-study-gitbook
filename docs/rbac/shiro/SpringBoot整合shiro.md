@@ -6,7 +6,7 @@
 
 创建一个SpringBoot 项目，添加Web依赖
 
-![image-20191017143726758](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191017143726758.png)
+![image-20191017143726758](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191017143726758.png)
 
 同时添加shiro 依赖
 
@@ -134,15 +134,15 @@ public class LoginController {
 
 - 请求[http://localhost:8080/hello](http://localhost:8080/hello)由于未登录，所以会自动跳转到 /login 接口
 
-  ![image-20191017165600253](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191017165600253.png)
+  ![image-20191017165600253](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191017165600253.png)
 
 - 调用doLogin完成登录
 
-  ![image-20191017165823819](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191017165823819.png)
+  ![image-20191017165823819](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191017165823819.png)
 
 - 再次调用/hello，就可以成功访问了：
 
-  ![image-20191017165854327](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191017165854327.png)
+  ![image-20191017165854327](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191017165854327.png)
 
 ### 参考文章
 

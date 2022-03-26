@@ -65,7 +65,7 @@ exports.mulu = {
                 }
             ]
         }, {
-            title: 'Pipeline流水线构建', // 必要的
+            title: 'Pipeline流水线构建（jenkinsfile）', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
@@ -75,7 +75,16 @@ exports.mulu = {
             },{
                 title: 'jenkinsfile部署前端Vue项目',
                 path: 'software/jenkins/pipeline/jenkinsfile部署前端Vue项目.md'
-            }, ]
+            } ]
+        }, {
+            title: '小技巧与问题', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
+                title: 'jenkins多分支流水线指定分支',
+                path: 'software/jenkins/skill/jenkins多分支流水线指定分支.md'
+            } ]
         }
 
     ]

@@ -8,7 +8,7 @@
 
 [豆瓣电影 Top250](https://movie.douban.com/top250)
 
-![image-20210311085829131](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311085829131.png)
+![image-20210311085829131](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311085829131.png)
 
 观察页面我们决定让爬虫获取每一部电影的排名
 
@@ -106,7 +106,7 @@ def logged_in(self, response):
 
 1. 首先我们在chrome浏览器里进入豆瓣电影TOP250页面并按F12打开开发者工具。
 
-   ![image-20210311101541138](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311101541138.png)
+   ![image-20210311101541138](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311101541138.png)
 
 点击工具栏左上角的类鼠标符号图标或者Ctrl + Shift + c在页面中点击我们想要的元素即可在工具栏中看到它在网页HTML源码中所处的位置。 一般抓取时会以先抓大再抓小的原则来抓取。通过观察我们看到该页面所有影片的信息都位于一个class属性为grid_view的ol标签内的li标签内。
 
@@ -207,7 +207,7 @@ scrapy crawl douban_movie_top250 -o douban.csv
 
 试着运行一下爬虫怎么什么也没输出呢？！！！
 
-![image-20210311102306053](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311102306053.png)
+![image-20210311102306053](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311102306053.png)
 
 作者：WoodenRobot
 链接：https://zhuanlan.zhihu.com/p/24769534
@@ -254,7 +254,7 @@ class DoubanMovieTop250Spider(Spider):
 
 再次运行爬虫，我们想要的信息都被下载到douban.scv文件夹里了。直接用WPS打开即可查看信息。
 
-![image-20210311102347247](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311102347247.png)
+![image-20210311102347247](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311102347247.png)
 
 ## 6. 自动翻页
 
@@ -265,7 +265,7 @@ class DoubanMovieTop250Spider(Spider):
 
 一般情况下我们使用第一种方法，第二种方法适用于页面的下一页地址为JS加载的情况。今天我们只说第一种方法。 首先利用Chrome浏览器的开发者工具找到下一页的地址 
 
-![image-20210311102449642](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311102449642.png)
+![image-20210311102449642](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311102449642.png)
 
 然后在解析该页面时获取下一页的地址并将地址交给调度器(Scheduler)
 
@@ -308,7 +308,7 @@ class DoubanMovieTop250Spider(Spider):
 
 最后再运行一下爬虫，打开douban.csv。是不是发现所有的影片信息都获取到了，250个一个不多一个不少。
 
-![image-20210311102831664](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311102831664.png)
+![image-20210311102831664](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311102831664.png)
 
 最后，利用WPS的筛选功能你可以筛选任意符合你要求的影片。
 

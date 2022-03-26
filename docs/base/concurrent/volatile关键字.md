@@ -51,7 +51,7 @@ i = i + 1;
 
 　所以就出现了**缓存一致性协议**。最出名的就是Intel 的MESI协议，MESI协议保证了每个缓存中使用的共享变量的副本是一致的。它核心的思想是：**当CPU写数据时，如果发现操作的变量是共享变量**，即在其他CPU中也存在该变量的副本，会发出信号通知其他CPU将该变量的**缓存行置为无效状态**，因此当其他CPU需要读取这个变量时，发现自己缓存中缓存该变量的缓存行是无效的，那么它就会从内存重新读取。
 
-![image-20190914220720769](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190914220720769.png)
+![image-20190914220720769](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190914220720769.png)
 
 ## 2. 并发编程中的三个概念
 
@@ -132,7 +132,7 @@ i = i + 1;
 >
 >这段代码有4个语句，那么可能的一个执行顺序是：
 >
->![image-20190914221554358](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190914221554358.png)
+>![image-20190914221554358](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190914221554358.png)
 >
 >那么可不可能是这个执行顺序呢： 语句2   语句1    语句4   语句3
 >

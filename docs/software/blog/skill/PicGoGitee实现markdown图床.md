@@ -1,5 +1,11 @@
 # PicGo + Gitee(码云)实现markdown图床
 
+>2022年3月25日已失效
+
+[Gitee 仓库做图床渡劫失败，寻求解决方案](https://www.v2ex.com/t/842694)
+
+[【吐槽】3.25日Gitee图床突然失效了，全部外链都作废了，大家打算接下来用什么图床？](https://meta.appinn.net/t/topic/31113)
+
 ## 1. 背景
 
 我们写博客的时候，总需要插入图片。图片存储在本地传到博客网站上，图片就没办法显示了。放在本地的话，整个博客将会非常大，影响性能。这时候就需要图床
@@ -18,11 +24,11 @@
 
    - 安装之后打开主界面
 
-     ![image-20210302215814334](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210302215814334.png)
+     ![image-20210302215814334](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210302215814334.png)
 
    - 选择最底下的插件设置，搜索**gitee**
 
-     ![image-20210302220048598](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210302220048598.png)
+     ![image-20210302220048598](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210302220048598.png)
 
 2. 建立gitee（码云）图传库
 
@@ -34,27 +40,27 @@
 
    **这个选项勾上，这样码云会自动给你的仓库建立master分支，这点很重要!!!** 我因为这点折腾了很久，因为使用github做图床picgo好像会自动帮你生成master分支，而picgo里的gitee插件不会帮你自动生成分支。
 
-   ![image-20210302220240165](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210302220240165.png)
+   ![image-20210302220240165](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210302220240165.png)
 
 3. 在gitee生成私人令牌
 
-   ![image-20210302220642408](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210302220642408.png)
+   ![image-20210302220642408](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210302220642408.png)
 
 4. 配置PicGo
 
-   ![image-20210302221134472](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210302221134472.png)
+   ![image-20210302221134472](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210302221134472.png)
 
 5. 测试
 
    将图片放置上传区，已经能正常上传到gitee中了
 
-   ![image-20210302221336071](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210302221336071.png)
+   ![image-20210302221336071](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210302221336071.png)
 
 ## 3. Typora 配置picgo
 
 偏好设置-》图像
 
-![image-20210302221557746](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210302221557746.png)
+![image-20210302221557746](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210302221557746.png)
 
 这样当我们把图片复制到typora的时候，他就会自动上传
 

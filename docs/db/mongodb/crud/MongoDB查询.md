@@ -89,7 +89,7 @@ db.raw_data_single.find({"host":"g61","facts":{"mtu_eth0":1500,"mtu_eth1":1500}}
 
 结果：没有，由于facts里面的数据过多我删掉了部分才能写完全匹配，结果如下
 
-![image-20211216192334520](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211216192334520.png)
+![image-20211216192334520](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211216192334520.png)
 
 注意：在没有删除其他facts数据前是无法查询到数据的，完全匹配！！！
 
@@ -101,7 +101,7 @@ db.raw_data_single.find({"host":"g61","facts.mtu_eth0":1500})
 
 结果如下：
 
-![image-20211216192407705](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211216192407705.png)
+![image-20211216192407705](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211216192407705.png)
 
 ### 4.3 $elemMatch操作符（搜索对象为数组）
 
@@ -131,7 +131,7 @@ db.raw_data_single.find({"host":"g61","facts.mtu_eth0":1500})
 db.blogs.find({"comment.author":"zhangsan", "comment.score":{"$gte":4}});
 ```
 
-![image-20211216192546640](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211216192546640.png)
+![image-20211216192546640](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211216192546640.png)
 
 使用$elemMatch操作符进行搜索：
 
@@ -142,9 +142,9 @@ db.blogs.find({"comment":{"$elemMatch":{"author":"zhangsan","score":{"$gt":4}}}}
 db.blogs.find({"comment":{"$elemMatch":{"author":"zhangsan","score":{"$gt":2}}}});
 ```
 
-![image-20211216192621889](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211216192621889.png)
+![image-20211216192621889](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211216192621889.png)
 
-![image-20211216192633326](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211216192633326.png)
+![image-20211216192633326](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211216192633326.png)
 
 ## 5 查询操作符
 

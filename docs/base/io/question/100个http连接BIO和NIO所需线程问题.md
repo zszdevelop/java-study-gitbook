@@ -88,7 +88,7 @@ class RequestHandler extends Thread {
 
 这样，一个简单的 Socket 服务器就被实现出来了。
 
-![image-20200216205948939](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200216205948939.png)
+![image-20200216205948939](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200216205948939.png)
 
 ## 3. NIO 代码实现
 
@@ -133,4 +133,4 @@ public class NIOServer extends Thread {
 
 可以看到，在前面两个样例中，IO 都是同步阻塞模式，所以需要多线程以实现多任务处理。而NIO 则是利用了单线程轮询事件的机制。通过高效的定位就绪的Channel，来决定做什么，仅仅select阶段是阻塞的。可以有效避免大量客户端连接时。频繁线程切换带来的问题。应用的扩张能力有了非常大的提高。下面这张图对这种实现思路进行了形象的说明
 
-![image-20200216213655390](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200216213655390.png)
+![image-20200216213655390](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200216213655390.png)

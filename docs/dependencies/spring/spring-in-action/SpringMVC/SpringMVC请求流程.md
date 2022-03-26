@@ -2,7 +2,7 @@
 
 # SpringMVC请求流程
 
-![image-20190730230853942](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190730230853942.png)
+![image-20190730230853942](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190730230853942.png)
 
 1. DispatcherServlet
 

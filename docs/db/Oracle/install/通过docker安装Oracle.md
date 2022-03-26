@@ -78,7 +78,7 @@
 
 ORA-12514: TNS:listener does not currently know of service requested in connect descriptor
 
-![image-20200507212411220](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200507212411220.png)
+![image-20200507212411220](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200507212411220.png)
 
 主要原因是service name 设置的并不是ORCL 导致
 
@@ -108,7 +108,7 @@ ORA-12514: TNS:listener does not currently know of service requested in connect 
 
      可以看到SERVICE_NAME = helowin
 
-     ![image-20200507213419605](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200507213419605.png)
+     ![image-20200507213419605](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200507213419605.png)
 
      serviceName 改为helowin 或者这里改为orcl
 

@@ -16,11 +16,11 @@
 
 >4.x版本改动比较大，查询的优化可能没做好导致
 
-![image-20220126164949424](https://gitee.com/zszdevelop/blogimage/raw/master/image-20220126164949424.png)
+![image-20220126164949424](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20220126164949424.png)
 
 降低spring-boot版本为2.2.x 关联的mongo版本为3.x
 
-![image-20220126164746396](https://gitee.com/zszdevelop/blogimage/raw/master/image-20220126164746396.png)
+![image-20220126164746396](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20220126164746396.png)
 
 速度快了好多
 

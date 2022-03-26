@@ -276,13 +276,13 @@ slf4j只是一套标准，通俗来讲，就是定义了一系列接口，它并
 
 我们查看`logback-classic`源码，可以看到slf4j的包.
 
-![image-20211102215616105](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211102215616105.png)
+![image-20211102215616105](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211102215616105.png)
 
 **slf4j在初始化时会调用`org.slf4j.StaticLoggerBinder`进行初始化！！！**。因此，每个要实现slf4j的日志组件项目，底下都要有`org.slf4j.StaticLoggerBinder`的具体实现。这样slf4j才会在初始化的关联到具体的实现。
 
 比如logback在自己定义的StaticLoggerBinder做了自己组件的初始化工作。下面是网上找的一个时序图：
 
-![image-20211102215812812](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211102215812812.png)
+![image-20211102215812812](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211102215812812.png)
 
 ## 参考文章
 

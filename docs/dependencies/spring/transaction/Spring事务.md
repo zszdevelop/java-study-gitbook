@@ -8,7 +8,7 @@
 
 ### 1.2 事务的特性
 
-![image-20191011230807408](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191011230807408.png)
+![image-20191011230807408](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191011230807408.png)
 
 1. 原子性：事务是最小的执行单位，不予许分割。事务的原子性确保动作要么全部完成，要么完全不起作用
 2. 一致性：执行事务前后，数据保持一致
@@ -50,7 +50,7 @@ Public interface PlatformTransactionManager()...{
 
 事务属性可以理解成事务的一些基本配置，描述了事务策略如何应用到方法上。事务属性包含了5个方面。 
 
-![image-20191011232517486](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191011232517486.png)
+![image-20191011232517486](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191011232517486.png)
 
 #### 2.2.1 TransactionDefinition接口中的方法如下：
 

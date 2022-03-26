@@ -5,6 +5,7 @@ var ManagerMulu = require('./ManagerMulu');
 var PeojectManageMulu = require('./PeojectManageMulu');
 var MyinterviewMulu = require('./MyinterviewMulu');
 var OptimizationMulu = require('./OptimizationMulu');
+var SummaryMulu = require('./SummaryMulu');
 
 exports.mulu = {
     title: '日常思考',   // 必要的
@@ -17,5 +18,6 @@ exports.mulu = {
         SelectionMulu.mulu,
         ManagerMulu.mulu,
         PeojectManageMulu.mulu,
-        MyinterviewMulu.mulu
+        MyinterviewMulu.mulu,
+        SummaryMulu.mulu
     ]}

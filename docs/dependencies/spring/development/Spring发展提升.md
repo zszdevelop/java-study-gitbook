@@ -50,13 +50,13 @@ Spring 4.x开始，Spring MVC基于Servlet 3.0 开发,并且为了方便Restful�
 
 一张图概括:
 
-![image-20200320221512611](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200320221512611.png)
+![image-20200320221512611](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200320221512611.png)
 
 ## 5. Spring5.x时代
 
 ### 5.1 新特性
 
-![image-20200320221608325](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200320221608325.png)
+![image-20200320221608325](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200320221608325.png)
 
 ## 面试真题
 

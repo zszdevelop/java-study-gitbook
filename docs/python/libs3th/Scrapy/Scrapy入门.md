@@ -16,7 +16,7 @@ Scrapy 是一个为了爬取网站数据，提取结构性数据而编写的应�
 
 ## 2. 架构概览
 
-![image-20210310164531835](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210310164531835.png)
+![image-20210310164531835](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210310164531835.png)
 
 ### 2.1 Scrapy Engine
 

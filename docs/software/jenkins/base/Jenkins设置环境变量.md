@@ -8,13 +8,13 @@
 
 在“全局工具配置中（Global Tool Configuration）”找到
 
-![image-20211001125528711](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001125528711.png)
+![image-20211001125528711](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001125528711.png)
 
-![image-20211001125611235](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001125611235.png)
+![image-20211001125611235](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001125611235.png)
 
 选择要安装的JDK版本
 
-![image-20211001125716055](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001125716055.png)
+![image-20211001125716055](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001125716055.png)
 
 需要输入oracle 的账户密码
 
@@ -22,7 +22,7 @@
 
 在“全局工具配置中（Global Tool Configuration）”找到maven设置
 
-![image-20211001130133461](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211001130133461.png)
+![image-20211001130133461](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211001130133461.png)
 
 ## 3. 建立Jenkinsfile
 

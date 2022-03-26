@@ -69,6 +69,11 @@ exports.mulu = {
                     title: 'mongoDB索引详解',   // 必要的
                     path: 'db/mongodb/operation/mongoDB索引详解.md'
                
+                },
+                {
+                    title: 'mongoDB删除字段',   // 必要的
+                    path: 'db/mongodb/operation/mongoDB删除字段.md'
+               
                 }
             ]
         },

@@ -18,7 +18,7 @@ public class MyApplication {
 1. 构造一个SpringApplication的实例
 2. run方法就表示启动SpringBoot
 
-![image-20200321004400020](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200321004400020.png)
+![image-20200321004400020](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200321004400020.png)
 
 ## 2. 总结
 
@@ -34,7 +34,7 @@ SpringBoot启动的时候，不论调用什么方法，都会构造一个SpringA
 4. 找出所有的应用程序监听器，默认有9个，设置到listeners属性中
 5. 找出运行的主类(main class)
 
-![image-20200321004534266](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200321004534266.png)
+![image-20200321004534266](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200321004534266.png)
 
 ## 2.2 run方法
 
@@ -48,11 +48,11 @@ SpringApplication构造完成之后调用run方法，启动SpringApplication，r
    3.3 Spring容器的刷新(完成bean的解析、各种processor接口的执行、条件注解的解析等等)
 4. 从Spring容器中找出ApplicationRunner和CommandLineRunner接口的实现类并排序后依次执行
 
-![image-20200321004718521](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200321004718521.png)
+![image-20200321004718521](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200321004718521.png)
 
 run方法的第4步
 
-![image-20200321010602661](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200321010602661.png)
+![image-20200321010602661](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200321010602661.png)
 
 ## 面试真题
 

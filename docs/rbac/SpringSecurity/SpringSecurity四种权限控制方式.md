@@ -13,7 +13,7 @@ Spring Security 提供了以下四种方式来对权限进行扩展
 
 Spring Security 支持在 URL 和方法权限控制时使用 SpEL 表达式，如果表达式返回值为 true 则表示需要对应的权限，否则表示不需要对应的权限。提供表达式的类是 SecurityExpressionRoot
 
-![image-20210402165122243](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210402165122243.png)
+![image-20210402165122243](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210402165122243.png)
 
 SecurityExpressionRoot 有两个实现类，表示在应对 URL 权限控制和应对方法权限控制时，分别对 SpEL 所做的拓展，例如在基于 URL 路径做权限控制时，增加了 hasIpAddress 选项。
 

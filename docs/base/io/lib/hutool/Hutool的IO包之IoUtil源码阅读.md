@@ -42,7 +42,7 @@ copy方法同样针对Reader、Writer、Channel等对象有一些重载方法，
 
 #### 3.1.1 源码操作
 
-![image-20211016202407321](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016202407321.png)
+![image-20211016202407321](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016202407321.png)
 
 可以看出底层还是还是一个标准的io读取操作
 
@@ -72,9 +72,9 @@ copy方法同样针对Reader、Writer、Channel等对象有一些重载方法，
 
 #### 3.2.1 源码
 
-![image-20211016203320813](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016203320813.png)
+![image-20211016203320813](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016203320813.png)
 
-![image-20211016203429377](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016203429377.png)
+![image-20211016203429377](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016203429377.png)
 
 - 封装 try-catch
 - 直接关闭io流
@@ -91,9 +91,9 @@ copy方法同样针对Reader、Writer、Channel等对象有一些重载方法，
 
 #### 3.3.1 源码
 
-![image-20211016203711351](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016203711351.png)
+![image-20211016203711351](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016203711351.png)
 
-![image-20211016203749635](/Users/zsz/Library/Application Support/typora-user-images/image-20211016203749635.png)
+![image-20211016203749635](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20211016203749635.png)
 
 - 主要就是帮我们做了try-catch 操作,实际上还是java的write
 
@@ -110,9 +110,9 @@ copy方法同样针对Reader、Writer、Channel等对象有一些重载方法，
 
 #### 3.4.1 源码
 
-![image-20211016204613353](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016204613353.png)
+![image-20211016204613353](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016204613353.png)
 
-![image-20211016204645360](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016204645360.png)
+![image-20211016204645360](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016204645360.png)
 
 正如文档所说，做的事情
 

@@ -8,7 +8,7 @@
 docker search zookeeper 
 ```
 
-![image-20200610224205696](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200610224205696.png)
+![image-20200610224205696](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200610224205696.png)
 
 ### 1.2 拉取zookeeper镜像
 
@@ -21,7 +21,7 @@ docker pull zookeeper
 
 这是拉取的最新版本的官方镜像，也可以选择其它版本的镜像
 
-![image-20200610224334401](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200610224334401.png)
+![image-20200610224334401](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200610224334401.png)
 
 ### 1.3 启动zookeeper容器实例
 

@@ -18,15 +18,15 @@ dig www.baidu.com
 
 会输出以下内容
 
-![image-20190824211111182](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824211111182.png)
+![image-20190824211111182](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824211111182.png)
 
 - 第一段是查询参数和统计
 
-![image-20190824211248412](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824211248412.png)
+![image-20190824211248412](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824211248412.png)
 
 - 第二段是查询内容
 
-![image-20190824211311373](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824211311373.png)
+![image-20190824211311373](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824211311373.png)
 
 上面的结果表示，查询域名`www.baidu.com` 的A记录，A是address的缩写
 
@@ -34,29 +34,29 @@ dig www.baidu.com
 
   `www.baidu.com`被cname到了`www.a.shifen.com`
 
-![image-20190824211459211](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824211459211.png)
+![image-20190824211459211](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824211459211.png)
 
 上面的结果显示，`www.baidu.com` 有三个A记录，既三个ip地址。600是TTL值（Time to live的缩写），表示缓存时间，既600秒之内不用重新查询
 
 - 第四段显示`www.a.shifen.com` 的NS记录（Name Service），既哪些服务器负责管路`www.a.shifen.com` 的DNS记录
 
-![image-20190824211915750](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824211915750.png)
+![image-20190824211915750](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824211915750.png)
 
 上面的结果显示a.shifen.com共有五条NS记录，既五域名服务器，向其中任一台查询都能知道a.shifen.com 的ip地址是什么
 
 - 第五段是上面5个域名服务器的ip地址，这是随着前一段一起返回的
 
-![image-20190824212924233](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824212924233.png)
+![image-20190824212924233](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824212924233.png)
 
 - 第六段是dns服务器的一些传输信息
 
-![image-20190824213456662](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824213456662.png)
+![image-20190824213456662](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824213456662.png)
 
 上面的结果显示，本机的DNS服务器是218.168.1.253，查询端口是53（dns服务器的默认端口），以及回应长度是260字节
 
 ### 2.1 简化+short
 
-![image-20190824213808554](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824213808554.png)
+![image-20190824213808554](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824213808554.png)
 
 上面命令值返回`www.baidu.com` 对应的3个ip地址
 
@@ -103,17 +103,17 @@ www.a.shifen.com.	600	IN	A	14.215.177.38
 
 host命令可以看作dig命令的简化版本，返回当前请求域名的各种记录
 
-![image-20190824220258126](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824220258126.png)
+![image-20190824220258126](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824220258126.png)
 
 ### 4.2 nslookup命令
 
 nslookup命令用于互动式的查询域名记录
 
-![image-20190824220446036](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824220446036.png)
+![image-20190824220446036](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824220446036.png)
 
 也可以直接过滤出cname
 
-![image-20190824221338613](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824221338613.png)
+![image-20190824221338613](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824221338613.png)
 
 ### 4.3 whois 命令
 
@@ -125,7 +125,7 @@ whois github.com
 
 ### 关于上文出现的218.85.152.99是我本机设置的dns地址
 
-![image-20190824220945022](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190824220945022.png)
+![image-20190824220945022](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190824220945022.png)
 
 ## 参考博客
 

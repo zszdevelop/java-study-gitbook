@@ -27,7 +27,7 @@ FastDFS 专为互联网应用量身定做，解决大容量文件存储问题，
 
 下面这是一张来自 FastDFS 官网的系统架构图：
 
-![image-20201211172156714](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211172156714.png)
+![image-20201211172156714](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201211172156714.png)
 
 从上面这张图中我们可以看到，**FastDFS 架构包括 Tracker 和 Storage 两部分，看名字大概就能知道，Tracker 用来追踪文件，相当于是文件的一个索引，而 Storage 则用来保存文件。**
 
@@ -118,7 +118,7 @@ Storage 一般会搭建成集群，一个 Storage Cluster 可以由多个组构�
 
    修改如下配置：
 
-   ![image-20201211094903515](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211094903515.png)
+   ![image-20201211094903515](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201211094903515.png)
 
 - 默认端口:22122 （无特殊需求暂不做修改）
 - 元数据的保存目录：（注意目录要存在）
@@ -143,9 +143,9 @@ Storage 本身的安装，也和 Tracker 一致，执行命令也都一样，因
 vi storage.conf
 ```
 
-![image-20201211101021672](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211101021672.png)
+![image-20201211101021672](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201211101021672.png)
 
-![image-20201211100945362](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211100945362.png)
+![image-20201211100945362](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201211100945362.png)
 
 这里一共配置三个地方，分别是 base_path、store_path0 以及 tracker_server ，tracker_server 模板有两个地址，我们这里只有一个，配置完成后，记得注释掉另外一个不用的。
 
@@ -193,7 +193,7 @@ Nginx 的安装分为两个步骤：
    vi /etc/fdfs/mod_fastdfs.conf
    ```
 
-   ![image-20201211102958727](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211102958727.png)
+   ![image-20201211102958727](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201211102958727.png)
 
 5. 接下来，回到第一步下载的 nginx 安装文件的解压目录中，执行如下命令，重新配置编译安装：
 
@@ -385,7 +385,7 @@ FastDFS 配好了，Nginx也配好了，可是网页打开图片地址就是访�
    vi /etc/fdfs/http.conf
    ```
 
-   ![image-20201211150330620](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211150330620.png)
+   ![image-20201211150330620](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201211150330620.png)
 
 2. 重启服务端
 
@@ -422,7 +422,7 @@ FastDFS 配好了，Nginx也配好了，可是网页打开图片地址就是访�
 
 ### 6.1 getStoreStorage fail, errno code: 28
 
-![image-20201211113209071](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201211113209071.png)
+![image-20201211113209071](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201211113209071.png)
 
 引起错误的原因是，在我们配置tracker的时候，里面有一个配置项：
 
@@ -452,11 +452,11 @@ reserved_storage_space = 10%
 
 connect timed out
 
-![image-20210324234312735](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210324234312735.png)
+![image-20210324234312735](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210324234312735.png)
 
 我们需要确认fdfs 端口是否打开，如果是阿里云服务器，则需要配置安全组
 
-![image-20210324234130717](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210324234130717.png)
+![image-20210324234130717](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210324234130717.png)
 
 端口有两个：**22122 和23000 都要开启**！！！！
 

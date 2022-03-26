@@ -42,7 +42,7 @@ mongodump是一个用于导出二进制数据库内容的实用工具，它导�
 mongodump -d mytest -c user -o F:\bk
 ```
 
-![image-20210104143705063](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210104143705063.png)
+![image-20210104143705063](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210104143705063.png)
 
 其中的metadata.json即为索引信息
 
@@ -84,7 +84,7 @@ linux下可以使用：mongorestore -d <db_name> <bson_folder>
 windows下可以使用：mongorestore.exe -d <db_name> <bson_folder>
 ```
 
-![image-20210104143924453](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210104143924453.png)
+![image-20210104143924453](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210104143924453.png)
 
 ```
 ./mongorestore -h"127.0.0.1:27017"  -d caseDB --dir /home/data/caseDB_200619 --bypassDocumentValidation

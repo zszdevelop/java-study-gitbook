@@ -4,7 +4,7 @@
 
 Jenkins 使用docker 安装非常方便。但是在安装时，我并没指定编码，导致我Jenkins 打印的日志出现乱码问题
 
-![image-20211008220042050](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211008220042050.png)
+![image-20211008220042050](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211008220042050.png)
 
 尝试过网上好多办法，发现很多并没有卵用。最终在一篇大佬博文下找到靠谱方案记录一下
 
@@ -17,7 +17,7 @@ Jenkins 使用docker 安装非常方便。但是在安装时，我并没指定�
 
 1. 查看其`Dockerfile`找到启动脚本位置
 
-   ![image-20211008221057262](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211008221057262.png)
+   ![image-20211008221057262](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211008221057262.png)
 
 2. 进入容器中位置查看该脚本内容
 
@@ -51,7 +51,7 @@ export JAVA_OPTS="-Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8"
 
    `docker restart jenkins`。 重新登录后见`file.encoding`和`sun.jnu.encoding`终于变为`UTF-8`，至此测试打印中文生效：
 
-   ![image-20211008221418316](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211008221418316.png)
+   ![image-20211008221418316](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211008221418316.png)
 
 ## 参考文章
 

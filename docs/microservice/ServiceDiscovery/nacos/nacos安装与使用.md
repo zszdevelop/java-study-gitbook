@@ -4,7 +4,7 @@
 
 [官方下载地址](https://github.com/alibaba/nacos/releases)
 
-![image-20191109003622139](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191109003622139.png)
+![image-20191109003622139](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191109003622139.png)
 
 ## 2.解压
 
@@ -13,7 +13,7 @@
 - conf下为nacos的配置文件
 - target目录下为nacos的fat jar
 
-![image-20191109003653869](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191109003653869.png)
+![image-20191109003653869](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191109003653869.png)
 
 ## 3. 修改配置（可选）
 
@@ -29,11 +29,11 @@ server.port=8001
 
 使用Navicat新建一个MySQL数据库，名字为febs_nacos：
 
-![image-20191109004748379](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191109004748379.png)
+![image-20191109004748379](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191109004748379.png)
 
 然后导入[febs_nacos.sql](https://github.com/wuyouzhuguli/FEBS-Cloud/blob/master/febs-cloud/sql/febs_nacos.sql) SQL脚本，导入后，数据库表如下图所示:
 
-![image-20191109004816923](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191109004816923.png)
+![image-20191109004816923](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191109004816923.png)
 
 接着修改nacos解压包目录下conf/application.properties配置文件，添加如下配置：
 
@@ -65,7 +65,7 @@ db.password=123456
 
 启动后使用浏览器访问：http://localhost:8001/nacos
 
-![image-20200116224000360](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200116224000360.png)
+![image-20200116224000360](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200116224000360.png)
 
 默认*账号*:*nacos* 默认*密码*:*nacos*
 

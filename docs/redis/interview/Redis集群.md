@@ -8,7 +8,7 @@ Redis单实例的架构，从最开始的一主N从，到读写分离，再到Se
 
 单实例的Redis缓存足以应对大多数的使用场景，也能实现主从故障迁移。
 
-![image-20210411214759101](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411214759101.png)
+![image-20210411214759101](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411214759101.png)
 
 ### 1.2 单实例存Redis缓存存在的问题
 
@@ -37,7 +37,7 @@ Redis单实例的架构，从最开始的一主N从，到读写分离，再到Se
 
 将数据key 使用相同函数hash计算出哈希值
 
-![image-20210411215650367](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411215650367.png)
+![image-20210411215650367](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411215650367.png)
 
 增加或减少只需要定位环中的一小部分数据，有比较好的容错性和扩展性
 
@@ -45,11 +45,11 @@ Redis单实例的架构，从最开始的一主N从，到读写分离，再到Se
 
 如果节点数量少，那么就有可能都落在某一节点上
 
-![image-20210411215952708](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411215952708.png)
+![image-20210411215952708](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411215952708.png)
 
 ### 2.3 分片方式3：hash环引入虚拟节点
 
-![image-20210411220038505](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411220038505.png)
+![image-20210411220038505](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411220038505.png)
 
 添加虚拟节点；将数量少的节点划分成多个虚拟节点。让数据均匀分布
 

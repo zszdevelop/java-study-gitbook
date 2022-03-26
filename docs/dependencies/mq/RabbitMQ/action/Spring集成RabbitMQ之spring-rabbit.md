@@ -16,7 +16,7 @@ Spring AMQP 是基于 Spring 框架的AMQP消息解决方案，提供模板化�
 
 -  `org.springframework.amqp.core.Exchange`：其有基本的四种实现
 
-  ![image-20210527162649214](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210527162649214.png)
+  ![image-20210527162649214](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210527162649214.png)
 
 - `org.springframework.amqp.core.Message`：消息是由属性和body构成，将属性也封装成一个对象MessageProperties。
 -  `org.springframework.amqp.core.MessageProperties`：对消息属性进行了抽象。

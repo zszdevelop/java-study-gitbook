@@ -10,7 +10,7 @@ Git 有多种工作流方式，我们接下来就介绍几种常见的工作流�
 
 严格意义上说他并不算工作流，所有提交都在主干上
 
-![image-20211209213253441](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211209213253441.png)
+![image-20211209213253441](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211209213253441.png)
 
 #### 2.1.1 优势
 
@@ -34,7 +34,7 @@ Git 有多种工作流方式，我们接下来就介绍几种常见的工作流�
 - hotfix-* 分支 — 当master分支中含有不应出现的状况时，则有必要派生出hotfix分支对master分支进行紧急修复。这些分支应当派生自master 分支，并且最终应当同时合并回master 和develop 分支。
 - release-* 分支 — release 分支用于准备一次新的生产环境版本更新。创建release-*分支用来修复一些在测试环境未发现的小BUG，以及更新此版本的原信息。其应当派生自develop分支，并且最终同时合并回master 分支和 develop分支。
 
-![image-20211209213326278](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211209213326278.png)
+![image-20211209213326278](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211209213326278.png)
 
 #### 2.2.1 **优势**
 
@@ -60,7 +60,7 @@ GitHub 工作流是一个轻型的工作流，它是GitHub 在2011年 创建，�
 5. 只有在其他人review通过之后，新分支才允许合并到 `master` 分支
 6. 一旦新分支被合并推送至`master`分支，master分支应当立即进行部署
 
-![image-20211209213349934](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211209213349934.png)
+![image-20211209213349934](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211209213349934.png)
 
 #### 2.3.1 **优势**
 
@@ -93,7 +93,7 @@ GitLab工作流遵循以下11条原则：
 10. 修复bug时应该优先修复`master`分支的代码，修复之后再cherry-pick到线上分支
 11. commit messages 要有意义
 
-![image-20211209213428242](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211209213428242.png)
+![image-20211209213428242](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211209213428242.png)
 
 #### 2.4.1 **优势**
 

@@ -23,7 +23,7 @@ redis将数据存在内存中，我们要怎么保证redis挂掉之后再重启�
 
 #### 2.1.1 save配置
 
-![image-20210411114052591](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411114052591.png)
+![image-20210411114052591](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411114052591.png)
 
 - save 900 1          
 
@@ -39,13 +39,13 @@ redis将数据存在内存中，我们要怎么保证redis挂掉之后再重启�
 
 #### 2.1.2 stop-writes-ob-bgsave-error 配置
 
-![image-20210411114416349](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411114416349.png)
+![image-20210411114416349](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411114416349.png)
 
 设置为yes：当备份进程出错的时候，就不新写入数据了
 
 #### 2.1.3 rbd压缩配置
 
-![image-20210411114539673](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411114539673.png)
+![image-20210411114539673](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411114539673.png)
 
 设置成yes：压缩
 
@@ -53,7 +53,7 @@ redis将数据存在内存中，我们要怎么保证redis挂掉之后再重启�
 
 #### 2.1.4 如何禁用rdb配置
 
-![image-20210411114757555](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411114757555.png)
+![image-20210411114757555](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411114757555.png)
 
 给save设置空值
 
@@ -61,11 +61,11 @@ redis将数据存在内存中，我们要怎么保证redis挂掉之后再重启�
 
 redis 会定期生成dump.rdb文件
 
-![image-20210411115003197](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411115003197.png)
+![image-20210411115003197](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411115003197.png)
 
 我们打开可以发现是一堆看不懂的乱码
 
-![image-20210411115123958](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411115123958.png)
+![image-20210411115123958](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411115123958.png)
 
 也就表明dump.rdb 是二进制文件
 
@@ -82,19 +82,19 @@ redis 会定期生成dump.rdb文件
 
 - 备份
 
-  ![image-20210411120115269](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411120115269.png)
+  ![image-20210411120115269](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411120115269.png)
 
   执行save后会卡着一段时间，直到备份完成
 
 - lastsave：查看最后备份时间
 
-![image-20210411120242935](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411120242935.png)
+![image-20210411120242935](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411120242935.png)
 
 - 定时备份：
 
   我们可以用java定时器来定时备份，并将dump文件改名
 
-  ![image-20210411120407537](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411120407537.png)
+  ![image-20210411120407537](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411120407537.png)
 
 #### 2.3.2 BGSAVE(常用)
 
@@ -102,7 +102,7 @@ redis 会定期生成dump.rdb文件
 
 ##### 2.3.2.1 原理
 
-![image-20210411121020117](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411121020117.png)
+![image-20210411121020117](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411121020117.png)
 
 ### 2.4 自动触发RDB持久化的方式
 
@@ -130,15 +130,15 @@ redis 会定期生成dump.rdb文件
 
 AOF 默认是关闭的
 
-![image-20210411150040293](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411150040293.png)
+![image-20210411150040293](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411150040293.png)
 
 #### 3.1.2 AOF 生成的文件名
 
-![image-20210411150146946](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411150146946.png)
+![image-20210411150146946](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411150146946.png)
 
 #### 3.1.3 aof的写入方式
 
-![image-20210411150239597](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411150239597.png)
+![image-20210411150239597](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411150239597.png)
 
 - always：表示缓存区方式变化，总是及时将内容写入aof中
 
@@ -158,7 +158,7 @@ AOF 默认是关闭的
 
    在客户端执行shutdown 的时候，服务端可以看到发送了shutdown指令和发送save指令
 
-   ![image-20210411152635369](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411152635369.png)
+   ![image-20210411152635369](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411152635369.png)
 
 
 3. 配置
@@ -176,7 +176,7 @@ AOF 默认是关闭的
 
 5. 添加后可以看到appendonly.aof文件
 
-   ![image-20210411153459664](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411153459664.png)
+   ![image-20210411153459664](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411153459664.png)
 
 ### 3.3 日志重写：解决AOF 文件大小不断增大问题
 
@@ -188,7 +188,7 @@ AOF 默认是关闭的
 
 ## 4. RDB和AOF文件共存的情况下回复流程
 
-![image-20210411154143065](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411154143065.png)
+![image-20210411154143065](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411154143065.png)
 
 - 存在AOF 文件，则执行AOF
 - 不存在AOF则恢复RDB
@@ -204,7 +204,7 @@ AOF 默认是关闭的
 
 ## 6. RDB-AOF混合持久化方式
 
-![image-20210411154937324](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210411154937324.png)
+![image-20210411154937324](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210411154937324.png)
 
 - BGSAVE 做镜像全量持久化
 - AOF 做增量持久化

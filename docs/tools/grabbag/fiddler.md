@@ -16,7 +16,7 @@
 
 我们随便请求一个地址，如www.baidu.com 在fiddler 就可以看到请求情况
 
-![image-20190821114652821](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190821114652821.png)
+![image-20190821114652821](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190821114652821.png)
 
 ## 2. 抓取 iPhone / Android 设备的数据包 
 
@@ -26,14 +26,14 @@
 
 在tools->options->connections 开启allow remote computers to connect
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20190821122319131.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20190821122319131.png)
 
 ## 2.3  手机设置代理
 
 选择对应的wifi，设置代理
 
-![145411566361690_.pic](https://gitee.com/zszdevelop/blogimage/raw/master/img/145411566361690_.pic.jpg)
+![145411566361690_.pic](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/145411566361690_.pic.jpg)
 
 此时就可以看到手机的请求了
 
-![2831566361063_.pic_hd](https://gitee.com/zszdevelop/blogimage/raw/master/img/2831566361063_.pic_hd.jpg)
+![2831566361063_.pic_hd](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/2831566361063_.pic_hd.jpg)

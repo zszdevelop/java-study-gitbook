@@ -22,7 +22,7 @@ Actuator功能强大，便于其他应用使用端点（只需要简单的REST�
 
 对于Spring Boot Admin，**被监控应用的每个实例（client）在启动时注册到Server**，每个实例在Admin Server 就有一个单点，就可以检查他们的状态了
 
-![image-20200127202803704](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127202803704.png)
+![image-20200127202803704](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127202803704.png)
 
 ## 4. Server端集成使用
 
@@ -54,7 +54,7 @@ public class ChinahrssMonitorAdminApplication {
 
 现在运行程序并在浏览器打开`http://localhost:8080/`，可以看到如下界面：
 
-![image-20200127203117556](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127203117556.png)
+![image-20200127203117556](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127203117556.png)
 
 Server运行正常，但是没有Client 注册
 
@@ -97,7 +97,7 @@ management.endpoints.web.exposure.include=*
 
 暴露Actuator端点后就可以在Admin Server上看到更多的信息了。
 
-![image-20200127203730293](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127203730293.png)
+![image-20200127203730293](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127203730293.png)
 
 ## 6. 安全配置
 
@@ -198,7 +198,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 重启Server，可以看到更加美观的登录界面。
 
-![image-20200127205054953](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200127205054953.png)
+![image-20200127205054953](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200127205054953.png)
 
 ## 参考文章
 

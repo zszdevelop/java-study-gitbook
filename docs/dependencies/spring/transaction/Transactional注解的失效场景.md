@@ -111,7 +111,7 @@ public class MybatisPlusController {
 
 如果`Transactional`注解应用在非`public` 修饰的方法上，Transactional将会失效。
 
-![image-20211201224539139](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211201224539139.png)
+![image-20211201224539139](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211201224539139.png)
 
 之所以会失效是因为在Spring AOP 代理时，如上图所示 `TransactionInterceptor` （事务拦截器）在目标方法执行前后进行拦截，`DynamicAdvisedInterceptor`（CglibAopProxy 的内部类）的 intercept 方法或 `JdkDynamicAopProxy` 的 invoke 方法会间接调用 `AbstractFallbackTransactionAttributeSource`的 `computeTransactionAttribute` 方法，获取Transactional 注解的事务配置信息。
 
@@ -138,7 +138,7 @@ protected TransactionAttribute computeTransactionAttribute(Method method,
 
 `rollbackFor` 可以指定能够触发事务回滚的异常类型。Spring默认抛出了未检查`unchecked`异常（继承自 `RuntimeException` 的异常）或者 `Error`才回滚事务；其他异常不会触发回滚事务。如果在事务中抛出其他类型的异常，但却期望 Spring 能够回滚事务，就需要指定 **rollbackFor**属性。
 
-![image-20211201224728984](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211201224728984.png)
+![image-20211201224728984](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211201224728984.png)
 
 ```java
 // 希望自定义的异常可以进行回滚

@@ -22,7 +22,7 @@ cookie.setValue();　　//将key对应的value值修改
 
 客户如何使用积分卡，cookie在客户端是如何工作的，工作原理是什么？
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/874710-20170221095538616-1829815211.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/874710-20170221095538616-1829815211.png)
 
 这个过程就相当于，奶茶店创建好了会员卡，并且已经设置了其中的内容，交到了客户手中，下次客户过来时，就带着积分卡过来，就知道你是会员了，然后奶茶店就拿到你的会员卡对其进行操作。
 

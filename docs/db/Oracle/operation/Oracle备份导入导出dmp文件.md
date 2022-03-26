@@ -45,7 +45,7 @@
 
 ### 2.1 ORA-28009：connection as SYS should be as SYSDBA OR SYSOPER解决方法
 
-![image-20210624145704882](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210624145704882.png)
+![image-20210624145704882](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210624145704882.png)
 
 错误提示里的大致意思：作为sys的连接应该是SySDBA或Sysopor
 所以,我们在登录的时候，可以试一下：sys as sysdba 

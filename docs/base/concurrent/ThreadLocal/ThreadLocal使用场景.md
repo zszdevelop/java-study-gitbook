@@ -83,3 +83,24 @@ protected void after(JobExecutionContext context, SysJob sysJob, Exception e)
     threadLocal.remove();
  }
 ```
+
+### 1.3 微信登录
+
+1. 微信登录后(此时只获取了Openid和SessionKey信息 )
+2. 将Openid和SessionKey还有appid存储在ThreadLocal。
+3. 将信息存储到redis
+4. 只返回给用户我们自己生成的sessionKey而不是微信的
+
+```java
+String thirdSessionKey = UUID.randomUUID().toString();
+		ThirdSession thirdSession = new ThirdSession();
+		thirdSession.setAppId(appId);
+		thirdSession.setSessionKey(wxUser.getSessionKey());
+		thirdSession.setWxUserId(wxUser.getId());
+		thirdSession.setOpenId(wxUser.getOpenId());
+		//将3rd_session和用户信息存入redis，并设置过期时间
+		String key = WxMaConstants.THIRD_SESSION_BEGIN + ":" + thirdSessionKey;
+		redisTemplate.opsForValue().set(key, JSON.toJSON(thirdSession) , WxMaConstants.TIME_OUT_SESSION, TimeUnit.HOURS);
+		wxUser.setSessionKey(thirdSessionKey);
+```
+

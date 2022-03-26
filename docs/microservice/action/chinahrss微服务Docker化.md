@@ -10,7 +10,7 @@ mvn clean package -Dmaven.test.skip=true
 
 每个微服务（除了聚合模块）target目录下会有个可运行jar包，比如chinahrss-auth模块：
 
-![image-20200129201147695](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129201147695.png)
+![image-20200129201147695](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129201147695.png)
 
 ## 2. 服务器创建相关目录
 
@@ -38,13 +38,13 @@ ls /chinahrss/chinahrss-auth /chinahrss/chinahrss-gateway \
 /chinahrss/chinahrss-server-system /chinahrss/chinahrss-server-test
 ```
 
-![image-20200129202700966](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129202700966.png)
+![image-20200129202700966](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129202700966.png)
 
 ## 5. 构建Docker镜像
 
 在 `/chinahrss/chinahrss-auth` 模块下创建一个Dockerfile
 
-![image-20200129203014295](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129203014295.png)
+![image-20200129203014295](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129203014295.png)
 
 内容如下所示：
 
@@ -83,7 +83,7 @@ docker build -t chinahrss-auth:v1 .
 
 第一次构建的时候因为要下载`openjdk:8u212-jre`镜像，所以速度较慢，耐心等待即可，构建好后终端输出如下所示：
 
-![image-20200129204734435](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129204734435.png)
+![image-20200129204734435](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129204734435.png)
 
 查看当前镜像：
 
@@ -91,4 +91,4 @@ docker build -t chinahrss-auth:v1 .
 docker images
 ```
 
-![image-20200129204825052](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200129204825052.png)
+![image-20200129204825052](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200129204825052.png)

@@ -31,7 +31,7 @@ const routes = [
 
 看一下打包之后的效果，会看到打包出了多个chunk异步块。
 
-![image-20200326162422455](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200326162422455.png)
+![image-20200326162422455](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200326162422455.png)
 
 ### 2.3 将chunk打包组
 
@@ -50,13 +50,13 @@ const routes = [
 ];
 ```
 
-![image-20200326162720918](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200326162720918.png)
+![image-20200326162720918](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200326162720918.png)
 
 ## 3. 解决prefetch提前加载导致问题
 
 实际在浏览器里访问首页的时候也加载了其他chunk的块，是prefetch 提前加载的原因。理论上这个是不影响加载速度的，但是我实际测试还是会影响。
 
-![image-20200326163849626](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200326163849626.png)
+![image-20200326163849626](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200326163849626.png)
 
 这里请求了1016个请求
 

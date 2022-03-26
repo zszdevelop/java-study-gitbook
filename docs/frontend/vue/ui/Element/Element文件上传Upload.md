@@ -8,7 +8,7 @@ element 的官网已经挺详尽了，这里主要是针对自己的疑惑点，
 
 ### 2.1 点击上传
 
-![image-20210607093813556](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210607093813556.png)
+![image-20210607093813556](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210607093813556.png)
 
 >通过 slot 你可以传入自定义的上传按钮类型和文字提示。可通过设置`limit`和`on-exceed`来限制上传文件的个数和定义超出限制时的行为。可通过设置`before-remove`来阻止文件移除操作。
 

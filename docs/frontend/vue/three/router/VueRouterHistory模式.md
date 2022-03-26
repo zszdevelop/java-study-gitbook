@@ -140,7 +140,7 @@ tomcat基本很少直接放在根目录下的情况，不做介绍
    </web-app>
    ```
 
-   ![image-20210529154237920](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210529154237920.png)
+   ![image-20210529154237920](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210529154237920.png)
 
    
 
@@ -148,7 +148,7 @@ tomcat基本很少直接放在根目录下的情况，不做介绍
 
 2. 打包之后dist(打包目录)，下会新增WEB-INF文件夹
 
-   ![image-20210529154331815](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210529154331815.png)
+   ![image-20210529154331815](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210529154331815.png)
 
    
 
@@ -172,7 +172,7 @@ tomcat基本很少直接放在根目录下的情况，不做介绍
 
 初次进入可以，刷新页面后404(页面地址不变，刷新就是不行)
 
-![image-20210529142826597](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210529142826597.png)
+![image-20210529142826597](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210529142826597.png)
 
 **解决方案**
 
@@ -182,7 +182,7 @@ tomcat基本很少直接放在根目录下的情况，不做介绍
 
 ### 4.3 页面进入后相关资源找不到
 
-![image-20210529142019445](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210529142019445.png)
+![image-20210529142019445](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210529142019445.png)
 
 我们指定二级目录了，但是资源还是一级目录的地址。
 

@@ -10,7 +10,7 @@ SkyWalking是一个观察性分析平台和应用性能管理系统（APM） Sky
 
 ### 2.1 整体架构
 
-![image-20211203220247094](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211203220247094.png)
+![image-20211203220247094](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211203220247094.png)
 
 整个架构，分成上、下、左、右四部分：
 

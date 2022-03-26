@@ -18,4 +18,4 @@
 
 双击运行
 
-![image-20210714212048937](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210714212048937.png)
+![image-20210714212048937](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210714212048937.png)

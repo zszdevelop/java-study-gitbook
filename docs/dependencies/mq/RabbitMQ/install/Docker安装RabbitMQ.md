@@ -26,7 +26,7 @@
 
    查看容器日志 使用`docker logs -f 容器ID`命令可以查看容器日志，我们执行`docker logs -f 3ae`命令查看rabbitMq在启动过程中日志，3ae是容器ID的简写——容器ID太长，使用时其写前几位即可
 
-   ![image-20200802235358837](https://gitee.com/zszdevelop/blogimage/raw/master/image-20200802235358837.png)
+   ![image-20200802235358837](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20200802235358837.png)
 
    从日志可以看出，rabbitMq默认创建了guest用户，并且赋予administrator角色权限，同时服务监听5672端口TCP连接和15672端口的HTTP连接，至此说明安装成功。
 

@@ -8,7 +8,7 @@
 
 
 
-![image-20211128183352758](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211128183352758.png)
+![image-20211128183352758](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211128183352758.png)
 
 ## 2. apm-spring-annotation-plugin插件
 
@@ -25,13 +25,13 @@
 
 将可选插件`optional-plugins`下的`apm-spring-annotation-plugin-8.8.0.jar`移动到`plugins`
 
-![image-20211128191652029](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211128191652029.png)
+![image-20211128191652029](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211128191652029.png)
 
 ### 3.2 测试
 
 我们可以看到这样就可以看到每个service 的耗时情况了
 
-![image-20211128192409598](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211128192409598.png)
+![image-20211128192409598](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211128192409598.png)
 
 ## 参考文章
 

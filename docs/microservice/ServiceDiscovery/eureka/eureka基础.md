@@ -16,15 +16,15 @@ Eureka 是 Netfix 开源的一款提供服务注册和发现的产品，他提�
 
 正常调用项目A 请求项目B
 
-![image-20191113223809093](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191113223809093.png)
+![image-20191113223809093](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191113223809093.png)
 
 有了服务中心之后，任何一个服务都不能直接去调用，都需要服务中心来调用
 
-![image-20191113223843702](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191113223843702.png)
+![image-20191113223843702](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191113223843702.png)
 
 **情况2：项目A 调用项目B,项目B 再调用项目C**
 
-![image-20191113224054970](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191113224054970.png)
+![image-20191113224054970](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191113224054970.png)
 
 这时候调用的步骤就会分为两步
 
@@ -34,7 +34,7 @@ Eureka 是 Netfix 开源的一款提供服务注册和发现的产品，他提�
 
    
 
-![image-20191113224305369](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191113224305369.png)
+![image-20191113224305369](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191113224305369.png)
 
 上面的项目只是两三个相互之间的简单调用，但是如果项目超过20个30个呢，画一张图来描述几十个项目之间的相互调用关系全是线条。任何其中一个项目改动，就会牵连好几个项目跟着重启，麻烦且容易出错
 
@@ -68,7 +68,7 @@ Eureka 采用了**C-S 的设计架构**，
 
 ### 3.4 Eureka 基本架构
 
-![image-20191113230422056](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191113230422056.png)
+![image-20191113230422056](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191113230422056.png)
 
 上图简要描述了Eureka 的基本架构，由3个角色组成
 

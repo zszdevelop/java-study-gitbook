@@ -14,7 +14,7 @@ AOP可以分离系统的业务逻辑和系统服务(日志，安全等)，这个
 
 下图就很直观地展示这个过程：
 
-![image-20191011214543898](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191011214543898.png)
+![image-20191011214543898](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191011214543898.png)
 
 ## 2. AOP中的基本概念
 

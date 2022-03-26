@@ -56,11 +56,11 @@ spring:
 
 使用浏览器访问 [http://localhost:8080：
 
-![image-20191202233352164](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191202233352164.png)
+![image-20191202233352164](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191202233352164.png)
 
 因为没有登录，页面直接被重定向到登录页，输入用户名和密码后：
 
-![image-20191202233413273](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191202233413273.png)
+![image-20191202233413273](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191202233413273.png)
 
 因为还没有搭建SBA客户端，所以监控信息都是空的
 
@@ -116,8 +116,8 @@ management:
 
 ### 3.3 浏览器访问
 
-![image-20191202234726467](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191202234726467.png)
+![image-20191202234726467](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191202234726467.png)
 
-![image-20191202234734852](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191202234734852.png)
+![image-20191202234734852](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191202234734852.png)
 
-![image-20191202234742046](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191202234742046.png)
+![image-20191202234742046](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191202234742046.png)

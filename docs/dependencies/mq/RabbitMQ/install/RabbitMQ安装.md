@@ -60,7 +60,7 @@ make && make install
 io:format("hello world~n", []).
 ```
 
-![image-20191107002303817](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191107002303817.png)
+![image-20191107002303817](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191107002303817.png)
 
 到此就安装完毕
 
@@ -87,7 +87,7 @@ source /etc/profile
 
 输入 erl 查看 erlang 环境变量是否配置正确
 
-![image-20191107002712325](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191107002712325.png)
+![image-20191107002712325](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191107002712325.png)
 
 ## 2. 安装 RabbitMQ
 
@@ -153,8 +153,8 @@ rabbitmqctl set_user_tags root administrator
 rabbitmqctl set_permissions -p / root ".*" ".*" ".*"
 ```
 
-![image-20191107003531187](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191107003531187.png)
+![image-20191107003531187](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191107003531187.png)
 
 再次访问:[http://你的ip地址:15672/](http://xn--ip-0p3ck01akcu41v:15672/) ,输入用户名和密码：root root
 
-![image-20191107003626827](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191107003626827.png)
+![image-20191107003626827](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191107003626827.png)

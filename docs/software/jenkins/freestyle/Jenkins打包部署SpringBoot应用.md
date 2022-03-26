@@ -14,7 +14,7 @@
 
   我这里简单上传到gitee 做测试
 
-![image-20210915191550138](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915191550138.png)
+![image-20210915191550138](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915191550138.png)
 
 ## 2. 补充插件 Publish Over SSH
 
@@ -28,19 +28,19 @@ Jenkins配置任务默认是无 send files execute commands over SSH 的。
 
 安装插件 Publish Over SSH
 
-![image-20210915201704009](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915201704009.png)
+![image-20210915201704009](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915201704009.png)
 
 ### 2.3 配置 SSH Servers
 
-![image-20210915202547951](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915202547951.png)
+![image-20210915202547951](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915202547951.png)
 
 最下面设置
 
-![image-20210915202923163](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915202923163.png)
+![image-20210915202923163](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915202923163.png)
 
 ### 2.4  测试连接
 
-![image-20210915204217543](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915204217543.png)
+![image-20210915204217543](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915204217543.png)
 
 ## 3. 脚本设置
 
@@ -149,31 +149,31 @@ esac
 
 - 首先我们需要新建一个任务：
 
-  ![image-20210915192136448](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915192136448.png)
+  ![image-20210915192136448](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915192136448.png)
 
 - 设置任务名称后选择构建一个自由风格的软件项目：
 
-![image-20210915192225320](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915192225320.png)
+![image-20210915192225320](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915192225320.png)
 
 ### 4.2 配置仓库地址
 
 - 然后在源码管理中添加我们的git仓库地址：https://gitee.com/zszdevelop/mall-tiny-jenkins.git
 
-  ![image-20210915194454588](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915194454588.png)
+  ![image-20210915194454588](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915194454588.png)
 
 - 此时需要添加一个凭据，也就是我们git仓库的账号密码：
 
-![image-20210915192628228](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915192628228.png)
+![image-20210915192628228](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915192628228.png)
 
 ### 4.3 构建打包
 
 - 之后我们需要添加一个构建，选择调用顶层maven目标
 
-  ![image-20210915192834926](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915192834926.png)
+  ![image-20210915192834926](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915192834926.png)
 
 - 选择我们的maven版本，然后设置maven命令和指定pom文件位置：
 
-  ![image-20210915193207921](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915193207921.png)
+  ![image-20210915193207921](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915193207921.png)
 
   
 
@@ -182,29 +182,29 @@ esac
 
 1. 选择
 
-![image-20210915205201650](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915205201650.png)
+![image-20210915205201650](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915205201650.png)
 
 2. 配置发送到远程的位置
 
-   ![image-20210915205234136](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915205234136.png)
+   ![image-20210915205234136](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915205234136.png)
 
 ### 4.5 构建环境（构建完后执行）
 
 - 需要设置执行的shell命令如下：/mydata/sh/mall-tiny-jenkins.sh
 
-  ![image-20210915194403946](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915194403946.png)
+  ![image-20210915194403946](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915194403946.png)
 
 ### 4.6 执行任务
 
 - 之后点击保存操作，我们的任务就创建完成了，在任务列表中我们可以点击运行来执行该任务；
 
-![image-20210915194616357](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915194616357.png)
+![image-20210915194616357](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915194616357.png)
 
 ### 4.7 查看控制台
 
 - 我们可以通过控制台输出来查看整个任务的执行过程：
 
-![image-20210915194756234](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915194756234.png)
+![image-20210915194756234](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915194756234.png)
 
 ### 4.8 查看项目效果
 
@@ -212,7 +212,7 @@ esac
 
 http://youip:8088/swagger-ui.html
 
-![image-20210915194921830](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915194921830.png)
+![image-20210915194921830](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915194921830.png)
 
 ## 参考文章
 

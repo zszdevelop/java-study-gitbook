@@ -24,19 +24,19 @@ Quartz是一个完全由java编写的任务调度框架。
 
 Qaurtz 提供的定时任务的接口，我们需要实现该接口做具体的操作。如定时发送邮件Job，重启机器Job
 
-![image-20211027203631278](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027203631278.png)
+![image-20211027203631278](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027203631278.png)
 
 ### 2.2 触发器Trigger
 
 有了任务之后，还需要一个能够实现触发任务去执行的触发器，触发器Trigger最基本的功能是指定Job的执行时间，执行间隔，运行次数等。
 
-![image-20211027203739489](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027203739489.png)
+![image-20211027203739489](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027203739489.png)
 
 ### 2.3 调度器 Schedule
 
 有了Job和Trigger后，怎么样将两者结合起来呢？即怎样指定Trigger去执行指定的Job呢？这时需要一个Schedule，来负责这个功能的实现。
 
-![image-20211027203820564](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027203820564.png)
+![image-20211027203820564](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027203820564.png)
 
 上面三个部分就是Quartz的基本组成部分：
 
@@ -104,7 +104,7 @@ public class MyScheduler {
 
 运行程序，可以看到程序每隔1s会打印出内容，且在一分钟后结束：
 
-![image-20211027203158947](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027203158947.png)
+![image-20211027203158947](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027203158947.png)
 
 ## 5. Job 详解
 
@@ -113,7 +113,7 @@ public class MyScheduler {
 Job是Quartz中的一个接口，接口下只有execute方法，在这个方法中编写业务逻辑。
 接口中的源码：
 
-![image-20211027204136389](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027204136389.png)
+![image-20211027204136389](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027204136389.png)
 
 ### 5.2 JobDetail
 
@@ -139,7 +139,7 @@ JobDetail定义的是任务数据，而真正的执行逻辑是在Job中。
 JobExecutionContext中包含了Quartz运行时的环境以及Job本身的详细数据信息。
 当Schedule调度执行一个Job的时候，就会将JobExecutionContext传递给该Job的execute()中，Job就可以通过JobExecutionContext对象获取信息。
 主要信息有：
-![image-20211027204531035](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027204531035.png)
+![image-20211027204531035](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027204531035.png)
 
 ### 5.4 JobDataMap
 
@@ -229,11 +229,11 @@ Cron表达式的语法比较复杂，
 下面是给的一个例子：
 
 
-![image-20211027205941975](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027205941975.png)
+![image-20211027205941975](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027205941975.png)
 
 可通过在线生成Cron表达式的工具：http://cron.qqe2.com/ 来生成自己想要的表达式。
 
-![image-20211027210001186](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211027210001186.png)
+![image-20211027210001186](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211027210001186.png)
 
 下面的代码就实现了每周一到周五上午10:30执行定时任务
 

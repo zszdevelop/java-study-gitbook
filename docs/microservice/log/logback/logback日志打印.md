@@ -4,7 +4,7 @@
 
 Spring Boot项目在引用了 `spring-boot-starter-logging `依赖后，默认使用了logback来记录日志。因为我们之前搭建的微服务系统都引用了`spring-boot-starter=`依赖，该依赖包含了`spring-boot-starter-logging`,所以无需再次引入
 
-![image-20191204224226134](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191204224226134.png)
+![image-20191204224226134](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191204224226134.png)
 
 ## 2. 集成logback
 
@@ -186,9 +186,9 @@ root节点是必选节点，用来指定最基础的日志输出级别，只有�
 
 剩下的模块照着febs-server-system模块配置即可。编写好日志配置文件后，在启动各个微服务系统的时候，控制台输出如下所示：
 
-![image-20191204225716215](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191204225716215.png)
+![image-20191204225716215](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191204225716215.png)
 
 ### 2.4 查看日志
 
-![](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191204225751170.png)
+![](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191204225751170.png)
 

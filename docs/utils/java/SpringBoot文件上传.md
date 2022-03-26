@@ -146,11 +146,11 @@ public class UploadController {
 
 - 单文件上传
 
-  ![image-20210604175741964](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210604175741964.png)
+  ![image-20210604175741964](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210604175741964.png)
 
 - 多文件上传
 
-  ![image-20210604175942400](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210604175942400.png)
+  ![image-20210604175942400](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210604175942400.png)
 
 ## 参考文章
 

@@ -26,7 +26,7 @@
 
 首先我们打[开豆瓣电影分类排行榜 - 动作片](https://link.zhihu.com/?target=https%3A//movie.douban.com/typerank%3Ftype_name%3D%E5%8A%A8%E4%BD%9C%26type%3D5%26interval_id%3D100%3A90%26action%3D)栏目。
 
-![image-20210311151244551](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311151244551.png)
+![image-20210311151244551](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311151244551.png)
 
 - 方案1：
 
@@ -36,7 +36,7 @@
 
   右键查看网页源码来鉴别。比如说你右键查看源码ctrl+f搜索这个杀手不太冷这几个字，你会发现源码里没有。
 
-  ![image-20210311152003444](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311152003444.png)
+  ![image-20210311152003444](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311152003444.png)
 
 
  
@@ -45,13 +45,13 @@
 
   方案1和2，虽然能用，但是都不太方便，还记得上面推荐的那个chrome插件Toggle JavaScript吗？
 
-  ![image-20210311152349107](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311152349107.png)
+  ![image-20210311152349107](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311152349107.png)
 
   
 
   安好这个插件它就会出现在chrome浏览器的右边，试着轻轻点一下。
 
-  ![image-20210311152426689](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311152426689.png)
+  ![image-20210311152426689](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311152426689.png)
 
   刚才的电影信息都不见了！还记得AJAX的介绍吗？AJAX = 异步 JavaScript和XML。当我们点击了插件就代表这个我们封禁了JavaScript,这个页面里的JavaScript代码无法执行，那么通过AJAX异步加载而来的信息当然就无法出现了。通过这种方法我们能快速精确地知道哪些信息是异步加载而来的。
 
@@ -65,15 +65,15 @@
 通常情况下我会采用第一种方法，因为使用无头浏览器会大大降低抓取效率，而且第一种方法得到的数据格式往往以Json为主，非常干净。在这里我只讲解第一种方法，第二种方法作为爬虫的终极武器我会在后续的教程中进行讲解。
 回到我们需要抓取的页面，还记得我说过页面的一个细节吗，下拉更新。进入页面后我们按F12打开chrome浏览器的开发者工具选择Network，然后实现一次下拉更新。
 
-![image-20210311152726896](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311152726896.png)
+![image-20210311152726896](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311152726896.png)
 
 你会在Network里发现一个Response为Json格式的请求，仔细看看Json里的内容你会明白这些都是网页上显示的电影信息。右键该请求地址选择Open Link in New Tab,如果你装了JSON-handle插件你会以下面这种更友好的方式查看这个Json串。
 
-![image-20210311152753926](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311152753926.png)
+![image-20210311152753926](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311152753926.png)
 
 接着再让我们看一该请求的Header信息
 
-![image-20210311152818193](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311152818193.png)
+![image-20210311152818193](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311152818193.png)
 
 
 
@@ -132,15 +132,15 @@ scrapy crawl douban_ajax -o douban_movie.csv
 
 1. 点击JSON-handle 查看
 
-   ![image-20210311153418508](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311153418508.png)
+   ![image-20210311153418508](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311153418508.png)
 
 2. 将JSON文本复制进来，点击确定
 
-   ![image-20210311153308124](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311153308124.png)
+   ![image-20210311153308124](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311153308124.png)
 
 3. 查看结果
 
-   ![image-20210311153405800](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210311153405800.png)
+   ![image-20210311153405800](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311153405800.png)
 
 ## 参考文章
 

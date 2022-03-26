@@ -29,45 +29,45 @@
 
 #### 2.1.1 源码
 
-![image-20211016205833483](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016205833483.png)
+![image-20211016205833483](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016205833483.png)
 
 ### 2.2 `touch` 创建文件
 
 #### 2.2.1 源码
 
-![image-20211016210332293](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210332293.png)
+![image-20211016210332293](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210332293.png)
 
-![image-20211016210402872](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210402872.png)
+![image-20211016210402872](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210402872.png)
 
 ### 2.3 `mkdir` 创建目录
 
 #### 2.3.1 源码
 
-![image-20211016210459317](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210459317.png)
+![image-20211016210459317](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210459317.png)
 
-![image-20211016210516840](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210516840.png)
+![image-20211016210516840](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210516840.png)
 
 ### 2.4 `del` 删除文件或目录
 
 #### 2.4.1 源码
 
-![image-20211016210704576](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210704576.png)
+![image-20211016210704576](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210704576.png)
 
 ### 2.5 `copy` 拷贝文件或目录
 
 #### 2.5.1 源码
 
-![image-20211016210812825](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210812825.png)
+![image-20211016210812825](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210812825.png)
 
-![image-20211016210908878](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210908878.png)
+![image-20211016210908878](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210908878.png)
 
 拷贝内容的意思为源目录下的所有文件和目录拷贝到另一个目录下，而不拷贝源目录本身
 
-![image-20211016210930992](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016210930992.png)
+![image-20211016210930992](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016210930992.png)
 
 拷贝文件
 
-![image-20211016211052720](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016211052720.png)
+![image-20211016211052720](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016211052720.png)
 
 ## 3. FileTypeUtil-文件类型判断
 
@@ -88,13 +88,13 @@ Console.log(type);
 
 判断文件类型
 
-![image-20211016214101979](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016214101979.png)
+![image-20211016214101979](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016214101979.png)
 
-![image-20211016214034559](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016214034559.png)
+![image-20211016214034559](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016214034559.png)
 
 读取前28位
 
-![image-20211016214012999](https://gitee.com/zszdevelop/blogimage/raw/master/image-20211016214012999.png)
+![image-20211016214012999](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211016214012999.png)
 
 ## 4. 文件监听-WatchMonitor
 

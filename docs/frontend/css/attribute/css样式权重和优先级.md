@@ -19,7 +19,7 @@
 
 **权重记忆口诀**：*从0开始，一个行内样式+1000，一个id选择器+100，一个属性选择器、class或者伪类+10，一个元素选择器，或者伪元素+1，通配符+0。*
 
-![image-20201013153629997](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20201013153629997.png)
+![image-20201013153629997](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20201013153629997.png)
 
 ## 参考文章
 

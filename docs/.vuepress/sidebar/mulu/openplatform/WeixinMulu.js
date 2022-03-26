@@ -5,6 +5,33 @@ exports.mulu = {
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
         {
+            title: '微信小程序',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '微信小程序登录实现',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序Java登录实现.md'
+                },
+                {
+                    title: '微信小程序支付实现',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序支付实现.md'
+                },
+                {
+                    title: '微信小程序客服',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序客服.md'
+                },
+                {
+                    title: '微信小程序客服',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序客服.md'
+                },
+                {
+                    title: '微信小程序-打开外部链接webview',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序-打开外部链接webview.md'
+                }
+            ]
+        },
+        {
             title: '微信公众号对接',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1

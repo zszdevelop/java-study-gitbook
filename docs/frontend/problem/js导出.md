@@ -41,7 +41,7 @@ exports = module.exports = {};
 
 
 
-![image-20210207165709128](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210207165709128.png)
+![image-20210207165709128](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210207165709128.png)
 
 
 

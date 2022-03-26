@@ -35,7 +35,7 @@ docker run -p 18080:8080 -p 50000:5000 --name jenkins \
 
   [http://ip:18080/](http://localhost:18080/)
 
-  ![image-20210915171144707](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915171144707.png)
+  ![image-20210915171144707](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915171144707.png)
 
 - 使用管理员密码进行登录，可以使用以下命令从容器启动日志中获取管理密码：
 
@@ -45,52 +45,52 @@ docker run -p 18080:8080 -p 50000:5000 --name jenkins \
 
 - 从日志中获取管理员密码：
 
-  ![image-20210915171324018](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915171324018.png)
+  ![image-20210915171324018](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915171324018.png)
 
 - 选择安装插件方式，这里我们直接安装推荐的插件：
 
-  ![image-20210915171418370](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915171418370.png)
+  ![image-20210915171418370](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915171418370.png)
 
 - 进入插件安装界面，联网等待插件安装：
 
-  ![image-20210915171547103](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915171547103.png)
+  ![image-20210915171547103](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915171547103.png)
 
 - 安装完成后，创建管理员账号：
 
-  ![image-20210915171851041](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915171851041.png)
+  ![image-20210915171851041](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915171851041.png)
 
 - 进行实例配置，配置Jenkins的URL：
 
-  ![image-20210915171931540](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915171931540.png)
+  ![image-20210915171931540](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915171931540.png)
 
 - 点击系统管理->插件管理，进行一些自定义的插件安装：
 
-  ![image-20210915172144017](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915172144017.png)
+  ![image-20210915172144017](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915172144017.png)
 
 - 确保以下插件被正确安装：
 
   - 根据角色管理权限的插件：Role-based Authorization Strategy
   - 远程使用ssh的插件：SSH plugin
 
-  ![image-20210915172346532](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915172346532.png)
+  ![image-20210915172346532](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915172346532.png)
 
 - 通过系统管理->全局工具配置来进行全局工具的配置，比如maven的配置：
 
-  ![image-20210915172442277](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915172442277.png)
+  ![image-20210915172442277](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915172442277.png)
 
 - 新增maven的安装配置：
 
-  ![image-20210915172624437](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915172624437.png)
+  ![image-20210915172624437](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915172624437.png)
 
 - 在系统管理->系统配置中添加全局ssh的配置，这样Jenkins使用ssh就可以执行远程的linux脚本了：
 
   1. 添加凭据
 
-     ![image-20210915173546451](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915173546451.png)
+     ![image-20210915173546451](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915173546451.png)
 
 2. 添加ssh
 
-   ![image-20210915173701296](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915173701296.png)
+   ![image-20210915173701296](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915173701296.png)
 
 ## 4. 角色权限管理
 
@@ -98,23 +98,23 @@ docker run -p 18080:8080 -p 50000:5000 --name jenkins \
 
 - 在系统管理->全局安全配置中启用基于角色的权限管理：
 
-![image-20210915173908996](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915173908996.png)
+![image-20210915173908996](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915173908996.png)
 
-![image-20210915184054625](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915184054625.png)
+![image-20210915184054625](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915184054625.png)
 
 - 进入系统管理->Manage and Assign Roles界面：
 
-![image-20210915184216609](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915184216609.png)
+![image-20210915184216609](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915184216609.png)
 
-![image-20210915184242961](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915184242961.png)
+![image-20210915184242961](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915184242961.png)
 
 - 添加角色与权限的关系：
 
-![image-20210915184813357](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915184813357.png)
+![image-20210915184813357](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915184813357.png)
 
 - 给用户分配角色：
 
-![image-20210915184857025](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210915184857025.png)
+![image-20210915184857025](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210915184857025.png)
 
 ## 参考文章
 

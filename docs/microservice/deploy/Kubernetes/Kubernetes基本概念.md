@@ -2,7 +2,7 @@
 
 ## 1. 基本概念
 
-![image-20200205232528752](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200205232528752.png)
+![image-20200205232528752](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200205232528752.png)
 
 - 节点（`Node`）：一个节点是一个运行 Kubernetes 中的主机
 - 容器组（`Pod`）：一个Pod对应于由若干容器组成的一个容器组，同个组内的容器共享一个存储卷（volume）

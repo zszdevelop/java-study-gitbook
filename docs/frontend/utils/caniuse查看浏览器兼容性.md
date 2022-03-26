@@ -6,7 +6,7 @@
 
 ## 1.主页面介绍
 
-![image-20200827145121290](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200827145121290.png)
+![image-20200827145121290](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200827145121290.png)
 
 页面红字标注了4个地方
 
@@ -22,7 +22,7 @@
 
 页面红字标注了4个地方
 
-![image-20200827145402982](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20200827145402982.png)
+![image-20200827145402982](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200827145402982.png)
 
 
 

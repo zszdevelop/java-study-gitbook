@@ -2,7 +2,7 @@
 
 1. top查看当前进程
 
-   ![image-20191226111855253](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191226111855253.png)
+   ![image-20191226111855253](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191226111855253.png)
 
    可以看到该进程就占了97%的cpu
 

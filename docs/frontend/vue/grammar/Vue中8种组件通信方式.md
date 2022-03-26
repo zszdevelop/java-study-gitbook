@@ -4,7 +4,7 @@
 
 vue是数据驱动视图更新的框架, 所以对于vue来说组件间的数据通信非常重要，那么组件之间如何进行数据通信的呢？
 
-![image-20210608202150893](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210608202150893.png)
+![image-20210608202150893](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210608202150893.png)
 
 如上图所示, A与B、A与C、B与D、C与E组件之间是父子关系； B与C之间是兄弟关系；A与D、A与E之间是隔代关系； D与E是堂兄关系（非直系亲属） 针对以上关系我们归类为：
 
@@ -127,7 +127,7 @@ export default {
 
 ### 2.2 方式2：`$children` / `$parent`
 
-![image-20210608203405149](https://gitee.com/zszdevelop/blogimage/raw/master/image-20210608203405149.png)
+![image-20210608203405149](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20210608203405149.png)
 
 通过`$parent`和`$children`就可以访问组件的实例，拿到实例代表什么？代表可以访问此组件的所有方法和`data`。接下来就是怎么实现拿到指定组件的实例。
 

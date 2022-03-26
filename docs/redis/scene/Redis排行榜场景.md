@@ -41,7 +41,7 @@ long score;
 
 排行榜，一般而言都是连续的，借此我们可以联想到一个合适的数据结构LinkedList，好处在于排名变动时，不需要数组的拷贝
 
-![image-20191007090440623](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191007090440623.png)
+![image-20191007090440623](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191007090440623.png)
 
 上图演示，当一个用户积分改变时，需要向前遍历找到合适的位置，插入并获取新的排名, 在更新和插入时，相比较于ArrayList要好很多，但依然有以下几个缺陷
 

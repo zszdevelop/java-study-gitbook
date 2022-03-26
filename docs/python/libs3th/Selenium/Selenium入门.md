@@ -18,7 +18,7 @@ browser = webdriver.Chrome()
 browser.get('http://www.baidu.com/')
 ```
 
-![image-20210204133157683](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210204133157683.png)
+![image-20210204133157683](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210204133157683.png)
 
 ## 3. 模拟提交
 
@@ -79,7 +79,7 @@ find_element_by_css_selector()
 
 一般我都自己采用 **xpath** 获取元素的，复制即可
 
-![image-20210204134742935](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20210204134742935.png)
+![image-20210204134742935](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210204134742935.png)
 
 ## 5. 控制浏览器操作
 

@@ -8,7 +8,7 @@ brew install siege
 
 默认安装在`/usr/local/bin/`，并自动添加到系统环境变量中,在终端输入`siege` 如果可以显示出相应的命令介绍，如下图所示，则表示我们已经安装成功。
 
-![image-20191230151706948](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191230151706948.png)
+![image-20191230151706948](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191230151706948.png)
 
 ## 2. 压测前准备工作
 
@@ -16,11 +16,11 @@ brew install siege
 
 当我们需要模拟大并发情况下的压测，则需要开启数量可观的线程，以及要占用大量的文件描述符，而系统默认对能够使用的文件描述符数量做了限制。首先使用 `ulimit -a` 命令查看目前系统开启的文件描述符数量
 
-![image-20191230165203813](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191230165203813.png)
+![image-20191230165203813](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191230165203813.png)
 
 可以看到目前系统允许使用的文件描述符的数量为 256，这是远远不够的。如果不修改该参数，要是进行大量并发的模拟场景时则会报`TOO MANY FILES OPEN` 错误。为此我们可以先使用 `ulimit -n 10000`命令来调大系统可打开的文件描述符数量。
 
-![image-20191230165254044](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191230165254044.png)
+![image-20191230165254044](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191230165254044.png)
 
 ## 3. 常用压测命令
 
@@ -50,7 +50,7 @@ siege -c 5 -r 5 http://www.baidu.com
 
 测试的结果如下：
 
-![image-20191230170159374](https://gitee.com/zszdevelop/blogimage/raw/master/img/image-20191230170159374.png)
+![image-20191230170159374](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20191230170159374.png)
 
 这些测试结果中的项目含义分别为：
 
