@@ -15,10 +15,11 @@ var RequestHttpMulu = require('./RequestHttpMulu.js');
 var TimerMulu = require('./TimerMulu.js');
 var LogMulu = require('./LogMulu.js');
 var Monitor = require('./Monitor.js');
+var ExcelMulu = require('./ExcelMulu.js');
 
 
 exports.mulu = {
-    title: '第三方依赖',   // 必要的
+    title: '常用库（第三方依赖）',   // 必要的
     // path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2,    // 可选的, 默认值是 1
@@ -38,6 +39,7 @@ exports.mulu = {
         TimerMulu.mulu,
         LogMulu.mulu,
         OfficeMulu.mulu,
-        Monitor.mulu
+        Monitor.mulu,
+        ExcelMulu.mulu,
     ]
 }

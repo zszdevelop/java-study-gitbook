@@ -132,6 +132,10 @@ exports.mulu = {
                         {
                             title: '导入SpringBoot源码',
                             path: 'dependencies/spring/SpringBoot/source/导入SpringBoot源码.md'
+                        },
+                        {
+                            title: 'SpringBoot的模块及结构',
+                            path: 'dependencies/spring/SpringBoot/source/SpringBoot的模块及结构.md'
                         }
                     ]
                 },

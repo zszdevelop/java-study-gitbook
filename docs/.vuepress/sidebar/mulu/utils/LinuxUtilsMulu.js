@@ -7,6 +7,10 @@ exports.mulu = {
         {
             title: 'Java-Jar包运行脚本',   // 必要的
             path: 'tools/script/运行脚本.md',     
+        },
+        {
+            title: '监控进程并重启',   // 必要的
+            path: 'tools/script/监控进程并重启.md',     
         }
     ]
 }

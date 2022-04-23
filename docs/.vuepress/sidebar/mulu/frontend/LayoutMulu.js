@@ -59,6 +59,18 @@ exports.mulu = {
 
         }]
     }, {
+        title: '小技巧', // 必要的
+        //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 2, // 可选的, 默认值是 1
+        children: [{
+            title: 'css文本超出就隐藏并且显示省略号', // 必要的
+            path: 'frontend/layout/skill/css文本超出就隐藏并且显示省略号.md'
+        },{
+            title: '不同font-size的文字底部在一条线上', // 必要的
+            path: 'frontend/layout/skill/不同font-size的文字底部在一条线上.md'
+        }]
+    }, {
         title: '适配方案', // 必要的
         //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         collapsable: true, // 可选的, 默认值是 true,

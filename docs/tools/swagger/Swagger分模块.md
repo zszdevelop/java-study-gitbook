@@ -85,3 +85,11 @@ public class SwaggerConfig
 
 ![image-20211026094024020](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/image-20211026094024020.png)
 
+## 3. Docket模块支持多个包
+
+### 3.1 使用PathSelectors.regex
+
+```
+.paths(PathSelectors.regex("/api/.*|/test/.*"))
+```
+

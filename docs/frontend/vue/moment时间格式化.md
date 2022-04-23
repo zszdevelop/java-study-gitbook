@@ -150,8 +150,26 @@ moment().add(7, 'days').subtract(1, 'months').year(2009).hours(0).minutes(0).sec
 
 ​	[更多使用参考官方文档](http://momentjs.cn/docs/)
 
+### 3.3 获取本月/年最后一天
+
+获取某年某月的最后一天
+
+```
+moment(日期).endOf('month').format("YYYY-MM-DD")//日期可以是 年月的格式 也可以是年月日的格式
+```
+
+moment.js获取某年的最后一天
+
+```
+oment(日期).endOf('year').format("YYYY-MM-DD")//日期可以是年的格式 或者 年月的格式 也可以是年月日的格式
+```
+
+
+
 ## 参考文章
 
 [官方文档](http://momentjs.cn/docs/)
 
 [vue+moment.js使用](https://segmentfault.com/a/1190000021200938)
+
+[moment.js 获取某年某月的最后一天 以及 获取某年最后一天](https://blog.csdn.net/qq_37899792/article/details/89914476)

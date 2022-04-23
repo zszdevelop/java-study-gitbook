@@ -110,6 +110,16 @@ exports.mulu = {
                     }
                 ]
             }]
-        }
+        },
+        {
+            title: '小技巧',
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
+                title: 'not like 优化', // 必要的
+                sidebarDepth: 3,
+                path: 'db/Oracle/skill/notlike优化.md'
+            }]
+        },
     ]
 }

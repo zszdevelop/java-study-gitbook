@@ -4,6 +4,8 @@ var FileMulu = require('./FileMulu');
 var MallMulu = require('./MallMulu');
 var MessageMulu = require('./MessageMulu');
 var ManagementSystemMulu = require('./ManagementSystemMulu');
+var LowCodeMulu = require('./LowCodeMulu');
+
 exports.mulu = {
     title: '系统架构',   // 必要的
     // path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
@@ -15,5 +17,6 @@ exports.mulu = {
         FileMulu.mulu,
         MallMulu.mulu,
         ManagementSystemMulu.mulu,
-        MessageMulu.mulu
+        MessageMulu.mulu,
+        LowCodeMulu.mulu
     ]}

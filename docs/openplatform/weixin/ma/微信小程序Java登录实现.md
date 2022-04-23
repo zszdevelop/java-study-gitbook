@@ -143,7 +143,29 @@
 
 ## 2. 保存用户信息
 
+
+
 ### 2.1 简介
+
+#### 2.1.1 wx.getUserInfo 只能获取匿名信息
+
+wx.getUserInfo 只能获取匿名信息，通常只作为获取openid 来使用
+
+>**回收wx.getUserInfo接口可获取用户个人信息能力**
+>
+>**4月28日24时后发布的新版本小程序，开发者调用wx.getUserInfo或<button open-type="getUserInfo"/>将不再弹出弹窗，直接返回匿名的用户个人信息，获取加密后的openID、unionID数据的能力不做调整。**
+
+![image-20220409103434301](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220409103434301.png)
+
+#### 2.1.2 新增getUserProfile接口获取用户的个人信息
+
+>**新增getUserProfile接口**
+>
+>**若开发者需要获取用户的个人信息（头像、昵称、性别与地区），可以通过wx.getUserProfile接口进行获取**，该接口从基础库2.10.4版本开始支持，该接口只返回用户个人信息，不包含用户身份标识符。该接口中desc属性（声明获取用户个人信息后的用途）后续会展示在弹窗中，请开发者谨慎填写**。开发者每次通过该接口获取用户个人信息均需用户确认，请开发者妥善保管用户快速填写的头像昵称，避免重复弹窗。**
+
+![image-20220409103413431](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220409103413431.png)
+
+#### 2.1.2 效果
 
 在微信中获取用户信息，需要通过按钮触发，并有微信提示要获取用户信息需要你授权
 
@@ -159,25 +181,35 @@
        </button>
    ```
 
-2.  通过 wx.getUserProfile 获取用户信息
+2. 通过 wx.getUserProfile 获取用户信息
 
    ```js
-    getUserProfile(e) {
-       wx.getUserProfile({
-         desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-         success: (detail) => {
-           app.api.wxUserSave(detail)
-           .then(res => {
-             let wxUser = res.data
-             this.setData({
-               wxUser: wxUser
-             })
-             app.globalData.wxUser = wxUser
-             this.wxUserGet()
-           })
-         }
-       })
-     },
+   login() {
+   				let that = this;
+   				uni.getUserProfile({
+   					desc: '用于完善会员资料',
+   					success: function(res) {
+   						console.log("获取用户信息成功" + JSON.stringify(res));
+   						that.updateWxUser(res)
+   						
+   					},
+   					fail(err) {
+   						console.log("获取用户信息失败" + JSON.stringify(err));
+   					}
+   				});
+   			},
+   			updateWxUser(data){
+   				wx.showLoading({
+   					title: '登录中',
+   				})
+   				let that = this;
+   				saveOrUptateWxUser(data).then(res=>{
+   					console.log("保存用户信息成功" + JSON.stringify(res));
+   					let wxUser = res.data
+   					 that.$store.dispatch("setUserInfo", wxUser);
+   					 wx.hideLoading()
+   				})
+   			},
    ```
 
 2.  此时会弹出授权提示
@@ -248,7 +280,7 @@
 
    
 
-## 微信用户SQL
+## 3. 微信用户SQL
 
 ```sql
 
@@ -287,3 +319,8 @@ CREATE TABLE `wx_user` (
 ) ENGINE=InnoDB COMMENT='微信用户';
 ```
 
+## 参考文章
+
+[小程序登录、用户信息相关接口调整说明](https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801?highLine=getUserProfile%253Afail)
+
+[uniapp官网](https://uniapp.dcloud.io/api/plugins/login.html#getuserprofile)

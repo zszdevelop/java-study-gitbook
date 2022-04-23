@@ -260,7 +260,7 @@ FullGC 平均持续时间=0.14s
 
 上图中:
 
-```text
+```bash
 第一次minor GC 之后，老年代空间:13740kb - 13732kb =8kb
 
 第二次minor GC 之后，老年代空间:22394kb - 17905kb =4489kb
@@ -274,7 +274,7 @@ FullGC 平均持续时间=0.14s
 
 老年代每次minorGC提升率
 
-```text
+```bash
 4481kb 第二次和第一次minorGC之间
 
 12333kb 第3次和第2次minorGC之间
@@ -286,7 +286,7 @@ FullGC 平均持续时间=0.14s
 
 我们可以测算出：
 
-```text
+```bash
 每次minorGC 的平均提升为12211kb,约为12Mb
 
 上图中，平均minorGC的频率为 213ms/次

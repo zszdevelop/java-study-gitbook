@@ -2,7 +2,7 @@
 
 ## 1. 简介
 
-ogback是java的日志开源组件，是log4j创始人写的，性能比log4j要好。
+logback是java的日志开源组件，是log4j创始人写的，性能比log4j要好。
 
 主要分为3个模块
 
