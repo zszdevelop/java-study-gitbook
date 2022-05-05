@@ -65,7 +65,7 @@
 
 2. 转换工具类
 
-   ```
+   ```java
    public class Word2PdfUtils {
    
    
@@ -118,7 +118,7 @@
 
 3. 测试
 
-   ```
+   ```java
    
        @Test
        void convertDocxToPdf() throws Exception {
@@ -129,7 +129,16 @@
        }
    ```
 
-   
+
+## 2. 相关问题
+
+### 2.1 doc文件不支持，要docx
+
+```
+java.lang.IllegalArgumentException: Word 2003 XML is not supported. Use a docx or Flat OPC XML instead, or look at the Word2003XmlConverter proof of concept.
+```
+
+![image-20220427104749883](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220427104749883.png)
 
 ## 遗留问题
 

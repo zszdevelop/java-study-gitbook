@@ -42,6 +42,9 @@ public class VelocityHelloWorld {
         VelocityEngine velocityEngine = new VelocityEngine();
         velocityEngine.setProperty(VelocityEngine.RESOURCE_LOADER, "file");
         velocityEngine.setProperty(VelocityEngine.FILE_RESOURCE_LOADER_PATH, "/Users/zsz/Project/demo/2021year/10yue/velocity-demo/src/main/resources");
+      // 解决中文乱码问题	
+        velocityEngine.setProperty(Velocity.INPUT_ENCODING, "UTF-8");
+        velocityEngine.setProperty(Velocity.OUTPUT_ENCODING, "UTF-8");
         velocityEngine.init();
 
         /* 2.创建一个上下文对象 */
@@ -216,7 +219,7 @@ Velocity 中的条件语句也可以使用与、或、非。
 
 `#foreach` 支持遍历一个 Vector、Hashtable 或 Array 对象。
 
-```bash
+```velocity
 <ul>
 #foreach( $key in $allProducts.keySet() )
     <li>Key: $key -> Value: $allProducts.get($key)</li>

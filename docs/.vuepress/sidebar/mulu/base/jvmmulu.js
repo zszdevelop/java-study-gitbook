@@ -49,6 +49,14 @@ exports.mulu = {
                 {
                     title: 'GC中对象自救',
                     path: 'base/jvm/GC中对象自救.md',
+                },
+                {
+                    title: 'gc日志分析',
+                    path: 'base/jvm/gc/gc日志分析.md',
+                },
+                {
+                    title: 'Java如何选择合适的垃圾回收器',
+                    path: 'base/jvm/gc/Java如何选择合适的垃圾回收器.md',
                 }
             ]
         },
@@ -77,6 +85,10 @@ exports.mulu = {
                 {
                     title: 'jstack等命令的实现原理',
                     path: 'base/jvm/jstack等命令的实现原理.md',
+                },
+                {
+                    title: 'Java堆设置多大合适',
+                    path: 'base/jvm/Java堆设置多大合适.md',
                 }
             ]
         }, {

@@ -5,7 +5,9 @@
 Word从2003开始支持XML格式，操作流程
 
 - 先用office2003或者2007编辑好word的样式，然后另存为xml，
-- 将xml翻译为FreeMarker模板，
+- 将xml翻译为FreeMarker模板
+  - 使用任何模板引擎都可以，核心就是渲染替换
+
 - 最后用java来解析FreeMarker模板并输出Doc。
 
 经测试这样方式生成的word文档完全符合office标准，样式、内容控制非常便利，打印也不会变形，生成的文档和office中编辑文档完全一样。
@@ -16,7 +18,7 @@ Word从2003开始支持XML格式，操作流程
 
 2. 引入相关pom依赖 `FreeMarker`
 
-   ```
+   ```xml
    <dependency>
        <groupId>org.springframework.boot</groupId>
        <artifactId>spring-boot-starter-freemarker</artifactId>
@@ -25,7 +27,7 @@ Word从2003开始支持XML格式，操作流程
 
 3. 在application.propertes中添加相应配置
 
-   ```
+   ```yml
    ## Freemarker 配置
    ##模版存放路径（默认为 classpath:/templates/）
    spring.freemarker.template-loader-path=classpath:/templates/
@@ -145,3 +147,16 @@ Word从2003开始支持XML格式，操作流程
 
    ![image-20200411214311413](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200411214311413.png)
 
+## 3. 小技巧
+
+### 3.1 如何确定word中的一行
+
+`<w:tr></w:tr>`标签表示word中的表格的一行记录，我们找到`<w:tr></w:tr>`标签，循环就好
+
+![image-20220426164319476](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220426164319476.png)
+
+## 参考文章
+
+[java生成word的几种方案](https://blog.51cto.com/u_15082395/4043560)
+
+[Java使用freemarker生成word文件](https://blog.csdn.net/czx2018/article/details/100894959)

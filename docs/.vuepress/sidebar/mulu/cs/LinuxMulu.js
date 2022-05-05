@@ -74,11 +74,39 @@ exports.mulu = {
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 3, // 可选的, 默认值是 1
-                    children: [{
+                    children: [
+                        {
                             title: 'Linux文本操作命令汇总', // 必要的
                             path: 'cs/linux/operation/textopt/Linux文本操作命令汇总.md'
+                        },
+                        {
+                            title: 'sed替换/查找/删除命令', // 必要的
+                            path: 'cs/linux/operation/textopt/sed替换查找删除命令.md'
+                        },
+                        {
+                            title: 'awk强大的文本分析命令', // 必要的
+                            path: 'cs/linux/operation/textopt/awk强大的文本分析命令.md'
+                        },
+                        {
+                            title: 'Linux-grep文本搜索', // 必要的
+                            path: 'cs/linux/operation/find/Linux-grep文本搜索.md'
+                        },
+                        {
+                            title: 'cut切分命令', // 必要的
+                            path: 'cs/linux/operation/textopt/cut切分命令.md'
+                        },{
+                            title: 'sort排序命令', // 必要的
+                            path: 'cs/linux/operation/textopt/sort排序命令.md'
+                        },
+                        {
+                            title: 'uniq去重命令', // 必要的
+                            path: 'cs/linux/operation/textopt/uniq去重命令.md'
+                        },
+                        {
+                            title: 'wc统计命令', // 必要的
+                            path: 'cs/linux/operation/textopt/wc统计命令.md'
                         }
-
+                        
                     ]
                 },
                 
