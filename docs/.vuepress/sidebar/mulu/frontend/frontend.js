@@ -8,7 +8,7 @@ var PluginMulu = require('./PluginMulu');
 var UtilsMulu = require('./UtilsMulu');
 var SkillMulu = require('./SkillMulu');
 var EnvironmentMulu  = require('./EnvironmentMulu');
-
+var UniappMulu  = require('./UniappMulu');
 
 exports.mulu = {
     title: '前端',   // 必要的
@@ -25,5 +25,6 @@ exports.mulu = {
         PluginMulu.mulu,
         UtilsMulu.mulu,
         SkillMulu.mulu,
-        EnvironmentMulu.mulu
+        EnvironmentMulu.mulu,
+        UniappMulu.mulu
     ]}

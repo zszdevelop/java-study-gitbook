@@ -29,7 +29,7 @@ public @interface EnableScheduling {
 
 可以看到EnableScheduling 注解直接导入配置类 SchedulingConfiguration，这个类注解了@Configuration，且注册了一个scheduledAnnotationProcessor的Bean，SchedulingConfiguration的源码如下：
 
-```
+```java
 @Configuration
 @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
 public class SchedulingConfiguration {
@@ -50,7 +50,7 @@ public class SchedulingConfiguration {
 
 ImportSelector接口只有一个方法
 
-```
+```java
 String[] selectImports(AnnotationMetadata importingClassMetadata);
 ```
 
@@ -58,7 +58,7 @@ AnnotationMetadata：用来获得当前配置类上的注解
 
 例：
 
-```
+```java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -79,7 +79,7 @@ public @interface EnableAsync {
 
 AsyncConfigurationSelector继承AdviceModeImportSelector，AdviceModeImportSelector类实现ImportSelector接口 根据AdviceMode的不同来选择生明不同的Bean
 
-```
+```java
 public class AsyncConfigurationSelector extends AdviceModeImportSelector<EnableAsync> {
 
 	private static final String ASYNC_EXECUTION_ASPECT_CONFIGURATION_CLASS_NAME =
@@ -103,11 +103,11 @@ public class AsyncConfigurationSelector extends AdviceModeImportSelector<EnableA
 
 ```
 
-## 2.3 方式3：动态注册Bean（实现 ImportBeanDefinitionRegistrar 接口）
+### 2.3 方式3：动态注册Bean（实现 ImportBeanDefinitionRegistrar 接口）
 
 一般只要用户确切知道哪些Bean需要放入容器的话，自己可以通过spring 提供的注解来标识就可以了，比如@Component,@Service,@Repository,@Bean等。 如果是不确定的类，或者不是spring专用的，所以并不想用spring的注解进行侵入式标识，那么就可以通过@Import注解，实现ImportBeanDefinitionRegistrar接口来动态注册Bean。 比如：
 
-```
+```java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -119,15 +119,13 @@ public @interface EnableAspectJAutoProxy {
 	boolean exposeProxy() default false;
 
 }
-复制代码
 ```
 
 AspectJAutoProxyRegistrar实现了ImportBeanDefinitionRegistrar接口，ImportBeanDefinitionRegistrar的作用是在运行时自动添加Bean到已有的配置类，通过重写方法：
 
-```
+```java
 public void registerBeanDefinitions(
 			AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry);
-复制代码
 ```
 
 - AnnotationMetadata  参数用来获得当前配置类上的注解
@@ -135,7 +133,7 @@ public void registerBeanDefinitions(
 
 源码：
 
-```
+```java
 @Override
 public void registerBeanDefinitions(
 		AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {

@@ -20,6 +20,10 @@ exports.mulu = {
                     path: 'dependencies/dbmanager/version/flyway/Flyway-commandline使用'
                 },
                 {
+                    title: 'Flyway配置属性详解', // 必要的
+                    path: 'dependencies/dbmanager/version/flyway/Flyway配置属性详解'
+                },
+                {
                     title: 'Flyway兼容达梦数据库', // 必要的
                     path: 'dependencies/dbmanager/version/flyway/Flyway兼容达梦数据库'
                 },
@@ -47,7 +51,20 @@ exports.mulu = {
             title: 'Druid', // 必要的
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [{
+            children: [
+                ,{
+                    title: 'Druid源码学习',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'Druid源码学习（一）-DruidDataSource数据结构',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习DruidDataSource数据结构.md'
+                        },{
+                            title: 'Druid源码学习（二）-DruidDataSource的init过程',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习2DruidDataSource的init过程.md'
+                        },]},
+                {
                 title: 'Druid多数据源配置', // 必要的
                 path: 'dependencies/dbmanager/connectpool/druid/Druid多数据源配置.md'
             }]

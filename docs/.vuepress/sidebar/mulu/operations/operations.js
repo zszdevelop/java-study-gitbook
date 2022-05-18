@@ -1,4 +1,5 @@
 var BoardMulu = require('./BoardMulu');
+var ToolsMulu = require('./ToolsMulu');
 
 exports.mulu = {
     title: '运维',   // 必要的
@@ -6,5 +7,6 @@ exports.mulu = {
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2,    // 可选的, 默认值是 1
     children: [
+        ToolsMulu.mulu,
         BoardMulu.mulu
     ]}

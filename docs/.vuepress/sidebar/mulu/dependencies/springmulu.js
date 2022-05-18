@@ -103,14 +103,7 @@ exports.mulu = {
                     title: 'Spring Boot常见知识点',
                     path: 'dependencies/spring/SpringBoot/'
                 },
-                {
-                    title: 'SpringBoot启动过程',
-                    path: 'dependencies/spring/SpringBoot/SpringBoot启动过程.md'
-                },
-                {
-                    title: 'Spring Boot 自动配置之@Enable与@Import注解',
-                    path: 'dependencies/spring/SpringBoot/SpringBoot自动配置之@Enable与@Import注解.md'
-                },
+                
                 {
                     title: 'SpringBoot-Starter',
                     collapsable: true, // 可选的, 默认值是 true,
@@ -136,7 +129,57 @@ exports.mulu = {
                         {
                             title: 'SpringBoot的模块及结构',
                             path: 'dependencies/spring/SpringBoot/source/SpringBoot的模块及结构.md'
+                        },
+                        {
+                            title: 'SpringBoot自动装配原理解析（核心功能）',
+                            path: 'dependencies/spring/SpringBoot/source/SpringBoot自动装配原理解析.md'
+                        },
+                        {
+                            title: 'SpringBoot启动过程（核心功能）',
+                            path: 'dependencies/spring/SpringBoot/SpringBoot启动过程.md'
+                        },
+                        {
+                            title: 'SpringBoot嵌入式Tomcat的自动配置原理',
+                            path: 'dependencies/spring/SpringBoot/source/SpringBoot嵌入式Tomcat的自动配置原理.md'
+                        },
+                        
+                        {
+                            title: '源码阅读相关问题',
+                            collapsable: true, // 可选的, 默认值是 true,
+                            sidebarDepth: 2, // 可选的, 默认值是 1
+                            children: [
+                                {
+                                    title: 'Springboot源码编译Kotlin版本过低问题',
+                                    path: 'dependencies/spring/SpringBoot/source/problem/Springboot源码编译Kotlin版本过低问题.md'
+                                },{
+                                    title: '为什么SpringBoot中main方法执行完毕后程序不会直接退出呢',
+                                    path: 'dependencies/spring/SpringBoot/source/problem/为什么SpringBoot中main方法执行完毕后程序不会直接退出呢.md'
+                                }
+                                
+                                
+                            ]
                         }
+                    ]
+                },{
+                    title: '相关注解',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'Spring Boot 自动配置之@Enable与@Import注解',
+                            path: 'dependencies/spring/SpringBoot/annotation/SpringBoot自动配置之@Enable与@Import注解.md'
+                        },
+                        {
+                            title: '@Conditional注解根据条件注入Bean到容器',
+                            path: 'dependencies/spring/SpringBoot/annotation/Conditional注解根据条件注入Bean到容器.md'
+                        },
+                        {
+                            title: '@EnableConfigurationProperties注解',
+                            path: 'dependencies/spring/SpringBoot/annotation/EnableConfigurationProperties注解.md',
+                            sidebarDepth: 3, // 可选的, 默认值是 1
+                        },
+                       
+                        
                     ]
                 },
             ]
@@ -153,6 +196,35 @@ exports.mulu = {
                     title: 'SpringBoot下定时任务方案',
                     path: 'dependencies/spring/apply/scheduled/SpringBoot下定时任务方案.md'
                 }
+            ]
+        },
+        {
+            title: 'Spring注解', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '@Configuration注解',
+                    path: 'dependencies/spring/annotation/Configuration注解.md'
+                },
+                {
+                    title: 'Spring Boot 自动配置之@Enable与@Import注解',
+                    path: 'dependencies/spring/SpringBoot/annotation/SpringBoot自动配置之@Enable与@Import注解.md'
+                },
+                {
+                    title: '@Conditional注解根据条件注入Bean到容器',
+                    path: 'dependencies/spring/SpringBoot/annotation/Conditional注解根据条件注入Bean到容器.md'
+                },
+                {
+                    title: '@EnableConfigurationProperties注解',
+                    path: 'dependencies/spring/SpringBoot/annotation/EnableConfigurationProperties注解.md'
+                },
+                {
+                    title: 'Spring/SpringBoot常用注解',
+                    path: 'dependencies/spring/annotation/Spring与SpringBoot常用注解.md'
+                },
+                
             ]
         },
         {

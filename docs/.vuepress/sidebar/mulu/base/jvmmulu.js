@@ -134,6 +134,29 @@ exports.mulu = {
                 {
                     title: 'JDK监控和故障处理工具汇总',
                     path: 'base/jvm/JDK监控和故障处理工具汇总.md',
+                },{
+                    title: 'visualvm',   // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'mac版idea配置visualvm',
+                            path: 'base/jvm/visualvm/mac版idea配置visualvm.md',
+                        },
+                        {
+                            title: 'MAT使用',
+                            path: 'base/jvm/mat使用.md',
+                        },
+                        {
+                            title: 'Shallow heap和Retained heap',
+                            path: 'base/jvm/mat/Shallow和Retained.md',
+                        },
+                        {
+                            title: '记一次MAT分析线上项目过程',
+                            path: 'base/jvm/mat/记一次MAT分析线上项目过程.md',
+                        }
+                    ]
                 }, {
                     title: 'MAT',   // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在

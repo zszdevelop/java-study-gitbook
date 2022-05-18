@@ -72,12 +72,33 @@ exports.mulu =   {
                     path: 'base/concurrent/synchronized关键字.md'
                 },
                 {
-                    title: 'ReentrantLock.md', 
+                    title: 'ReentrantLock', 
                     path: 'base/concurrent/ReentrantLock.md'
                 },
                 {
-                    title: 'volatile关键字', 
-                    path: 'base/concurrent/volatile关键字.md'
+                    title: 'volatile关键字',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2,    // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'volatile关键字', 
+                            path: 'base/concurrent/volatile/volatile关键字.md'
+                        },
+                        // {
+                        //     title: 'volatile关键字(老版)', 
+                        //     path: 'base/concurrent/volatile关键字old.md'
+                        // }
+                        {
+                            title: '相关基础',
+                            collapsable: true, // 可选的, 默认值是 true,
+                            sidebarDepth: 2,    // 可选的, 默认值是 1
+                            children: [
+                                {
+                                    title: 'java内存模型', 
+                                    path: 'base/concurrent/volatile/java内存模型.md'
+                                }]}
+                    ] 
+                    
                 },
                 {
                     title: '线程池', 

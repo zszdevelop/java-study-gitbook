@@ -24,7 +24,13 @@ exports.mulu = {
                 {
                     title: '微信小程序-打开外部链接webview',   // 必要的
                     path: 'openplatform/weixin/ma/微信小程序-打开外部链接webview.md'
+                },
+                {
+                    title: '微信小程序-分享',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序-分享.md'
                 }
+
+                
             ]
         },
         {
@@ -54,6 +60,10 @@ exports.mulu = {
                 {
                     title: '微信小程序退款实现',   // 必要的
                     path: 'openplatform/weixin/pay/微信小程序退款实现.md'
+                },
+                {
+                    title: '微信商户付款实现(企业打款/提现)',   // 必要的
+                    path: 'openplatform/weixin/pay/微信商户付款实现.md'
                 }
             ]
         },

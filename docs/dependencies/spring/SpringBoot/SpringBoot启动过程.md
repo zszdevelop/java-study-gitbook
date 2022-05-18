@@ -43,9 +43,9 @@ SpringApplication构造完成之后调用run方法，启动SpringApplication，r
 1. 构造一个StopWatch，观察SpringApplication的执行
 2. 找出所有的SpringApplicationRunListener并封装到SpringApplicationRunListeners中，用于监听run方法的执行。监听的过程中会封装成事件并广播出去让初始化过程中产生的应用程序监听器进行监听
 3. 构造Spring容器(ApplicationContext)，并返回
-   3.1 创建Spring容器的判断是否是web环境，是的话构造AnnotationConfigEmbeddedWebApplicationContext，否则构造AnnotationConfigApplicationContext
-   3.2 初始化过程中产生的初始化器在这个时候开始工作
-   3.3 Spring容器的刷新(完成bean的解析、各种processor接口的执行、条件注解的解析等等)
+   1. 创建Spring容器的判断是否是web环境，是的话构造AnnotationConfigEmbeddedWebApplicationContext，否则构造AnnotationConfigApplicationContext
+   2. 初始化过程中产生的初始化器在这个时候开始工作
+   3. Spring容器的刷新(完成bean的解析、各种processor接口的执行、条件注解的解析等等)
 4. 从Spring容器中找出ApplicationRunner和CommandLineRunner接口的实现类并排序后依次执行
 
 ![image-20200321004718521](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200321004718521.png)
