@@ -1,4 +1,5 @@
 var base = require('./mulu/base/base');
+var thread = require('./mulu/thread/thread');
 var dependencies = require('./mulu/dependencies/dependencies');
 var db = require('./mulu/db/db');
 var microservice = require('./mulu/microservice/microservice');
@@ -24,6 +25,7 @@ exports.mulu  = [
             path: '/'
         },
         base.mulu,
+        thread.mulu,
         dependencies.mulu,
         db.mulu,
         microservice.mulu,

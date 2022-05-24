@@ -11,7 +11,10 @@ exports.mulu = {
         {
             title: 'Java编译',
             path: 'base/command/Java编译.md'
+        },
+        {
+            title: 'Java反编译命令-javap',
+            path: 'base/command/Java反编译命令-javap.md'
         }
-
     ]
 }

@@ -3,7 +3,19 @@ exports.mulu = {
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2, // 可选的, 默认值是 1
-    children: [{
+    children: [
+        {
+            title: 'aspose.word(最终方案)', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
+                    title: 'aspose word for java 21.6 破解使用', // 必要的
+                    path: 'problem&solve/office/aspose/asposeWordForJava216破解使用.md'
+                }
+            ]
+        },
+        {
             title: 'java多张图片合并转为PDF', // 必要的
             path: 'problem&solve/office/pdf/java多张图片合并转为PDF.md'
         },

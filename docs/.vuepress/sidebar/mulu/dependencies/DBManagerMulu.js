@@ -47,12 +47,28 @@ exports.mulu = {
         title: '数据库连接池', // 必要的
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 2, // 可选的, 默认值是 1
-        children: [{
+        children: [
+            {
+                title: '概念',
+                collapsable: true, // 可选的, 默认值是 true,
+                sidebarDepth: 2, // 可选的, 默认值是 1
+                children: [
+                    {
+                        title: '数据库连接池原理',
+                        path: 'dependencies/dbmanager/connectpool/base/数据库连接池原理.md'
+                    }
+                ]
+            },
+            {
             title: 'Druid', // 必要的
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
             children: [
-                ,{
+                {
+                    title: '为什么选择Druid',
+                    path: 'dependencies/dbmanager/connectpool/druid/为什么选择Druid.md'
+                },
+                {
                     title: 'Druid源码学习',
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2, // 可选的, 默认值是 1
@@ -63,7 +79,20 @@ exports.mulu = {
                         },{
                             title: 'Druid源码学习（二）-DruidDataSource的init过程',
                             path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习2DruidDataSource的init过程.md'
-                        },]},
+                        },{
+                            title: 'Druid源码学习（三）-DruidDataSource连接池的基本原理（重点）',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习3DruidDataSource连接池的基本原理.md'
+                        },{
+                            title: 'Druid源码学习（四）-DruidDataSource的getConnection过程',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习4DruidDataSource的getConnection过程.md'
+                        },{
+                            title: 'Druid源码学习（五）-DruidDataSource的shrink过程',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习5DruidDataSource的shrink过程.md'
+                        }
+
+                        
+                    ]
+                },
                 {
                 title: 'Druid多数据源配置', // 必要的
                 path: 'dependencies/dbmanager/connectpool/druid/Druid多数据源配置.md'
