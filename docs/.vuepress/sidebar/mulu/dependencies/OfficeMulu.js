@@ -9,10 +9,23 @@ exports.mulu = {
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [{
+            children: [
+                {
                     title: 'aspose word for java 21.6 破解使用', // 必要的
                     path: 'problem&solve/office/aspose/asposeWordForJava216破解使用.md'
-                }
+                },
+                {
+                    title: '相关问题', // 必要的
+                    //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'aspose.word部署linux服务器字体乱码问题', // 必要的
+                            path: 'problem&solve/office/aspose/problem/aspose部署linux服务器字体乱码问题.md'
+                        }
+                    ]
+                },
             ]
         },
         {

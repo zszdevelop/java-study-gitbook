@@ -88,6 +88,21 @@ exports.mulu = {
                         },{
                             title: 'Druid源码学习（五）-DruidDataSource的shrink过程',
                             path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习5DruidDataSource的shrink过程.md'
+                        },{
+                            title: 'Druid源码学习（六）-PreparedStatementPool源码及使用场景分析',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习6PreparedStatementPool源码及使用场景分析.md'
+                        },{
+                            title: 'Druid源码学习（七）-DruidDataSource的recycle过程',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习7DruidDataSource的recycle过程.md'
+                        },{
+                            title: 'Druid源码学习（八）-DruidDataSource的removeAbandoned机制',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习8DruidDataSource的removeAbandoned机制.md'
+                        },{
+                            title: 'Druid源码学习（九）-DruidDataSource和DruidConnection中的状态',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习9DruidDataSource和DruidConnection中的状态.md'
+                        },{
+                            title: 'Druid源码学习（十）-DruidDataSource中的一些计数器',
+                            path: 'dependencies/dbmanager/connectpool/druid/source/Druid源码学习10DruidDataSource中的一些计数器.md'
                         }
 
                         

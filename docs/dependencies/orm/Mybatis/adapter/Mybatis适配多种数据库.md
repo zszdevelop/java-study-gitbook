@@ -28,7 +28,7 @@ databaseIdProvider配置：
 public class MyBatisConfig
 {
   ....
-@Primary
+    
     @Bean
     public DatabaseIdProvider getDatabaseIdProvider() {
         DatabaseIdProvider databaseIdProvider = new VendorDatabaseIdProvider();

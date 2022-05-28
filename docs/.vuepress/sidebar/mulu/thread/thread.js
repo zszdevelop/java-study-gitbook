@@ -1,5 +1,11 @@
 var ConcurrentMulu = require('./ConcurrentMulu');
 var ThreadMulu = require('./ThreadMulu');
+var JUCCollectionMulu = require('./JUCCollectionMulu');
+var JUCExecutorMulu = require('./JUCExecutorMulu');
+var JUCLockMulu = require('./JUCLockMulu');
+var JUCToolsMulu = require('./JUCToolsMulu');
+
+
 var SummaryMulu = require('./SummaryMulu');
 
 exports.mulu = {
@@ -10,6 +16,10 @@ exports.mulu = {
     children: [
         ThreadMulu.mulu,
         ConcurrentMulu.mulu,
-        SummaryMulu.mulu
+        JUCCollectionMulu.mulu,
+        JUCLockMulu.mulu,
+        JUCToolsMulu.mulu,
+        JUCExecutorMulu.mulu,
+        SummaryMulu.mulu,
     ]
 }

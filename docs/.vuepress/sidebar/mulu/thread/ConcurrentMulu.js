@@ -177,7 +177,13 @@ exports.mulu = {
             title: 'java锁',
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [{
+            children: [
+                
+                {
+                    title: 'Java中所有的锁',
+                    path: 'thread/concurrent/lock/Java中所有的锁.md'
+                },
+                {
                     title: '乐观锁和悲观锁',
                     path: 'thread/concurrent/lock/乐观锁和悲观锁.md'
                 },

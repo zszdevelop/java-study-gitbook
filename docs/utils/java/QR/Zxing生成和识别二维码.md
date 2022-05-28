@@ -26,6 +26,8 @@
 ```java
 package com.fardu.utils;
 
+
+import com.faduit.report.utils.qr.MyQRCodeWriter;
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.client.j2se.MatrixToImageConfig;
@@ -33,6 +35,7 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.CharacterSetECI;
 import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import javax.imageio.ImageIO;
@@ -54,7 +57,7 @@ public class QrUtil {
      * @param height  二维码高度
      * @throws Exception
      */
-    public static void createQr(String content, int width, int height) throws Exception {
+    public static File createQr(String content, int width, int height,String formatName,String outPath) throws Exception {
         //二维码参数基本设置
         Map<EncodeHintType, Object> hints = new HashMap<>();
         //设置编码为UTF-8
@@ -63,17 +66,37 @@ public class QrUtil {
         // L:7%纠错率  M:15%纠错率 Q:25%纠错率 H:30纠错率   纠错率越高越容易识别出来,但是纠错率越高识别速度越慢
         hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
         //设置二维码白边的范围(此值可能不生效)
-        hints.put(EncodeHintType.MARGIN, 1);
+        hints.put(EncodeHintType.MARGIN, 0);
         //设置生成的图片类型为QRCode
         BarcodeFormat format = BarcodeFormat.QR_CODE;
         //生成二维码对应的位矩阵对象
-        BitMatrix matrix = new MultiFormatWriter().encode(content, format, width, height);
+//        MultiFormatWriter writer = new MultiFormatWriter();
+//        QRCodeWriter writer = new QRCodeWriter();
+        MyQRCodeWriter writer = new MyQRCodeWriter();
+
+        // 解决中文乱码问题
+        String contentCharset = new String(content.getBytes("UTF-8"), "ISO-8859-1");
+        BitMatrix matrix = writer.encode(contentCharset, format, width, height);
         //设置位矩阵对象转图片的参数(前景色,背景色)
         MatrixToImageConfig config = new MatrixToImageConfig(Color.black.getRGB(), Color.white.getRGB());
         //位矩阵对象转BufferedImage对象
         BufferedImage qrcode = MatrixToImageWriter.toBufferedImage(matrix, config);
         //将BufferedImage对象保存到本地
-        ImageIO.write(qrcode, "png", new File("C:\\src\\idea\\qr-java\\qr.png"));
+        File outFile = new File(outPath);
+        ImageIO.write(qrcode, formatName, outFile);
+
+        return outFile;
+    }
+    /**
+     * 生成二维码
+     *
+     * @param content 二维码内容
+     * @param width   二维码宽度
+     * @param height  二维码高度
+     * @throws Exception
+     */
+    public static File createQr(String content, int width, int height) throws Exception {
+      return createQr(content,width,height,"png","C:\\src\\idea\\qr-java\\qr.png");
     }
 
     /**
@@ -160,6 +183,7 @@ public class QrUtil {
     }
 
 }
+
 ```
 
 #### 2.2.1 识别率不高的原因
