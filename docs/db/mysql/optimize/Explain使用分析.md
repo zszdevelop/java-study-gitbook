@@ -14,7 +14,7 @@ EXPLAIN SELECT * FROM user_info WHERE id <300;
 
 为了方便演示EXPLAIN 的使用，首先我们需要建立两个测试用的表，并添加相应的数据
 
-```
+```sql
 CREATE TABLE `user_info` (
   `id`   BIGINT(20)  NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL DEFAULT '',
@@ -37,7 +37,7 @@ INSERT INTO user_info (name, age) VALUES ('h', 50);
 INSERT INTO user_info (name, age) VALUES ('i', 15);
 ```
 
-```
+```sql
 CREATE TABLE `order_info` (
   `id`           BIGINT(20)  NOT NULL AUTO_INCREMENT,
   `user_id`      BIGINT(20)           DEFAULT NULL,
@@ -64,7 +64,7 @@ INSERT INTO order_info (user_id, product_name, productor) VALUES (9, 'p8', 'TE')
 
 EXPLAIN 命令的输出内容大致内容
 
-```
+```sql
 mysql> explain select * from user_info where id = 2\G
 *************************** 1. row ***************************
            id: 1
@@ -112,7 +112,7 @@ select_type 表示查询的类型，他常用的取值有
 
 最常见的查询类别应该是 `SIMPLE` 了, 比如当我们的查询没有子查询, 也没有 UNION 查询时, 那么通常就是 `SIMPLE` 类型。例如：
 
-```
+```sql
 mysql> explain select * from user_info where id = 2\G
 *************************** 1. row ***************************
            id: 1
@@ -134,7 +134,7 @@ possible_keys: PRIMARY
 
 如果我们使用了UNION 查询，那么EXPLAIN 输出的结果类似如下
 
-```
+```sql
 EXPLAIN (SELECT * FROM user_info  WHERE id IN (1, 2, 3))
     ->  UNION
     ->  (SELECT * FROM user_info WHERE id IN (3, 4, 5));
@@ -159,7 +159,7 @@ EXPLAIN (SELECT * FROM user_info  WHERE id IN (1, 2, 3))
 `const`: 针对主键或唯一索引的等值查询扫描, 最多只返回一行数据. const 查询速度非常快, 因为它仅仅读取一次即可.
 例如下面的这个查询, 它使用了主键索引, 因此 `type` 就是 `const` 类型的.
 
-```
+```sql
 
 mysql> explain select * from user_info where id = 2\G
 *************************** 1. row ***************************
@@ -182,7 +182,7 @@ possible_keys: PRIMARY
 
 `eq_ref`: 此类型通常出现在多表的 join 查询, 表示对于前表的每一个结果, 都只能匹配到后表的一行结果. 并且查询的比较操作通常是 `=`, 查询效率较高. 例如:
 
-```
+```sql
 mysql> EXPLAIN SELECT * FROM user_info, order_info WHERE user_info.id = order_info.user_id\G
 *************************** 1. row ***************************
            id: 1
@@ -218,7 +218,7 @@ possible_keys: PRIMARY
 `ref`: 此类型通常出现在多表的 join 查询, 针对于非唯一或非主键索引, 或者是使用了 `最左前缀` 规则索引的查询.
 例如下面这个例子中, 就使用到了 `ref` 类型的查询:
 
-```
+```sql
 mysql> EXPLAIN SELECT * FROM user_info, order_info WHERE user_info.id = order_info.user_id AND order_info.user_id = 5\G
 *************************** 1. row ***************************
            id: 1
@@ -255,7 +255,7 @@ possible_keys: user_product_detail_index
 `range`: 表示使用索引范围查询, 通过索引字段范围获取表中部分数据记录. 这个类型通常出现在 =, <>, >, >=, <, <=, IS NULL, <=>, BETWEEN, IN() 操作中.
 当 `type` 是 `range` 时, 那么 EXPLAIN 输出的 `ref` 字段为 NULL, 并且 `key_len` 字段是此次查询中使用到的索引的最长的那个.
 
-```
+```sql
 mysql> EXPLAIN SELECT *
     ->  FROM user_info
     -> WHERE id BETWEEN 2 AND 8 \G;
@@ -305,7 +305,7 @@ possible_keys: NULL
 ALL: 表示全表扫描, 这个类型的查询是性能最差的查询之一. 通常来说, 我们的查询不应该出现 ALL 类型的查询, 因为这样的查询在数据量大的情况下, 对数据库的性能是巨大的灾难. 如一个查询是 ALL 类型查询, 那么一般来说可以对相应的字段添加索引来避免.
 下面是一个全表扫描的例子, 可以看到, 在全表扫描时, possible_keys 和 key 字段都是 NULL, 表示没有使用到索引, 并且 rows 十分巨大, 因此整个查询效率是十分低下的.
 
-```
+```sql
 mysql> EXPLAIN SELECT age FROM  user_info WHERE age = 20 \G
 *************************** 1. row ***************************
            id: 1
@@ -362,7 +362,7 @@ key_len 的计算规则如下:
 
 我们来举两个简单的栗子:
 
-```
+```sql
 mysql> EXPLAIN SELECT * FROM order_info WHERE user_id < 3 AND product_name = 'p1' AND productor = 'WHH' \G
 *************************** 1. row ***************************
            id: 1
@@ -392,7 +392,7 @@ KEY `user_product_detail_index` (`user_id`, `product_name`, `productor`)
 
 接下来我们来看一下下一个例子:
 
-```
+```sql
 mysql> EXPLAIN SELECT * FROM order_info WHERE user_id = 1 AND product_name = 'p1' \G;
 *************************** 1. row ***************************
            id: 1
@@ -426,7 +426,7 @@ EXplain 中的很多额外的信息会在 Extra 字段显示, 常见的有以下
 
   例如下面的例子:
 
-  ```
+  ```sql
   mysql> EXPLAIN SELECT * FROM order_info ORDER BY product_name \G
   *************************** 1. row ***************************
              id: 1
@@ -453,7 +453,7 @@ EXplain 中的很多额外的信息会在 Extra 字段显示, 常见的有以下
   但是上面的查询中根据 `product_name` 来排序, 因此不能使用索引进行优化, 进而会产生 `Using filesort`.
   如果我们将排序依据改为 `ORDER BY user_id, product_name`, 那么就不会出现 `Using filesort` 了. 例如:
 
-  ```
+  ```sql
   mysql> EXPLAIN SELECT * FROM order_info ORDER BY user_id, product_name \G;
   *************************** 1. row ***************************
              id: 1

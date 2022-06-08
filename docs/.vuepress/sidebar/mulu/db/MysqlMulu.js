@@ -33,112 +33,116 @@ exports.mulu = {
                 },
             ]
         },
-        {
-            title: 'MySQL语法',   // 必要的
-            collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
-                    title: 'MySQL-连接操作',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-连接操作.md'
-                },
-                {
-                    title: 'MySQL-数据库操作',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-数据库操作.md'
-                },
-                {
-                    title: 'MySQL-表的操作',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-表的操作.md'
-                },
-                {
-                    title: 'MySQL-数据增删改查操作',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-数据增删改查操作.md'
-                },
-                {
-                    title: 'MySQL-字符集编码',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-字符集编码.md'
-                },
-                {
-                    title: 'MySQL-数据类型(列类型)',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-数据类型.md'
-                },
-                {
-                    title: 'MySQL-列属性(列约束)',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-列属性.md'
-                },
-                {
-                    title: 'MySQL-UNION',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-UNION.md'
-                },
-                {
-                    title: 'MySQL-子查询',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-子查询.md'
-                },
-                {
-                    title: 'MySQL-连接查询(join)',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-连接查询.md'
-                },
-                {
-                    title: 'MySQL-TRUNCATE',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-TRUNCATE.md'
-                },
-                {
-                    title: 'MySQL-备份与还原',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-备份与还原.md'
-                },
-                {
-                    title: 'MySQL-视图',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-视图.md'
-                },
-                {
-                    title: 'MySQL-事务(transaction) ',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-事务.md'
-                },
-                {
-                    title: 'MySQL-锁表',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-锁表.md'
-                },
-                {
-                    title: 'MySQL-触发器',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-触发器.md'
-                },
-                {
-                    title: 'MySQL-SQL编程',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-SQL编程.md'
-                },
-                {
-                    title: 'MySQL-存储过程',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-存储过程.md'
-                },
-                {
-                    title: 'MySQL-用户和权限管理',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-用户和权限管理.md'
-                },
-                {
-                    title: 'MySQL-表维护',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-表维护.md'
-                },
-                {
-                    title: 'MySQL-杂项',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-杂项.md'
-                },
-                {
-                    title: 'MySQL-数据库操作',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-数据库操作.md'
-                },
-                {
-                    title: 'MySQL-数据库操作',   // 必要的
-                    path: 'db/mysql/syntax/MySQL-数据库操作.md'
-                },
+        // {
+        //     title: 'MySQL语法',   // 必要的
+        //     collapsable: true, // 可选的, 默认值是 true,
+        //     sidebarDepth: 2,    // 可选的, 默认值是 1
+        //     children: [
+        //         {
+        //             title: 'MySQL-连接操作',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-连接操作.md'
+        //         },
+        //         {
+        //             title: 'MySQL-数据库操作',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-数据库操作.md'
+        //         },
+        //         {
+        //             title: 'MySQL-表的操作',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-表的操作.md'
+        //         },
+        //         {
+        //             title: 'MySQL-数据增删改查操作',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-数据增删改查操作.md'
+        //         },
+        //         {
+        //             title: 'MySQL-字符集编码',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-字符集编码.md'
+        //         },
+        //         {
+        //             title: 'MySQL-数据类型(列类型)',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-数据类型.md'
+        //         },
+        //         {
+        //             title: 'MySQL-列属性(列约束)',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-列属性.md'
+        //         },
+        //         {
+        //             title: 'MySQL-UNION',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-UNION.md'
+        //         },
+        //         {
+        //             title: 'MySQL-子查询',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-子查询.md'
+        //         },
+        //         {
+        //             title: 'MySQL-连接查询(join)',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-连接查询.md'
+        //         },
+        //         {
+        //             title: 'MySQL-TRUNCATE',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-TRUNCATE.md'
+        //         },
+        //         {
+        //             title: 'MySQL-备份与还原',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-备份与还原.md'
+        //         },
+        //         {
+        //             title: 'MySQL-视图',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-视图.md'
+        //         },
+        //         {
+        //             title: 'MySQL-事务(transaction) ',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-事务.md'
+        //         },
+        //         {
+        //             title: 'MySQL-锁表',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-锁表.md'
+        //         },
+        //         {
+        //             title: 'MySQL-触发器',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-触发器.md'
+        //         },
+        //         {
+        //             title: 'MySQL-SQL编程',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-SQL编程.md'
+        //         },
+        //         {
+        //             title: 'MySQL-存储过程',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-存储过程.md'
+        //         },
+        //         {
+        //             title: 'MySQL-用户和权限管理',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-用户和权限管理.md'
+        //         },
+        //         {
+        //             title: 'MySQL-表维护',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-表维护.md'
+        //         },
+        //         {
+        //             title: 'MySQL-杂项',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-杂项.md'
+        //         },
+        //         {
+        //             title: 'MySQL-数据库操作',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-数据库操作.md'
+        //         },
+        //         {
+        //             title: 'MySQL-数据库操作',   // 必要的
+        //             path: 'db/mysql/syntax/MySQL-数据库操作.md'
+        //         },
                 
-            ]
-        },
+        //     ]
+        // },
       
         {
             title: '索引',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
+                {
+                    title: 'Mysql索引',
+                    path: "db/mysql/index/Mysql索引.md"
+                },
                 {
                     title: '索引',
                     path: "db/mysql/index/索引.md"
@@ -254,11 +258,16 @@ exports.mulu = {
                 }, 
                 {
                     title: 'Explain使用分析',
+                    sidebarDepth: 3, 
                     path: "db/mysql/optimize/Explain使用分析.md"
                 }, 
                 {
                     title: '一条SQL语句在MySQL中如何执行的',
                     path: "db/mysql/optimize/一条SQL语句在MySQL中如何执行的.md"
+                },
+                {
+                    title: '分解大连接查询',
+                    path: "db/mysql/optimize/分解大连接查询.md"
                 },
             ]
         },

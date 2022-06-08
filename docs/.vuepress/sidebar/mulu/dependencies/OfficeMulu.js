@@ -3,28 +3,36 @@ exports.mulu = {
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2, // 可选的, 默认值是 1
-    children: [
-        {
+    children: [{
             title: 'aspose.word(最终方案)', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [
-                {
+            children: [{
                     title: 'aspose word for java 21.6 破解使用', // 必要的
                     path: 'problem&solve/office/aspose/asposeWordForJava216破解使用.md'
+                },
+                {
+                    title: 'aspose.word文档格式转换', // 必要的
+                    path: 'problem&solve/office/aspose/asposeword文档格式转换.md'
+                },
+                {
+                    title: 'aspose.word为每页头部添加二维码信息', // 必要的
+                    path: 'problem&solve/office/aspose/asposeword为每页头部添加二维码信息.md'
+                },
+                {
+                    title: 'aspose.word动态修改字体等', // 必要的
+                    path: 'problem&solve/office/aspose/asposeword动态修改字体等.md'
                 },
                 {
                     title: '相关问题', // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [
-                        {
-                            title: 'aspose.word部署linux服务器字体乱码问题', // 必要的
-                            path: 'problem&solve/office/aspose/problem/aspose部署linux服务器字体乱码问题.md'
-                        }
-                    ]
+                    children: [{
+                        title: 'aspose.word部署linux服务器字体乱码问题', // 必要的
+                        path: 'problem&solve/office/aspose/problem/aspose部署linux服务器字体乱码问题.md'
+                    }]
                 },
             ]
         },
@@ -77,16 +85,15 @@ exports.mulu = {
                     title: 'XML方式', // 必要的
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [
-                        {
-                        title: 'java导出生成word之XML方式', // 必要的
-                        path: 'problem&solve/office/toword/java导出生成word之XML方式.md'
-                    },{
-                        title: 'Word的XML格式解析', // 必要的
-                        path: 'problem&solve/office/toword/Word的XML格式解析.md'
-                    }
-                    
-                ]
+                    children: [{
+                            title: 'java导出生成word之XML方式', // 必要的
+                            path: 'problem&solve/office/toword/java导出生成word之XML方式.md'
+                        }, {
+                            title: 'Word的XML格式解析', // 必要的
+                            path: 'problem&solve/office/toword/Word的XML格式解析.md'
+                        }
+
+                    ]
                 }
             ]
         },

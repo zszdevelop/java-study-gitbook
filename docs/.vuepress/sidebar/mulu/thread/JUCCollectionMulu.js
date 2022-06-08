@@ -7,6 +7,13 @@ exports.mulu = {
             title: 'BlockingQueue详解', // 必要的
             path: 'thread/JUCCollection/BlockingQueue详解.md'
             
+        },{
+            title: 'JUC集合: ConcurrentHashMap详解(引用)', // 必要的
+            path: 'https://pdai.tech/md/java/thread/java-thread-x-juc-collection-ConcurrentHashMap.html'
+        },{
+            title: 'JUC集合: CopyOnWriteArrayList详解(引用)', // 必要的
+            path: 'https://pdai.tech/md/java/thread/java-thread-x-juc-collection-CopyOnWriteArrayList.html'
         }
+
     ]
 }

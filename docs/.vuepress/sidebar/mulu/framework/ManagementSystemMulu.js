@@ -76,6 +76,10 @@ exports.mulu = {
                 {
                     title: '若依优化与问题记录', // 必要的
                     path: 'framework/ManagementSystem/problem/若依优化与问题记录.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                },
+                {
+                    title: '若依支持分布式场景需要考虑的地方', // 必要的
+                    path: 'framework/ManagementSystem/problem/若依支持分布式场景需要考虑的地方.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                 }
             ]
         },

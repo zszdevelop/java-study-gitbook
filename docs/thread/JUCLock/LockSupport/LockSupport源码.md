@@ -135,7 +135,6 @@ public static void park() {
 - 其他某个线程中断当前线程。
 - 该调用不合逻辑地(即毫无理由地)返回。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/java/thread/java-thread-x-lock-LockSupport.html
 
 ### 4.3 parkNanos函数
 
@@ -178,7 +177,7 @@ public static void parkUntil(Object blocker, long deadline) {
 
 说明: 该函数也调用了两次setBlocker函数，deadline参数表示绝对时间，表示指定的时间。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/java/thread/java-thread-x-lock-LockSupport.html
+
 
 ### 4.5 unpark函数
 

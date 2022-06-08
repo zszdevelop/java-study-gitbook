@@ -306,11 +306,21 @@ public ThreadPoolExecutor(int corePoolSize,
 ```
 
 - `corePoolSize` 线程池中的核心线程数，当提交一个任务时，线程池创建一个新线程执行任务，直到当前线程数等于corePoolSize, 即使有其他空闲线程能够执行新来的任务, 也会继续创建线程；如果当前线程数为corePoolSize，继续提交的任务被保存到阻塞队列中，等待被执行；如果执行了线程池的prestartAllCoreThreads()方法，线程池会提前创建并启动所有核心线程。
+
 - `maximumPoolSize` 线程池中允许的最大线程数。如果当前阻塞队列满了，且继续提交任务，则创建新的线程执行任务，前提是当前线程数小于maximumPoolSize；当阻塞队列是无界队列, 则maximumPoolSize则不起作用, 因为无法提交至核心线程池的线程会一直持续地放入workQueue.
-- `workQueue` 用来保存等待被执行的任务的阻塞队列. 在JDK中提供了如下阻塞队列:  具体可以参考[JUC 集合: BlockQueue详解]()
+
+- `workQueue` 用来保存等待被执行的任务的阻塞队列. 在JDK中提供了如下阻塞队列:  具体可以参考[BlockQueue详解](https://java.isture.com/thread/JUCCollection/BlockingQueue%E8%AF%A6%E8%A7%A3.html)
+
   - `ArrayBlockingQueue`: 基于数组结构的有界阻塞队列，按FIFO排序任务；
+
   - `LinkedBlockingQuene`: 基于链表结构的阻塞队列，按FIFO排序任务，吞吐量通常要高于ArrayBlockingQuene；
+
+    >LinkedBlockingQuene 最合适的BlockingQuene，但无参LinkedBlockingQueue(队列容量为Integer.MAX_VALUE)。就会导致拒绝策略失效
+    >
+    >spring 的ThreadPoolTaskExecutor 的BlockingQuene大于1的时候就用他
+
   - `SynchronousQuene`: 一个不存储元素的阻塞队列，每个插入操作必须等到另一个线程调用移除操作，否则插入操作一直处于阻塞状态，吞吐量通常要高于LinkedBlockingQuene；
+
   - `PriorityBlockingQuene`: 具有优先级的无界阻塞队列；
 
 `LinkedBlockingQueue`比`ArrayBlockingQueue`在插入删除节点性能方面更优，但是二者在`put()`, `take()`任务的时均需要加锁，`SynchronousQueue`使用无锁算法，根据节点的状态判断执行，而不需要用到锁，其核心是`Transfer.transfer()`.
@@ -336,10 +346,6 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
                                 0L, TimeUnit.MILLISECONDS,
                                 new LinkedBlockingQueue<Runnable>());
 }
-
-  
-        @pdai: 代码已经复制到剪贴板
-    
 ```
 
 线程池的线程数量达corePoolSize后，即使线程池没有可执行任务时，也不会释放线程。

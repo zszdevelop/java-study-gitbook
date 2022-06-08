@@ -1,5 +1,6 @@
 var ConcurrentMulu = require('./ConcurrentMulu');
 var ThreadMulu = require('./ThreadMulu');
+var KeywordsMulu = require('./KeywordsMulu');
 var JUCCollectionMulu = require('./JUCCollectionMulu');
 var JUCExecutorMulu = require('./JUCExecutorMulu');
 var JUCLockMulu = require('./JUCLockMulu');
@@ -15,6 +16,7 @@ exports.mulu = {
     sidebarDepth: 2, // 可选的, 默认值是 1
     children: [
         ThreadMulu.mulu,
+        KeywordsMulu.mulu,
         ConcurrentMulu.mulu,
         JUCCollectionMulu.mulu,
         JUCLockMulu.mulu,

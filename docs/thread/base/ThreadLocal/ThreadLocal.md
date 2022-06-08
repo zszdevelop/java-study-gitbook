@@ -38,7 +38,7 @@ ThreadLocal提供了线程的局部变量。每个线程都可以通过`set()`�
 
 当时候写的代码：
 
-```
+```java
 public class DBUtil {
     //数据库连接池
     private static BasicDataSource source;
