@@ -2,6 +2,7 @@ var LinuxMulu = require('./LinuxMulu');
 var CsMulu = require('./CsMulu');
 var WinMulu = require('./WinMulu');
 var MacMulu = require('./MacMulu');
+var SkillMulu = require('./SkillMulu');
 exports.mulu = {
     title: '计算机基础',   // 必要的
     // path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
@@ -11,5 +12,6 @@ exports.mulu = {
         LinuxMulu.mulu,
         CsMulu.mulu,
         WinMulu.mulu,
-        MacMulu.mulu
+        MacMulu.mulu,
+        SkillMulu.mulu
     ]}

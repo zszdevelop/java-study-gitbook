@@ -2,13 +2,15 @@ var base = require('./mulu/base/base');
 var thread = require('./mulu/thread/thread');
 var dependencies = require('./mulu/dependencies/dependencies');
 var db = require('./mulu/db/db');
-var microservice = require('./mulu/microservice/microservice');
 var framework = require('./mulu/framework/framework');
+var microservice = require('./mulu/microservice/microservice');
+var deploy = require('./mulu/deploy/deploy');
 var test = require('./mulu/test/test');
 var frontend = require('./mulu/frontend/frontend');
 var android = require('./mulu/android/android');
 var cs = require('./mulu/cs/cs');
 var software = require('./mulu/software/software');
+var algorithm= require('./mulu/algorithm/algorithm');
 var utils = require('./mulu/utils/utils.js');
 // var principle = require('./mulu/principle/principle.js');
 var think  = require('./mulu/think/think.js');
@@ -28,8 +30,9 @@ exports.mulu  = [
         thread.mulu,
         dependencies.mulu,
         db.mulu,
-        microservice.mulu,
         framework.mulu,
+        microservice.mulu,
+        deploy.mulu,
         test.mulu,
         frontend.mulu,
         openplatform.mulu,
@@ -37,6 +40,7 @@ exports.mulu  = [
         python.mulu,
         cs.mulu,
         software.mulu,
+        algorithm.mulu,
         operations.mulu,
         utils.mulu,
         // principle.mulu,

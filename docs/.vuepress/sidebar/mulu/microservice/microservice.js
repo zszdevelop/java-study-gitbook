@@ -1,10 +1,15 @@
-var MsLogMulu = require('./MsLogMulu');;
+var MsLogMulu = require('./MsLogMulu');
+var ArchMulu = require('./ArchMulu');
+var DistributedMulu = require('./DistributedMulu');
 exports.mulu = {
-    title: '微服务', // 必要的
+    title: '分布式与微服务', // 必要的
     // path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2, // 可选的, 默认值是 1
-    children: [{
+    children: [
+        ArchMulu.mulu,
+        DistributedMulu.mulu,
+        {
             title: '概念梳理', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
@@ -325,126 +330,7 @@ exports.mulu = {
 
             ]
         },
-        {
-            title: '微服务部署docker', // 必要的
-            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-            collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [{
-                    title: 'Docker', // 必要的
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
-                            title: 'Centos安装Docker', // 必要的
-                            path: 'microservice/deploy/docker/Centos安装Docker.md',
-                        },
-                        {
-                            title: 'Docker 镜像与容器', // 必要的
-                            path: 'microservice/deploy/docker/Docker镜像与容器.md',
-                        },
-                        {
-                            title: '使用Dockerfile定制镜像', // 必要的
-                            path: 'microservice/deploy/docker/使用Dockerfile定制镜像.md',
-                        },
-                        {
-                            title: 'Docker停止、删除所有的docker容器和镜像', // 必要的
-                            path: 'microservice/deploy/docker/删除所有的docker容器和镜像.md',
-                        },
-                        {
-                            title: 'Docker启动', // 必要的
-                            path: 'microservice/deploy/docker/Docker启动.md',
-                        },
-                        {
-                            title: 'docker中宿主机与容器（container）互相拷贝传递文件的方法', // 必要的
-                            path: 'microservice/deploy/docker/docker中宿主机与容器互相拷贝传递文件的方法.md',
-                        }, {
-                            title: 'Dockerfile 指令', // 必要的
-                            collapsable: true, // 可选的, 默认值是 true,
-                            sidebarDepth: 2, // 可选的, 默认值是 1
-                            children: [{
-                                title: 'Dockerfile之COPY复制文件', // 必要的
-                                path: 'microservice/deploy/docker/Instruction/Dockerfile之COPY复制文件.md',
-                            }]
-                        },
-
-                        {
-                            title: 'Docker参考文章', // 必要的
-                            path: 'https://yeasy.gitbooks.io/docker_practice/',
-                        }, {
-                            title: 'docker配置阿里云镜像', // 必要的
-                            path: 'microservice/deploy/docker/docker配置阿里云镜像.md',
-                        },
-                    ]
-                },
-                {
-                    title: 'Docker Compose', // 必要的
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
-                        title: 'Docker Compose入门', // 必要的
-                        path: 'microservice/deploy/dockerCompose/DockerCompose入门.md',
-                    }, {
-                        title: 'Docker Compose常用命令', // 必要的
-                        path: 'microservice/deploy/dockerCompose/DockerCompose常用命令.md',
-                    }]
-                },
-                {
-                    title: 'Kubernetes容器编排管理平台', // 必要的
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
-                            title: 'Kubernetes基本概念', // 必要的
-                            path: 'microservice/deploy/Kubernetes/Kubernetes基本概念.md',
-                        }, {
-                            title: 'Kubernetes架构', // 必要的
-                            path: 'microservice/deploy/Kubernetes/Kubernetes架构.md',
-                        },
-
-                        // {
-                        //     title: 'Kubeadm安装Kubernetes',   // 必要的
-                        //     path: 'microservice/deploy/Kubernetes/Kubeadm安装Kubernetes.md',
-                        // }
-                    ]
-                },
-                {
-                    title: 'Rancher', // 必要的
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
-                        title: '安装Rancher', // 必要的
-                        path: 'microservice/deploy/rancher/安装Rancher.md',
-                    }, {
-                        title: 'Rancher部署服务', // 必要的
-                        collapsable: true, // 可选的, 默认值是 true,
-                        sidebarDepth: 2, // 可选的, 默认值是 1
-                        children: [{
-                            title: 'Rancher部署服务简单示例', // 必要的
-                            path: 'microservice/deploy/rancher/Rancher部署服务简单示例.md'
-                        }]
-                    }, {
-                        title: 'Rancher集群启动失败Failed to bring up Etcd Plane', // 必要的
-                        path: 'microservice/deploy/rancher/Rancher集群启动失败FailedtobringupEtcdPlane.md',
-                    }, {
-                        title: 'Rancher中文文档', // 必要的
-                        path: 'https://docs.rancher.cn/rancher2x/',
-                    }]
-                },
-                {
-                    title: 'Docker镜像仓库', // 必要的
-                    collapsable: true, // 可选的, 默认值是 true,
-                    sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
-                        title: 'Harbor',
-                        collapsable: true, // 可选的, 默认值是 true,
-                        sidebarDepth: 2, // 可选的, 默认值是 1
-                        children: [{
-                            title: 'Docker镜像仓库Harbor',
-                            path: 'microservice/deploy/repository/harbor/Docker镜像仓库Harbor.md'
-                        }]
-                    }]
-                }
-            ]
-        },
+        
         {
             title: '网络共享存储', // 必要的
             collapsable: true, // 可选的, 默认值是 true,
@@ -470,6 +356,10 @@ exports.mulu = {
                 {
                     title: '单点登录SSO',
                     path: 'microservice/question/单点登录SSO.md'
+                },
+                {
+                    title: '分布式id生成方案',
+                    path: 'microservice/question/分布式id生成方案.md'
                 },
                 {
                     title: '分布式id生成方案',

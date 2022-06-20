@@ -25,6 +25,10 @@ exports.mulu = {
                     path: 'problem&solve/office/aspose/asposeword动态修改字体等.md'
                 },
                 {
+                    title: 'Aspose.Word转换为PDF的时候字体丢失', // 必要的
+                    path: 'problem&solve/office/aspose/asposeword转换为PDF的时候字体丢失.md'
+                },
+                {
                     title: '相关问题', // 必要的
                     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
                     collapsable: true, // 可选的, 默认值是 true,

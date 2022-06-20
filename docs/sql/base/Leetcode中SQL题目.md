@@ -138,7 +138,6 @@ UPDATE salary SET sex = IF(sex = 'm', 'f', 'm')
 
 https://leetcode.com/problems/not-boring-movies/description/
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/db/sql-lan/sql-lan-leetcode.html
 
 #### Description
 
@@ -198,7 +197,6 @@ ORDER BY
     rating DESC;
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/db/sql-lan/sql-lan-leetcode.html
 
 ### 596. Classes More Than 5 Students
 
@@ -322,7 +320,6 @@ HAVING
     COUNT( * ) >= 2;
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/db/sql-lan/sql-lan-leetcode.html
 
 ### 196. *Delete Duplicate Emails 
 
@@ -395,7 +392,6 @@ WHERE
 
 参考: [pMySQL Error 1093 - Can't specify target table for update in FROM clause  (opens new window)](https://stackoverflow.com/questions/45494/mysql-error-1093-cant-specify-target-table-for-update-in-from-clause)
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/db/sql-lan/sql-lan-leetcode.html
 
 ### 175. Combine Two Tables
 
@@ -472,7 +468,6 @@ FROM
   
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/db/sql-lan/sql-lan-leetcode.html
 
 ### 181. * Employees Earning More Than Their Managers
 

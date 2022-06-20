@@ -57,10 +57,6 @@ class DoubanMovieTop250Spider(Spider):
         item = DoubanMovieItem()
 ```
 
-作者：WoodenRobot
-链接：https://zhuanlan.zhihu.com/p/24769534
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
 
@@ -111,10 +107,6 @@ def logged_in(self, response):
 点击工具栏左上角的类鼠标符号图标或者Ctrl + Shift + c在页面中点击我们想要的元素即可在工具栏中看到它在网页HTML源码中所处的位置。 一般抓取时会以先抓大再抓小的原则来抓取。通过观察我们看到该页面所有影片的信息都位于一个class属性为grid_view的ol标签内的li标签内。
 
 ```html
-作者：WoodenRobot
-链接：https://zhuanlan.zhihu.com/p/24769534
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 <ol class="grid_view">
         <li>
@@ -166,10 +158,6 @@ def logged_in(self, response):
 因此我们根据以上原则对所需信息进行抓取
 
 ```python
-作者：WoodenRobot
-链接：https://zhuanlan.zhihu.com/p/24769534
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 from scrapy.spiders import Spider
 from scrapyspider.items import DoubanMovieItem
@@ -209,10 +197,7 @@ scrapy crawl douban_movie_top250 -o douban.csv
 
 ![image-20210311102306053](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20210311102306053.png)
 
-作者：WoodenRobot
-链接：https://zhuanlan.zhihu.com/p/24769534
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 
 
 

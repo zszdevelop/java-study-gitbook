@@ -154,7 +154,6 @@ public class SynchronizedObjectLock implements Runnable {
 }
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/java/thread/java-thread-x-key-synchronized.html
 
 ### 1.2 类锁
 
@@ -419,7 +418,6 @@ public class MonitorDemo {
 
 根据happens-before的定义中的一条:如果A happens-before B，则A的执行结果对B可见，并且A的执行顺序先于B。线程A先对共享变量A进行加一，由2 happens-before 5关系可知线程A的执行结果对线程B可见即线程B所读取到的a的值为1。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/java/thread/java-thread-x-key-synchronized.html
 
 ## 3. JVM中锁的优化
 

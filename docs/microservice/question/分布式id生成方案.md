@@ -66,12 +66,6 @@ github地址：[Leaf](https://github.com/Meituan-Dianping/Leaf)
 
 Leaf中的snowflake模式和原始snowflake算法的不同点，也主要在workId的生成，Leaf中workId是基于ZooKeeper的顺序Id来生成的，每个应用在使用Leaf-snowflake时，在启动时都会都在Zookeeper中生成一个顺序Id，相当于一台机器对应一个顺序节点，也就是一个workId。
 
-## 参考文章
-
-作者：1点25
-链接：https://juejin.im/post/5d6fc8eff265da03ef7a324b
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 ## 参考文章
 

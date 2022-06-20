@@ -42,7 +42,6 @@ class MyString{
 }
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/java/thread/java-thread-x-key-final.html
 
 ### 1.2 修饰方法
 
@@ -92,7 +91,6 @@ public class FinalExampleParent {
 
 Java允许在参数列表中以声明的方式将参数指明为final，这意味这你无法在方法中更改参数引用所指向的对象。这个特性主要用来向匿名内部类传递数据。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/java/thread/java-thread-x-key-final.html
 
 ### 1.4 修饰变量
 

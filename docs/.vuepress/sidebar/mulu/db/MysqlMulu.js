@@ -199,6 +199,17 @@ exports.mulu = {
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
+                
+                {
+                    title: 'MySQL的乐观锁，悲观锁与MVCC',
+                    path: "db/mysql/lock/MySQL的乐观锁悲观锁与MVCC.md"
+                },
+                {
+                    title: 'MySQL的MVCC及实现原理',
+                    path: "db/mysql/lock/MySQL的MVCC及实现原理.md"
+                },
+
+                
                 {
                     title: '锁',
                     path: "db/mysql/lock/"
@@ -263,12 +274,18 @@ exports.mulu = {
                 }, 
                 {
                     title: '一条SQL语句在MySQL中如何执行的',
+                    sidebarDepth: 3, 
                     path: "db/mysql/optimize/一条SQL语句在MySQL中如何执行的.md"
                 },
                 {
                     title: '分解大连接查询',
                     path: "db/mysql/optimize/分解大连接查询.md"
                 },
+                {
+                    title: '慢查询优化思路与案例',
+                    path: "db/mysql/optimize/慢查询优化思路与实例.md"
+                },
+                
             ]
         },
         {
@@ -292,20 +309,22 @@ exports.mulu = {
                     path: "db/mysql/problem/无法连接远端Mysql.md"
                 }
             ]
-        }, {
-            title: '面试真题',   // 必要的
-            collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: 2,    // 可选的, 默认值是 1
-            children: [
-                {
-                    title: '手写SQL面试题',   // 必要的
-                    path: "db/mysql/interview/手写SQL面试题.md"
-                },
-                {
-                    title: 'MySql面试提问',   // 必要的
-                    path: "db/mysql/interview/MySql面试提问.md"
-                }
-            ]
-        }
+        }, 
+        
+        // {
+        //     title: '面试真题',   // 必要的
+        //     collapsable: true, // 可选的, 默认值是 true,
+        //     sidebarDepth: 2,    // 可选的, 默认值是 1
+        //     children: [
+        //         {
+        //             title: '手写SQL面试题',   // 必要的
+        //             path: "db/mysql/interview/手写SQL面试题.md"
+        //         },
+        //         {
+        //             title: 'MySql面试提问',   // 必要的
+        //             path: "db/mysql/interview/MySql面试提问.md"
+        //         }
+        //     ]
+        // }
     ]
 }

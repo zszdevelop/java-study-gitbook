@@ -83,5 +83,17 @@ exports.mulu = {
                 }
             ]
         },
+        {
+            title: '分布式场景改进', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [
+                {
+                    title: '采用Redisson强化redis支持分布式场景', // 必要的
+                    path: 'framework/ManagementSystem/distributed/采用Redisson强化redis支持分布式场景.md' // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                }
+            ]
+        },
     ]
 }
