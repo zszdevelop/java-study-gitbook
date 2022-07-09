@@ -5,6 +5,7 @@ var db = require('./mulu/db/db');
 var framework = require('./mulu/framework/framework');
 var microservice = require('./mulu/microservice/microservice');
 var deploy = require('./mulu/deploy/deploy');
+var develop = require('./mulu/develop/develop');
 var test = require('./mulu/test/test');
 var frontend = require('./mulu/frontend/frontend');
 var android = require('./mulu/android/android');
@@ -33,6 +34,7 @@ exports.mulu  = [
         framework.mulu,
         microservice.mulu,
         deploy.mulu,
+        develop.mulu,
         test.mulu,
         frontend.mulu,
         openplatform.mulu,

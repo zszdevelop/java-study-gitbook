@@ -16,11 +16,13 @@
     "@vuepress/plugin-medium-zoom": "^1.8.2",
     "cross-env": "^5.0.5",
     "increase-memory-limit": "^1.0.7",
-    "vuepress": "^1.6.0"
+    "vuepress": "^1.6.0",
+    "vuepress-plugin-baidu-autopush": "^1.0.1"
   },
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
     "markdown-it-disable-url-encode": "^1.0.1",
-    "vuepress-plugin-comment": "^0.7.3"
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-sitemap": "^2.3.1"
   }
 }

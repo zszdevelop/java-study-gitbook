@@ -67,9 +67,5 @@
 - [Java 全栈知识体系](https://pdai.tech/)
 - 等等优秀的博客会在具体文章后列出
 
-## 交流群
 
-请添加我微信（备注：**Java学习交流**），我会拉你进群
-
-<img src="https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220525233105477.png" alt="image-20220525233105477" style="zoom: 33%;" />
 

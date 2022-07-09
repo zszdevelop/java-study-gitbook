@@ -28,7 +28,17 @@ exports.mulu = {
                 {
                     title: '微信小程序-分享',   // 必要的
                     path: 'openplatform/weixin/ma/微信小程序-分享.md'
+                },
+                {
+                    title: '微信小程序(uniapp)-分包',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序-分包.md'
+                },
+                {
+                    title: '微信小程序(uniapp)-包大小优化',   // 必要的
+                    path: 'openplatform/weixin/ma/微信小程序-包大小优化.md'
                 }
+
+                
 
                 
             ]

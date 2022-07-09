@@ -45,6 +45,18 @@ exports.mulu = {
         }, {
             title: '分布式系统-分布式事务及实现方案',   // 必要的
             path: 'microservice/distributed/分布式系统-分布式事务及实现方案.md'
+        }, {
+            title: '分布式系统-分布式缓存及方案实现',   // 必要的
+            path: 'microservice/distributed/分布式系统-分布式缓存及方案实现.md'
+        },{
+            title: '分布式系统-分布式任务及实现方案',   // 必要的
+            path: 'microservice/distributed/分布式系统-分布式任务及实现方案.md'
+        },{
+            title: '分布式系统-分布式会话及实现方案',   // 必要的
+            path: 'microservice/distributed/分布式系统-分布式会话及实现方案.md'
+        },{
+            title: '分布式系统-分布式系统的8个谬误',   // 必要的
+            path: 'microservice/distributed/分布式系统-分布式系统的8个谬误.md'
         },
         
        

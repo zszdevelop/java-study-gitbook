@@ -6,6 +6,10 @@ exports.mulu = {
     children: [
         
         {
+            title: 'redis大数据（bigkeys）查询还不如直接查数据库',   // 必要的
+            path: 'think/deepImpression/redis大数据查询还不如直接查数据库.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        },
+        {
             title: '拖拽排序后端设计思路',   // 必要的
             path: 'think/deepImpression/拖拽排序后端设计思路.md',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         },

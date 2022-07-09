@@ -240,6 +240,19 @@ exports.mulu = {
             ]
         },
         {
+            title: '分库分表',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'MySQL-分表分库',
+                    path: "db/mysql/sharding/MySQL-分表分库.md"
+                },{
+                    title: 'MySQL-分表分库详解',
+                    path: "db/mysql/sharding/MySQL-分表分库详解.md"
+                },
+            ]},
+        {
             title: '性能优化',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2,    // 可选的, 默认值是 1
@@ -251,6 +264,13 @@ exports.mulu = {
                     title: 'MySQL 高性能优化规范建议',
                     path: "db/mysql/optimize/MySQL高性能优化规范建议.md"
                 },
+                
+                {
+                    title: 'MySQL-主从复制与读写分离',
+                    path: "db/mysql/optimize/MySQL-主从复制与读写分离.md"
+                },
+                
+                
                 {
                     title: '大表优化',
                     path: "db/mysql/bigtable/"

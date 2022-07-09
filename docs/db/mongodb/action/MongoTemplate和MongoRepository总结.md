@@ -61,7 +61,7 @@ public class User(){
 
 ### 3.3 save - update
 
-```
+```java
  // save 还可以用来更新一条数据	
  user = mongoTemplate.findOne(
  Query.query(Criteria.where("name").is("Jack")), User.class);

@@ -111,6 +111,19 @@ exports.mulu = {
                 }
             ]
         }, {
+            title: '分库分表', // 必要的
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [{
+                    title: 'sharding-jdbc',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [{
+                        title: 'sharding-jdbc实现分库分表',
+                        path: 'dependencies/dbmanager/subdb/shardingsphere/sharding-jdbc实现分库分表.md'
+                    }]
+                }]
+        }, {
             title: 'P6Spy监控你的SQL输出',
             path: 'dependencies/dbmanager/p6spy/P6Spy监控你的SQL输出.md'
         }

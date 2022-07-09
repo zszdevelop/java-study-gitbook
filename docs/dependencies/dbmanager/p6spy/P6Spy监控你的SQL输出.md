@@ -59,7 +59,7 @@ logMessageFormat=com.zszdevelop.test.aop.P6SpyLogger
 # 使用日志系统记录sql
 appender=com.p6spy.engine.spy.appender.Slf4JLogger
 ## 配置记录Log例外
-excludecategories=info,debug,result,batc,resultset
+excludecategories=info,debug,result,commit,resultset
 # 设置使用p6spy driver来做代理
 deregisterdrivers=true
 # 日期格式
@@ -86,30 +86,42 @@ logMessageFormat=com.zszdevelop.test.aop.P6SpyLogger
 >自己想怎么打日志就怎么打
 
 ```java
+
 /**
  * 自定义日志
  * 默认com.p6spy.engine.spy.appender.SingleLineFormat
- * @author kangqing
- * @date 2020/9/7 10:58
+ *
+ * @author zsz
+ * @date 2022-06-16
  */
 public class P6SpyLogger implements MessageFormattingStrategy {
 
     /**
      * 日志格式
+     *
      * @param connectionId 连接id
-     * @param now 当前时间
-     * @param elapsed 耗时多久
-     * @param category 类别
-     * @param prepared mybatis带占位符的sql
-     * @param sql 占位符换成参数的sql
-     * @param url sql连接的 url
+     * @param now          当前时间
+     * @param elapsed      耗时多久
+     * @param category     类别
+     * @param prepared     mybatis带占位符的sql
+     * @param sql          占位符换成参数的sql
+     * @param url          sql连接的 url
      * @return 自定义格式日志
      */
     @Override
     public String formatMessage(int connectionId, String now, long elapsed, String category, String prepared, String sql, String url) {
-        return !"".equals(sql.trim()) ? "P6SpyLogger " + LocalDateTime.now() + " | elapsed " + elapsed + "ms | category " + category + " | connection " + connectionId + " | url " + url + " | sql \n" + sql : "";
+        String log = null;
+
+        if (StringUtils.isNotBlank(sql)) {
+            log = String.format("\n-----------  SQL执行时间：%s   SQL执行耗时：%s ms  -----------\n 执行的 SQL语句：%s\n", now, elapsed, sql.replaceAll("[\\s]+", " "));
+        } else {
+            log = "";
+        }
+        return log;
     }
+
 }
+
 ```
 
 ## 3. spy.properties详细说明
@@ -199,6 +211,32 @@ outagedetection=true|false
 outagedetectioninterval=integer time (seconds)
 ```
 
+## 4. 相关问题
+
+### 4.1 配置了exclude 不生效
+
+切记要先开启过滤：filter=true
+
+```ini
+# 是否开启日志过滤 默认false， 这项配置是否生效前提是配置了 include/exclude/sqlexpression
+filter=true
+# 过滤 Log 时所排除的表名列表，以逗号分隔 默认为空
+exclude=QRTZ_*
+```
+
+### 4.2 总是打印空日志
+
+我们debug 可以看到打印空日志的时候。他的category 为commit,所以我们要排除commit 即可
+
+```ini
+## 配置记录Log例外
+excludecategories=info,debug,result,commit,resultset
+```
+
+![image-20220622092110715](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220622092110715.png)
+
 ## 参考文章
 
 [使用P6Spy监控你的SQL输出](https://segmentfault.com/a/1190000038714503)
+
+[p6spy配置详解](https://blog.csdn.net/li521wang/article/details/104002897)

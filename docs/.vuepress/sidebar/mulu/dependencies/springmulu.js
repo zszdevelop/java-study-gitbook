@@ -3,10 +3,37 @@ exports.mulu = {
     //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2, // 可选的, 默认值是 1
-    children: [{
+    children: [
+
+        {
+            title: 'Spring基础-Spring和Spring框架组成', // 必要的
+            path: 'dependencies/spring/base/Spring基础-Spring和Spring框架组成.md'
+        },
+        {
+            title: 'Spring基础-Spring简单例子引入Spring要点', // 必要的
+            path: 'dependencies/spring/base/Spring基础-Spring简单例子引入Spring要点.md'
+        },
+        {
+            title: 'Spring基础-Spring核心之控制反转(IOC)', // 必要的
+            path: 'dependencies/spring/base/Spring基础-Spring核心之控制反转.md'
+        },{
+            title: 'Spring基础-Spring核心之面向切面编程(AOP)', // 必要的
+            path: 'dependencies/spring/base/Spring基础-Spring核心之面向切面编程.md'
+        },{
+            title: 'Spring基础-SpringMVC请求流程和案例', // 必要的
+            path: 'dependencies/spring/base/Spring基础-SpringMVC请求流程和案例.md'
+        },
+
+       
+        
+
+        {
             title: 'Spring常见知识点', // 必要的
             path: 'dependencies/spring/interview/Spring常见知识点.md'
         },
+
+       
+
         {
             title: 'Spring整体架构',
             path: 'dependencies/spring/Framework/Spring整体架构.md',

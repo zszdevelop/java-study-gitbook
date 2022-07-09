@@ -338,7 +338,6 @@ PRIMARY KEY(ID)
   
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/arch/arch-z-id.html
 
 ### 6.1 DefaultUidGenerator 实现
 

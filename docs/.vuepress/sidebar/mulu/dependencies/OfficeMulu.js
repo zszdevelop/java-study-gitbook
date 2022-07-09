@@ -25,8 +25,15 @@ exports.mulu = {
                     path: 'problem&solve/office/aspose/asposeword动态修改字体等.md'
                 },
                 {
+                    title: 'aspose.word动态渲染表格', // 必要的
+                    path: 'problem&solve/office/aspose/asposeword动态渲染表格.md'
+                },
+                {
                     title: 'Aspose.Word转换为PDF的时候字体丢失', // 必要的
                     path: 'problem&solve/office/aspose/asposeword转换为PDF的时候字体丢失.md'
+                },{
+                    title: 'Aspose.Word插入复选框', // 必要的
+                    path: 'problem&solve/office/aspose/asposeword插入复选框.md'
                 },
                 {
                     title: '相关问题', // 必要的

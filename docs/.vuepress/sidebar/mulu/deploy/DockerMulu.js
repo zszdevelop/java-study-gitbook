@@ -30,6 +30,10 @@ exports.mulu = {
             path: 'deploy/docker/Docker基础-Docker入门实战快速上手.md',
         },
         {
+            title: 'Docker基础-Docker四种网络模式', // 必要的
+            path: 'deploy/docker/Docker基础-Docker四种网络模式.md',
+        },
+        {
             title: 'Docker实战', // 必要的
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1

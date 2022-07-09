@@ -83,13 +83,13 @@ Leader为了使Followers的日志同自己的一致，Leader需要找到Follower
 
 Leader会从后往前试，每次AppendEntries失败后尝试前一个日志条目，直到成功找到每个Follower的日志一致位点，然后向后逐条覆盖Followers在该位置之后的条目。
 
-## 3. 安全性
+### 2.3 安全性
 
 Raft增加了如下两条限制以保证安全性:
 
 - 拥有最新的已提交的log entry的Follower才有资格成为Leader。
 
-这个保证是在RequestVote RPC中做的，Candidate在发送RequestVote RPC时，要带上自己的最后一条日志的term和log index，其他节点收到消息时，如果发现自己的日志比请求中携带的更新，则拒绝投票。日志比较的原则是，如果本地的最后一条log entry的term更大，则term大的更新，如果term一样大，则log index更大的更新。
+  这个保证是在RequestVote RPC中做的，Candidate在发送RequestVote RPC时，要带上自己的最后一条日志的term和log index，其他节点收到消息时，如果发现自己的日志比请求中携带的更新，则拒绝投票。日志比较的原则是，如果本地的最后一条log entry的term更大，则term大的更新，如果term一样大，则log index更大的更新。
 
 - Leader只能推进commit index来提交当前term的已经复制到大多数服务器上的日志，旧term日志的提交要等到提交当前term的日志来间接提交(log index 小于 commit index的日志被间接提交)。
 
@@ -109,7 +109,7 @@ S5尚未将日志推送到Followers就离线了，进而触发了一次新的选
 
 增加上述限制后，即使日志(2，2)已经被大多数节点(S1、S2、S3)确认了，但是它不能被提交，因为它是来自之前term(2)的日志，直到S1在当前term(4)产生的日志(4， 4)被大多数Followers确认，S1方可提交日志(4，4)这条日志，当然，根据Raft定义，(4，4)之前的所有日志也会被提交。此时即使S1再下线，重新选主时S5不可能成为Leader，因为它没有包含大多数节点已经拥有的日志(4，4)。
 
-### 3.1 日志压缩
+### 2.4 日志压缩
 
 在实际的系统中，不能让日志无限增长，否则系统重启时需要花很长的时间进行回放，从而影响可用性。Raft采用对整个系统进行snapshot来解决，snapshot之前的日志都可以丢弃。
 
@@ -126,7 +126,7 @@ Snapshot中包含以下内容:
 
 做一次snapshot可能耗时过长，会影响正常日志同步。可以通过使用copy-on-write技术避免snapshot过程影响正常日志同步。
 
-### 3.2 成员变更
+### 2.5 成员变更
 
 成员变更是在集群运行过程中副本发生变化，如增加/减少副本数、节点替换等。
 
@@ -149,7 +149,7 @@ Snapshot中包含以下内容:
 Raft两阶段成员变更过程如下:
 
 - Leader收到成员变更请求从Cold切成Cnew；
-- eader在本地生成一个新的log entry，其内容是Cold∪Cnew，代表当前时刻新旧成员配置共存，写入本地日志，同时将该log entry复制至Cold∪Cnew中的所有副本。在此之后新的日志同步需要保证得到Cold和Cnew两个多数派的确认；
+- Leader在本地生成一个新的log entry，其内容是Cold∪Cnew，代表当前时刻新旧成员配置共存，写入本地日志，同时将该log entry复制至Cold∪Cnew中的所有副本。在此之后新的日志同步需要保证得到Cold和Cnew两个多数派的确认；
 - Follower收到Cold∪Cnew的log entry后更新本地日志，并且此时就以该配置作为自己的成员配置；
 - 如果Cold和Cnew中的两个多数派确认了Cold U Cnew这条日志，Leader就提交这条log entry；
 - 接下来Leader生成一条新的log entry，其内容是新成员配置Cnew，同样将该log entry写入本地日志，同时复制到Follower上；
@@ -197,7 +197,11 @@ Raft与Multi-Paxos的不同:
 
 nacos 注册中心采用的就是raft
 
-### 5.2 消息中间件rabbitmq 和 Kafka
+### 5.2 redis哨兵Sentinel
+
+`Sentinel` 使用的算法核心是 Raft 算法，主要用途就是用于分布式系统，系统容错，以及Leader选举
+
+### 5.3 消息中间件rabbitmq 和 Kafka
 
 [Kafka在2.8版本中会“抛弃”Zookeeper，选择拥抱Raft？](https://www.codingw.net/Article?id=650)
 

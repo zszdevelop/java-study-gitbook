@@ -70,6 +70,13 @@ module.exports = {
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
     ['@vuepress/medium-zoom'],
     ['@vuepress/last-updated'],
+    ['sitemap', {
+      hostname: 'https://java.isture.com/'
+  }],
+   // see: https://github.com/IOriens/vuepress-plugin-baidu-autopush
+   ['vuepress-plugin-baidu-autopush', {
+            
+  }],
     [
       'vuepress-plugin-comment',
       {

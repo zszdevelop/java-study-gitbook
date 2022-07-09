@@ -19,6 +19,12 @@ exports.mulu = {
         {
             title: '分布式算法-ZAB算法',   // 必要的
             path: 'algorithm/domain/distributed/分布式算法-ZAB算法.md'
+        },
+        {
+            title: '负载均衡算法-汇总',   // 必要的
+            path: 'algorithm/domain/distributed/负载均衡算法-汇总.md'
         }
+
+        
     ]
 }

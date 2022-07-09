@@ -2,86 +2,168 @@
 
 ## 1. 基本使用
 
-### 1.1 步骤1
+Test Plan就是你的测试计划，可以理解为根目录，然后在里面创建测试的具体内容。
 
-**在 Test Plan 上點右鍵， Add → Threads (Users) → Thread Group**
+### 1.1 新建线程组
 
-![image-20200102135005094](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135005094.png)
+添加线程组，创建模拟多少个并发用户
 
-### 1.2 步骤2
+在 Test Plan 上點右鍵， Add → Threads (Users) → Thread Group
 
-设定有10个使用者来存取（测试）我们的服务
+![image-20220621143515425](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621143515425.png)
 
-![image-20200102135129772](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135129772.png)
+设定有100个使用者来测试我们的服务
 
-*Ramp-Up Period (in seconds)* 指得是「在幾秒內達到所設定的使用者人數」，可以讓受測服務一開始不會接受到太過巨量的 Requests
+![image-20220621144638422](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621144638422.png)
 
-### 1.3 步骤3
+- 线程数：虚拟用户数。
 
-模拟每个使用者，都会对我们的服务存取一定的次数
+  模拟多少个用户请求
 
-在 *Thread Group* 上點右鍵， *Add → Logic Controller → Loop Controller*
+- 准备时长（Ramp-Up Period(in seconds)）：
 
-![image-20200102135505057](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135505057.png)
+  线程数多长时间内启动完成 
 
-設定 Loop count (迴圈/重複執行次數)為 100 次
+  > 比如100个线程，5秒，则表示20秒内100个线程都要启动完成，每秒启动20个线程
 
-![image-20200102135539224](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135539224.png)
+- 循环次数：
 
-設定完 *Thread Group* 和 *Loop Count* 後，也就等於控制了對受測服務所發出的 request 數量，這邊作個簡單的計數的話就是：
+  每个线程发送的次数
+
+  > 假如值为5，100个线程，则会发送500次请求，可以勾选永远循环
+
+
+
+### 1.2 添加采样器（HTTP请求等）
+
+创建完线程组后，再添加http请求，表示要对哪个接口进行测试
+
+![image-20220621144714690](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621144714690.png)
+
+![image-20220621145436107](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621145436107.png)
+
+#### 1.2.1 添加请求头信息
+
+如果接口中需要设置特殊的请求头
+
+如：用户信息的token，一般我们放在请求头
+
+![image-20220621150443152](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621150443152.png)
+
+![image-20220621150620862](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621150620862.png)
+
+### 1.3 添加监听器
+
+为需要压测的http请求添加监听器，用户生成测试结果
+
+![image-20220621145545694](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621145545694.png)
+
+![image-20220621145723861](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621145723861.png)
+
+### 1.4 自动压测
+
+![image-20220621150711906](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621150711906.png)
+
+### 1.5 查看结果
+
+可以自行查看压测的结果
+
+#### 1.5.1 察看结果树
+
+记录每个请求接口详情
+
+![image-20220621150815332](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621150815332.png)
+
+#### 1.5.2 汇总报告
+
+![image-20220621150928889](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621150928889.png)
+
+#### 1.5.3 聚合报告
+
+![image-20220621150939140](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621150939140.png)
+
+#### 1.5.4 汇总图
+
+![image-20220621150952833](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621150952833.png)
+
+## 2. jmeter 参数化
+
+入参经常变化的话，则可以设置成一个变量，方便统一修改管理；如果入参要求随机或可多种选择，则通过函数生成器或者读取文件形成一个变量。所以参数化有三种方式：
+
+- 用户定义的变量、
+- 函数生成器、
+- 读取文件。
+
+### 2.1 用户定义的变量
+
+ 需要添加配置元件 - 用户定义的变量。
+
+![image-20220621153104573](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621153104573.png)
+
+定义ip
+
+![image-20220621153231624](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621153231624.png)
+
+使用的时候
+
+![image-20220621153326131](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621153326131.png)
+
+### 2.2 函数生成器 
+
+需要用到函数助手功能，可以调用函数生成一些有规则的数据。常用的几个函数有_uuid、_random、_time。_
+
+- ${__UUID}：
+
+  会生成一个随机唯一 的 id，比如在避免 java 请求重发造成未处理数据太多的情况，接口请求可加一个唯一的请求 id 唯一的响应 id 进行一一对应；
+
+- ${__Random(1,100,)}：_
+
+  随机数_random，可以 在你指定的一个范围里取随机值；_
+
+- ${__time(,)}
+
+  _取当前时间_time，一些时间类的入参可以使用，如 {time (,)} 是生成精确到毫秒的时间戳、{time (/1000,)} 是生成精确到秒的时间戳、${__time (yyyy-MM-dd HH:mm:ss,)} 是生成精确到秒的当前时间。
+
+#### 2.2.1 通过函数助手查看
+
+函数助手中的Random函数，
+
+创建方式：Tools–>函数助手对话框–>选择一个功能–>_Random：
+
+![image-20220621155023710](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621155023710.png)
+
+### 2.3 从文件读取
+
+需要在线程组里面添加配置元件 - CSV Data Set Config
+其中 Recycle on EOF: 设置 True 后，允许循环取值
+
+![image-20220621155455357](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621155455357.png)
+
+配置
+
+![image-20220621155819206](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621155819206.png)
+
+csv 文件
 
 ```
-10 (Users) * 100 (Loop Count) = 1,000 (Requests)
+user_id,user_name
+1,admin
+2,test
+3,sys
 ```
 
-也就是我們的服務將接受 1,000 次 requests 的測試。
+我们压测登录接口
 
-### 1.4 步骤4：设定要测试的Http Request请求
+![image-20220621160200409](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621160200409.png)
 
-建立一個 *HTTP Request*。在 *Loop Controller* 上點右鍵， *Add → Sampler → HTTP Request*
+测试结果
 
-![image-20200102135714099](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135714099.png)
-
-输入要测试的内容
-
-![image-20200102135823044](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135823044.png)
-
-如果有需要添加请求header
-
-![image-20200102135918040](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135918040.png)
-
-例如这里添加到content-type 为json
-
-![image-20200102135949198](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102135949198.png)
-
-### 1.5 建立测量图报表
-
-我們一樣在 *Loop Controller* 上點右鍵， *Add → Listener → Graph Results* 加入圖形化的測量結果：
-
-![image-20200102140708331](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102140708331.png)
-
-图标结果之后的展示页面
-
-![image-20200102140755976](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102140755976.png)
-
-## 1.6 **View Results Tree**
-
-*Loop Controller* 上點右鍵， *Add → Listener → View Results Tree* 加入 *View Results Tree* 來記錄每一筆 Request 的結果
-
-![image-20200102140846532](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102140846532.png)
-
-View Results Tree 裡可以看到實際傳回的 request 和 response data.
-
-![image-20200102141123652](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102141123652.png)![image-20200102141029818](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102141029818.png)
-
-### 1.7 看结果集概述
-
-
-
-概览图
-
-![image-20200102141152379](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/blogimage-master/img/image-20200102141152379.png)
+![image-20220621160223118](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220621160223118.png)
 
 ## 参考文章
 
+[使用JMeter进行压力测试](https://blog.csdn.net/zxd1435513775/article/details/106372446)
+
 [Apache JMeter 測試工具簡單基本教學](https://stackoverflow.max-everyday.com/2017/09/jmeter/)
+
+[Jmeter 压测工具使用手册（完整版）](https://learnku.com/articles/43858)
