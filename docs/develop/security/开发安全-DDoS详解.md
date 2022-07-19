@@ -28,7 +28,6 @@ DDoS攻击有两个步骤：构造攻击网络和发起攻击。事实上，构�
 
 ![image-20220706231622474](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220706231622474.png)
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/develop/security/dev-security-x-ddos.html
 
 ## 2. 攻击原理
 
@@ -334,7 +333,6 @@ HTTP洪水攻击是目标对Web服务威胁最大的攻击之一，有大量的�
 - **考虑把网站做成静态页面**
 - 把网站尽可能做成静态页面，不仅能大大提高抗攻击能力，而且还给黑客入侵带来不少麻烦，最好在需要调用数据库的脚本中，拒绝使用代理的访问，经验表明，使用代理访问你网站的80%属于恶意行为。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/develop/security/dev-security-x-ddos.html
 
 **分布式集群防御**
 

@@ -225,7 +225,6 @@ console.log(xssFilter('<div><font color="red">你好</font><a href="http://www.b
   
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/develop/security/dev-security-x-xss.html
 
 ### 4.3 CSP(Content Security Policy)
 

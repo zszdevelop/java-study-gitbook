@@ -86,7 +86,6 @@ public ReponseData saveSomething(XXParam param){
 
 根据 HTTP 协议，在 HTTP 头中有一个字段叫 Referer，它记录了该 HTTP 请求的来源地址。在通常情况下，访问一个安全受限页面的请求来自于同一个网站，比如需要访问 http://bank.example/withdraw?account=bob&amount=1000000&for=Mallory，用户必须先登陆 bank.example，然后通过点击页面上的按钮来触发转账事件。这时，该转帐请求的 Referer 值就会是转账按钮所在的页面的 URL，通常是以 bank.example 域名开头的地址。而如果黑客要对银行网站实施 CSRF 攻击，他只能在他自己的网站构造请求，当用户通过黑客的网站发送请求到银行时，该请求的 Referer 是指向黑客自己的网站。因此，要防御 CSRF 攻击，银行网站只需要对于每一个转账请求验证其 Referer 值，如果是以 bank.example 开头的域名，则说明该请求是来自银行网站自己的请求，是合法的。如果 Referer 是其他网站的话，则有可能是黑客的 CSRF 攻击，拒绝该请求。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/develop/security/dev-security-x-csrf.html
 
 ### 4.2 在请求地址中添加 token 并验证
 
@@ -304,7 +303,6 @@ public class CsrfSecurityRequestMatcher implements RequestMatcher {
 }
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/develop/security/dev-security-x-csrf.html
 
 ### 5.5 Spring Security - CookieCsrfTokenRepository如何工作的呢?
 

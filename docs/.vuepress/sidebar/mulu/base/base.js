@@ -3,6 +3,7 @@ var jvmmulu = require('./jvmmulu');
 var j2eemulu = require('./j2eemulu');
 var mubanmulu = require('./mubanmulu');
 var iomulu = require('./iomulu');
+var java8 = require('./java8');
 var regularmulu = require('./regularmulu');
 var commandmulu = require('./commandmulu');
 exports.mulu = {
@@ -16,6 +17,7 @@ exports.mulu = {
         j2eemulu.mulu,
         mubanmulu.mulu,
         iomulu.mulu,
+        java8.mulu,
         regularmulu.mulu,
         commandmulu.mulu
     ]

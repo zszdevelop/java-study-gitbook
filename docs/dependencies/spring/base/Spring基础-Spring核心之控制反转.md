@@ -41,7 +41,7 @@ Spring里面的bean就类似是定义的一个组件，而这个组件的作用�
 
 - **为何是反转，哪些方面反转了**?
 
-有反转就有正转，传统应用程序是由我们自己在对象中主动控制去直接获取依赖对象，也就是正转；而反转则是由容器来帮忙创建及注入依赖对象；为何是反转？因为由容器帮我们查找及注入依赖对象，对象只是被动的接受依赖对象，所以是反转；哪些方面反转了？依赖对象的获取被反转了。
+有反转就有正转，传统应用程序是由我们自己在对象中主动控制去直接获取依赖对象，也就是正转；而反转则是由容器来帮忙创建及注入依赖对象；为何是反转？因为由容器帮我们查找及注入依赖对象，对象只是被动的接受依赖对象，所以是反转；哪些方面反转了？**依赖对象的获取被反转**了。
 
 - **用图例说明一下**?
 
@@ -63,7 +63,6 @@ Spring里面的bean就类似是定义的一个组件，而这个组件的作用�
 
 IoC很好的体现了面向对象设计法则之一—— **好莱坞法则：“别找我们，我们找你”**；即由IoC容器帮对象找相应的依赖对象并注入，而不是由对象主动去找。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/spring/spring-x-framework-ioc.html
 
 ###  2.4 IoC和DI是什么关系
 
@@ -201,11 +200,9 @@ public class UserServiceImpl {
 }
 ```
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/spring/spring-x-framework-ioc.html
-
 ## 4. 依赖注入的三种方式
 
-> 常用的注入方式主要有三种：构造方法注入（Construct注入），setter注入，基于注解的注入（接口注入）
+> 常用的注入方式主要有三种：构造方法注入（Construct注入），setter注入，成员变量/ 接口注入
 
 ### 4.1 setter方式
 
@@ -308,8 +305,6 @@ public class UserServiceImpl {
 
 在Spring3.x刚推出的时候，推荐使用注入的就是这种, 但是这种方式比较麻烦，所以在Spring4.x版本中推荐构造函数注入。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/spring/spring-x-framework-ioc.html
-
 ### 4.2 构造函数
 
 - **在XML配置方式中**，`<constructor-arg>`是通过构造函数参数注入，比如下面的xml:
@@ -401,7 +396,7 @@ public class UserServiceImpl {
 
 在Spring4.x版本中推荐的注入方式就是这种， 具体原因看后续章节。
 
-### 4.3 注解注入
+### 4.3 成员变量/ 接口注入
 
 以@Autowired（自动注入）注解注入为例，修饰符有三个属性：Constructor，byType，byName。默认按照byType注入。
 
@@ -435,8 +430,6 @@ public class UserServiceImpl {
 
 }
 ```
-
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/spring/spring-x-framework-ioc.html
 
 ## 5. IoC和DI使用问题小结
 
@@ -515,7 +508,6 @@ public class B {
 
 （pdai： 想起来一句话：**所有困难问题的解决方式，都在另外一个层次**）
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/spring/spring-x-framework-ioc.html
 
 ### 5.3 @Autowired和@Resource以及@Inject等注解注入有何区别？
 

@@ -651,7 +651,6 @@ Swap:                  0 kB
 
 预防的办法就是，你需要对 Redis 机器的内存和 Swap 使用情况进行监控，在内存不足或使用到 Swap 时报警出来，及时处理。
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/db/nosql-redis/db-redis-x-performance.html
 
 ## 12. 碎片整理
 

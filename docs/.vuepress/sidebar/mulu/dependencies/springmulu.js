@@ -23,9 +23,38 @@ exports.mulu = {
             title: 'Spring基础-SpringMVC请求流程和案例', // 必要的
             path: 'dependencies/spring/base/Spring基础-SpringMVC请求流程和案例.md'
         },
-
-       
-        
+        {
+            title: 'Spring进阶-SpringIOC实现原理详解之IOC体系结构设计', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-SpringIOC实现原理详解之IOC体系结构设计.md'
+        },{
+            title: 'Spring进阶-SpringIOC实现原理详解之IOC初始化流程', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-IOC实现原理详解之IOC初始化流程.md'
+        },
+        {
+            title: 'Spring进阶-IOC实现原理详解之Bean实例化(生命周期,循环依赖等)', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-IOC实现原理详解之Bean实例化.md'
+        },
+        {
+            title: 'Spring进阶-Spring AOP实现原理详解之AOP切面的实现', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-AOP实现原理详解之AOP切面的实现.md'
+        },
+        {
+            title: 'Spring进阶-Spring AOP实现原理详解之AOP代理的创建', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-AOP实现原理详解之AOP代理的创建.md'
+        },
+        {
+            title: 'Spring进阶-Spring AOP实现原理详解之Cglib代理实现', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-AOP实现原理详解之Cglib代理实现.md'
+        },{
+            title: 'Spring进阶-Spring AOP实现原理详解之JDK代理实现', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-AOP实现原理详解之JDK代理实现.md'
+        },{
+            title: 'Spring进阶-SpringMVC实现原理之DispatcherServlet的初始化过程', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-SpringMVC实现原理之DispatcherServlet的初始化过程.md'
+        },{
+            title: 'Spring进阶-SpringMVC实现原理之DispatcherServlet处理请求的过程', // 必要的
+            path: 'dependencies/spring/advanced/Spring进阶-SpringMVC实现原理之DispatcherServlet处理请求的过程.md'
+        },
 
         {
             title: 'Spring常见知识点', // 必要的
@@ -126,7 +155,17 @@ exports.mulu = {
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [{
+            children: [
+                
+                {
+                    title: 'SpringBoot入门-SpringBoot简介',
+                    path: 'dependencies/spring/SpringBoot/start/SpringBoot入门-SpringBoot简介.md'
+                },
+                {
+                    title: 'SpringBoot入门-配置热部署devtools工具',
+                    path: 'dependencies/spring/SpringBoot/start/SpringBoot入门-配置热部署devtools工具.md'
+                },
+                {
                     title: 'Spring Boot常见知识点',
                     path: 'dependencies/spring/SpringBoot/'
                 },
@@ -187,7 +226,56 @@ exports.mulu = {
                             ]
                         }
                     ]
-                },{
+                },
+                {
+                    title: 'Springboot接口设计',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'SpringBoot接口-如何提供多个版本接口',
+                            path: 'dependencies/spring/SpringBoot/apidesign/SpringBoot接口-如何提供多个版本接口.md'
+                        },
+                        {
+                            title: 'SpringBoot接口-如何保证接口幂等',
+                            path: 'dependencies/spring/SpringBoot/apidesign/SpringBoot接口-如何保证接口幂等.md'
+                        },
+                        {
+                            title: 'SpringBoot接口-如何对接口进行签名',
+                            path: 'dependencies/spring/SpringBoot/apidesign/SpringBoot接口-如何对接口进行签名.md'
+                        },
+                        
+                    ]
+                },
+                {
+                    title: 'Springboot集成文件',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'SpringBoot集成文件-基础的文件上传和下载',
+                            path: 'dependencies/spring/SpringBoot/file/SpringBoot集成文件-基础的文件上传和下载.md'
+                        },
+                        {
+                            title: 'SpringBoot集成文件-大文件的上传(异步，分片，断点续传和秒传)',
+                            path: 'dependencies/spring/SpringBoot/file/SpringBoot集成文件-大文件的上传.md'
+                        }
+                    
+                    ]
+                },
+                {
+                    title: 'Springboot应用部署',
+                    collapsable: true, // 可选的, 默认值是 true,
+                    sidebarDepth: 2, // 可选的, 默认值是 1
+                    children: [
+                        {
+                            title: 'SpringBoot应用部署-使用第三方JAR包',
+                            path: 'dependencies/spring/SpringBoot/deploy/SpringBoot应用部署-使用第三方JAR包.md'
+                        },
+                    
+                    ]
+                },
+                {
                     title: '相关注解',
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2, // 可选的, 默认值是 1

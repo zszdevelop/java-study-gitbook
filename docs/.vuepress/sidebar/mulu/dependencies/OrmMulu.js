@@ -8,7 +8,25 @@ exports.mulu = {
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
             collapsable: true, // 可选的, 默认值是 true,
             sidebarDepth: 2, // 可选的, 默认值是 1
-            children: [{
+            children: [
+                {
+                    title: 'Mybatis概念', // 必要的
+                    path: 'dependencies/orm/Mybatis/Mybatis概念.md'
+
+                },
+                {
+                    title: 'MyBatis PageHelper分页', // 必要的
+                    path: 'dependencies/orm/Mybatis/MyBatisPageHelper分页.md'
+
+                },
+                
+                {
+                    title: 'MyBatis注解方式', // 必要的
+                    path: 'dependencies/orm/Mybatis/MyBatis注解方式.md'
+
+                },
+                
+                {
                     title: 'Mybatis生成实体类', // 必要的
                     path: 'dependencies/orm/Mybatis/Mybatis生成实体类.md'
 
@@ -65,6 +83,29 @@ exports.mulu = {
                 }
             ]
         },
+        {
+            title: 'MyBatis-Plus', // 必要的
+            //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+            collapsable: true, // 可选的, 默认值是 true,
+            sidebarDepth: 2, // 可选的, 默认值是 1
+            children: [
+                {
+                    title: 'SpringBoot集成 MySQL-MyBatis-Plus方式', // 必要的
+                    path: 'dependencies/orm/Mybatis-Plus/SpringBoot集成MySQL-MyBatis-Plus方式.md'
+
+                },
+                {
+                    title: 'SpringBoot集成 MyBatis-Plus代码自动生成', // 必要的
+                    path: 'dependencies/orm/Mybatis-Plus/SpringBoot集成MySQL-MyBatis-Plus代码自动生成.md'
+
+                },
+                {
+                    title: 'SpringBoot集成  MyBatis-Plus基于字段隔离的多租户', // 必要的
+                    path: 'dependencies/orm/Mybatis-Plus/SpringBoot集成MySQL-MyBatis-Plus基于字段隔离的多租户.md'
+
+                },
+               
+            ]},
         {
             title: 'JPA', // 必要的
             //path: '/base/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在

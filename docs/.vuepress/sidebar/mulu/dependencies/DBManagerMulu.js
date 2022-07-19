@@ -118,10 +118,26 @@ exports.mulu = {
                     title: 'sharding-jdbc',
                     collapsable: true, // 可选的, 默认值是 true,
                     sidebarDepth: 2, // 可选的, 默认值是 1
-                    children: [{
+                    children: [
+                        {
+                            title: 'SpringBoot集成ShardingJDBC-Sharding-JDBC简介和基于MyBatis的单库分表',
+                            path: 'dependencies/dbmanager/subdb/shardingsphere/SpringBoot集成ShardingJDBC-Sharding-JDBC简介和基于MyBatis的单库分表.md'
+                        },
+                        {
+                            title: 'SpringBoot集成ShardingJDBC-基于JPA的读写分离',
+                            path: 'dependencies/dbmanager/subdb/shardingsphere/SpringBoot集成ShardingJDBC-基于JPA的读写分离.md'
+                        },
+                        {
+                            title: 'SpringBoot集成ShardingJDBC-基于JPA的DB隔离多租户方案',
+                            path: 'dependencies/dbmanager/subdb/shardingsphere/SpringBoot集成ShardingJDBC-基于JPA的DB隔离多租户方案.md'
+                        },
+                        
+                        {
                         title: 'sharding-jdbc实现分库分表',
                         path: 'dependencies/dbmanager/subdb/shardingsphere/sharding-jdbc实现分库分表.md'
-                    }]
+                    }
+                
+                ]
                 }]
         }, {
             title: 'P6Spy监控你的SQL输出',

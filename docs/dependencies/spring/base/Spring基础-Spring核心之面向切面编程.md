@@ -10,17 +10,82 @@
 2. 为什么@Aspect注解使用的是aspectj的jar包呢？这就引出了**Aspect4J和Spring AOP的历史渊源**，只有理解了Aspect4J和Spring的渊源才能理解有些注解上的兼容设计
 3. 如何支持**更多拦截方式**来实现解耦， 以满足更多场景需求呢？ 这就是@Around, @Pointcut... 等的设计
 4. 那么Spring框架又是如何实现AOP的呢？ 这就引入**代理技术，分静态代理和动态代理**，动态代理又包含JDK代理和CGLIB代理等
+   1. 静态代理：AspectJ
+   2. 动态代理：JDK代理和CGLIB代理
+
 
 本节将在此基础上进一步解读AOP的含义以及AOP的使用方式；后续的文章还将深入AOP的实现原理：
 
 - [Spring进阶 - Spring AOP实现原理详解之切面实现](https://pdai.tech/md/spring/spring-x-framework-aop-source-1.html)
 - [Spring进阶 - Spring AOP实现原理详解之AOP代理](https://pdai.tech/md/spring/spring-x-framework-aop-source-2.html)
 
-## 2. 如何理解AOP
+## 2. Spring AOP 的实现原理
+
+`Spring`的`AOP`实现原理其实很简单，就是通过**动态代理**实现的。如果我们为`Spring`的某个`bean`配置了切面，那么`Spring`在创建这个`bean`的时候，实际上创建的是这个`bean`的一个代理对象，我们后续对`bean`中方法的调用，实际上调用的是代理类重写的代理方法。而`Spring`的`AOP`使用了两种动态代理，分别是**JDK的动态代理**，以及**CGLib的动态代理**。
+
+### 2.1 JDK动态代理
+
+**Spring默认使用JDK的动态代理实现AOP，类如果实现了接口，Spring就会使用这种方式实现动态代理**。
+
+> 熟悉`Java`语言的应该会对`JDK`动态代理有所了解。`JDK`实现动态代理需要两个组件
+>
+> 1. 首先第一个就是**`InvocationHandler`接口**。我们在使用`JDK`的动态代理时，需要编写一个类，去实现这个接口，然后重写`invoke`方法，这个方法其实就是我们提供的代理方法
+> 1. 然后`JDK`动态代理需要使用的第二个组件就**是`Proxy`这个类**，我们可以通过这个类的`newProxyInstance`方法，返回一个代理对象。生成的代理类实现了原来那个类的所有接口，并对接口的方法进行了代理，我们通过代理对象调用这些方法时，**底层将通过反射，调用我们实现的`invoke`方法。**
+
+### 2.2 CGLib动态代理
+
+**`JDK`的动态代理存在限制，那就是被代理的类必须是一个实现了接口的类**，代理类需要实现相同的接口，代理接口中声明的方法。若需要代理的类没有实现接口，此时`JDK`的动态代理将没有办法使用，于是`Spring`会使用`CGLib`的动态代理来生成代理对象。`CGLib`直接操作字节码，生成类的子类，重写类的方法完成代理。
+
+以上就是`Spring`实现动态的两种方式，下面我们具体来谈一谈这两种生成动态代理的方式。
+
+### 2.3 代理方式对比
+
+#### 2.3.1  JDK的动态代理
+
+**（一）实现原理**
+
+  `JDK`的动态代理是基于**反射**实现。`JDK`通过反射，生成一个代理类，这个代理类实现了原来那个类的全部接口，并对接口中定义的所有方法进行了代理。当我们通过代理对象执行原来那个类的方法时，代理类底层会通过反射机制，回调我们实现的`InvocationHandler`接口的`invoke`方法。**并且这个代理类是Proxy类的子类**（记住这个结论，后面测试要用）。这就是`JDK`动态代理大致的实现方式。
+
+**（二）优点**
+
+1. `JDK`动态代理是`JDK`原生的，不需要任何依赖即可使用；
+2. 通过反射机制生成代理类的速度要比`CGLib`操作字节码生成代理类的速度更快；
+
+**（三）缺点**
+
+1. 如果要使用`JDK`动态代理，被代理的类必须实现了接口，否则无法代理；
+
+2. `JDK`动态代理无法为没有在接口中定义的方法实现代理，假设我们有一个实现了接口的类，我们为它的一个不属于接口中的方法配置了切面，`Spring`仍然会使用`JDK`的动态代理，**但是由于配置了切面的方法不属于接口，为这个方法配置的切面将不会被织入**。
+
+3. `JDK`动态代理执行代理方法时，需要通过反射机制进行回调，此时方法执行的效率比较低；
+
+   >`JDK`动态代理 生成快，执行慢
+
+#### 2.3.2  CGLib动态代理
+
+**（一）实现原理**
+
+  `CGLib`实现动态代理的原理是，底层采用了`ASM`字节码生成框架，直接对需要代理的类的字节码进行操作，生成这个类的一个子类，并重写了类的所有可以重写的方法，在重写的过程中，将我们定义的额外的逻辑（简单理解为`Spring`中的切面）织入到方法中，对方法进行了增强。而通过字节码操作生成的代理类，和我们自己编写并编译后的类没有太大区别。
+
+**（二）优点**
+
+1. 使用`CGLib`代理的类，不需要实现接口，因为`CGLib`生成的代理类是直接继承自需要被代理的类；
+2. `CGLib`生成的代理类是原来那个类的子类，这就意味着这个代理类可以为原来那个类中，所有能够被子类重写的方法进行代理；
+3. `CGLib`生成的代理类，和我们自己编写并编译的类没有太大区别，对方法的调用和直接调用普通类的方式一致，所以`CGLib`执行代理方法的效率要高于`JDK`的动态代理；
+
+**（三）缺点**
+
+1. 由于`CGLib`的代理类使用的是继承，这也就意味着如果需要被代理的类是一个`final`类，则无法使用`CGLib`代理；
+2. 由于`CGLib`实现代理方法的方式是重写父类的方法，所以无法对`final`方法，或者`private`方法进行代理，因为子类无法重写这些方法；
+3. `CGLib`生成代理类的方式是通过操作字节码，这种方式生成代理类的速度要比`JDK`通过反射生成代理类的速度更慢；
+
+
+
+## 3. 如何理解AOP
 
 > AOP的本质也是为了解耦，它是一种设计思想； 在理解时也应该简化理解。
 
-### 2.1 AOP是什么
+### 3.1 AOP是什么
 
 > AOP为Aspect Oriented Programming的缩写，意为：面向切面编程
 
@@ -65,9 +130,8 @@ OOP面向对象编程，针对业务处理过程的实体及其属性和行为�
 
 ![image-20220709213600027](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220709213600027.png)
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/spring/spring-x-framework-aop.html
 
-### 2.2 AOP术语
+### 3.2 AOP术语
 
 > 首先让我们从一些重要的AOP概念和术语开始。**这些术语不是Spring特有的**。
 
@@ -95,45 +159,51 @@ OOP面向对象编程，针对业务处理过程的实体及其属性和行为�
 
 ![image-20220709214347570](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220709214347570.png)
 
-### 2.3 Spring AOP和AspectJ是什么关系
+### 3.3 Spring AOP和AspectJ是什么关系
 
-- **首先AspectJ是什么**？
+#### 3.3.1 **AspectJ是什么**？
 
 AspectJ是一个java实现的AOP框架，它能够对java代码进行AOP编译（一般在编译期进行），让java代码具有AspectJ的AOP功能（当然需要特殊的编译器）
 
 可以这样说AspectJ是目前实现AOP框架中最成熟，功能最丰富的语言，更幸运的是，AspectJ与java程序完全兼容，几乎是无缝关联，因此对于有java编程基础的工程师，上手和使用都非常容易。
 
-- **其次，为什么需要理清楚Spring AOP和AspectJ的关系**？
+#### 3.3.2 **为什么需要理清楚Spring AOP和AspectJ的关系**？
 
 我们看下@Aspect以及增强的几个注解，为什么不是Spring包，而是来源于aspectJ呢？
 
 ![image-20220709215254936](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220709215254936.png)
 
-- **Spring AOP和AspectJ是什么关系**？
+#### 3.3.3 **Spring AOP和AspectJ是什么关系**？
+
+>- Spring 使用了和AspectJ 5一样的注解
+>- 使用AspectJ来做切入点解析和匹配
+>- AOP在运行时仍旧是纯的Spring AOP，并不依赖于AspectJ的编译器或者织入器（weaver）。
 
 1. AspectJ是更强的AOP框架，是实际意义的**AOP标准**；
 2. Spring为何不写类似AspectJ的框架？ Spring AOP使用纯Java实现, 它不需要专门的编译过程, 它一个**重要的原则就是无侵入性（non-invasiveness）**; Spring 小组完全有能力写类似的框架，只是Spring AOP从来没有打算通过提供一种全面的AOP解决方案来与AspectJ竞争。Spring的开发小组相信无论是基于代理（proxy-based）的框架如Spring AOP或者是成熟的框架如AspectJ都是很有价值的，他们之间应该是**互补而不是竞争的关系**。
 3. Spring小组喜欢@AspectJ注解风格更胜于Spring XML配置； 所以**在Spring 2.0使用了和AspectJ 5一样的注解，并使用AspectJ来做切入点解析和匹配**。**但是，AOP在运行时仍旧是纯的Spring AOP，并不依赖于AspectJ的编译器或者织入器（weaver）**。
 4. Spring 2.5对AspectJ的支持：在一些环境下，增加了对AspectJ的装载时编织支持，同时提供了一个新的bean切入点。
 
-- **更多关于AspectJ**？
+#### 3.3.4 **更多关于AspectJ**？
+
+>1. 静态代理：AspectJ
+>2. 动态代理：JDK代理和CGLIB代理
 
 了解AspectJ应用到java代码的过程（这个过程称为织入），对于织入这个概念，可以简单理解为aspect(切面)应用到目标函数(类)的过程。
 
 对于这个过程，一般分为**动态织入**和**静态织入**：
 
-1. 动态织入的方式是在运行时动态将要增强的代码织入到目标类中，这样往往是通过动态代理技术完成的，如Java JDK的动态代理(Proxy，底层通过反射实现)或者CGLIB的动态代理(底层通过继承实现)，Spring AOP采用的就是基于运行时增强的代理技术
-2. ApectJ采用的就是静态织入的方式。ApectJ主要采用的是编译期织入，在这个期间使用AspectJ的acj编译器(类似javac)把aspect类编译成class字节码后，在java目标类编译时织入，即先编译aspect类再编译目标类。
+1. **动态织入的方式是在运行时动态将要增强的代码织入到目标类中**，这样往往是通过动态代理技术完成的，如**Java JDK的动态代理(Proxy，底层通过反射实现)或者CGLIB的动态代理(底层通过继承实现)**，Spring AOP采用的就是基于运行时增强的代理技术
+2. ApectJ采用的就是静态织入的方式。**ApectJ主要采用的是编译期织入**，在这个期间使用AspectJ的acj编译器(类似javac)把aspect类编译成class字节码后，在java目标类编译时织入，**即先编译aspect类再编译目标类。**
 
 ![image-20220709215829504](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220709215829504.png)
 
-著作权归https://pdai.tech所有。 链接：https://pdai.tech/md/spring/spring-x-framework-aop.html
 
-## 3. AOP的配置方式
+## 4. AOP的配置方式
 
 > Spring AOP 支持对XML模式和基于@AspectJ注解的两种配置方式。
 
-### 3.1 XML Schema配置方式
+### 4.1 XML Schema配置方式
 
 Spring提供了使用"aop"命名空间来定义一个切面，我们来看个例子([例子代码 ](https://github.com/realpdai/tech-pdai-spring-demos/004-spring-framework-demo-aop-xml))：
 
@@ -330,7 +400,9 @@ AopDemoServiceImpl.doMethod3()
 
 ```
 
-### 3.2 AspectJ注解方式
+>发生异常的时候，并不会执行环绕通知
+
+### 4.2 AspectJ注解方式
 
 基于XML的声明式AspectJ存在一些不足，需要在Spring配置文件配置大量的代码信息，为了解决这个问题，Spring 使用了@AspectJ框架为AOP的实现提供了一套注解。
 
@@ -350,7 +422,7 @@ AopDemoServiceImpl.doMethod3()
 > - 基于JDK代理例子
 > - 基于Cglib代理例子
 
-#### 3.2.1 接口使用JDK代理
+#### 4.2.1 接口使用JDK代理
 
 - 定义接口
 
@@ -515,7 +587,7 @@ JdkProxyServiceImpl.doMethod3()
 最终通知
 ```
 
-#### 3.2.2 非接口使用Cglib代理
+#### 4.2.2 非接口使用Cglib代理
 
 - **类定义**
 
@@ -572,11 +644,11 @@ CglibProxyDemoServiceImpl.doMethod3()
 最终通知
 ```
 
-## 4. AOP使用问题小结
+## 5. AOP使用问题小结
 
 > 这里总结下实际开发中会遇到的一些问题：
 
-### 4.1 切入点（pointcut）的申明规则?
+### 5.1 切入点（pointcut）的申明规则?
 
 Spring AOP 用户可能会经常使用 execution切入点指示符。执行表达式的格式如下：
 
@@ -654,7 +726,7 @@ bean（*Service）
 !:：要求连接点不匹配指定的切入点表达式
 ```
 
-### 4.2 多种增强通知的顺序？
+### 5.2 多种增强通知的顺序？
 
 如果有多个通知想要在同一连接点运行会发生什么？Spring AOP遵循跟AspectJ一样的优先规则来确定通知执行的顺序。 在“进入”连接点的情况下，最高优先级的通知会先执行（所以给定的两个前置通知中，优先级高的那个会先执行）。 在“退出”连接点的情况下，最高优先级的通知会最后执行。（所以给定的两个后置通知中， 优先级高的那个会第二个执行）。
 
@@ -662,7 +734,7 @@ bean（*Service）
 
 当定义在相同的切面里的两个通知都需要在一个相同的连接点中运行， 执行的顺序是未知的（因为这里没有方法通过反射javac编译的类来获取声明顺序）。 考虑在每个切面类中按连接点压缩这些通知方法到一个通知方法，或者重构通知的片段到各自的切面类中 - 它能在切面级别进行排序。
 
-### 4.3 Spring AOP 和 AspectJ 之间的关键区别？
+### 5.3 Spring AOP 和 AspectJ 之间的关键区别？
 
 AspectJ可以做Spring AOP干不了的事情，**它是AOP编程的完全解决方案，Spring AOP则致力于解决企业级开发中最普遍的AOP**（方法织入）。
 
@@ -671,20 +743,18 @@ AspectJ可以做Spring AOP干不了的事情，**它是AOP编程的完全解决�
 | Spring AOP                                       | AspectJ                                                      |
 | ------------------------------------------------ | ------------------------------------------------------------ |
 | 在纯 Java 中实现                                 | 使用 Java 编程语言的扩展实现                                 |
-| 不需要单独的编译过程                             | 除非设置 LTW，否则需要 AspectJ 编译器 (ajc)                  |
-| 只能使用运行时织入                               | 运行时织入不可用。支持编译时、编译后和加载时织入             |
-| 功能不强-仅支持方法级编织                        | 更强大 - 可以编织字段、方法、构造函数、静态初始值设定项、最终类/方法等......。 |
-| 只能在由 Spring 容器管理的 bean 上实现           | 可以在所有域对象上实现                                       |
+| **不需要单独的编译过程**                         | 除非设置 LTW，否则需要 AspectJ 编译器 (ajc)                  |
+| **只能使用运行时织入**                           | **运行时织入不可用。支持编译时、编译后和加载时织入**         |
+| 功能不强-**仅支持方法级编织**                    | 更强大 - 可以编织字段、方法、构造函数、静态初始值设定项、最终类/方法等......。 |
+| **只能在由 Spring 容器管理的 bean 上实现**       | 可以在所有域对象上实现                                       |
 | 仅支持方法执行切入点                             | 支持所有切入点                                               |
 | 代理是由目标对象创建的, 并且切面应用在这些代理上 | 在执行应用程序之前 (在运行时) 前, 各方面直接在代码中进行织入 |
-| 比 AspectJ 慢多了                                | 更好的性能                                                   |
+| **比 AspectJ 慢多了**                            | 更好的性能                                                   |
 | 易于学习和应用                                   | 相对于 Spring AOP 来说更复杂                                 |
 
-### 4.4 Spring AOP还是完全用AspectJ？
+### 5.4 Spring AOP还是完全用AspectJ？
 
->AspectJ 功能强大，意味着以后想扩展的时候方便
->
->若依：使用AspectJ
+>大部分场景Spring AOP 够用了。有特殊需求再用AspectJ
 
 以下Spring官方的回答：（总结来说就是 **Spring AOP更易用，AspectJ更强大**）。
 
@@ -694,6 +764,10 @@ AspectJ可以做Spring AOP干不了的事情，**它是AOP编程的完全解决�
 
 当使用AspectJ时，你可以选择使用AspectJ语言（也称为“代码风格”）或@AspectJ注解风格。 如果切面在你的设计中扮演一个很大的角色，并且你能在Eclipse等IDE中使用AspectJ Development Tools (AJDT)， 那么首选AspectJ语言 :- 因为该语言专门被设计用来编写切面，所以会更清晰、更简单。如果你没有使用 Eclipse等IDE，或者在你的应用中只有很少的切面并没有作为一个主要的角色，你或许应该考虑使用@AspectJ风格 并在你的IDE中附加一个普通的Java编辑器，并且在你的构建脚本中增加切面织入（链接）的段落。
 
+
+
 ## 参考文章
 
 [**Spring基础 - Spring核心之面向切面编程(AOP)**](https://pdai.tech/md/spring/spring-x-framework-aop.html)
+
+[浅析Spring中AOP的实现原理——动态代理](https://www.cnblogs.com/tuyang1129/p/12878549.html)
