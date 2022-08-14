@@ -1,0 +1,12 @@
+import { o as openBlock, c as createElementBlock, e as createStaticVNode } from "./app.2ec15a41.js";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.21dcd24c.js";
+const _sfc_main = {};
+const _hoisted_1 = /* @__PURE__ */ createStaticVNode('<h1 id="\u5355\u5143\u6D4B\u8BD5" tabindex="-1"><a class="header-anchor" href="#\u5355\u5143\u6D4B\u8BD5" aria-hidden="true">#</a> \u5355\u5143\u6D4B\u8BD5</h1><h2 id="\u4EC0\u4E48\u662F\u5355\u5143\u6D4B\u8BD5" tabindex="-1"><a class="header-anchor" href="#\u4EC0\u4E48\u662F\u5355\u5143\u6D4B\u8BD5" aria-hidden="true">#</a> \u4EC0\u4E48\u662F\u5355\u5143\u6D4B\u8BD5</h2><blockquote><p>\u5355\u5143\u6D4B\u8BD5\u53C8\u79F0\u6A21\u5757\u6D4B\u8BD5\uFF0C\u662F\u9488\u5BF9\u7A0B\u5E8F\u6A21\u5757\uFF08\u8F6F\u4EF6\u8BBE\u8BA1\u4E2D\u6700\u5C0F\u5355\u5143\uFF09\u6765\u8FDB\u884C\u6B63\u786E\u6027\u68C0\u9A8C\u7684\u6D4B\u8BD5\u5DE5\u4F5C</p><p>\u200B -----------\u7EF4\u57FA\u767E\u79D1</p></blockquote><p>\u5355\u5143\u6D4B\u8BD5\u662F\u6B63\u786E\u6027\u6821\u9A8C\u7684\u6D4B\u8BD5\u5DE5\u4F5C</p><h2 id="\u54EA\u4E9B\u5730\u65B9\u9700\u8981\u4E9B\u5355\u5143\u6D4B\u8BD5" tabindex="-1"><a class="header-anchor" href="#\u54EA\u4E9B\u5730\u65B9\u9700\u8981\u4E9B\u5355\u5143\u6D4B\u8BD5" aria-hidden="true">#</a> \u54EA\u4E9B\u5730\u65B9\u9700\u8981\u4E9B\u5355\u5143\u6D4B\u8BD5</h2><ol><li><strong>\u5728Dao\u5C42\uFF0CService\u5C42\u4E2D\u7684\u6BCF\u4E00\u4E2A\u65B9\u6CD5</strong>\u90FD\u786E\u4FDD\u5355\u5143\u6D4B\u8BD5\u901A\u8FC7\u3002</li><li>\u5728\u91CD\u8981\u7684\u7B97\u6CD5\uFF0C\u6838\u5FC3\u4E1A\u52A1\u903B\u8F91\u5FC5\u987B\u5355\u5143\u6D4B\u8BD5\u901A\u8FC7</li></ol><h2 id="\u4E3A\u4EC0\u4E48\u8981\u5199\u5355\u5143\u6D4B\u8BD5" tabindex="-1"><a class="header-anchor" href="#\u4E3A\u4EC0\u4E48\u8981\u5199\u5355\u5143\u6D4B\u8BD5" aria-hidden="true">#</a> \u4E3A\u4EC0\u4E48\u8981\u5199\u5355\u5143\u6D4B\u8BD5</h2><ol><li>\u63D0\u9AD8\u4EE3\u7801\u8D28\u91CF</li><li>\u63D0\u9AD8\u4EE3\u7801\u53EF\u8BFB\u6027</li><li>\u5BF9\u81EA\u5DF1\u4EE3\u7801\u7684\u4E00\u79CD\u8D1F\u8D23</li><li>\u2026.</li></ol>', 8);
+const _hoisted_9 = [
+  _hoisted_1
+];
+function _sfc_render(_ctx, _cache) {
+  return openBlock(), createElementBlock("div", null, _hoisted_9);
+}
+var _____html = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "\u5355\u5143\u6D4B\u8BD5.html.vue"]]);
+export { _____html as default };
