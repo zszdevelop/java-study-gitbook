@@ -1,0 +1,14 @@
+import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";import{o as a,c as r,a as e,b as i,e as s,d as l,r as o}from"./app.e683cd35.js";const d={},c=s(`<h1 id="idea-maven\u4E0B\u8F7Djar\u5305\u592A\u6162" tabindex="-1"><a class="header-anchor" href="#idea-maven\u4E0B\u8F7Djar\u5305\u592A\u6162" aria-hidden="true">#</a> IDEA maven\u4E0B\u8F7Djar\u5305\u592A\u6162</h1><p>\u6211\u4EEC\u5728IDEA \u7684maven\u4E0B\u8F7Djar\u5305\u662F\u53EF\u80FD\u4F1A\u8D85\u7EA7\u6162\uFF0C\u8FD9\u65F6\u5019\u6211\u4EEC\u53EF\u4EE5\u4F7F\u7528\u4E00\u4E9Bmaven\u955C\u50CF\u6765\u89E3\u51B3\u3002</p><p><strong>\u53F3\u952E\u9879\u76EE\u9009\u4E2Dmaven\u9009\u9879\uFF0C\u7136\u540E\u9009\u62E9\u201Copen settings.xml\u201D\u6216\u8005 \u201Ccreate settings.xml\u201D\uFF0C\u7136\u540E\u628A\u5982\u4E0B\u4EE3\u7801\u7C98\u8D34\u8FDB\u53BB\u5C31\u53EF\u4EE5\u4E86\u3002\u91CD\u542FIDE</strong></p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;settings xmlns=&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;
+          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+          xsi:schemaLocation=&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;&gt;
+    &lt;mirrors&gt;
+    &lt;mirror&gt;
+        &lt;id&gt;alimaven&lt;/id&gt;
+        &lt;name&gt;aliyun maven&lt;/name&gt;
+        &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+        &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+    &lt;/mirror&gt;
+    &lt;/mirrors&gt;
+&lt;/settings&gt;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="\u53C2\u8003\u6587\u7AE0" tabindex="-1"><a class="header-anchor" href="#\u53C2\u8003\u6587\u7AE0" aria-hidden="true">#</a> \u53C2\u8003\u6587\u7AE0</h2>`,5),m={href:"https://blog.csdn.net/qq1501340219/article/details/54638158",target:"_blank",rel:"noopener noreferrer"},v=l("IntelliJ IDEA maven\u5E93\u4E0B\u8F7D\u4F9D\u8D56\u5305\u901F\u5EA6\u6162\u7684\u95EE\u9898");function u(g,h){const n=o("ExternalLinkIcon");return a(),r("div",null,[c,e("p",null,[e("a",m,[v,i(n)])])])}var x=t(d,[["render",u],["__file","IDEAmaven\u4E0B\u8F7Djar\u5305\u592A\u6162.html.vue"]]);export{x as default};
