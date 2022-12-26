@@ -1,0 +1,17 @@
+import{_ as n,W as e,X as a,a0 as s}from"./framework-0cf5f349.js";const t={},d=s(`<h1 id="sql多字段聚合统计的思考" tabindex="-1"><a class="header-anchor" href="#sql多字段聚合统计的思考" aria-hidden="true">#</a> SQL多字段聚合统计的思考</h1><h2 id="_1-背景" tabindex="-1"><a class="header-anchor" href="#_1-背景" aria-hidden="true">#</a> 1. 背景</h2><p>我项目中有个需求，需要统计分组中的两个字段的汇总值。</p><p>需求大体如下：</p><p>假设要统计每个年段的主科教师人数，这些教师信息是存在每个班级中</p><blockquote><p>可能例子不够恰当，但是在我的业务中是存在这样一个场景的</p></blockquote><table><thead><tr><th>班级id</th><th>年段</th><th>语文老师</th><th>数学老师</th></tr></thead><tbody><tr><td>1</td><td>一年级</td><td>张三</td><td>李四</td></tr><tr><td>2</td><td>一年级</td><td>李四</td><td>张三</td></tr><tr><td>3</td><td>二年级</td><td>张三</td><td>李四</td></tr></tbody></table><h2 id="_2-面临的问题" tabindex="-1"><a class="header-anchor" href="#_2-面临的问题" aria-hidden="true">#</a> 2. 面临的问题</h2><p>我要得到每个年段的，语文老师数和数学老师数，都非常好取</p><div class="language-sql line-numbers-mode" data-ext="sql"><pre class="language-sql"><code><span class="token keyword">select</span> 年级<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">distinct</span> 语文老师<span class="token punctuation">)</span> <span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">distinct</span> 数学老师<span class="token punctuation">)</span> <span class="token punctuation">,</span>
+<span class="token keyword">from</span> 班级表 
+<span class="token keyword">group</span> <span class="token keyword">by</span> 年级<span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我也没有建表，只讲思路</p><p>但现在要求老师总和，我 <code>count(distinct 语文老师) , count(distinct 数学老师)</code> 并不能合在一起。</p><ul><li>count(distinct 语文老师)+ count(distinct 数学老师) 不等于总老师数</li></ul><p>因为他们会存在重复的情况</p><h2 id="_3-解决" tabindex="-1"><a class="header-anchor" href="#_3-解决" aria-hidden="true">#</a> 3. 解决</h2><h3 id="_3-1-方案一" tabindex="-1"><a class="header-anchor" href="#_3-1-方案一" aria-hidden="true">#</a> 3.1 方案一：</h3><p>使用union all 查出符合条件的老师。再group by 出来</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>select 年级,count (distinct 老师)
+from (
+         select f1.年级 年级,f1.语文老师 as 老师
+         from 班级表 f1
+         where f1.KPFAID = &#39;5f67db08f3a848bdb7d1993206c9efff&#39;
+         group by f1.年级,f1.语文老师
+         union all
+         select f2.年级  年级, f2.数学老师 as 老师
+         from 班级表 f2
+         where f2.KPFAID = &#39;5f67db08f3a848bdb7d1993206c9efff&#39;
+        group by f2.年级,f2.数学老师
+         )
+group by 年级
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样可能存在性能问题，如果表太大的话</p><h3 id="_3-2-redis" tabindex="-1"><a class="header-anchor" href="#_3-2-redis" aria-hidden="true">#</a> 3.2 redis</h3><p>将老师放到redis set中</p>`,21),i=[d];function c(l,r){return e(),a("div",null,i)}const p=n(t,[["render",c],["__file","sql-multi-field-aggregation.html.vue"]]);export{p as default};

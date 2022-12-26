@@ -1,0 +1,25 @@
+import{_ as e,W as t,X as p,Y as s,Z as n,$ as c,a0 as i,D as l}from"./framework-0cf5f349.js";const o={},r=i(`<h1 id="布局垂直居中" tabindex="-1"><a class="header-anchor" href="#布局垂直居中" aria-hidden="true">#</a> 布局垂直居中</h1><h2 id="_1-实现方式" tabindex="-1"><a class="header-anchor" href="#_1-实现方式" aria-hidden="true">#</a> 1. 实现方式</h2><h3 id="_1-1-方式一-不知道父子高度" tabindex="-1"><a class="header-anchor" href="#_1-1-方式一-不知道父子高度" aria-hidden="true">#</a> 1.1 方式一：不知道父子高度</h3><p>不知道自己高度和父容器高度的情况下, 利用绝对定位只需要以下三行：</p><div class="language-css line-numbers-mode" data-ext="css"><pre class="language-css"><code><span class="token selector">parentElement</span><span class="token punctuation">{</span>
+        <span class="token property">position</span><span class="token punctuation">:</span>relative<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+ <span class="token selector">childElement</span><span class="token punctuation">{</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ <span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-2-方式二-父高度知道-子只有一个元素" tabindex="-1"><a class="header-anchor" href="#_1-2-方式二-父高度知道-子只有一个元素" aria-hidden="true">#</a> 1.2 方式二：父高度知道，子只有一个元素</h3><p>若父容器下只有一个元素，且父元素设置了高度，则只需要使用相对定位即可</p><div class="language-css line-numbers-mode" data-ext="css"><pre class="language-css"><code>    <span class="token selector">parentElement</span><span class="token punctuation">{</span>
+        <span class="token property">height</span><span class="token punctuation">:</span>xxx<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.childElement</span> <span class="token punctuation">{</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+      <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-3-方式三-flex-布局" tabindex="-1"><a class="header-anchor" href="#_1-3-方式三-flex-布局" aria-hidden="true">#</a> 1.3 方式三：Flex 布局：</h3><p>不考虑兼容老式浏览器的话，用Flex布局简单直观一劳永逸：</p><div class="language-css line-numbers-mode" data-ext="css"><pre class="language-css"><code><span class="token selector">parentElement</span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span><span class="token comment">/*Flex布局*/</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> -webkit-flex<span class="token punctuation">;</span> <span class="token comment">/* Safari */</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span><span class="token comment">/*指定垂直居中*/</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="参考文章" tabindex="-1"><a class="header-anchor" href="#参考文章" aria-hidden="true">#</a> 参考文章</h2>`,12),u={href:"https://www.zhihu.com/question/20543196",target:"_blank",rel:"noopener noreferrer"};function d(v,k){const a=l("ExternalLinkIcon");return t(),p("div",null,[r,s("p",null,[n("["),s("a",u,[n("https://www.zhihu.com/question/20543196"),c(a)]),n("](用 CSS 实现元素垂直居中，有哪些好的方案？)")])])}const h=e(o,[["render",d],["__file","layout-vertical-center.html.vue"]]);export{h as default};
