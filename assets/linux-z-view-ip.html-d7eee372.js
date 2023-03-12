@@ -1,0 +1,7 @@
+import{_ as i,W as n,X as r,Y as e,Z as d,$ as t,a0 as s,D as c}from"./framework-0cf5f349.js";const l={},o=s(`<h1 id="centos7-查看内网ip和外网ip" tabindex="-1"><a class="header-anchor" href="#centos7-查看内网ip和外网ip" aria-hidden="true">#</a> centos7 - 查看内网ip和外网ip</h1><h2 id="_1-查看内网ip" tabindex="-1"><a class="header-anchor" href="#_1-查看内网ip" aria-hidden="true">#</a> 1. 查看内网IP</h2><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>ifconfig
+# 简化输出
+ifconfig | grep inet
+或
+ip addr 
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_2-查看外网的ip" tabindex="-1"><a class="header-anchor" href="#_2-查看外网的ip" aria-hidden="true">#</a> 2. 查看外网的ip</h2><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>curl ifconfig.me
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="参考文章" tabindex="-1"><a class="header-anchor" href="#参考文章" aria-hidden="true">#</a> 参考文章</h2>`,6),h={href:"https://www.jianshu.com/p/04c7a9ab438c",target:"_blank",rel:"noopener noreferrer"};function u(p,v){const a=c("ExternalLinkIcon");return n(),r("div",null,[o,e("p",null,[e("a",h,[d("Linux 开启 Swap分区 教程"),t(a)])])])}const m=i(l,[["render",u],["__file","linux-z-view-ip.html.vue"]]);export{m as default};
