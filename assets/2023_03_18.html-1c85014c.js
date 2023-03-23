@@ -1,0 +1,1 @@
+import{_ as e,W as _,X as t,Y as l,Z as n}from"./framework-0cf5f349.js";const c={},o=l("ul",null,[l("li",null,[n("OCR 难点 "),l("ul",null,[l("li",null,"手写识别"),l("li",null,"图片方向问题"),l("li",null,"公章问题")])]),l("li"),l("li")],-1),s=[o];function a(i,r){return _(),t("div",null,s)}const d=e(c,[["render",a],["__file","2023_03_18.html.vue"]]);export{d as default};
