@@ -12,11 +12,30 @@ category:
 
 备份方案主要分为
 
-- xtrabackup
+- mysqldump
+- xtrabackup(推荐)
 
-## 2. xtrabackup 备份
+## 2. mysqldump 命令备份
 
-### 2.1 备份脚本
+mysqldump 可以导出MYSQL表中的数据
+
+mysqldump该工具会将数据查出来，转换成insert语句，写入到某个文件中，相当于数据备份。
+
+我们获取到该文件，然后执行相应的insert语句，就能创建相关的表，并且写入数据了，这就相当于数据还原。
+
+> mysqldump命令的语法为：mysqldump -h主机名 -P端口 -u用户名 -p密码 参数1,参数2.... > 文件名称.sql
+
+备份远程数据库中的数据库：
+
+```
+mysqldump -h 192.168.0.1 -u root -p123456 dbname > backup.sql
+```
+
+
+
+## 3. xtrabackup 备份（推荐）
+
+### 3.1 备份脚本
 
 backup_script.sh
 
@@ -42,19 +61,19 @@ sudo docker run   --user 0:0 --name percona-xtrabackup --volumes-from mysql perc
 - --user : 以root 角色运行容器，以免因为权限问题无法备份
 - --volumes-from：挂在到docker 的mysql 容器的相同数据卷、实现数据共享
 
-### 2.2 恢复数据：方案1 xtrabackup 恢复
+### 3.2 恢复数据：方案1 xtrabackup 恢复
 
 ```
 还有点问题
 ```
 
-#### 2.2.1 步骤1：准备恢复的数据
+#### 3.2.1 步骤1：准备恢复的数据
 
 ```bash
 shell> xtrabackup --prepare --target-dir=/data/backups/full
 ```
 
-#### 2.2.2 步骤2：trabackup 恢复
+#### 3.2.2 步骤2：trabackup 恢复
 
 ```
 shell> systemctl stop mysqld.service
@@ -68,7 +87,7 @@ shell> xtrabackup --copy-back --datadir=/var/lib/mysql --target-dir=/backups/ful
 180818 10:59:25 completed OK!
 ```
 
-### 2.2 恢复数据：方案2 `rsync`命令
+### 3.3 恢复数据：方案2 `rsync`命令
 
 >验证成功
 
