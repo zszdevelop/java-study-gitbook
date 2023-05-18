@@ -276,6 +276,25 @@ POST /_index_template/_simulate
 
 ![image-20220804230703815](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220804230703815.png)
 
+## 3. 实战
+
+### 3.1 通过指定索引生命周期策略
+
+```bash
+PUT _template/my_template
+{
+  "index_patterns": ["dataexa-*"],
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "index.lifecycle.name": "7-days-default",
+    "index.lifecycle.rollover_alias": "my_alias"
+  }
+}
+```
+
+![image-20230516153933037](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20230516153933037.png)
+
 ## 参考文章
 
 [**ES详解 - 索引：索引模板(Index Template)详解**](https://pdai.tech/md/db/nosql-es/elasticsearch-x-index-template.html)
