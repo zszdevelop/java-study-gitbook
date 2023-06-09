@@ -24,40 +24,56 @@ ELK是Elasticsearch+Logstash+Kibana简称
 version: '3'
 services:
   elasticsearch:
-    image: elasticsearch:7.7.0  #镜像
-    container_name: elk_elasticsearch  #定义容器名称
-    restart: always  #开机启动，失败也会一直重启
-    environment:
-      - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
-      - "discovery.type=single-node" #以单一节点模式启动
-      - "ES_JAVA_OPTS=-Xms512m -Xmx1024m" #设置使用jvm内存大小
-    volumes:
-      - ./elasticsearch/plugins:/usr/share/elasticsearch/plugins #插件文件挂载
-      - ./elasticsearch/data:/usr/share/elasticsearch/data #数据文件挂载
+    image: elasticsearch:7.17.6
+    container_name: elasticsearch
     ports:
-      - 9200:9200
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      # 设置集群名称
+      cluster.name: elasticsearch
+      # 以单一节点模式启动
+      discovery.type: single-node
+      # 开启x-pack(需要加密时配置)
+      xpack.security.enabled: "true"
+      # 密码(需要加密时配置)
+      ELASTIC_PASSWORD: abc@123
+      # 设置内存大小
+      ES_JAVA_OPTS: "-Xms2048m -Xmx2048m"
+    volumes:
+      - /home/dataexa/aia/elk/elasticsearch/plugins:/usr/share/elasticsearch/plugins
+      - /home/dataexa/aia/elk/elasticsearch/data:/usr/share/elasticsearch/data
+      - /home/dataexa/aia/elk/elasticsearch/logs:/usr/share/elasticsearch/logs
+    network_mode: "host"
+
   kibana:
-    image: kibana:7.7.0
-    container_name: elk_kibana
-    restart: always
+    image: kibana:7.17.6
+    container_name: kibana
+    ports:
+      - "5601:5601"
     depends_on:
-      - elasticsearch #kibana在elasticsearch启动之后再启动
+      # kibana在elasticsearch启动之后再启动
+      - elasticsearch
     environment:
-      - ELASTICSEARCH_URL=http://elasticsearch:9200 #设置访问elasticsearch的地址
-    ports:
-      - 5601:5601
-  logstash:
-    image: logstash:7.7.0
-    container_name: elk_logstash
-    restart: always
+      #设置系统语言文中文
+      I18N_LOCALE: zh-CN
+      # 访问域名
+      # SERVER_PUBLICBASEURL: https://kibana.cloud.com
     volumes:
-      - ./logstash/logstash-springboot.conf:/usr/share/logstash/pipeline/logstash.conf #挂载logstash的配置文件
-    depends_on:
-      - elasticsearch #kibana在elasticsearch启动之后再启动
-    links:
-      - elasticsearch:es #可以用es这个域名访问elasticsearch服务
+      - /home/dataexa/aia/elk/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    network_mode: "host"
+
+  logstash:
+    image: logstash:7.17.6
+    container_name: logstash
     ports:
-      - 4560:4560
+      - "4560:4560"
+    volumes:
+      - /home/dataexa/aia/elk/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - /home/dataexa/aia/elk/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+    depends_on:
+      - elasticsearch
+    network_mode: "host"
 ```
 
 ### 2.2 新建logstash/logstash-springboot.conf文件
@@ -73,19 +89,35 @@ input {
 }
 output {
   elasticsearch {
-    hosts => "es:9200"
-    index => "springboot-logstash-%{+YYYY.MM.dd}"
+    hosts => "192.168.0.1:9200"
+    index => "%{[spring.application.name]}-%{+YYYY.MM.dd}"
+    user => "elastic"
+    password => "abc@123"
   }
 }
+
 ```
 
-### 2.3 安装，运行ELK
+### 2.3 新建 kibana/config/kibana.yml
+
+```
+server.host: "0.0.0.0"
+server.shutdownTimeout: "5s"
+elasticsearch.username: "elastic"
+elasticsearch.password: "dataexa@123"
+elasticsearch.hosts: [ "http://127.0.0.1:9200" ]
+monitoring.ui.container.elasticsearch.enabled: true
+```
+
+
+
+## 3. 安装，运行ELK
 
 ```php
 docker-compose up -d
 ```
 
-### 2.4 访问Kibana
+## 4. 访问Kibana
 
 ![image-20220803230538798](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220803230538798.png)
 

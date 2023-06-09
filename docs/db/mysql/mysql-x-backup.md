@@ -13,7 +13,8 @@ category:
 备份方案主要分为
 
 - mysqldump
-- xtrabackup(推荐)
+- xtrabackup
+- [docker-backup-database](https://github.com/appleboy/docker-backup-database)(推荐)
 
 ## 2. mysqldump 命令备份
 
@@ -95,6 +96,48 @@ shell> xtrabackup --copy-back --datadir=/var/lib/mysql --target-dir=/backups/ful
 rsync -avrP /backup/ /var/lib/mysql/
 ```
 
+## 4. docker-backup-database(推荐)
+
+按文档配置后，每日会将备份sql打包到minio
+
+```yml
+backup_mysql:
+  image: appleboy/docker-backup-database:mysql-8
+  logging:
+    options:
+      max-size: "100k"
+      max-file: "3"
+  environment:
+    STORAGE_DRIVER: s3
+    STORAGE_ENDPOINT: 192.168.0.1:9000
+    STORAGE_BUCKET: db-backup
+    #STORAGE_REGION: ap-northeast-1
+    STORAGE_PATH: backup_mysql
+    STORAGE_SSL: "false"
+    STORAGE_INSECURE_SKIP_VERIFY: "false"
+    ACCESS_KEY_ID: admin
+    SECRET_ACCESS_KEY: 123456
+
+    DATABASE_DRIVER: mysql
+    DATABASE_HOST: 192.168.0.1:3306
+    DATABASE_USERNAME: root
+    DATABASE_PASSWORD: 123456
+    DATABASE_NAME: sss
+    DATABASE_OPTS:
+    # 每天凌晨备份
+    TIME_SCHEDULE: "@daily"
+    TIME_LOCATION: Asia/Shanghai
+```
+
+### 4.1 如果mysql 无法正常连接
+
+需添加
+
+```
+#接受来自任何IP地址的请求，远程备份用
+bind-address=0.0.0.0
+```
+
 
 
 ## 参考文章
@@ -104,4 +147,6 @@ rsync -avrP /backup/ /var/lib/mysql/
 [数据库备份之Xtrabackup](https://cn.openjianghu.org/doc/page/article/10080)
 
 [MySQL 物理备份： Innobackupex 和 xtrabackup（热备）](https://www.jianshu.com/p/e8bd79e84f55)
+
+[docker-backup-database](https://github.com/appleboy/docker-backup-database)
 
