@@ -1,0 +1,18 @@
+import{_ as n,W as a,X as s,a0 as e}from"./framework-0cf5f349.js";const t={},i=e(`<h1 id="neo4j-安装" tabindex="-1"><a class="header-anchor" href="#neo4j-安装" aria-hidden="true">#</a> Neo4j - 安装</h1><h2 id="_1-安装" tabindex="-1"><a class="header-anchor" href="#_1-安装" aria-hidden="true">#</a> 1. 安装</h2><h3 id="_1-1-docker-compose安装" tabindex="-1"><a class="header-anchor" href="#_1-1-docker-compose安装" aria-hidden="true">#</a> 1.1 docker-compose安装</h3><div class="language-yaml line-numbers-mode" data-ext="yml"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&#39;3&#39;</span>
+
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">neo4j</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> neo4j<span class="token punctuation">:</span>5.9.0<span class="token punctuation">-</span>community
+    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> neo4j
+    <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token comment">#    environment: - NEO4J_AUTH=neo4j/neo4j123</span>
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;7474:7474&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;7687:7687&quot;</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;/home/dataexa/aia/neo4j/data:/var/lib/neo4j/data&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;/home/dataexa/aia/neo4j/logs:/var/lib/neo4j/logs&quot;</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-2-启动" tabindex="-1"><a class="header-anchor" href="#_1-2-启动" aria-hidden="true">#</a> 1.2 启动</h3><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code> <span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span> neo4j
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="_1-3-浏览器访问" tabindex="-1"><a class="header-anchor" href="#_1-3-浏览器访问" aria-hidden="true">#</a> 1.3 浏览器访问</h3><p>可以设置数据库和账户密码</p><blockquote><p>默认的账户和密码都是neo4j</p></blockquote><figure><img src="https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20230621095847945.png" alt="image-20230621095847945" tabindex="0" loading="lazy"><figcaption>image-20230621095847945</figcaption></figure><p>进入后可以修改密码</p>`,11),o=[i];function l(c,p){return a(),s("div",null,o)}const d=n(t,[["render",l],["__file","neo4j-x-install.html.vue"]]);export{d as default};
