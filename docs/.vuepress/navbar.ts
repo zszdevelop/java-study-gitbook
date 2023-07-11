@@ -61,6 +61,7 @@ export default navbar([
           { text: "Redis", link: "redis/db-redis-introduce" },
           { text: "MongoDB", link: "mongodb/mongo-x-basic" },
           { text: "Elasticsearch", link: "es/elasticsearch-x-introduce-1" },
+          { text: "Neo4J", link: "neo4j/neo4j-x-tutorial" },
         ],
       },
     ]

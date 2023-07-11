@@ -6,7 +6,7 @@ category:
 
 
 
-# Nginx从入门到实践
+# Nginx - 从入门到实践
 
 ![image-20220724221108300](https://zszblog.oss-cn-beijing.aliyuncs.com/zszblog/image-20220724221108300.png)
 
