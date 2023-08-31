@@ -6,7 +6,7 @@ export default defineUserConfig({
   lang: "zh-CN",
   title: "Java学习笔记",
   description: "工作总结，读书笔记",
-  base: "/java-study-gitbook",
+  base: "/java-study-gitbook/",
   head: [
     ['script', {}, `
           var _hmt = _hmt || [];
