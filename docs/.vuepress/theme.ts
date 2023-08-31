@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://java.isture.com",
+  hostname: "https://zszdevelop.github.io/java-study-gitbook",
 
   author: {
     name: "zszdevelop",
