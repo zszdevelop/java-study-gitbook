@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://java.isture.com/sitemap.xml
+Sitemap: https://zszdevelop.github.io/java-study-gitbook/sitemap.xml
