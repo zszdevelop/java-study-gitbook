@@ -340,4 +340,4 @@ public static void main(String[] args) {
 
 ## 参考文章
 
-[一个跟面试官扯皮半个小时的HashMa](https://angela.blog.csdn.net/article/details/104889549?spm=1001.2014.3001.5502)
+[一个跟面试官扯皮半个小时的HashMap](https://angela.blog.csdn.net/article/details/104889549?spm=1001.2014.3001.5502)
